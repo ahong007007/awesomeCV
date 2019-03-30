@@ -25,6 +25,7 @@ Deep High-Resolution Representation Learning for Human Pose Estimation. [pdf](ht
 # Hand Pose Estimation
 
 ## [2019年3月]
+
 1.CVPR2019论文，南洋理工大学提出，two-stacked hourglass network提取特征，Graph CNN在RGB图像重建
 包括3D手势和姿态的3D mesh，合成3D meshes and 3D poses数据集用于训练，借助于depth map fine-tuning.
 最终模型在Nvidia GTX 1080 GPU可以运行50fps。
