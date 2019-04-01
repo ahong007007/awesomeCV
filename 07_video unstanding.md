@@ -1,7 +1,9 @@
 # video understanding
 
-## 行为识别
 
+
+## 行为识别
+数据集：kinetics,HMDB
 1、CVPR2019论文，中科院自动化研究所模式识别实验室和中科大提出的Skeleton-based行为识别(Action Recognition)算法，基于
 注意力机制增强的图卷积AGC-LSTM网络，高效提取和判别空间特征和时序特征，NTU RGB+D dataset 和 
 Northwestern-UCLA dataset数据集state-of-art水平。
@@ -15,3 +17,12 @@ An Attention Enhanced Graph Convolutional LSTM Network for Skeleton-Based Action
 论文称为CoST模块（Collaborative SpatioTemporal），C3D计算量为3k^2，而CoST计算量是3k^2-3k+1，k=3时节省30%计算量。论文在Moments in Time Challenge 2018赢得第一名。
 
 Collaborative Spatiotemporal Feature Learning for Video Action Recognition.[pdf](https://arxiv.org/pdf/1903.01197.pdf)
+
+3、CVPR2019论文，印第安那大学提出。受optial flow启发，为降低运算量，在低分辨率特征图计算可微分卷积"flow"表示层,进一步迭代实现flow of flow的运动信息表示方法。
+论文同时准确率和实时性做对比试验（给出运算速率对比的都是好文章），865ms/帧，准确率和实时性取得平衡（I3D Two-Stream 9354ms）。虽然论文的某些理论是实验出来的（After Block 3计算flow性能最好，以及
+Flow-Conv-Flow要优于Flow-Conv-Flow-Conv-Flow，并且没有给出合理解释），但是论文的实验过程值得学习。
+
+Representation Flow for Action Recognition.[pdf](https://arxiv.org/pdf/1810.01455.pdf)
+
+
+
