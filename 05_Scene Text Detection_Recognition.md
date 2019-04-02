@@ -16,7 +16,6 @@ Pyramid Mask Text Detector.[PDF](https://arxiv.org/pdf/1903.11800.pdf)
 
 如果语义分割图一开始就是黏连一起，如果保证最小的kernel情况下字符串不黏连？ 
 
-
 Shape Robust Text Detection with Progressive Scale Expansion Network.[pdf](https://arxiv.org/pdf/1806.02559.pdf)
 
 
