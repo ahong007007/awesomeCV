@@ -27,6 +27,7 @@ M2Det: A Single-Shot Object Detector based on Multi-Level Feature Pyramid Networ
 Grid R-CNN [PDF](https://arxiv.org/pdf/1811.12030.pdf)
  
 ##人脸检测
+
 1、天津大学、武汉大学、腾讯AI实验室提出的人脸检测模型，主要针对移动端设计（backbone MobileNet v2）
 在高通845上达到140fps的实时性。论文主要提出一个解决类别不均衡问题（都是人脸，相当于二分类，什么不均衡）。
 
@@ -35,6 +36,7 @@ Grid R-CNN [PDF](https://arxiv.org/pdf/1811.12030.pdf)
 清晰，应该是idea分拆，写成连续剧的节奏。
 
 (https://arxiv.org/pdf/1902.10859.pdf)
+
 ##[2019年3月]
 
 1、国防科技大学和旷视科技联合提出，典型的RPN+FPN架构，backbone基于SNet,增加Context Enhancement
