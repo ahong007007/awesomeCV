@@ -10,6 +10,7 @@ Res2Net: A New Multi-scale Backbone Architecture.[pdf](https://arxiv.org/pdf/190
 
 # Detection
 ##NMS系列去重算法
+
 2017----Soft-NMS----Improving Object Detection With One Line of Code
 
 2018----Softer-NMS- Rethinking Bounding Box Regression for Accurate Object Detection
@@ -25,6 +26,15 @@ M2Det: A Single-Shot Object Detector based on Multi-Level Feature Pyramid Networ
 
 Grid R-CNN [PDF](https://arxiv.org/pdf/1811.12030.pdf)
  
+##人脸检测
+1、天津大学、武汉大学、腾讯AI实验室提出的人脸检测模型，主要针对移动端设计（backbone MobileNet v2）
+在高通845上达到140fps的实时性。论文主要提出一个解决类别不均衡问题（都是人脸，相当于二分类，什么不均衡）。
+
+但是MobileNet v2的检测框架应该没有这么快，并且论文的预测特征点和3D旋转角时，使用全连接网络，计算量大，
+应该更耗时才对。论文只给出特征点预测，但是一张图片N个人，如何区分特征点属于何人？论文应该很多细节没有讲述
+清晰，应该是idea分拆，写成连续剧的节奏。
+
+(https://arxiv.org/pdf/1902.10859.pdf)
 ##[2019年3月]
 
 1、国防科技大学和旷视科技联合提出，典型的RPN+FPN架构，backbone基于SNet,增加Context Enhancement
