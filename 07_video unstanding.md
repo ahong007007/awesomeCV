@@ -1,8 +1,19 @@
 # video understanding
 
+## dataset
+美图联合清华大学开源的视频分类数据集，规模较大且类别丰富。COIN 数据集采用分层结构，
+即第一层是领域（Domain）、第二层是任务（Task）、第三层是步骤（Step），其中包含与
+日常生活相关的 11827 个视频，涉及交通工具、电器维修、和家具装修等 12 个领域的 180
+ 个任务，共 778 个步骤。
 
 
-## 行为识别
+COIN: A Large-scale Dataset for Comprehensive Instructional Video Analysis.[pdf](https://arxiv.org/pdf/1903.02874.pdf)
+
+## video Segmentation
+
+BubbleNets: Learning to Select the Guidance Frame in Video Object Segmentation by Deep Sorting Frames
+
+## Action Recognition
 数据集：kinetics,HMDB
 1、CVPR2019论文，中科院自动化研究所模式识别实验室和中科大提出的Skeleton-based行为识别(Action Recognition)算法，基于
 注意力机制增强的图卷积AGC-LSTM网络，高效提取和判别空间特征和时序特征，NTU RGB+D dataset 和 
@@ -23,6 +34,11 @@ Collaborative Spatiotemporal Feature Learning for Video Action Recognition.[pdf]
 Flow-Conv-Flow要优于Flow-Conv-Flow-Conv-Flow，并且没有给出合理解释），但是论文的实验过程值得学习。
 
 Representation Flow for Action Recognition.[pdf](https://arxiv.org/pdf/1810.01455.pdf)
+
+
+4、CVPR2019论文。
+Peeking into the Future: Predicting Future Person Activities and Locations in Videos
+
 
 
 

@@ -28,3 +28,18 @@ AlphaX: eXploring Neural Architectures with Deep Neural Networks and Monte Carlo
 4、伊利诺伊大学厄巴纳-香槟分校提出的以及channel select算法，论文对mobilenetv1/2 MNasNet 性能提高，推断延迟降低。
 
 Network Slimming by Slimmable Networks:Towards One-Shot Architecture Search for Channel Numbers. [PDF](https://arxiv.org/pdf/1903.11728.pdf)
+
+## classifier
+
+NAS一般是依据人类设计的CNN构造cell,堆叠cell单元。Facebook Ross Girshick，Kaiming He等设计一个基于图论的网络生成器生成随机网络。
+实验效果在RandWire-WS数据集，RandWire-WS相比MobileNet v2，Amoeba-C没有太大提升，在COCO目标检测数据集相比ResNeXt-50和ResNeXt-101，
+在FLOPs计算量相同情况下，最高有1.7%的提升。
+
+Exploring Randomly Wired Neural Networks for Image Recognition.[pdf](https://arxiv.org/pdf/1904.01569.pdf)
+5、
+
+
+
+
+
+
