@@ -9,7 +9,7 @@ top-1分类误差降低0.93%，而FLOPs降低69%。期待源码以及更多领�
 Res2Net: A New Multi-scale Backbone Architecture.[pdf](https://arxiv.org/pdf/1904.01169.pdf)
 
 # Detection
-##NMS系列去重算法
+## NMS系列去重算法
 
 2017----Soft-NMS----Improving Object Detection With One Line of Code
 
@@ -21,12 +21,11 @@ Res2Net: A New Multi-scale Backbone Architecture.[pdf](https://arxiv.org/pdf/190
 
 2018----NIPS----Sequential Context Encoding for Duplicate Removal
 
-
 M2Det: A Single-Shot Object Detector based on Multi-Level Feature Pyramid Network [PDF](https://arxiv.org/pdf/1811.04533.pdf) [Github](https://github.com/qijiezhao/M2Det)
 
 Grid R-CNN [PDF](https://arxiv.org/pdf/1811.12030.pdf)
  
-##人脸检测
+## 人脸检测
 
 1、天津大学、武汉大学、腾讯AI实验室提出的人脸检测模型，主要针对移动端设计（backbone MobileNet v2）
 在高通845上达到140fps的实时性。论文主要提出一个解决类别不均衡问题（侧脸、正脸、抬头、低头、表情、遮挡等各种类型）。
@@ -37,7 +36,7 @@ Grid R-CNN [PDF](https://arxiv.org/pdf/1811.12030.pdf)
 
 PFLD:A Practical Facial Landmark Detector.[pdf](https://arxiv.org/pdf/1902.10859.pdf)
 
-##[2019年3月]
+## [2019年3月]
 
 1、国防科技大学和旷视科技联合提出，典型的RPN+FPN架构，backbone基于SNet,增加Context Enhancement
 Module(FPN多尺度分辨率特征融合)和spatial attention module（RPN->1x1卷积实现空间注意力模型），
