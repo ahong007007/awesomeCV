@@ -32,16 +32,19 @@ Grid R-CNN [PDF](https://arxiv.org/pdf/1811.12030.pdf)
 在高通845上达到140fps的实时性。论文主要提出一个解决类别不均衡问题（侧脸、正脸、抬头、低头、表情、遮挡等各种类型）。
 
 但是MobileNet v2的检测框架应该没有这么快，并且论文的预测特征点和3D旋转角时，使用全连接网络，计算量大，
-应该更耗时才对。论文只给出特征点预测，但是一张图片N个人，如何区分特征点属于何人？论文应该很多细节没有讲述
-清晰，应该是idea分拆，写成连续剧的节奏。
+应该更耗时才对。论文只给出特征点预测，但是一张图片N个人，如何区分特征点属于何人？论文没有告知如何计算检测框。
+论文应该很多细节没有讲述清晰，应该是idea分拆，写成连续剧的节奏。
 
 PFLD:A Practical Facial Landmark Detector.[pdf](https://arxiv.org/pdf/1902.10859.pdf)
 
 ##[2019年3月]
 
 1、国防科技大学和旷视科技联合提出，典型的RPN+FPN架构，backbone基于SNet,增加Context Enhancement
-Module和spatial attention module，实验结果相对于MobileNetV2-SSDLite速度和精度均有提高。
+Module(FPN多尺度分辨率特征融合)和spatial attention module（RPN->1x1卷积实现空间注意力模型），
+实验结果相对于MobileNetV2-SSDLite速度和精度均有提高。
 
 ThunderNet: Towards Real-time Generic Object Detection.[PDF](https://arxiv.org/pdf/1903.11752.pdf)
+
 2、商汤和香港中文大学联合提出，ICLR2019论文，实在没看懂啥意思。
+
 Feature Intertwiner for Object Detection. [PDF](https://arxiv.org/pdf/1903.11851.pdf)
