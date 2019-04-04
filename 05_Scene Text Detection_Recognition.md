@@ -27,5 +27,4 @@ Shape Robust Text Detection with Progressive Scale Expansion Network.[pdf](https
 What is wrong with scene text recognition model comparisons? dataset and model analysis.[pdf](https://128.84.21.199/pdf/1904.01906.pdf)
 
 
-<font color=#00ffff size=4>todo BiLSTM+Attention </font> 
-
+<table><tr><td bgcolor=orange>todo BiLSTM+Attention</td></tr></table>
