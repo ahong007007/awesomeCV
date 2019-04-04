@@ -30,8 +30,8 @@ An Attention Enhanced Graph Convolutional LSTM Network for Skeleton-Based Action
 Collaborative Spatiotemporal Feature Learning for Video Action Recognition.[pdf](https://arxiv.org/pdf/1903.01197.pdf)
 
 3、CVPR2019论文，印第安那大学提出。受optial flow启发，为降低运算量，在低分辨率特征图计算可微分卷积"flow"表示层,进一步迭代实现flow of flow的运动信息表示方法。
-论文同时准确率和实时性做对比试验（给出运算速率对比的都是好文章），865ms/帧，准确率和实时性取得平衡（I3D Two-Stream 9354ms）。虽然论文的某些理论是实验出来的（After Block 3计算flow性能最好，以及
-Flow-Conv-Flow要优于Flow-Conv-Flow-Conv-Flow，并且没有给出合理解释），但是论文的实验过程值得学习。
+论文同时准确率和实时性做对比试验（给出运算速率对比的都是好文章），865ms/帧，准确率和实时性取得平衡（I3D Two-Stream 9354ms）。虽然论文的某些理论是实验出来的
+（After Block 3计算flow性能最好，以及Flow-Conv-Flow要优于Flow-Conv-Flow-Conv-Flow，并且没有给出合理解释），但是论文的实验过程值得学习。
 
 Representation Flow for Action Recognition.[pdf](https://arxiv.org/pdf/1810.01455.pdf)
 
