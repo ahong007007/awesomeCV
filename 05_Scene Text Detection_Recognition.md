@@ -21,6 +21,11 @@ Shape Robust Text Detection with Progressive Scale Expansion Network.[pdf](https
 
 # Scene Text Recognition
 
+论文提出一个框架模型，包括Spatial Transformer Network，Feature extraction，Sequence modeling，Sequence modeling，每个
+阶段采用主流的方法，共2×3×2×2= 24种实现方式，从准确率最高的反推，应该是STN+Backbone+BiLSTM+Attention模型可以取得最佳效果（
+没有考虑实时性）。
+What is wrong with scene text recognition model comparisons? dataset and model analysis.[pdf](https://128.84.21.199/pdf/1904.01906.pdf)
 
 
+<font color=#00ffff size=4>todo BiLSTM+Attention </font> 
 
