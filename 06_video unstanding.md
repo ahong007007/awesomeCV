@@ -41,4 +41,14 @@ Peeking into the Future: Predicting Future Person Activities and Locations in Vi
 
 
 
+# tricks
+
+1.3D卷积，各种C3D, I3D,R(2+1)D,P3D,R(2+1)D
+2.光流，从FlowNet到FlowNet2.0，flow of flow,
+3.LSTM convLSTM
+4.Graph CNN
+
+
+
+
 
