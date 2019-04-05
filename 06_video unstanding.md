@@ -1,4 +1,4 @@
-# video understanding
+# video understanding/video analysis
 
 ## dataset
 美图联合清华大学开源的视频分类数据集，规模较大且类别丰富。COIN 数据集采用分层结构，
