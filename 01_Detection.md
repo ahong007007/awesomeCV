@@ -37,7 +37,7 @@ ThunderNet: Towards Real-time Generic Object Detection.[PDF](https://arxiv.org/p
 
 2、CVPR2019论文、商汤，浙江大学等联合提出的Libra R-CNN。motivation来自于作者认为的三个不平衡：数据不平衡，特征不平衡，
 损失函数不平衡。数据不平衡采用：N总样本根据IoU分成K个子样本,增加困难样本的采样概率。特征不平衡采用：ResNet Identity 和
-non-local模块修正语义特征。损失函数不平衡：论文设计Balanced L1 Loss（```待验证和理解```diff）。
+non-local模块修正语义特征。损失函数不平衡：论文设计Balanced L1 Loss（**待验证和理解**）。
 
 论文提出的三个不平衡，可以认为是3个trick，可以集成到其他模型，改进检测的精度。
 
@@ -45,6 +45,7 @@ Libra R-CNN: Towards Balanced Learning for Object Detection.[pdf](https://arxiv.
 
 
 ## other
+
 2、商汤和香港中文大学联合提出，ICLR2019论文，实在没看懂啥意思。
 
 Feature Intertwiner for Object Detection. [PDF](https://arxiv.org/pdf/1903.11851.pdf)
