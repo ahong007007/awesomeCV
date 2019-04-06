@@ -32,12 +32,7 @@ High Performance Visual Tracking with Siamese Region Proposal Network.[pdf](http
 Fast Online Object Tracking and Segmentation: A Unifying Approach.[pdf](https://arxiv.org/pdf/1812.05050.pdf)
 
 
-
-
-作者：Qiang Wang, Li Zhang, Luca Bertinetto, Weiming Hu, Philip H.S. Torr
-Github链接：https://github.com/foolwood/SiamMask
-project链接：http://www.robots.ox.ac.uk/~qwang/SiamMask/
-
+# 代归并
 
 2、Deeper and Wider Siamese Networks for Real-Time Visual Tracking(CIR,目标跟踪）
 作者：Zhipeng Zhang, Houwen Peng
