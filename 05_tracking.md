@@ -10,8 +10,7 @@
 
 2.训练出的网络主要关注外观特征而无视语义信息，容易造成背景干扰。
 
-
-High Performance Visual Tracking with Siamese Region Proposal Network.[pdf](https://arxiv.org/pdf/1606.09549.pdf)
+Fully-Convolutional Siamese Networks for Object Tracking.[pdf](https://arxiv.org/pdf/1606.09549.pdf)
 
 2.SiamRPN CVPR2018论文，商汤，北航和清华共同提出，实时性到160fps(backbone采用AlexNet)。论文提出模型包括两个子网络：Siamese subnetwork （特征提取）
 和region proposal subnetwork（包括分类和检测分支）。换个角度，跟踪当做的单样本检测任务，就是把第一帧的BBox视为检测的样例，在其余帧里面检测与它相似的目标。
