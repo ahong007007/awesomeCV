@@ -6,9 +6,9 @@
 
 缺点：
 
-1.在真实世界存在多个目标干扰，遮挡，以及移位等因素，feature map会有多个相应，主要通过高斯窗滤波干扰目标。
+a.在真实世界存在多个目标干扰，遮挡，以及移位等因素，feature map会有多个相应，主要通过高斯窗滤波干扰目标。
 
-2.训练出的网络主要关注外观特征而无视语义信息，容易造成背景干扰。
+b.训练出的网络主要关注外观特征而无视语义信息，容易造成背景干扰。
 
 Fully-Convolutional Siamese Networks for Object Tracking.[pdf](https://arxiv.org/pdf/1606.09549.pdf)
 
@@ -23,16 +23,17 @@ High Performance Visual Tracking with Siamese Region Proposal Network.[pdf](http
 
 缺点：
 
-1.Siammask的mask预测分支采用SharpMask语义分割模型，精度可使用替代模型提高。
+a.Siammask的mask预测分支采用SharpMask语义分割模型，精度可使用替代模型提高。
 
-2.目前tracking没有专门处理消失问题（object traker如果从当前画面离开或完全遮挡），特别的，siammask挺容易受到具有语义的distractor影响。
+b.目前tracking没有专门处理消失问题（object traker如果从当前画面离开或完全遮挡），特别的，siammask挺容易受到具有语义的distractor影响。
 Fast Online Object Tracking and Segmentation: A Unifying Approach.[pdf](https://arxiv.org/pdf/1812.05050.pdf)
 
-# 待归并
-2、Deeper and Wider Siamese Networks for Real-Time Visual Tracking(CIR,目标跟踪）
-作者：Zhipeng Zhang, Houwen Peng
-论文链接：https://arxiv.org/pdf/1901.01660.pdf
-Code链接：https://gitlab.com/MSRA_NLPR/deeper_wider_siamese_trackers
+
+4.CVPR2019论文，中国科学院大学和微软联合提出，主要解决Siamese网络架构一般使用较浅的网络架构（比如alexnet）。分析影响神经网络的三个因素
+：padding,receptive field size和stride，并提出针对性改善的Cropping-Inside Residual (CIR)单元。模型在OTB和VOT等数据集取得
+state-of-art，达到论文提出的改变神经网络deeper和wider的目标。
+
+Deeper and Wider Siamese Networks for Real-Time Visual Tracking.[pdf](https://arxiv.org/pdf/1901.01660.pdf)
 
 
 3、SiamRPN++: Evolution of Siamese Visual Tracking with Very Deep Networks(目标跟踪）
