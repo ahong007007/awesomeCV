@@ -43,7 +43,11 @@ non-local模块修正语义特征。损失函数不平衡：论文设计Balanced
 
 Libra R-CNN: Towards Balanced Learning for Object Detection.[pdf](https://arxiv.org/pdf/1904.02701.pdf)
 
+3.阿德莱德大学沈春华项目组提出的目标检测方向新论文FCOS,去除传统目标检测的FPN操作,添加Center-ness分支，直接anchor free预测
+(l; t; r; b) 四维向量（节省anchor相关的超参数设定以及计算），依赖于NMS，直接生成目标检测框。论文提出的FCOS希望可以应用于
+后续的语义分割，姿态估计等领域。论文的性能在one-stage领域state-of-art，节省大量FPN的计算，但是没有任何关于速度的指标，比较遗憾。
 
+FCOS: Fully Convolutional One-Stage Object Detection.[pdf](https://arxiv.org/pdf/1904.01355.pdf)
 ## other
 
 2、商汤和香港中文大学联合提出，ICLR2019论文，实在没看懂啥意思。
