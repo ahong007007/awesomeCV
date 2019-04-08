@@ -38,13 +38,20 @@ Deeper and Wider Siamese Networks for Real-Time Visual Tracking.[pdf](https://ar
 5.CVPR2019论文，中科院自动化所和商汤联合提出，同样解决Siamese网络架构一般使用较浅的网络架构（比如alexnet）。
 性能：论文提出的SiamRPN++在VOT2018取得性能最优的同时，速度在NVIDIA Titan Xp GPU 35fps,MobileNetv2保持性能的同时可运行70fps.
 改进措施：
-1.论文同样发现padding对特征提取有损伤,降低padding和stride的影响。（stride降低同时使用空洞卷积提高感受野）。
-2.模型基于ResNet架构，并提出层级级联SiamRPN block用于协方差计算，多层次特征图预测目标的相似性。
-3.提出Depthwise Cross Correlation (DW-XCorr)，大幅度降低参数和稳定模型训练。
+a.论文同样发现padding对特征提取有损伤,降低padding和stride的影响。（stride降低同时使用空洞卷积提高感受野）。
+b.模型基于ResNet架构，并提出层级级联SiamRPN block用于协方差计算，多层次特征图预测目标的相似性。
+c.提出Depthwise Cross Correlation (DW-XCorr)，大幅度降低参数和稳定模型训练。
+孪生网络和目标跟踪进入深度学习的深度网络时代。
 
 SiamRPN++: Evolution of Siamese Visual Tracking with Very Deep Networks.[pdf](https://arxiv.org/pdf/1901.01660.pdf)
 
-Project链接：http://bo-li.info/SiamRPN++/
+
+6.商汤，北航等联合提出，多目标跟踪（MOT）框架，可以学会充分利用长期和短期线索来处理MOT场景中的复杂情况。针对短期匹配，使用Siamese-RPN，
+长期匹配和矫正，使用ReID。视频检测，分割，跟踪等均可以使用这种机制。
+
+Multi-Object Tracking with Multiple Cues and Switcher-Aware Classification.[pdf](https://arxiv.org/pdf/1901.06129.pdf)
+
+# 待更新
 
 
 4、Siamese Cascaded Region Proposal Networks for Real-Time Visual Tracking(CRPN,目标跟踪）
