@@ -36,7 +36,7 @@ Collaborative Spatiotemporal Feature Learning for Video Action Recognition.[pdf]
 Representation Flow for Action Recognition.[pdf](https://arxiv.org/pdf/1810.01455.pdf)
 
 
-4、CVPR2019论文。
+4、CVPR2019论文。AAAI2018.
 Peeking into the Future: Predicting Future Person Activities and Locations in Videos
 
 
@@ -50,5 +50,8 @@ Peeking into the Future: Predicting Future Person Activities and Locations in Vi
 
 
 
+Spatial temporal graph convolutional networks for skeletonbased action recognition AAAI2018.
+
+Videos as Space-Time Region Graphs ECCV2018.
 
 

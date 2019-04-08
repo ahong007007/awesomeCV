@@ -35,10 +35,15 @@ state-of-art，达到论文提出的改变神经网络deeper和wider的目标。
 
 Deeper and Wider Siamese Networks for Real-Time Visual Tracking.[pdf](https://arxiv.org/pdf/1901.01660.pdf)
 
+5.CVPR2019论文，中科院自动化所和商汤联合提出，同样解决Siamese网络架构一般使用较浅的网络架构（比如alexnet）。
+性能：论文提出的SiamRPN++在VOT2018取得性能最优的同时，速度在NVIDIA Titan Xp GPU 35fps,MobileNetv2保持性能的同时可运行70fps.
+改进措施：
+1.论文同样发现padding对特征提取有损伤,降低padding和stride的影响。（stride降低同时使用空洞卷积提高感受野）。
+2.模型基于ResNet架构，并提出层级级联SiamRPN block用于协方差计算，多层次特征图预测目标的相似性。
+3.提出Depthwise Cross Correlation (DW-XCorr)，大幅度降低参数和稳定模型训练。
 
-3、SiamRPN++: Evolution of Siamese Visual Tracking with Very Deep Networks(目标跟踪）
-作者：Bo Li, Wei Wu, Qiang Wang, Fangyi Zhang, Junliang Xing, Junjie Yan
-论文链接：https://arxiv.org/pdf/1901.01660.pdf
+SiamRPN++: Evolution of Siamese Visual Tracking with Very Deep Networks.[pdf](https://arxiv.org/pdf/1901.01660.pdf)
+
 Project链接：http://bo-li.info/SiamRPN++/
 
 
@@ -72,3 +77,13 @@ project链接：https://cis.temple.edu/lasot/
 ## trade off
 
 illumination, deformation,occlusion and motion,speed
+
+#待合并
+
+Graph Convolutional Tracking
+
+http://nlpr-web.ia.ac.cn/mmc/homepage/jygao/gct_cvpr2019.html#
+
+
+
+
