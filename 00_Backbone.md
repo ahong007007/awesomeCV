@@ -8,3 +8,7 @@ top-1分类误差降低0.93%，而FLOPs降低69%。期待源码以及更多领�
 
 Res2Net: A New Multi-scale Backbone Architecture.[pdf](https://arxiv.org/pdf/1904.01169.pdf)
 
+
+# 待记录
+
+ANTNets: Mobile Convolutional Neural Networks for Resource Efficient Image Classification.[pdf](https://arxiv.org/pdf/1904.03775.pdf)

@@ -83,4 +83,8 @@ UnitBox，IoU-Net，GIoU
 
 类别不平衡（增加样本）,数据增强
 
+# 待记录
+
+Adaptive NMS: Refining Pedestrian Detection in a Crowd.[pdf](https://arxiv.org/pdf/1904.03629.pdf)
+
 

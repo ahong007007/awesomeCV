@@ -18,3 +18,7 @@ Learning Context Graph for Person Search.[pdf](https://arxiv.org/pdf/1904.01830.
 Graph Convolutional Tracking
 
 http://nlpr-web.ia.ac.cn/mmc/homepage/jygao/gct_cvpr2019.html#
+
+# 待记录
+
+Can GCNs Go as Deep as CNNs?.[pdf](https://arxiv.org/pdf/1904.03751.pdf)
