@@ -9,6 +9,16 @@ top-1分类误差降低0.93%，而FLOPs降低69%。期待源码以及更多领�
 Res2Net: A New Multi-scale Backbone Architecture.[pdf](https://arxiv.org/pdf/1904.01169.pdf)
 
 
-# 待记录
+2、威斯康星大学麦迪逊分校和亚马逊等联合提出移动端分类神经网络架构：ANTNets(Attention NesTed Network),相比MobileNetv2，ImageNet
+Top1 提升 0.8%，速度提升20%（157ms iphone 5s).论文主要是设计神经网络，架构基于Block堆叠，每个Block包括1x1，3x3 dwise，Channel attention，Group-wise，
+Inverted Residual Block。Channel attention与SENet不同，论文提出的Channel attention是自适应学习，从输入端到输出端Reduction Ratio (r)逐渐增加。
+分类网络有两个设计方向：何凯明等提出的RandWire-WS和各个conv组件排列组合，怎么看都像是升级版的连连看。
 
 ANTNets: Mobile Convolutional Neural Networks for Resource Efficient Image Classification.[pdf](https://arxiv.org/pdf/1904.03775.pdf)
+
+# 待记录
+
+multi label
+resnet
+mobile
+1x1卷积
