@@ -14,11 +14,9 @@ Top1 提升 0.8%，速度提升20%（157ms iphone 5s).论文主要是设计神�
 Inverted Residual Block。Channel attention与SENet不同，论文提出的Channel attention是自适应学习，从输入端到输出端Reduction Ratio (r)逐渐增加。
 分类网络有两个设计方向：何凯明等提出的RandWire-WS和各个conv组件排列组合，怎么看都像是升级版的连连看。
 
+缺点：depth multiplier (a = 1.4)时与MobileNetv2性能接近，差别不明显。
+
 ANTNets: Mobile Convolutional Neural Networks for Resource Efficient Image Classification.[pdf](https://arxiv.org/pdf/1904.03775.pdf)
 
 # 待记录
 
-multi label
-resnet
-mobile
-1x1卷积
