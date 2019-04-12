@@ -13,6 +13,8 @@ COIN: A Large-scale Dataset for Comprehensive Instructional Video Analysis.[pdf]
 
 BubbleNets: Learning to Select the Guidance Frame in Video Object Segmentation by Deep Sorting Frames
 
+
+
 ## Action Recognition
 数据集：kinetics,HMDB
 1、CVPR2019论文，中科院自动化研究所模式识别实验室和中科大提出的Skeleton-based行为识别(Action Recognition)算法，基于

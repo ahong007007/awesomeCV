@@ -18,8 +18,12 @@ Inverted Residual Block。Channel attention与SENet不同，论文提出的Chann
 
 ANTNets: Mobile Convolutional Neural Networks for Resource Efficient Image Classification.[pdf](https://arxiv.org/pdf/1904.03775.pdf)
 
-3、
+3、CVPR2019论文，印度坎普尔提出一种改进的卷积方式HetConv(Heterogeneous Kernel-Based Convolution)。相比标准卷积，inception mobilenet等提出
+depthwise conv、pointwise conv、groupwise conv减少模型计算量，轮提出的异形卷积HetConv可以看做分组卷积的一种变体，只不过卷积核是有3x3,1x1组成，
+延伸可以使用5x5,7x7，这样并排使用且分组卷积的方式。优点：论文详细对比了DP,DW,GW等卷积方式的计算量。缺点：VGG-16模型以及CIFAR-10数据集实验无说服力，
+仅在ResNet-50和ImageNet实验说明减少30% FLOPs，缺少在检测，分割等领域的实验对比。
 
 HetConv: Heterogeneous Kernel-Based Convolutions for Deep CNNs.[pdf](https://arxiv.org/pdf/1903.04120.pdf)
+
 # 待记录
 
