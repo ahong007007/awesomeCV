@@ -18,5 +18,8 @@ Inverted Residual Block。Channel attention与SENet不同，论文提出的Chann
 
 ANTNets: Mobile Convolutional Neural Networks for Resource Efficient Image Classification.[pdf](https://arxiv.org/pdf/1904.03775.pdf)
 
+3、
+
+HetConv: Heterogeneous Kernel-Based Convolutions for Deep CNNs.[pdf](https://arxiv.org/pdf/1903.04120.pdf)
 # 待记录
 
