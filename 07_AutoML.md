@@ -38,6 +38,11 @@ NAS一般是依据人类设计的CNN构造cell,堆叠cell单元。Facebook Ross 
 
 1、Exploring Randomly Wired Neural Networks for Image Recognition.[pdf](https://arxiv.org/pdf/1904.01569.pdf)
 
+# Detection
+2、Google基于AutoML提出Detection模型，基于RetinaNet网络，解决FPN多尺度金字塔问题。通过Neural Architecture Search搜索各种类型的
+top-down,bottom-up特征层的连接方式（还是连连看），取得state-of-art的mAP同时降低推断时间。
+
+NAS-FPN: Learning Scalable Feature Pyramid Architecture for Object Detection.[pdf](https://arxiv.org/pdf/1904.01569.pdf)
 
 
 
