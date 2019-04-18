@@ -54,6 +54,11 @@ FCOS: Fully Convolutional One-Stage Object Detection.[pdf](https://arxiv.org/pdf
 
 Feature Intertwiner for Object Detection. [PDF](https://arxiv.org/pdf/1903.11851.pdf)
 
+3.中国科学院大学,牛津大学和华为联合提出one-stage模型，MS-COCO dataset数据集测试，达到47mAP（逼近two-stage PANet准确率）,超越所有one-stage模型。论文模型backbone
+基于Hourglass，提出Center pooling，Corner pooling，Cascade corner pooling（论文的triplet）确定目标的边界。
+NVIDIA Tesla P100 GPU运行，CenterNet511-104 340ms/image，比CornerNet511-104 300ms略慢。
+
+CenterNet: Object Detection with Keypoint Triplets.[pdf](https://arxiv.org/pdf/1904.08189.pdf)
 
 # tricks
 
