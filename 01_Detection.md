@@ -60,6 +60,13 @@ NVIDIA Tesla P100 GPU运行，CenterNet511-104 340ms/image，比CornerNet511-104
 
 CenterNet: Object Detection with Keypoint Triplets.[pdf](https://arxiv.org/pdf/1904.08189.pdf)
 
+4.普林斯顿大学提出CornerNet改进版的目标检测模型，CornerNet-Saccade比CornerNet提速6倍且性能提升1% AP,CornerNet-Squeeze比YOLOv3更快也更准确。
+论文首先把图片Downsizing，经过hourglass网络与Attention maps生成候选区域并裁剪，对每个裁剪区域再经过hourglass生成目标检测框。最后对所有检测框合并。
+论文使用缩放代替CNN的降采样，较少运算量，但是缩小图像的分辨率对小目标的检测准确率应该有影响吧。个人感觉比CenterNet实用性更好：要么选择准确率高的two-stage,
+要么选择速度和准确率平衡的轻量化网络。感叹目标检测领域的飞速发展。CV行业在分类和检测日新月异。
+
+CornerNet-Lite: Efficient Keypoint Based Object Detection.[pdf](https://arxiv.org/pdf/1904.08900.pdf) [github](https://github.com/princeton-vl/CornerNet-Lite)
+
 # tricks
 
 1.backbone与特征提取
