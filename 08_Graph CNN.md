@@ -40,7 +40,7 @@ Multi-Label Image Recognition with Graph Convolutional Networks.[(pdf)](https://
 
 1.多伦多大学与英伟达联合提出Curve-GCN，基于图卷积模型的一种高效交互式图像标注方法（需要人工使用多边形或矩形框框选模目标框，自动完成图像的像素分割）。
 回忆一下faster RCNN,这不就是手工实现RPN的角色，再让Curve-GCN像素标注。如果让CNN实现目标检测，让Curve-GCN标注，这就是妥妥的实体分割模型。
-另外训练Curve-GCN需要的标注数据集，也得人工完成标注吧。
+另外训练Curve-GCN需要的标注数据集，也得人工完成图像的原始标注吧。先有鸡还是先有蛋。
 
 Fast Interactive Object Annotation with Curve-GCN.[pdf](https://arxiv.org/pdf/1903.06874.pdf)
 
