@@ -44,6 +44,15 @@ Multi-Label Image Recognition with Graph Convolutional Networks.[(pdf)](https://
 
 Fast Interactive Object Annotation with Curve-GCN.[pdf](https://arxiv.org/pdf/1903.06874.pdf)
 
+
+# Human Pose Regression
+
+1、CVPR2019论文，罗格斯大学和宾汉姆顿大学联合提出，基于Graph CNN的3D姿态回归模型。使用2D Pose Estimation Network提取RGB Image keypoint，多层Feature和2D location
+拼接，作为Semantic Graph Convolutional Network的输入，输出为3D Pose。论文提出的Semantic Graph Convolutions，融合CNN增加Graph CNN的感受野，NonLocal
+模块保持Graph CNN的全局信息。
+
+[semantic Graph Convolutional Networks for 3D Human Pose Regression](https://arxiv.org/pdf/1904.03345.pdf)
+
 # 待记录
 
 Can GCNs Go as Deep as CNNs?.[pdf](https://arxiv.org/pdf/1904.03751.pdf)
