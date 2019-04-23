@@ -14,3 +14,11 @@ ResNet/DenseNet等在一定程度改善。论文认为卷积核的冗余是由�
 可惜论文描述不详细，是不是可以再写一个ICCV2019的论文？
 
 RePr: Improved Training of Convolutional Filters.[pdf](https://arxiv.org/pdf/1811.07275.pdf)
+
+# Optimization
+
+1、商汤提出Switchable Whitening，相比Batch Normalization (BN) , Instance Normalization，Layer Normalization (LN)，
+论文在classification (CIFAR-10/100, ImageNet), semantic segmentation (ADE20K, Cityscapes), domain adaptation
+(GTA5, Cityscapes), and image style transfer (COCO)均有良好表现。
+
+[Switchable Whitening for Deep Representation Learning](https://arxiv.org/pdf/1904.09739.pdf)
