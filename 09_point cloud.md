@@ -9,3 +9,8 @@
 
 DenseFusion: 6D Object Pose Estimation by Iterative Dense Fusion. [pdf](https://arxiv.org/pdf/1901.04780.pdf)
 
+# 3D object detection
+
+
+[Deep Hough Voting for 3D Object Detection in Point Clouds](https://arxiv.org/pdf/1904.09664.pdf)
+
