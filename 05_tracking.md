@@ -51,7 +51,16 @@ SiamRPN++: Evolution of Siamese Visual Tracking with Very Deep Networks.[pdf](ht
 
 Multi-Object Tracking with Multiple Cues and Switcher-Aware Classification.[pdf](https://arxiv.org/pdf/1901.06129.pdf)
 
+7、哈尔滨工业大学和华为联合提出STAIN(Siamese Attentional Keypoint Network)。一般视频追踪基于discriminative correlation filters和Siamese network， 
+而论文提出在三个方面改进：backbone network, attentional mechanism 和detection component。backbone network基于hourglass network设计，cross-attentional
+改进空间和时序注意力机制，检测模型基于华为提出的corner point和centroid point。
+
+[Siamese Attentional Keypoint Network for High Performance Visual Tracking](https://arxiv.org/pdf/1904.10128.pdf)
 # 待更新
+
+Martin大神新作，需要仔细研读
+
+[Learning Discriminative Model Prediction for Tracking](https://arxiv.org/pdf/1904.07220v1.pdf)
 
 
 4、Siamese Cascaded Region Proposal Networks for Real-Time Visual Tracking(CRPN,目标跟踪）
@@ -90,6 +99,9 @@ illumination, deformation,occlusion and motion,speed
 Graph Convolutional Tracking
 
 http://nlpr-web.ia.ac.cn/mmc/homepage/jygao/gct_cvpr2019.html#
+
+
+Learning Discriminative Model Prediction for Tracking.[pdf](https://128.84.21.199/pdf/1904.07220.pdf)
 
 
 
