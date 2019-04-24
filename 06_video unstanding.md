@@ -42,6 +42,10 @@ Representation Flow for Action Recognition.[pdf](https://arxiv.org/pdf/1810.0145
 Peeking into the Future: Predicting Future Person Activities and Locations in Videos
 
 
+# ReID
+
+1、阿联酋IIAI研究院
+[Interpretable and Generalizable Deep Image Matching with Adaptive Convolutions](https://arxiv.org/pdf/1904.10424.pdf)
 
 # tricks
 
