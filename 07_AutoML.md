@@ -17,6 +17,13 @@ https://medium.com/@santiagof/auto-is-the-new-black-google-automl-microsoft-auto
 
 [Exploring Randomly Wired Neural Networks for Image Recognition](https://arxiv.org/pdf/1904.01569.pdf)
 
+
+- CVPR2019论文，加州大学伯克利分校,普林斯顿大学和Facebook联合提出一种NAS搜索方法。首先定义网络的框架结构和9种layer-wise的搜索空间，定义Latency-Aware Loss Function∝cross-entropy &Latency,
+cross-entropy计算精度，Latency基于速查表（预先计算9种layer-wise计算数据）。Stochastic super net是每一层都让9中架构并联，基于可微分的GumbelSoftmax训练整个super net,根据训练结果Pθ设计网络架构。
+这种可微分方式比RL方式快速很多。
+
+[FBNet: Hardware-Aware Efficient ConvNet Design via Differentiable Neural Architecture Search](https://arxiv.org/pdf/1812.03443.pdf)
+
 ## Detection
 
 - 中科院自动化所和旷视联合提出，Object Detection with FPN on COCO优于ResNet101,但是FLOPs比ResNet50低。基于ShuffleNetV2的架构也有较好的表现。
@@ -38,7 +45,7 @@ Additive Margin Softmax LossArcFace Loss等）。论文基于强化学习的NAS�
 
 ## Semantic  Segmentation
 
-- 驭势科技，新加坡国立大学等联合提出轻量型分类和语义分割网络，成为"东风"网络，主要解决Speed/Accuracy trade-off问题，性能接近于deeplab v2但是速度>50 fps。
+- CVPR2019论文，驭势科技，新加坡国立大学等联合提出轻量型分类和语义分割网络，成为"东风"网络，主要解决Speed/Accuracy trade-off问题，性能接近于deeplab v2但是速度>50 fps。
 论文的backbone基于典型residual block，但是提出Acc(x)和Lat(x)用于评价准确率和推断时间，节省神经网络的随机搜索。另外没有选用RNN/LSTM,而是Random select an architecture。
 论文提出的算法，训练200个模型架构时已经去除438个模型架构，每个模型训练5-7个小时(8卡机)。训练200个架构月400GPU/days。
 模型在嵌入式硬件TX2和1080Ti均有评测，准确率和性能均有明显优势。去年有项目曾使用ENet/ICNet，速率尚可准确率不如人意，也许"东风"系列有明显改善。
@@ -81,7 +88,7 @@ Auto-ReID: Searching for a Part-aware ConvNet for Person Re-Identification [PDF]
 
 ## Benchmark on ImageNet
 
-| Architecture       | Top-1 (%) | Top-5 (%) | Params (M) | +x (M) | GPU | Days |
+| Architecture       | Top-1 (%) | Top-5 (%) | Params (M) | +x (M) | GPU | Search cost(Days/GPU hours) |Search method | Search space |
 | ------------------ | --------- | --------- | ---------- | ------ | -   | -    |
 | [Inception-v1](https://arxiv.org/pdf/1409.4842.pdf)       | 30.2      | 10.1      | 6.6        | 1448   | -   | -    |
 | [MobileNet-v1](https://arxiv.org/abs/1704.04861)       | 29.4      | 10.5      | 4.2        | 569    | -   | -    |
