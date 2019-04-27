@@ -24,6 +24,12 @@ cross-entropy计算精度，Latency基于速查表（预先计算9种layer-wise�
 
 [FBNet: Hardware-Aware Efficient ConvNet Design via Differentiable Neural Architecture Search](https://arxiv.org/pdf/1812.03443.pdf)
 
+- CVPR2019论文，悉尼科技大学和百度联合提出GDAS(Differentiable Architecture Sampler)。搜索空间是基于FBNet提出的Stochastic super net，梯度运算同样基于GumbelSoftmax。论文改进在训练方式：首先CIFAR训练，选择normal cell用于ImageNet网络设计。
+normal cell输入为two previous cells。Reduction Cell是人工设计。论文的加速设计是基于hij(one-hot vector),既计算BP时只有一个支路。轮设计的GDAS (FRC) 在V100 GPU仅运行4个小时，远远高于state-of-art
+的搜索效率。
+
+  - [Searching for A Robust Neural Architecture in Four GPU Hours](https://raw.githubusercontent.com/D-X-Y/GDAS/master/data/GDAS.pdf)
+
 ## Detection
 
 - 中科院自动化所和旷视联合提出，Object Detection with FPN on COCO优于ResNet101,但是FLOPs比ResNet50低。基于ShuffleNetV2的架构也有较好的表现。
@@ -103,5 +109,6 @@ Auto-ReID: Searching for a Part-aware ConvNet for Person Re-Identification [PDF]
 | AmobebaNet-C       | 24.3      | 7.6       | 6.4        | 555    | 450 |  7   |
 | [Progressive NAS](http://openaccess.thecvf.com/content_ECCV_2018/papers/Chenxi_Liu_Progressive_Neural_Architecture_ECCV_2018_paper.pdf)    | 25.8      | 8.1       | 5.1        | 588    | 100 | 1.5  |
 | [DARTS-V2](https://arxiv.org/abs/1806.09055)           | 26.9      | 9.0       | 4.9        | 595    |  1  |  1   |
-| [GDAS](http://xuanyidong.com/bibtex/Four-Hours-CVPR19.txt) | 26.0      | 8.5       | 5.3        | 581    |  1  |  0.21   |
+| [GDAS](https://raw.githubusercontent.com/D-X-Y/GDAS/master/data/GDAS.pdf) | 26.0      | 8.5       | 5.3        | 581    |  1  |  0.21   |
 | [RandWire-WS](https://arxiv.org/pdf/1904.01569.pdf)        | 25.3±0.25 | 7.8       | 5.6±1      |583±6.2 |  -  |   -     |
+
