@@ -9,20 +9,26 @@ https://medium.com/@santiagof/auto-is-the-new-black-google-automl-microsoft-auto
 
 ## classifier
 
+- Google提出，ICML2018论文。不太了解NAS基于梯度优化的原理，所以追溯相关论文加深理解。论文首先构架one-shot model（FBNet提到的super net），训练包含搜索空间的所有卷积路径。
+评估时随机zero out r^(1/k)个分支，并评估舍弃对网络性能影响较小的分支，Re-train the most promising architectures。论文中drop也是按照一定策略进行。论文基于KL divergence
+论证less/most important operations假设的合理性。#todolist:机器学习kl理论基础，GumbelSoftmax为什么可代替random dropout.
+
+  - [Understanding and Simplifying One-Shot Architecture Search](http://proceedings.mlr.press/v80/bender18a/bender18a.pdf)
+
 - NAS一般是依据人类设计的CNN构造cell,堆叠cell单元。Facebook Ross Girshick，Kaiming He等设计一个基于图论的网络生成器生成随机网络。
 实验效果在RandWire-WS数据集，RandWire-WS相比MobileNet v2，Amoeba-C没有太大提升，在COCO目标检测数据集相比ResNeXt-50和ResNeXt-101，
 在FLOPs计算量相同情况下，最高有1.7%的提升。为保证公平，论文的随机网络生成器只迭代250 epoch，如果迭代更高的epoch是不是可以生成准确率更高
 计算更快的网络模型？
   - 缺点：每个随机生成的网络都需要在完整数据集训练，论文没有说明使用GPU数量和天数
 
-[Exploring Randomly Wired Neural Networks for Image Recognition](https://arxiv.org/pdf/1904.01569.pdf)
+  - [Exploring Randomly Wired Neural Networks for Image Recognition](https://arxiv.org/pdf/1904.01569.pdf)
 
 
 - CVPR2019论文，加州大学伯克利分校,普林斯顿大学和Facebook联合提出一种NAS搜索方法。首先定义网络的框架结构和9种layer-wise的搜索空间，定义Latency-Aware Loss Function∝cross-entropy &Latency,
 cross-entropy计算精度，Latency基于速查表（预先计算9种layer-wise计算数据）。Stochastic super net是每一层都让9中架构并联，基于可微分的GumbelSoftmax训练整个super net,根据训练结果Pθ设计网络架构。
 这种可微分方式比RL方式快速很多。
 
-[FBNet: Hardware-Aware Efficient ConvNet Design via Differentiable Neural Architecture Search](https://arxiv.org/pdf/1812.03443.pdf)
+ - [FBNet: Hardware-Aware Efficient ConvNet Design via Differentiable Neural Architecture Search](https://arxiv.org/pdf/1812.03443.pdf)
 
 - CVPR2019论文，悉尼科技大学和百度联合提出GDAS(Differentiable Architecture Sampler)。搜索空间是基于FBNet提出的Stochastic super net，梯度运算同样基于GumbelSoftmax。论文改进在训练方式：首先CIFAR训练，选择normal cell用于ImageNet网络设计。
 normal cell输入为two previous cells。Reduction Cell是人工设计。论文的加速设计是基于hij(one-hot vector),既计算BP时只有一个支路。轮设计的GDAS (FRC) 在V100 GPU仅运行4个小时，远远高于state-of-art
@@ -39,7 +45,7 @@ DetNAS: Neural Architecture Search on Object Detection [PDF](https://arxiv.org/p
 - Google基于AutoML提出Detection模型，基于RetinaNet网络，解决FPN多尺度金字塔问题。通过Neural Architecture Search搜索各种类型的
 top-down,bottom-up特征层的连接方式（还是连连看），取得state-of-art的mAP同时降低推断时间。
 
-NAS-FPN: Learning Scalable Feature Pyramid Architecture for Object Detection.[pdf](https://arxiv.org/pdf/1904.07392.pdf)
+  - NAS-FPN: Learning Scalable Feature Pyramid Architecture for Object Detection.[pdf](https://arxiv.org/pdf/1904.07392.pdf)
 
 ## Recognition
 
@@ -47,7 +53,7 @@ NAS-FPN: Learning Scalable Feature Pyramid Architecture for Object Detection.[pd
 Additive Margin Softmax LossArcFace Loss等）。论文基于强化学习的NAS设计，network size 和latency作为reward(论文的实验没有对比测试latency或者模型尺寸)，仅说明最小网络参数NASC 16M。
 这是NAS在人脸识别的首测尝试，分类，检测，识别都有涉及，图像分割应该不远。
 
-[Neural Architecture Search for Deep Face Recognition](https://arxiv.org/pdf/1904.09523.pdf)
+  - [Neural Architecture Search for Deep Face Recognition](https://arxiv.org/pdf/1904.09523.pdf)
 
 ## Semantic  Segmentation
 
@@ -60,37 +66,37 @@ Additive Margin Softmax LossArcFace Loss等）。论文基于强化学习的NAS�
 
 - 李飞飞团队作品。
 
-[Auto-DeepLab:Hierarchical Neural Architecture Search for Semantic Image Segmentation](https://arxiv.org/pdf/1901.02985.pdf)
+  - [Auto-DeepLab:Hierarchical Neural Architecture Search for Semantic Image Segmentation](https://arxiv.org/pdf/1901.02985.pdf)
 
 # Pruning
 
 - 清华大学和旷视科技提出，基于MobileNet V1/V2 网络的自动化通道剪枝，相比AMC和NetAdapt有提升
 
-MetaPruning: Meta Learning for Automatic Neural Network Channel Pruning [PDF](https://arxiv.org/pdf/1903.10258.pdf)
+  - MetaPruning: Meta Learning for Automatic Neural Network Channel Pruning [PDF](https://arxiv.org/pdf/1903.10258.pdf)
 
 
 - 伊利诺伊大学厄巴纳-香槟分校提出的以及channel select算法，论文对mobilenetv1/2 MNasNet 性能提高，推断延迟降低。
 
-Network Slimming by Slimmable Networks:Towards One-Shot Architecture Search for Channel Numbers. [PDF](https://arxiv.org/pdf/1903.11728.pdf)
+  - Network Slimming by Slimmable Networks:Towards One-Shot Architecture Search for Channel Numbers. [PDF](https://arxiv.org/pdf/1903.11728.pdf)
 
 ## ReID
 
 -澳大利亚欧缇莫的大学
 
-Auto-ReID: Searching for a Part-aware ConvNet for Person Re-Identification [PDF](https://arxiv.org/pdf/1903.09776.pdf)
+  - Auto-ReID: Searching for a Part-aware ConvNet for Person Re-Identification [PDF](https://arxiv.org/pdf/1903.09776.pdf)
 
 
 # Super-Resolution 
 
 - 小米AI团队团队提出的超分辨率模型。
 
-[Fast, Accurate and Lightweight Super-Resolution with Neural Architecture Search](https://arxiv.org/pdf/1901.07261.pdf)
+  - [Fast, Accurate and Lightweight Super-Resolution with Neural Architecture Search](https://arxiv.org/pdf/1901.07261.pdf)
 
 # Architecture
 
 - facebook开源框架，基于MCTS和DNN,解决分类，目标检测，风格迁移，图像描述4个任务。
 
-[AlphaX: eXploring Neural Architectures with Deep Neural Networks and Monte Carlo Tree Search](https://arxiv.org/pdf/1903.11059.pdf)
+  - [AlphaX: eXploring Neural Architectures with Deep Neural Networks and Monte Carlo Tree Search](https://arxiv.org/pdf/1903.11059.pdf)
 
 ## Benchmark on ImageNet
 
