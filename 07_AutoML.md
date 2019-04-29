@@ -23,6 +23,12 @@ https://medium.com/@santiagof/auto-is-the-new-black-google-automl-microsoft-auto
 
   - [Exploring Randomly Wired Neural Networks for Image Recognition](https://arxiv.org/pdf/1904.01569.pdf)
 
+- ICLR2019论文，CMU和goole提出的DARTS(Differentiable ARchiTecture Search)模型,在连续域进行模型搜索，基于梯度下降方式的方式优化模型（NAS梯度算法的首次提出者？），
+通过以可微的方式进行神经网络结构搜索，用于解决NAS搜索空间大及占用GPU资源问题。优化目标是w和a，提出近似迭代优化：w和a分别在权重和架构空间的梯度下降布置之间交替优化。
+【扩展阅读】连续域结构搜索
+
+  - [DARTS: Differentiable Architecture Search](https://arxiv.org/pdf/1806.09055.pdf)
+
 
 - CVPR2019论文，加州大学伯克利分校,普林斯顿大学和Facebook联合提出一种NAS搜索方法。首先定义网络的框架结构和9种layer-wise的搜索空间，定义Latency-Aware Loss Function∝cross-entropy &Latency,
 cross-entropy计算精度，Latency基于速查表（预先计算9种layer-wise计算数据）。Stochastic super net是每一层都让9中架构并联，基于可微分的GumbelSoftmax训练整个super net,根据训练结果Pθ设计网络架构。
