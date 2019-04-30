@@ -28,6 +28,17 @@ https://medium.com/@santiagof/auto-is-the-new-black-google-automl-microsoft-auto
 【扩展阅读】连续域结构搜索
 
   - [DARTS: Differentiable Architecture Search](https://arxiv.org/pdf/1806.09055.pdf)
+  
+- ICLR2019论文，麻省理工学院提出ProxylessNAS。NAS的巨大搜索空间和proxy tasks代理训练，影响NAS的进一步发展。DARTS基于梯度下降解决了搜索空间问题，本文重点在解决proxy tasks，
+既直接学习目标训练集和目标硬件平台的网络架构（为不同数据集，不同硬件平台定制学习不同的网络架构？）。
+1、Proxyless。论文首先构建super network（包括所有分支的搜索空间），把 NAS 当作一个 Path level pruning 问题，训练后
+pruning冗余的路径。为了解决显存占用和搜索空间线性增长的问题，将路径上的arch parameter二值化（todolist：复习BinaryConnect），在搜索时仅有一条路径处于激活状态，将显存复杂度从O(n)降低到O(1)。
+2、latency。论文引入基于latency estimation model的损失函数，可以通过梯度优化的方法建模。基于Monte-Carlo的REINFORCE 训练binarized weights。
+论文对比搜索架构实现的GPU/CPU/mobile model，提出几个模型设计准则：GPU prefers shallow and wide model with early pooling; CPU prefers deep and narrow model with late pooling. 
+Pooling layers prefer large and wide kernel. Early layers prefer small kernel. Late layers prefer large kernel.
+论文从pruning角度解决NAS搜索问题，将NAS和compression连接在一起，compression领域和RL领域很多算法都可以应用在NAS。
+
+  -- [ProxylessNAS: Direct Neural Architecture Search on Target Task and Hardware](https://arxiv.org/pdf/1812.00332.pdf)
 
 
 - CVPR2019论文，加州大学伯克利分校,普林斯顿大学和Facebook联合提出一种NAS搜索方法。首先定义网络的框架结构和9种layer-wise的搜索空间，定义Latency-Aware Loss Function∝cross-entropy &Latency,
