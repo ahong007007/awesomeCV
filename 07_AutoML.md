@@ -40,7 +40,13 @@ Pooling layers prefer large and wide kernel. Early layers prefer small kernel. L
 
   -- [ProxylessNAS: Direct Neural Architecture Search on Target Task and Hardware](https://arxiv.org/pdf/1812.00332.pdf)
 
+- arxiv论文，同济大学和华为诺亚联合提出P-DARTS，基于DARTS基础上改进的NAS方法。论文认为DARTS的搜索和评估架构不一致(depth gaps),导致学习能力降低(貌似performance没有较大提升)。提出策略：
+在搜索过程中渐进式增加网络深度，使得搜索网络深度和评估网络深度一致。
 
+缺点：基于梯度下降的算法在搜索时间上显著降低(0.3 GPU days)，但是在准确率和实时性貌似没有质的改进(1%以内的提升很难说是训练策略的提升)，话说增加/或减少GPU搜索与训练时间，target是performance。
+
+  - [Progressive Differentiable Architecture Search:Bridging the Depth Gap between Search and Evaluation](https://arxiv.org/pdf/1904.12760.pdf)
+  
 - CVPR2019论文，加州大学伯克利分校,普林斯顿大学和Facebook联合提出一种NAS搜索方法。首先定义网络的框架结构和9种layer-wise的搜索空间，定义Latency-Aware Loss Function∝cross-entropy &Latency,
 cross-entropy计算精度，Latency基于速查表（预先计算9种layer-wise计算数据）。Stochastic super net是每一层都让9中架构并联，基于可微分的GumbelSoftmax训练整个super net,根据训练结果Pθ设计网络架构。
 这种可微分方式比RL方式快速很多。
@@ -115,9 +121,21 @@ Additive Margin Softmax LossArcFace Loss等）。论文基于强化学习的NAS�
 
   - [AlphaX: eXploring Neural Architectures with Deep Neural Networks and Monte Carlo Tree Search](https://arxiv.org/pdf/1903.11059.pdf)
 
+# Graph CNN
+
+- 2019ICLR论文，Uber等联合提出，基于Graph CNN实现的NAS,性能虽然没有太惊艳，但是基于Graph CNN应该有更广阔用处。
+
+[Graph HyperNetworks for Neural Architecture Search](https://arxiv.org/pdf/1810.05749.pdf)
+
+# survey/overview/review
+
+- 机器学习的survey，和Neural Architecture Search不相关。
+
+  - [Survey on Automated Machine Learning](https://arxiv.org/pdf/1904.12054.pdf)
+
 ## Benchmark on ImageNet
 
-| Architecture       | Top-1 (%) | Top-5 (%) | Params (M) | +x (M) | GPU | Search cost(Days/GPU hours) |Search method | Search space |
+| Architecture       | Top-1 (%) | Top-5 (%) | Params (M) | +x (M) | GPU | Search cost(Days/GPU hours) |
 | ------------------ | --------- | --------- | ---------- | ------ | -   | -    |
 | [Inception-v1](https://arxiv.org/pdf/1409.4842.pdf)       | 30.2      | 10.1      | 6.6        | 1448   | -   | -    |
 | [MobileNet-v1](https://arxiv.org/abs/1704.04861)       | 29.4      | 10.5      | 4.2        | 569    | -   | -    |
