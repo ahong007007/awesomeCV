@@ -135,8 +135,8 @@ Additive Margin Softmax LossArcFace Loss等）。论文基于强化学习的NAS�
 
 ## Benchmark on ImageNet
 
-| Architecture       | Top-1 (%) | Top-5 (%) | Params (M) | +x (M) | GPU | Search cost(Days/GPU hours) |
-| ------------------ | --------- | --------- | ---------- | ------ | -   | -    |
+| Architecture       | Top-1 (%) | Top-5 (%) | Params (M) | +x (M) | GPU | Search cost |
+| --- | --- | --- | --- | --- | ---   | ---    |
 | [Inception-v1](https://arxiv.org/pdf/1409.4842.pdf)       | 30.2      | 10.1      | 6.6        | 1448   | -   | -    |
 | [MobileNet-v1](https://arxiv.org/abs/1704.04861)       | 29.4      | 10.5      | 4.2        | 569    | -   | -    |
 | [ShuffleNet](http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0642.pdf)         | 26.3      | -         | ~5         | 524    | -   | -    |
@@ -152,4 +152,3 @@ Additive Margin Softmax LossArcFace Loss等）。论文基于强化学习的NAS�
 | [DARTS-V2](https://arxiv.org/abs/1806.09055)           | 26.9      | 9.0       | 4.9        | 595    |  1  |  1   |
 | [GDAS](https://raw.githubusercontent.com/D-X-Y/GDAS/master/data/GDAS.pdf) | 26.0      | 8.5       | 5.3        | 581    |  1  |  0.21   |
 | [RandWire-WS](https://arxiv.org/pdf/1904.01569.pdf)        | 25.3±0.25 | 7.8       | 5.6±1      |583±6.2 |  -  |   -     |
-
