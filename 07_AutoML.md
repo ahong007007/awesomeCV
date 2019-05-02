@@ -9,6 +9,22 @@ https://medium.com/@santiagof/auto-is-the-new-black-google-automl-microsoft-auto
 
 ## classifier
 
+- 2017 ICLR论文。google 首次尝试使用NAS构造CNN模型，基于RNN和强化学习的思路，训练和测试集CIFAR-10。RNN作为控制器，生成变长字符串，控制child network网络模型的连接。
+child network在验证数据集反馈准确率作为reward信息，计算策略的梯度更新控制器。重复以上过程，控制器将学习如何随着时间的推移改进其搜索。
+论文同时提出固定搜索空间(滤波器宽度/高度[1, 3, 5, 7]，滤波器个数[24,36,48,64]),增加跳跃连接等设计方法。
+  
+  google是强化学习的引领者，基于强化学习生成神经网络模型NAS-CNN和NAS-RNN两个架构，虽然数据集仅为CIFAR-10,作为行业开创者使自动生成网络模型成为可能。另外使用800块GPU,
+  一般实验室即使有类似idea也难以实施。
+
+  - [Neural Architecture Search with Reinforcement Learning](https://arxiv.org/pdf/1611.01578.pdf)
+
+- 继NAS之后，Google又一力作NASNet。论文提出proxy dataset CIFAR-10，通过堆叠训练的Normal Cell和Reduction Cell，生成在ImageNet classification、mobile network和COCO Object detection数据集，
+state-of-art性能。论文实验部分对比Random search网络结构方式有显著优势。
+
+  特点：固定cell,每个cell内部学习5个block operation，cnn可以由同构cell进行堆叠而构成。计算量大，500 GPU*4days。结构不规则，特征由RNN学习。
+
+  -- [Learning Transferable Architectures for Scalable Image Recognition](https://arxiv.org/pdf/1707.07012.pdf)
+
 - Google提出，ICML2018论文。不太了解NAS基于梯度优化的原理，所以追溯相关论文加深理解。论文首先构架one-shot model（FBNet提到的super net），训练包含搜索空间的所有卷积路径。
 评估时随机zero out r^(1/k)个分支，并评估舍弃对网络性能影响较小的分支，Re-train the most promising architectures。论文中drop也是按照一定策略进行。论文基于KL divergence
 论证less/most important operations假设的合理性。#todolist:机器学习kl理论基础，GumbelSoftmax为什么可代替random dropout.
@@ -43,7 +59,7 @@ Pooling layers prefer large and wide kernel. Early layers prefer small kernel. L
 - arxiv论文，同济大学和华为诺亚联合提出P-DARTS，基于DARTS基础上改进的NAS方法。论文认为DARTS的搜索和评估架构不一致(depth gaps),导致学习能力降低(貌似performance没有较大提升)。提出策略：
 在搜索过程中渐进式增加网络深度，使得搜索网络深度和评估网络深度一致。
 
-缺点：基于梯度下降的算法在搜索时间上显著降低(0.3 GPU days)，但是在准确率和实时性貌似没有质的改进(1%以内的提升很难说是训练策略的提升)，话说增加/或减少GPU搜索与训练时间，target是performance。
+  缺点：基于梯度下降的算法在搜索时间上显著降低(0.3 GPU days)，但是在准确率和实时性貌似没有质的改进(1%以内的提升很难说是训练策略的提升)，话说增加/或减少GPU搜索与训练时间，target是performance。
 
   - [Progressive Differentiable Architecture Search:Bridging the Depth Gap between Search and Evaluation](https://arxiv.org/pdf/1904.12760.pdf)
   
