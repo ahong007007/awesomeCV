@@ -5,10 +5,14 @@
 Deep Learning on Graphs: A Survey.[pdf](https://arxiv.org/pdf/1812.04202.pdf)
 
 Graph Neural Networks:A Review of Methods and Applications.[pdf](https://arxiv.org/pdf/1812.08434.pdf)
-# Video Classification
-I Know the Relationships: Zero-Shot Action Recognition via Two-Stream Graph Convolutional Networks and Knowledge Graphs
-.[pdf]()
 
+- ICLR2019论文。理论证明GCN的强大
+
+  - [How powerful are graph neural networks](https://arxiv.org/pdf/1810.00826.pdf)
+  
+- GCN kernel介绍
+  - [Graph Kernels: A Survey](https://arxiv.org/pdf/1904.12218.pdf)
+  
 # Classification
 
 1、CVPR 2019论文，中山大学和加利福尼亚大学洛杉矶分校联合提出，主要提出Graph CNN代替CNN实现分类和分割等计算机视觉任务。论文用数学定义
@@ -53,6 +57,16 @@ Fast Interactive Object Annotation with Curve-GCN.[pdf](https://arxiv.org/pdf/19
 
 [semantic Graph Convolutional Networks for 3D Human Pose Regression](https://arxiv.org/pdf/1904.03345.pdf)
 
+
+# Video Classification
+
+[I Know the Relationships: Zero-Shot Action Recognition via Two-Stream Graph Convolutional Networks and Knowledge Graphs]()
+
+
+# about awesome
+
+- [naganandy/graph-based-deep-learning-literature](https://github.com/naganandy/graph-based-deep-learning-literature)
+
 # 待记录
 
 Can GCNs Go as Deep as CNNs?.[pdf](https://arxiv.org/pdf/1904.03751.pdf)
@@ -60,6 +74,7 @@ Can GCNs Go as Deep as CNNs?.[pdf](https://arxiv.org/pdf/1904.03751.pdf)
 Deep Learning on Graphs For Computer Vision — CNN, RNN, and GNN
 
 https://medium.com/@utorontomist/deep-learning-on-graphs-for-computer-vision-cnn-rnn-and-gnn-c114d6004678
+
 
 
 
