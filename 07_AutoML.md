@@ -69,7 +69,7 @@ cross-entropy计算精度，Latency基于速查表（预先计算9种layer-wise�
 
  - [FBNet: Hardware-Aware Efficient ConvNet Design via Differentiable Neural Architecture Search](https://arxiv.org/pdf/1812.03443.pdf)
 
-- CVPR2019论文，悉尼科技大学和百度联合提出GDAS(Differentiable Architecture Sampler)。搜索空间是基于FBNet提出的Stochastic super net，梯度运算同样基于GumbelSoftmax。论文改进在训练方式：首先CIFAR训练，选择normal cell用于ImageNet网络设计。
+- CVPR2019论文(oral)，悉尼科技大学和百度联合提出GDAS(Differentiable Architecture Sampler)。搜索空间是基于FBNet提出的Stochastic super net，梯度运算同样基于GumbelSoftmax。论文改进在训练方式：首先CIFAR训练，选择normal cell用于ImageNet网络设计。
 normal cell输入为two previous cells。Reduction Cell是人工设计。论文的加速设计是基于hij(one-hot vector),既计算BP时只有一个支路。轮设计的GDAS (FRC) 在V100 GPU仅运行4个小时，远远高于state-of-art
 的搜索效率。
 
@@ -79,12 +79,12 @@ normal cell输入为two previous cells。Reduction Cell是人工设计。论文�
 
 - 中科院自动化所和旷视联合提出，Object Detection with FPN on COCO优于ResNet101,但是FLOPs比ResNet50低。基于ShuffleNetV2的架构也有较好的表现。
 
-DetNAS: Neural Architecture Search on Object Detection [PDF](https://arxiv.org/pdf/1903.10979v1.pdf)
+  - [DetNAS: Neural Architecture Search on Object Detection](https://arxiv.org/pdf/1903.10979v1.pdf)
 
 - Google基于AutoML提出Detection模型，基于RetinaNet网络，解决FPN多尺度金字塔问题。通过Neural Architecture Search搜索各种类型的
 top-down,bottom-up特征层的连接方式（还是连连看），取得state-of-art的mAP同时降低推断时间。
 
-  - NAS-FPN: Learning Scalable Feature Pyramid Architecture for Object Detection.[pdf](https://arxiv.org/pdf/1904.07392.pdf)
+  - [NAS-FPN: Learning Scalable Feature Pyramid Architecture for Object Detection](https://arxiv.org/pdf/1904.07392.pdf)
 
 ## Recognition
 
@@ -107,22 +107,12 @@ Additive Margin Softmax LossArcFace Loss等）。论文基于强化学习的NAS�
 
   - [Auto-DeepLab:Hierarchical Neural Architecture Search for Semantic Image Segmentation](https://arxiv.org/pdf/1901.02985.pdf)
 
-# Pruning
-
-- 清华大学和旷视科技提出，基于MobileNet V1/V2 网络的自动化通道剪枝，相比AMC和NetAdapt有提升
-
-  - MetaPruning: Meta Learning for Automatic Neural Network Channel Pruning [PDF](https://arxiv.org/pdf/1903.10258.pdf)
-
-
-- 伊利诺伊大学厄巴纳-香槟分校提出的以及channel select算法，论文对mobilenetv1/2 MNasNet 性能提高，推断延迟降低。
-
-  - Network Slimming by Slimmable Networks:Towards One-Shot Architecture Search for Channel Numbers. [PDF](https://arxiv.org/pdf/1903.11728.pdf)
 
 ## ReID
 
 -澳大利亚欧缇莫的大学
 
-  - Auto-ReID: Searching for a Part-aware ConvNet for Person Re-Identification [PDF](https://arxiv.org/pdf/1903.09776.pdf)
+  - [Auto-ReID: Searching for a Part-aware ConvNet for Person Re-Identification](https://arxiv.org/pdf/1903.09776.pdf)
 
 
 # Super-Resolution 
@@ -141,13 +131,18 @@ Additive Margin Softmax LossArcFace Loss等）。论文基于强化学习的NAS�
 
 - 2019ICLR论文，Uber等联合提出，基于Graph CNN实现的NAS,性能虽然没有太惊艳，但是基于Graph CNN应该有更广阔用处。
 
-[Graph HyperNetworks for Neural Architecture Search](https://arxiv.org/pdf/1810.05749.pdf)
+  - [Graph HyperNetworks for Neural Architecture Search](https://arxiv.org/pdf/1810.05749.pdf)
 
 # survey/overview/review
 
 - 机器学习的survey，和Neural Architecture Search不相关。
 
   - [Survey on Automated Machine Learning](https://arxiv.org/pdf/1904.12054.pdf)
+
+
+# awesome
+
+- [D-X-Y/Awesome-NAS](https://github.com/D-X-Y/Awesome-NAS)
 
 ## Benchmark on ImageNet
 
