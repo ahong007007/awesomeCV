@@ -25,6 +25,15 @@ state-of-art性能。论文实验部分对比Random search网络结构方式有�
 
   -- [Learning Transferable Architectures for Scalable Image Recognition](https://arxiv.org/pdf/1707.07012.pdf)
 
+
+- Google 团队提出MnasNet，使用强化学习的思路，提出基于移动终端的CNN模型的神经网络自动搜索方法。论文将实时性结合到主要搜索目标中，
+基于强化学习，将实时性和准确率作为 reward，并且直接使用手机平台（Pixel phones 等）运行模型，测量实时性和准确率，另外根据Params更新A1-A3模型。
+论文还提出一种新的分解层次搜索空间，既每个block单独搜索。在ImageNet(MnasNet)以及COCO(MnasNet-A1 + SSDLite)均取得state-of-art水平，（相比mobileNetv2 
+，速度和准确率均超越）。在搜索空间生成8k个模型，只有15个模型在ImageNet完整训练，1个模型在COCO训练。
+
+  - [MnasNet: Platform-Aware Neural Architecture Search for Mobile](https://arxiv.org/pdf/1807.11626.pdf)
+  
+
 - Google提出，ICML2018论文。不太了解NAS基于梯度优化的原理，所以追溯相关论文加深理解。论文首先构架one-shot model（FBNet提到的super net），训练包含搜索空间的所有卷积路径。
 评估时随机zero out r^(1/k)个分支，并评估舍弃对网络性能影响较小的分支，Re-train the most promising architectures。论文中drop也是按照一定策略进行。论文基于KL divergence
 论证less/most important operations假设的合理性。#todolist:机器学习kl理论基础，GumbelSoftmax为什么可代替random dropout.
