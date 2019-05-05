@@ -115,25 +115,28 @@ Additive Margin Softmax LossArcFace Loss等）。论文基于强化学习的NAS�
   - [Auto-ReID: Searching for a Part-aware ConvNet for Person Re-Identification](https://arxiv.org/pdf/1903.09776.pdf)
 
 
-# Super-Resolution 
+## Super-Resolution 
 
 - 小米AI团队团队提出的超分辨率模型。
 
   - [Fast, Accurate and Lightweight Super-Resolution with Neural Architecture Search](https://arxiv.org/pdf/1901.07261.pdf)
 
-# Architecture
 
-- facebook开源框架，基于MCTS和DNN,解决分类，目标检测，风格迁移，图像描述4个任务。
-
-  - [AlphaX: eXploring Neural Architectures with Deep Neural Networks and Monte Carlo Tree Search](https://arxiv.org/pdf/1903.11059.pdf)
-
-# Graph CNN
+## Graph CNN
 
 - 2019ICLR论文，Uber等联合提出，基于Graph CNN实现的NAS,性能虽然没有太惊艳，但是基于Graph CNN应该有更广阔用处。
 
   - [Graph HyperNetworks for Neural Architecture Search](https://arxiv.org/pdf/1810.05749.pdf)
 
-# survey/overview/review
+
+## Architecture
+
+- facebook开源框架，基于MCTS和DNN,解决分类，目标检测，风格迁移，图像描述4个任务。
+
+  - [AlphaX: eXploring Neural Architectures with Deep Neural Networks and Monte Carlo Tree Search](https://arxiv.org/pdf/1903.11059.pdf)
+
+
+## survey/overview/review
 
 - NAS一篇综述，从Search Space，search strategy performance论述NAS.
 
@@ -144,9 +147,18 @@ Additive Margin Softmax LossArcFace Loss等）。论文基于强化学习的NAS�
   - [Survey on Automated Machine Learning](https://arxiv.org/pdf/1904.12054.pdf)
 
 
-# awesome
+## awesome
 
 - [D-X-Y/Awesome-NAS](https://github.com/D-X-Y/Awesome-NAS)
+
+
+## Blogs
+- [What’s the deal with Neural Architecture Search?](https://determined.ai/blog/neural-architecture-search/)
+- [Google Could AutoML](https://cloud.google.com/vision/automl/docs/beginners-guide)
+- [PocketFlow](https://pocketflow.github.io/)
+- [AutoML Challenge](http://automl.chalearn.org/)
+- [AutoDL Challenge](https://autodl.chalearn.org/)
+
 
 ## Benchmark on ImageNet
 
