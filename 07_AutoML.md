@@ -135,6 +135,10 @@ Additive Margin Softmax LossArcFace Loss等）。论文基于强化学习的NAS�
 
 # survey/overview/review
 
+- NAS一篇综述，从Search Space，search strategy performance论述NAS.
+
+  - [Neural Architecture Search: A Survey](https://arxiv.org/pdf/1808.05377.pdf)
+
 - 机器学习的survey，和Neural Architecture Search不相关。
 
   - [Survey on Automated Machine Learning](https://arxiv.org/pdf/1904.12054.pdf)
