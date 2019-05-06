@@ -1,3 +1,5 @@
+
+
 # Detection
 ## NMS系列去重算法
 
@@ -29,43 +31,52 @@ PFLD:A Practical Facial Landmark Detector.[pdf](https://arxiv.org/pdf/1902.10859
 
 ## object Detection
 
-1、国防科技大学和旷视科技联合提出，典型的RPN+FPN架构，backbone基于SNet,增加Context Enhancement
+- 国防科技大学和旷视科技联合提出，典型的RPN+FPN架构，backbone基于SNet,增加Context Enhancement
 Module(FPN多尺度分辨率特征融合)和spatial attention module（RPN->1x1卷积实现空间注意力模型），
 实验结果相对于MobileNetV2-SSDLite速度和精度均有提高。
 
-ThunderNet: Towards Real-time Generic Object Detection.[PDF](https://arxiv.org/pdf/1903.11752.pdf)
+  - ThunderNet: Towards Real-time Generic Object Detection.[PDF](https://arxiv.org/pdf/1903.11752.pdf)
 
-2、CVPR2019论文、商汤，浙江大学等联合提出的Libra R-CNN。motivation来自于作者认为的三个不平衡：数据不平衡，特征不平衡，
+- CVPR2019论文、商汤，浙江大学等联合提出的Libra R-CNN。motivation来自于作者认为的三个不平衡：数据不平衡，特征不平衡，
 损失函数不平衡。数据不平衡采用：N总样本根据IoU分成K个子样本,增加困难样本的采样概率。特征不平衡采用：ResNet Identity 和
 non-local模块修正语义特征。损失函数不平衡：论文设计Balanced L1 Loss（**待验证和理解**）。
 
-论文提出的三个不平衡，可以认为是3个trick，可以集成到其他模型，改进检测的精度。
+  论文提出的三个不平衡，可以认为是3个trick，可以集成到其他模型，改进检测的精度。
 
-Libra R-CNN: Towards Balanced Learning for Object Detection.[pdf](https://arxiv.org/pdf/1904.02701.pdf)
+  - Libra R-CNN: Towards Balanced Learning for Object Detection.[pdf](https://arxiv.org/pdf/1904.02701.pdf)
 
-3.阿德莱德大学沈春华项目组提出的目标检测方向新论文FCOS,去除传统目标检测的FPN操作,添加Center-ness分支，直接anchor free预测
+- 阿德莱德大学沈春华项目组提出的目标检测方向新论文FCOS,去除传统目标检测的FPN操作,添加Center-ness分支，直接anchor free预测
 (l; t; r; b) 四维向量（节省anchor相关的超参数设定以及计算），依赖于NMS，直接生成目标检测框。论文提出的FCOS希望可以应用于
 后续的语义分割，姿态估计等领域。论文的性能在one-stage领域state-of-art，节省大量FPN的计算，但是没有任何关于速度的指标，比较遗憾。
 
-FCOS: Fully Convolutional One-Stage Object Detection.[pdf](https://arxiv.org/pdf/1904.01355.pdf)
+  - FCOS: Fully Convolutional One-Stage Object Detection.[pdf](https://arxiv.org/pdf/1904.01355.pdf)
+
+- 清华大学提出HAR-Net，在single-stage 目标检测框架FPN-Retina-Net基础上改进，混合实现attention mechanism，包括spatial attention, channel attention
+和aligned attention。spatial attention通过堆叠空洞卷积实现增加感受视野，channel attention通过squeeze-excitation (SE) block实现，aligned attention
+通过deformable convolution实现。论文思路清晰，实现单阶段目标检测模型性能的state-of-art(45.8% mAP COCO)，并超越two stage Cascade RCNN。论文没有实时性的数据。
+
+  - [HAR-Net: Joint Learning of Hybrid Attention for Single-stage Object Detection](https://arxiv.org/pdf/1904.11141.pdf)
+
+
+
 ## other
 
-2、商汤和香港中文大学联合提出，ICLR2019论文，实在没看懂啥意思。
+- 商汤和香港中文大学联合提出，ICLR2019论文，实在没看懂啥意思。
 
-Feature Intertwiner for Object Detection. [PDF](https://arxiv.org/pdf/1903.11851.pdf)
+  - Feature Intertwiner for Object Detection. [PDF](https://arxiv.org/pdf/1903.11851.pdf)
 
-3.中国科学院大学,牛津大学和华为联合提出one-stage模型，MS-COCO dataset数据集测试，达到47mAP（逼近two-stage PANet准确率）,超越所有one-stage模型。论文模型backbone
+- 中国科学院大学,牛津大学和华为联合提出one-stage模型，MS-COCO dataset数据集测试，达到47mAP（逼近two-stage PANet准确率）,超越所有one-stage模型。论文模型backbone
 基于Hourglass，提出Center pooling，Corner pooling，Cascade corner pooling（论文的triplet）确定目标的边界。
 NVIDIA Tesla P100 GPU运行，CenterNet511-104 340ms/image，比CornerNet511-104 300ms略慢。
 
-CenterNet: Object Detection with Keypoint Triplets.[pdf](https://arxiv.org/pdf/1904.08189.pdf)
+  - CenterNet: Object Detection with Keypoint Triplets.[pdf](https://arxiv.org/pdf/1904.08189.pdf)
 
-4.普林斯顿大学提出CornerNet改进版的目标检测模型，CornerNet-Saccade比CornerNet提速6倍且性能提升1% AP,CornerNet-Squeeze比YOLOv3更快也更准确。
+- 普林斯顿大学提出CornerNet改进版的目标检测模型，CornerNet-Saccade比CornerNet提速6倍且性能提升1% AP,CornerNet-Squeeze比YOLOv3更快也更准确。
 论文首先把图片Downsizing，经过hourglass网络与Attention maps生成候选区域并裁剪，对每个裁剪区域再经过hourglass生成目标检测框。最后对所有检测框合并。
 论文使用缩放代替CNN的降采样，较少运算量，但是缩小图像的分辨率对小目标的检测准确率应该有影响吧。个人感觉比CenterNet实用性更好：要么选择准确率高的two-stage,
 要么选择速度和准确率平衡的轻量化网络。感叹目标检测领域的飞速发展。CV行业在分类和检测日新月异。
 
-CornerNet-Lite: Efficient Keypoint Based Object Detection.[pdf](https://arxiv.org/pdf/1904.08900.pdf) [github](https://github.com/princeton-vl/CornerNet-Lite)
+  CornerNet-Lite: Efficient Keypoint Based Object Detection.[pdf](https://arxiv.org/pdf/1904.08900.pdf) [github](https://github.com/princeton-vl/CornerNet-Lite)
 
 # tricks
 
@@ -99,4 +110,7 @@ UnitBox，IoU-Net，GIoU
 
 Adaptive NMS: Refining Pedestrian Detection in a Crowd.[pdf](https://arxiv.org/pdf/1904.03629.pdf)
 
+
+CVPR2019
+[All You Need is a Few Shifts: Designing Efficient Convolutional Neural Networks for Image Classification](https://arxiv.org/pdf/1903.05285.pdf)
 
