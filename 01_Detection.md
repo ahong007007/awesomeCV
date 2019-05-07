@@ -57,7 +57,10 @@ non-local模块修正语义特征。损失函数不平衡：论文设计Balanced
 
   - [HAR-Net: Joint Learning of Hybrid Attention for Single-stage Object Detection](https://arxiv.org/pdf/1904.11141.pdf)
 
+- 中国科学院大学等提出Trident Networks，既模型backbone包含的tricks:Multi-branch Block,Weight sharing among branches,Scale-aware Training Scheme(不同尺度目标
+位于不同分支)，模型最终集万千tricks于一身，基于ResNet-101-Deformable，在COCO test-dev set取得state-of-art，48.4 mAP。
 
+  - [Scale-Aware Trident Networks for Object Detection](https://arxiv.org/pdf/1901.01892v1.pdf)
 
 ## other
 
@@ -77,6 +80,13 @@ NVIDIA Tesla P100 GPU运行，CenterNet511-104 340ms/image，比CornerNet511-104
 要么选择速度和准确率平衡的轻量化网络。感叹目标检测领域的飞速发展。CV行业在分类和检测日新月异。
 
   CornerNet-Lite: Efficient Keypoint Based Object Detection.[pdf](https://arxiv.org/pdf/1904.08900.pdf) [github](https://github.com/princeton-vl/CornerNet-Lite)
+
+## framwork
+
+[simpledet](https://github.com/tusimple/simpledet)
+mmdetection
+maskrcnn-benchmark
+
 
 # tricks
 
