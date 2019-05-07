@@ -7,6 +7,21 @@ Auto is the new black — Google AutoML, Microsoft Automated ML, AutoKeras a
 
 https://medium.com/@santiagof/auto-is-the-new-black-google-automl-microsoft-automated-ml-autokeras-and-auto-sklearn-80d1d3c3005c
 
+
+## survey/overview/review
+
+- NAS一篇综述，从Search Space，search strategy performance论述NAS.
+
+  - [Neural Architecture Search: A Survey](https://arxiv.org/pdf/1808.05377.pdf)
+
+- 机器学习的survey，和Neural Architecture Search不相关。
+
+  - [Survey on Automated Machine Learning](https://arxiv.org/pdf/1904.12054.pdf)
+
+- IBM Martin团队对NAS总结。
+
+  - [A Survey on Neural Architecture Search](https://arxiv.org/pdf/1905.01392.pdf)
+  
 ## classifier
 
 - 2017 ICLR论文。google 首次尝试使用NAS构造CNN模型，基于RNN和强化学习的思路，训练和测试集CIFAR-10。RNN作为控制器，生成变长字符串，控制child network网络模型的连接。
@@ -142,18 +157,6 @@ Additive Margin Softmax LossArcFace Loss等）。论文基于强化学习的NAS�
 - facebook开源框架，基于MCTS和DNN,解决分类，目标检测，风格迁移，图像描述4个任务。
 
   - [AlphaX: eXploring Neural Architectures with Deep Neural Networks and Monte Carlo Tree Search](https://arxiv.org/pdf/1903.11059.pdf)
-
-
-## survey/overview/review
-
-- NAS一篇综述，从Search Space，search strategy performance论述NAS.
-
-  - [Neural Architecture Search: A Survey](https://arxiv.org/pdf/1808.05377.pdf)
-
-- 机器学习的survey，和Neural Architecture Search不相关。
-
-  - [Survey on Automated Machine Learning](https://arxiv.org/pdf/1904.12054.pdf)
-
 
 ## awesome
 
