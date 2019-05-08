@@ -8,7 +8,7 @@ Auto is the new black — Google AutoML, Microsoft Automated ML, AutoKeras a
 https://medium.com/@santiagof/auto-is-the-new-black-google-automl-microsoft-automated-ml-autokeras-and-auto-sklearn-80d1d3c3005c
 
 
-## survey/overview/review
+# survey/overview/review
 
 - NAS一篇综述，从Search Space，search strategy performance论述NAS.
 
@@ -97,6 +97,18 @@ normal cell输入为two previous cells。Reduction Cell是人工设计。论文�
 的搜索效率。
 
   - [Searching for A Robust Neural Architecture in Four GPU Hours](https://raw.githubusercontent.com/D-X-Y/GDAS/master/data/GDAS.pdf)
+  
+- google最新设计MobileNetv3,应用于移动端CPU。网络的架构基于NAS实现的MnasNet，根据图像分辨率，准确率和实时性设计两个模型MobileNetV3-Large和MobileNetV3-Small。在分类，目标检测和语义分割验证performance。
+MobileNetv3用到的tricks:
+1、backbone基于MobileNetV2 + Squeeze-and-Excite(扩张系数1/4)。SENet继残差设计之后，成为神经网络另外一个标配。
+2、复用MnasNet-A1框架。MnasNet-A1使用64 TPUv2*4.5days，采样 8K 模型，精选top15在ImageNet模型训练。论文中对MnasNet LAT权重系数w改进。tensorflow已开源MnasNet(https://github.com/tensorflow/tpu/tree/master/models/official/mnasnet),github也有pytorch keras等实现。
+3、NetAdapt也是google提出，在约束latency条件下，序列方式微调每一层的网络结构，暂时不了解细节。
+4、Redesigning Expensive Layers。对earlier layers和last layers裁剪，initial  banks的32个滤波器减少到16个滤波器。
+5、Nonlinearities。论文部分block用h-swish{x*ReLU6(x + 3)/6}代替swish{x*sigmoid(x)}。swish和h-swish在部署时没有准确率差别，但是更容易实现软件和硬件的优化，量化。论文模型在deeper层使用h-swish。
+6、语义分割的R-ASPP模块，是由ASPP(Atrous Spatial Pyramid Pooling)改进，主要包括1*1 卷积和avg-pooling实现。
+MobileNetV3使用tricks较多，但是模型实时性和准确率都是state-of-art，设计过程复杂，使用简单有效。
+
+  - [Searching for MobileNetV3](https://arxiv.org/pdf/1905.02244.pdf)
 
 ## Detection
 
@@ -157,6 +169,10 @@ Additive Margin Softmax LossArcFace Loss等）。论文基于强化学习的NAS�
 - facebook开源框架，基于MCTS和DNN,解决分类，目标检测，风格迁移，图像描述4个任务。
 
   - [AlphaX: eXploring Neural Architectures with Deep Neural Networks and Monte Carlo Tree Search](https://arxiv.org/pdf/1903.11059.pdf)
+
+## Hyperparameter Optimization
+
+[Searching for Activation Functions](https://arxiv.org/pdf/1710.05941.pdf)
 
 ## awesome
 
