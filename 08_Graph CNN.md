@@ -2,9 +2,13 @@
 
 # overview
 
-Deep Learning on Graphs: A Survey.[pdf](https://arxiv.org/pdf/1812.04202.pdf)
+- [Deep Learning on Graphs: A Survey](https://arxiv.org/pdf/1812.04202.pdf)
 
-Graph Neural Networks:A Review of Methods and Applications.[pdf](https://arxiv.org/pdf/1812.08434.pdf)
+- [Graph Neural Networks:A Review of Methods and Applications](https://arxiv.org/pdf/1812.08434.pdf)
+
+- [A Comprehensive Survey on Graph Neural Networks](https://arxiv.org/pdf/1901.00596v1.pdf)
+
+
 
 - ICLR2019论文。理论证明GCN的强大
 

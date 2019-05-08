@@ -1,4 +1,4 @@
-[1810.05270] Rethinking the Value of Network Pruning
+Rethinking the Value of Network Pruning[1810.05270] 
 
 channel pruning with LASSO-based channel selection [PDF](https://arxiv.org/pdf/1707.06168.pdf)
 
@@ -55,17 +55,21 @@ FLOPS减少53.5%,TOP1准确率降低1.32%。
 
 # framework
 
-- 韩松提出AMC(AutoML for Model Compression) 
+- ECCV2018,韩松提出AMC(AutoML for Model Compression) 
 
   - [AMC: AutoML for Model Compression and Acceleration on Mobile Devices](https://arxiv.org/pdf/1802.03494.pdf)
 
-- ICML2019论文，google和微软提出CADNN，对标TVM tensorflow-lite等移动端压缩框架。论文仅有框架之前性能的对比，没有具体算法说明。
+- google和微软提出CADNN，对标TVM tensorflow-lite等移动端压缩框架。论文仅有框架之前性能的对比，没有具体算法说明。
 
   -- [26ms Inference Time for ResNet-50: Towards Real-Time Execution of all DNNs on Smartphone](https://arxiv.org/pdf/1905.00571.pdf)
 
 # people work
 
 - [MIT 韩松](https://songhan.mit.edu/publications/)
+
+# awesome
+
+[EfficientDNNs](https://github.com/MingSun-Tse/EfficientDNNs)
 
 # 待记录
 

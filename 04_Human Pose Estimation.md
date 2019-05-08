@@ -47,5 +47,10 @@ COCO，MPII test，PoseTrack2017取得较高的准确率，但是实时性避而
 
   - [Progressive Pose Attention Transfer for Person Image Generation](https://arxiv.org/pdf/1904.03349.pdf)
 
+
+# awesome&blog
+
+[An Overview of Human Pose Estimation with Deep Learning](https://medium.com/beyondminds/an-overview-of-human-pose-estimation-with-deep-learning-d49eb656739b)
+
 # 待处理
 

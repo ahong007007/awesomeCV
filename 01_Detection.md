@@ -19,15 +19,15 @@ Grid R-CNN [PDF](https://arxiv.org/pdf/1811.12030.pdf)
 
 ## 人脸检测
 
-1、天津大学、武汉大学、腾讯AI实验室提出的人脸检测模型，主要针对移动端设计（backbone MobileNet v2）
+- 天津大学、武汉大学、腾讯AI实验室提出的人脸检测模型，主要针对移动端设计（backbone MobileNet v2）
 在高通845上达到140fps的实时性。论文主要提出一个解决类别不均衡问题（侧脸、正脸、抬头、低头、表情、遮挡等各种类型）：
 增加困难类别和样本的损失函数权重。
 
-但是MobileNet v2的检测框架应该没有这么快，并且论文的预测特征点和3D旋转角时，使用全连接网络，计算量大，
-应该更耗时才对。论文只给出特征点预测，但是一张图片N个人，如何区分特征点属于何人？论文没有告知如何计算检测框。
-论文应该很多细节没有讲述清晰，应该是idea分拆，写成连续剧的节奏。
+  但是MobileNet v2的检测框架应该没有这么快，并且论文的预测特征点和3D旋转角时，使用全连接网络，计算量大，
+  应该更耗时才对。论文只给出特征点预测，但是一张图片N个人，如何区分特征点属于何人？论文没有告知如何计算检测框。
+  论文应该很多细节没有讲述清晰，应该是idea分拆，写成连续剧的节奏。
 
-PFLD:A Practical Facial Landmark Detector.[pdf](https://arxiv.org/pdf/1902.10859.pdf)
+  - PFLD:A Practical Facial Landmark Detector.[pdf](https://arxiv.org/pdf/1902.10859.pdf)
 
 ## object Detection
 
@@ -61,6 +61,12 @@ non-local模块修正语义特征。损失函数不平衡：论文设计Balanced
 位于不同分支)，模型最终集万千tricks于一身，基于ResNet-101-Deformable，在COCO test-dev set取得state-of-art，48.4 mAP。
 
   - [Scale-Aware Trident Networks for Object Detection](https://arxiv.org/pdf/1901.01892v1.pdf)
+
+
+## loss
+
+
+  - [Generalized Intersection over Union: A Metric and A Loss for Bounding Box Regression](https://arxiv.org/pdf/1902.09630.pdf)
 
 ## other
 
