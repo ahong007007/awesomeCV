@@ -174,6 +174,9 @@ Additive Margin Softmax LossArcFace Loss等）。论文基于强化学习的NAS�
 
 [Searching for Activation Functions](https://arxiv.org/pdf/1710.05941.pdf)
 
+## Loss Function
+(AM-LFS: AutoML for Loss Function Search)[https://arxiv.org/pdf/1905.07375.pdf]
+
 ## awesome
 
 - [D-X-Y/Awesome-NAS](https://github.com/D-X-Y/Awesome-NAS)
@@ -206,3 +209,4 @@ Additive Margin Softmax LossArcFace Loss等）。论文基于强化学习的NAS�
 | [DARTS-V2](https://arxiv.org/abs/1806.09055)           | 26.9      | 9.0       | 4.9        | 595    |  1  |  1   |
 | [GDAS](https://raw.githubusercontent.com/D-X-Y/GDAS/master/data/GDAS.pdf) | 26.0      | 8.5       | 5.3        | 581    |  1  |  0.21   |
 | [RandWire-WS](https://arxiv.org/pdf/1904.01569.pdf)        | 25.3±0.25 | 7.8       | 5.6±1      |583±6.2 |  -  |   -     |
+
