@@ -87,4 +87,6 @@ FPN->ResNet->ResNeXt->DLA->DenseNet->Res2Net
 
 1.[Troubleshooting Convolutional Neural Networks](https://gist.github.com/zeyademam/0f60821a0d36ea44eef496633b4430fc#before-troubleshooting)
 
+The Best and Most Current of Modern Natural Language Processing
+https://medium.com/huggingface/the-best-and-most-current-of-modern-natural-language-processing-5055f409a1d1
 
