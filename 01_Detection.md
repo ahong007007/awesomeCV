@@ -57,10 +57,13 @@ non-local模块修正语义特征。损失函数不平衡：论文设计Balanced
 
   - [HAR-Net: Joint Learning of Hybrid Attention for Single-stage Object Detection](https://arxiv.org/pdf/1904.11141.pdf)
 
-- 中国科学院大学等提出Trident Networks，既模型backbone包含的tricks:Multi-branch Block,Weight sharing among branches,Scale-aware Training Scheme(不同尺度目标
-位于不同分支)，模型最终集万千tricks于一身，基于ResNet-101-Deformable，在COCO test-dev set取得state-of-art，48.4 mAP。
+- 中国科学院大学等提出Trident Networks，既模型backbone包含的tricks:Multi-branch Block,Weight sharing among branches,Scale-aware Training Scheme(不同尺度目标位于不同分支)，模型最终集万千tricks于一身，基于ResNet-101-Deformable，在COCO test-dev set取得state-of-art，48.4 mAP。
 
   - [Scale-Aware Trident Networks for Object Detection](https://arxiv.org/pdf/1901.01892v1.pdf)
+  
+- 微软等提出GCNet(global context network),基于Non-Local Network（NLNet）和Squeeze-Excitation Network (SENet)集成版。论文验证对于Non-Local Network，不同的query points可得到一致的attention maps，因此可以简化NL模块为Context Modeling，结合Transform既为Global context (GC) block。个人认为Global context (GC) block是空间注意力机制的延伸。论文模型在集成X101+DCN++Cascade+GC r4，在COCO test-dev set取得state-of-art，48.4 mAP，再次证明集成的伟大。
+
+  - [GCNet: Non-local Networks Meet Squeeze-Excitation Networks and Beyond](https://arxiv.org/pdf/1904.11492v1.pdf)
 
 
 ## loss
