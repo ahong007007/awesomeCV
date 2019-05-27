@@ -55,6 +55,11 @@ state-of-art，达到论文提出的改变神经网络deeper和wider的目标。
 改进空间和时序注意力机制，检测模型基于华为提出的corner point和centroid point。
 
   - [Siamese Attentional Keypoint Network for High Performance Visual Tracking](https://arxiv.org/pdf/1904.10128.pdf)
+  
+  # Framework
+  
+  https://github.com/STVIR/pysot
+  
 # 待更新
 
 Martin大神新作，需要仔细研读
