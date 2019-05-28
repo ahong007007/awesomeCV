@@ -31,11 +31,19 @@ Grid R-CNN [PDF](https://arxiv.org/pdf/1811.12030.pdf)
 
 ## object Detection
 
+- ICCV2017论文，微软亚洲研究院代季峰等提出DCN(Deformable Convolutional Network),将固定位置的卷积改造为适应物体形变的可变形卷积。
+提出两个模块：deformable convolution 和deformable RoI pooling。所谓的deformable，是在原deformable convolution基础上增加可学习的offset(增加感受野范围)。同理RoI pooling计算上增加偏差实现deformable RoI pooling。论文提出的DCN俨然已经是目标检测领域刷分必备插件。
+
+  1.针对任意形变的目标，offset都一样？
+  2.x(p0+pn+Δpn)由于存在小数，通过双线性插值实现。G(q; p)·x(q)和双线性插值什么关系？
+  
+  -- [Deformable Convolutional Networks](https://arxiv.org/pdf/1703.06211.pdf)
+
 - 国防科技大学和旷视科技联合提出，典型的RPN+FPN架构，backbone基于SNet,增加Context Enhancement
 Module(FPN多尺度分辨率特征融合)和spatial attention module（RPN->1x1卷积实现空间注意力模型），
 实验结果相对于MobileNetV2-SSDLite速度和精度均有提高。
 
-  - ThunderNet: Towards Real-time Generic Object Detection.[PDF](https://arxiv.org/pdf/1903.11752.pdf)
+  - [ThunderNet: Towards Real-time Generic Object Detection](https://arxiv.org/pdf/1903.11752.pdf)
 
 - CVPR2019论文、商汤，浙江大学等联合提出的Libra R-CNN。motivation来自于作者认为的三个不平衡：数据不平衡，特征不平衡，
 损失函数不平衡。数据不平衡采用：N总样本根据IoU分成K个子样本,增加困难样本的采样概率。特征不平衡采用：ResNet Identity 和
@@ -43,13 +51,13 @@ non-local模块修正语义特征。损失函数不平衡：论文设计Balanced
 
   论文提出的三个不平衡，可以认为是3个trick，可以集成到其他模型，改进检测的精度。
 
-  - Libra R-CNN: Towards Balanced Learning for Object Detection.[pdf](https://arxiv.org/pdf/1904.02701.pdf)
+  - [Libra R-CNN: Towards Balanced Learning for Object Detection](https://arxiv.org/pdf/1904.02701.pdf)
 
 - 阿德莱德大学沈春华项目组提出的目标检测方向新论文FCOS,去除传统目标检测的FPN操作,添加Center-ness分支，直接anchor free预测
 (l; t; r; b) 四维向量（节省anchor相关的超参数设定以及计算），依赖于NMS，直接生成目标检测框。论文提出的FCOS希望可以应用于
 后续的语义分割，姿态估计等领域。论文的性能在one-stage领域state-of-art，节省大量FPN的计算，但是没有任何关于速度的指标，比较遗憾。
 
-  - FCOS: Fully Convolutional One-Stage Object Detection.[pdf](https://arxiv.org/pdf/1904.01355.pdf)
+  - [FCOS: Fully Convolutional One-Stage Object Detection](https://arxiv.org/pdf/1904.01355.pdf)
 
 - 清华大学提出HAR-Net，在single-stage 目标检测框架FPN-Retina-Net基础上改进，混合实现attention mechanism，包括spatial attention, channel attention
 和aligned attention。spatial attention通过堆叠空洞卷积实现增加感受视野，channel attention通过squeeze-excitation (SE) block实现，aligned attention
