@@ -1,17 +1,6 @@
 
 # Backbone
 
-## CNN 
-
-[Deformable Convolutional Networks](https://arxiv.org/pdf/1703.06211.pdf)
-
-SENet 
-DCN
-cascade
-GCNet
-框架，代码
-
-## Backbone
 - Res2Net,南开大学提出。计算机视觉的主题是提取更好的特征表示，多尺度特征提取是图像分类，识别，检测，分割的重要手段，
 FPN/ResNet/ResNeXt/DLA/DenseNet等模型都在构造各种提高性能的连接，赏心悦目的美学结构，终极目标应该是何凯明等人提出的
 网络随机生成器。Res2Net的基本结构很容易理解，基本单元拆分Res2Net为分组卷积和SENet，显著降低计算量同时提高准确率。论文
@@ -37,10 +26,11 @@ depthwise conv、pointwise conv、groupwise conv减少模型计算量，轮提�
 
   - [HetConv: Heterogeneous Kernel-Based Convolutions for Deep CNNs](https://arxiv.org/pdf/1903.04120.pdf)
 
-- google提出的backbone模型，主要是对现有模型基础上depth/width/resolution尺度变换，即三个维度系数的设计（手工调参？）。这些维度都是>1的乘法，为什么准确率提高的同时，计算量还降低？
+- google提出的backbone模型，主要是对现有模型基础上depth/width/resolution尺度变换，即三个维度系数的设计（手工调参？）。这些维度都是>1的乘法，为什么准确率提高的同时，计算量还降低？模型没有结合SENet等常见trick，貌似用使用更多的5x5卷积。
 
   - [EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks](https://arxiv.org/pdf/1905.11946.pdf)
-# 待记录
+
+## 待记录
 
 [An Empirical Study of Spatial Attention Mechanisms in Deep Networks](https://arxiv.org/pdf/1904.05873.pdf)
 
