@@ -42,6 +42,7 @@ Grid R-CNN [PDF](https://arxiv.org/pdf/1811.12030.pdf)
 - CVPR2018论文，加利福尼亚大学圣迭戈分校提出。出发点是在目标检测中提高IoU阈值可提高准确率（影响召回率）。既然不能直接提高IoU，可以分阶段提高IoU的阈值。Faster R-CNN是RCNN的two stage级联，RPN有分类和回归，NMS抑制后ROIpool继续计算分类和回归。既然这样为什么不多级联几次？
 
   1.Cascade R-CNN是R-CNN的多层级联，损失函数也是级联，那么检测框从那一个detector输出？是都输出？
+  2.iterative bounding box和Cascade R-CNN框架相同，只是损失函数不同？
 
   - [Cascade R-CNN: Delving into High Quality Object Detection](https://arxiv.org/pdf/1712.00726.pdf)
 
