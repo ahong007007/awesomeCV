@@ -37,6 +37,9 @@ depthwise conv、pointwise conv、groupwise conv减少模型计算量，轮提�
 
   - [HetConv: Heterogeneous Kernel-Based Convolutions for Deep CNNs](https://arxiv.org/pdf/1903.04120.pdf)
 
+- google提出的backbone模型，主要是对现有模型基础上depth/width/resolution尺度变换，即三个维度系数的设计（手工调参？）。这些维度都是>1的乘法，为什么准确率提高的同时，计算量还降低？
+
+  - [EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks](https://arxiv.org/pdf/1905.11946.pdf)
 # 待记录
 
 [An Empirical Study of Spatial Attention Mechanisms in Deep Networks](https://arxiv.org/pdf/1904.05873.pdf)
