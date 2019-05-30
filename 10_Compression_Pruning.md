@@ -48,7 +48,7 @@ FLOPS减少53.5%,TOP1准确率降低1.32%。
 
   - [Slimmable Neural Networks](https://arxiv.org/pdf/1812.08928.pdf)
 
-# CVPR2019论文，厦门大学和北航等联合提出，基于GAN的思路，对filter channel等剪枝。在Imagenet评测，Param减少60%,但是Top-1 降低7%。思路较为新颖，但是性能略差。
+- CVPR2019论文，厦门大学和北航等联合提出，基于GAN的思路，对filter channel等剪枝。在Imagenet评测，Param减少60%,但是Top-1 降低7%。思路较为新颖，但是性能略差。
 
 [Towards Optimal Structured CNN Pruning via Generative Adversarial Learning](https://arxiv.org/pdf/1903.09291.pdf)
 
