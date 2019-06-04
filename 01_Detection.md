@@ -39,6 +39,13 @@ Grid R-CNN [PDF](https://arxiv.org/pdf/1811.12030.pdf)
   
   -- [Deformable Convolutional Networks](https://arxiv.org/pdf/1703.06211.pdf)
   
+- Deformable ConvNet V2（DCNv2),DCNv1升级版。论文任务DCNv1虽然可解决变形目标的检测，但是受irrelevant image content影响。论文提出三个改进措施：
+1、增加更多的Deformable Convolution，Conv3-Conv5的3x3 convolution都换成了Deformable Conv。2、让Deformable Conv不仅能学习offset，还能学习每个采样点的权重（modulation）3、模拟R-CNN的feature（knowledge distillation）。
+
+  Feature Mimicking如何实现？
+
+  -- [Deformable ConvNets v2: More Deformable, Better Results](https://arxiv.org/pdf/1811.11168.pdf)
+  
 - CVPR2018论文，加利福尼亚大学圣迭戈分校提出。出发点是在目标检测中提高IoU阈值可提高准确率（影响召回率）。既然不能直接提高IoU，可以分阶段提高IoU的阈值。Faster R-CNN是RCNN的two stage级联，RPN有分类和回归，NMS抑制后ROIpool继续计算分类和回归。既然这样为什么不多级联几次？
 
   1.Cascade R-CNN是R-CNN的多层级联，损失函数也是级联，那么检测框从那一个detector输出？是都输出？
