@@ -30,6 +30,11 @@ depthwise conv、pointwise conv、groupwise conv减少模型计算量，轮提�
 
   - [EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks](https://arxiv.org/pdf/1905.11946.pdf)
 
+## others
+- Facebook作品，论文没有提出任何模型，或针对特定任务改进。论文任务公开数据集COCO/ImageNet/OpenIamge等对地理位置或收入水平低区域存在偏差，相应的图像数据分布较少。话说假如训练的模型可以识别全球目标的，在欠发达区域使用率也较少吧。
+
+  - [Does Object Recognition Work for Everyone?](https://arxiv.org/pdf/1906.02659.pdf)
+
 ## 待记录
 
 [An Empirical Study of Spatial Attention Mechanisms in Deep Networks](https://arxiv.org/pdf/1904.05873.pdf)
