@@ -14,7 +14,8 @@
 - SiamRPN CVPR2018论文，商汤，北航和清华共同提出，实时性到160fps(backbone采用AlexNet)。论文提出模型包括两个子网络：Siamese subnetwork （特征提取）
 和region proposal subnetwork（包括分类和检测分支）。换个角度，跟踪当做的单样本检测任务，就是把第一帧的BBox视为检测的样例，在其余帧里面检测与它相似的目标。
 
-  - High Performance Visual Tracking with Siamese Region Proposal Network.[pdf](http://openaccess.thecvf.com/content_cvpr_2018/papers/Li_High_Performance_Visual_CVPR_2018_paper.pdf)
+  - [High Performance Visual Tracking with Siamese Region Proposal Networkpdf
+  (http://openaccess.thecvf.com/content_cvpr_2018/papers/Li_High_Performance_Visual_CVPR_2018_paper.pdf)
 
 
 - CVPR2019论文，中科院自动化所（王强）和牛津大学提出SiamMask,目标跟踪和视频分割结合的多任务学习网络。VOT2015以后数据集难度不断增加，
@@ -59,6 +60,10 @@ state-of-art，达到论文提出的改变神经网络deeper和wider的目标。
   # Framework
   
   https://github.com/STVIR/pysot
+# Dataset
+- CVPR2019 Tracking and Detection Challenge
+
+  - [CVPR19 Tracking and Detection Challenge:How crowded can it get?](https://arxiv.org/pdf/1906.04567.pdf)
   
 # 待更新
 
