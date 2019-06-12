@@ -117,9 +117,13 @@ MobileNetV3使用tricks较多，但是模型实时性和准确率都是state-of-
   - [DetNAS: Neural Architecture Search on Object Detection](https://arxiv.org/pdf/1903.10979v1.pdf)
 
 - Google基于AutoML提出Detection模型，基于RetinaNet网络，解决FPN多尺度金字塔问题。通过Neural Architecture Search搜索各种类型的
-top-down,bottom-up特征层的连接方式（还是连连看），取得state-of-art的mAP同时降低推断时间。
+top-down,bottom-up特征层的连接方式（还是连连看），取得state-of-art的mAP同时降低推断时间。100 TPU的模型也不是可轻易实现。
 
   - [NAS-FPN: Learning Scalable Feature Pyramid Architecture for Object Detection](https://arxiv.org/pdf/1904.07392.pdf)
+  
+ - 西工大提出，基于one-stage object detector (FCOS)的基础，基本运算包括可分离卷积，空洞卷积，可变形卷积，搜索空间包括FPN，Prediction Head和Head Weight Sharing。论文第一句话说的好：The success of deep neural networks relies on significant architecture engineering，现在Deep learning就是在各种架构上作文章。论文的trick使用比NAS-FPN多，但是性能仅仅相比one-stage模型提升1%，相比two-stage还是有较大差距，说明搜索架构的backbone还很重要，关键有一个较优的先验知识。论文虽然在搜索时间上有优势（强化学习30GPU days可完成？存疑），性能上却没有优势。
+ 
+  - [NAS-FCOS: Fast Neural Architecture Search for Object Detection](https://arxiv.org/pdf/1906.04423.pdf)
 
 ## Recognition
 
