@@ -1,5 +1,7 @@
 # video understanding/video analysis
-
+# survey
+ - 澳大利亚麦觉理大学提出，行为识别论文综述,包括Vison Based和Sensor Based两个方向。
+  - [Different Approaches for Human Activity Recognition– A Survey](https://arxiv.org/pdf/1906.05074.pdf)
 ## dataset
 - 美图联合清华大学开源的视频分类数据集，规模较大且类别丰富。COIN 数据集采用分层结构，
 即第一层是领域（Domain）、第二层是任务（Task）、第三层是步骤（Step），其中包含与
