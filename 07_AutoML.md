@@ -1,15 +1,6 @@
 
-## NAS
-
-[2018,DSO-NAS] You Only Search Once: Single Shot Neural Architecture Search via Direct Sparse Optimization.[PDF](https://arxiv.org/pdf/1811.01567.pdf)
-
-Auto is the new black — Google AutoML, Microsoft Automated ML, AutoKeras and auto-sklearn
-
-https://medium.com/@santiagof/auto-is-the-new-black-google-automl-microsoft-automated-ml-autokeras-and-auto-sklearn-80d1d3c3005c
-
-
 # survey/overview/review
-
+## paper
 - NAS一篇综述，从Search Space，search strategy performance论述NAS.
 
   - [Neural Architecture Search: A Survey](https://arxiv.org/pdf/1808.05377.pdf)
@@ -21,6 +12,16 @@ https://medium.com/@santiagof/auto-is-the-new-black-google-automl-microsoft-auto
 - IBM Martin团队对NAS总结。
 
   - [A Survey on Neural Architecture Search](https://arxiv.org/pdf/1905.01392.pdf)
+
+## blog  
+- Auto is the new black — Google AutoML, Microsoft Automated ML, AutoKeras and auto-sklearn
+
+  - https://medium.com/@santiagof/auto-is-the-new-black-google-automl-microsoft-automated-ml-autokeras-and-auto-sklearn-80d1d3c3005c
+
+- Illustrated: Efficient Neural Architecture Search
+  - https://towardsdatascience.com/illustrated-efficient-neural-architecture-search-5f7387f9fb6
+  
+
   
 ## classifier
 
@@ -213,4 +214,10 @@ Additive Margin Softmax LossArcFace Loss等）。论文基于强化学习的NAS�
 | [DARTS-V2](https://arxiv.org/abs/1806.09055)           | 26.9      | 9.0       | 4.9        | 595    |  1  |  1   |
 | [GDAS](https://raw.githubusercontent.com/D-X-Y/GDAS/master/data/GDAS.pdf) | 26.0      | 8.5       | 5.3        | 581    |  1  |  0.21   |
 | [RandWire-WS](https://arxiv.org/pdf/1904.01569.pdf)        | 25.3±0.25 | 7.8       | 5.6±1      |583±6.2 |  -  |   -     |
+
+
+
+Auto is the new black — Google AutoML, Microsoft Automated ML, AutoKeras and auto-sklearn
+
+https://medium.com/@santiagof/auto-is-the-new-black-google-automl-microsoft-automated-ml-autokeras-and-auto-sklearn-80d1d3c3005c
 
