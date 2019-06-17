@@ -30,5 +30,9 @@ MaskIoU Head，代码也是facebook 开源框架maskrcnn_benchmark基础上直�
 b.target category训练方式。个人感觉MaskIoU和score不是线性相关，应该还有很多坑可以填。
 
   - [Mask Scoring R-CNN](https://arxiv.org/pdf/1903.00241.pdf)
+  
+ - CVPR2019论文，香港中文大学，商汤等联合提出，1st in the COCO 2018 Challenge Object Detection Task。实体分割是目标检测和语义分割结合，论文提出从Mask RCNN->Cascade Mask R-CNN->Hybrid Task Cascade，集成很多trick。论文发现Cascade Mask R-CNN提升检测3.5%但是分割仅仅提升1.2%，不对等在于语义分割没有融合，于是提出混合式的并行和穿行支路。Cascade Mask R-CNN+Interleaved Execution+Mask information flow+Semantic Feature Fusion组成Hybrid Task Cascade框架，另外tricks包括DCN,SyncBN，ms train，SENet-154，GA-RPN，ms test，ensemble提升到49%AP。论文还研究了ASPP,PAFPN，DCN，PrRoIPool，SoftNMS，检测和语义分割模型都能来个大杂烩。
+ 
+  - [Hybrid Task Cascade for Instance Segmentation](https://arxiv.org/pdf/1901.07518.pdf)
 
 
