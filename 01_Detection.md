@@ -1,6 +1,12 @@
 
 
 # Detection
+## survey/overview/review
+
+- 香港中文大学，商汤等联合提出的MMDetection，包括模具检测，实体分割等state-of-art模型框架源码，属业界良心。
+
+  - [MMDetection: Open MMLab Detection Toolbox and Benchmark](https://arxiv.org/pdf/1906.07155.pdf)
+
 ## NMS
 
 2017----Soft-NMS----Improving Object Detection With One Line of Code
