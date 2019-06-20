@@ -1,5 +1,6 @@
 
 # survey/overview/review
+
 ## paper
 - NAS一篇综述，从Search Space，search strategy performance论述NAS.
 
@@ -12,6 +13,8 @@
 - IBM Martin团队对NAS总结。
 
   - [A Survey on Neural Architecture Search](https://arxiv.org/pdf/1905.01392.pdf)
+  
+- [Automated Machine Learning: State-of-The-Art and Open Challenges](https://arxiv.org/pdf/1906.02287.pdf)
 
 ## awesome
 
