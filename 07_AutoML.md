@@ -13,14 +13,22 @@
 
   - [A Survey on Neural Architecture Search](https://arxiv.org/pdf/1905.01392.pdf)
 
-## blog  
+## awesome
+
+- [D-X-Y/Awesome-NAS](https://github.com/D-X-Y/Awesome-NAS)
+- https://github.com/datasystemsgrouput/automl_survey
+
+
+## Blogs
+- [What’s the deal with Neural Architecture Search?](https://determined.ai/blog/neural-architecture-search/)
+- [Google Could AutoML](https://cloud.google.com/vision/automl/docs/beginners-guide)
+- [PocketFlow](https://pocketflow.github.io/)
+- [AutoML Challenge](http://automl.chalearn.org/)
+- [AutoDL Challenge](https://autodl.chalearn.org/)
 - Auto is the new black — Google AutoML, Microsoft Automated ML, AutoKeras and auto-sklearn
-
   - https://medium.com/@santiagof/auto-is-the-new-black-google-automl-microsoft-automated-ml-autokeras-and-auto-sklearn-80d1d3c3005c
-
 - Illustrated: Efficient Neural Architecture Search
   - https://towardsdatascience.com/illustrated-efficient-neural-architecture-search-5f7387f9fb6
-  
 
   
 ## classifier
@@ -181,18 +189,6 @@ Additive Margin Softmax LossArcFace Loss等）。论文基于强化学习的NAS�
 
 ## Loss Function
 (AM-LFS: AutoML for Loss Function Search)[https://arxiv.org/pdf/1905.07375.pdf]
-
-## awesome
-
-- [D-X-Y/Awesome-NAS](https://github.com/D-X-Y/Awesome-NAS)
-
-
-## Blogs
-- [What’s the deal with Neural Architecture Search?](https://determined.ai/blog/neural-architecture-search/)
-- [Google Could AutoML](https://cloud.google.com/vision/automl/docs/beginners-guide)
-- [PocketFlow](https://pocketflow.github.io/)
-- [AutoML Challenge](http://automl.chalearn.org/)
-- [AutoDL Challenge](https://autodl.chalearn.org/)
 
 
 ## Benchmark on ImageNet
