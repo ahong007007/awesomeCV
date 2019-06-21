@@ -30,7 +30,3 @@ SUN RGB-D具有良好表现。 CNN在3D object classification ,3D object detecti
 # 待阅读
 pointnet point++ ,VoteNet层次理解
 https://zhuanlan.zhihu.com/p/44809266
-
-
-
-
