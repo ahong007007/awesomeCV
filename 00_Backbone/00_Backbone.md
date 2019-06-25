@@ -7,7 +7,7 @@ FPN/ResNet/ResNeXt/DLA/DenseNet等模型都在构造各种提高性能的连接�
 在分类，检测，语义分割，实体分割，显著性分割等领域均做了充分的实验，比如Res2Net-50相比ResNet-50，在ImageNet数据集
 top-1分类误差降低0.93%，而FLOPs降低69%。期待源码以及更多领域提高性能和实时性。
 
-  - [Res2Net: A New Multi-scale Backbone Architecture](https://arxiv.org/pdf/1904.01169.pdf)
+  - [Res2Net: A New Multi-scale Backbone Architecture](https://arxiv.org/pdf/1904.01169.pdf) :star::star::star::star::star:
 
 
 - 威斯康星大学麦迪逊分校和亚马逊等联合提出移动端分类神经网络架构：ANTNets(Attention NesTed Network),相比MobileNetv2，ImageNet
