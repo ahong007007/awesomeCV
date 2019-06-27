@@ -7,21 +7,6 @@
 
   - [MMDetection: Open MMLab Detection Toolbox and Benchmark](https://arxiv.org/pdf/1906.07155.pdf)[2019.06]
 
-## NMS
-
-2017----Soft-NMS----Improving Object Detection With One Line of Code
-
-2018----Softer-NMS- Rethinking Bounding Box Regression for Accurate Object Detection
-
-2018----IoUNet----Acquisition of Localization Confidence for Accurate Object Detection
-
-2018----CVPR----Improving Object Localization with Fitness NMS and Bounded IoU Loss
-
-2018----NIPS----Sequential Context Encoding for Duplicate Removal
-
-M2Det: A Single-Shot Object Detector based on Multi-Level Feature Pyramid Network [PDF](https://arxiv.org/pdf/1811.04533.pdf) [Github](https://github.com/qijiezhao/M2Det)
-
-Grid R-CNN [PDF](https://arxiv.org/pdf/1811.12030.pdf)
 
 ## Facial Detector
 
@@ -118,7 +103,38 @@ NVIDIA Tesla P100 GPU运行，CenterNet511-104 340ms/image，比CornerNet511-104
 论文使用缩放代替CNN的降采样，较少运算量，但是缩小图像的分辨率对小目标的检测准确率应该有影响吧。个人感觉比CenterNet实用性更好：要么选择准确率高的two-stage,
 要么选择速度和准确率平衡的轻量化网络。感叹目标检测领域的飞速发展。CV行业在分类和检测日新月异。
 
-  [CornerNet-Lite: Efficient Keypoint Based Object Detection](https://arxiv.org/pdf/1904.08900.pdf)[2019.04] [github](https://github.com/princeton-vl/CornerNet-Lite)
+  - [CornerNet-Lite: Efficient Keypoint Based Object Detection](https://arxiv.org/pdf/1904.08900.pdf)[2019.04] [github](https://github.com/princeton-vl/CornerNet-Lite)
+
+
+## Data Augmentation
+
+- Google大脑出品。论文提出的数据增强方式是训练过程常用的技巧：Color operations（Equalize, Contrast, Brightness），Geometric operations（e.g., Rotate,ShearX, TranslationY）
+Bounding box operations（BBox Only Equalize,BBox Only Rotate, BBox Only FlipLR），硬生地设计(22×6×6)^2×5 ≈ 9.6×10^28的搜索空间(当然可以再增加)，延续NAS的设计思路（强化学习+RNN），
+让神经网络选择数据增强的方式和过程。
+    1、图像增强的方式没有什么亮点，但是9.6×10^28的搜索空间，想想都头大。
+    2、不仅仅目标检测，其他分类，分割等计算机视觉任务都可以通过NAS-Data Augmentation训练模型？
+    3、The RNN controller is trained over 20K augmentation policies. The search employed 400 TPU’s over 48 hours,土豪就是这么任性。
+    4、Google最近很多论文都是基于NAS实现，NAS-FPN -> MobileNet v3-> EfficientNet -> NAS Data Augmentation，在EfficientNet时Google的调参就是满满的异类(initial learning rate 0.256 that decays by 0.97 every 2.4 epochs).
+    Google不如一鼓作气让NAS给模型调参，真正实现AutoML,也能解放调参侠的工作量。
+
+  - [Learning Data Augmentation Strategies for Object Detection](https://arxiv.org/pdf/1906.11172.pdf)[2019.06]
+
+## NMS系列
+
+2017----Soft-NMS----Improving Object Detection With One Line of Code
+
+2018----Softer-NMS- Rethinking Bounding Box Regression for Accurate Object Detection
+
+2018----IoUNet----Acquisition of Localization Confidence for Accurate Object Detection
+
+2018----CVPR----Improving Object Localization with Fitness NMS and Bounded IoU Loss
+
+2018----NIPS----Sequential Context Encoding for Duplicate Removal
+
+M2Det: A Single-Shot Object Detector based on Multi-Level Feature Pyramid Network [PDF](https://arxiv.org/pdf/1811.04533.pdf) [Github](https://github.com/qijiezhao/M2Det)
+
+Grid R-CNN [PDF](https://arxiv.org/pdf/1811.12030.pdf)
+
 
 ## framwork
 
