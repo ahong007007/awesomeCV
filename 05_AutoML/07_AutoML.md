@@ -25,6 +25,7 @@
 ## awesome
 
 - [D-X-Y/Awesome-NAS](https://github.com/D-X-Y/Awesome-NAS)
+- [awesome-automl-papers](https://github.com/hibayesian/awesome-automl-papers)
 - https://github.com/datasystemsgrouput/automl_survey
 
 
@@ -133,6 +134,10 @@ MobileNetv3用到的tricks:
   24 TPU-hours实现架构搜索，Top 1性能优于MobileNet v3,推断延时80ms(Pixel 1)，在人类先验知识基础上完全是机器设计。轮最后提出的NAS hyperparameter optimization问题不理解。 
 
   - [Single-Path Mobile AutoML: Efficient ConvNet Design and NAS Hyperparameter Optimization](https://arxiv.org/pdf/1907.00959.pdf)[2019.07]
+
+- 小米团队楚洋洋，张勃等新作。
+
+  - [FairNAS: Rethinking Evaluation Fairness of Weight Sharing Neural Architecture Search](https://arxiv.org/pdf/1907.01845.pdf)[2019.07]
 
 ## Detection
 
