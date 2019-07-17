@@ -142,7 +142,7 @@ MobileNetv3用到的tricks:
 
 
 - 
-  - [EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks](https://arxiv.org/pdf/1905.11946.pdf)
+  - [EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks](https://arxiv.org/pdf/1905.11946.pdf)[2019.05]
 ## Detection
 
 - 中科院自动化所和旷视联合提出，Object Detection with FPN on COCO优于ResNet101,但是FLOPs比ResNet50低。基于ShuffleNetV2的架构也有较好的表现。
@@ -252,7 +252,7 @@ Bounding box operations（BBox Only Equalize,BBox Only Rotate, BBox Only FlipLR�
 | [DARTS-V2](https://arxiv.org/abs/1806.09055)           | 26.9      | 9.0       | 4.9        | 595    |  1  |  1   |
 | [GDAS](https://raw.githubusercontent.com/D-X-Y/GDAS/master/data/GDAS.pdf) | 26.0      | 8.5       | 5.3        | 581    |  1  |  0.21   |
 | [RandWire-WS](https://arxiv.org/pdf/1904.01569.pdf)        | 25.3±0.25 | 7.8       | 5.6±1      |583±6.2 |  -  |   -     |
-
+| [EfficientNet](https://arxiv.org/pdf/1905.11946.pdf) | 15.4% | 2.9%  | 66 | - | -|-| 
 
 
 Auto is the new black — Google AutoML, Microsoft Automated ML, AutoKeras and auto-sklearn
