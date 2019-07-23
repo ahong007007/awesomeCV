@@ -1,4 +1,15 @@
+
+#
+- Why GEMM is at the heart of deep learning
+  - [Why GEMM is at the heart of deep learning](https://petewarden.com/2015/04/20/why-gemm-is-at-the-heart-of-deep-learning/)
+
+- 卷积算法优化，GEMM(GEneral Matrix to Matrix Multiplication)->GEMM−based Convolution。从C代码看，有两层循环，相对于GEMM为何反而能更高效？另外论文
+提出算法uIndirectGEMM在pytorch(NCHW layout),Transposed Convolution operator,depthwise convolutions之外才更高效，很少有论文这么直接。
+
+  - [The Indirect Convolution Algorithm](https://arxiv.org/pdf/1907.02129.pdf)
+
 # Optimization
+
 
 
 
