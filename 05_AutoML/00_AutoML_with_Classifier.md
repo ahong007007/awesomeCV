@@ -175,42 +175,14 @@ Additive Margin Softmax LossArcFace Loss等）。论文基于强化学习的NAS�
 
 [Partial Order Pruning: for Best Speed/Accuracy Trade-off in Neural Architecture Search](https://arxiv.org/pdf/1903.03777.pdf)[2019.03]
 
-- 李飞飞团队作品。
+- 李飞飞团队作品。基于DeepLab系列框架搜索。
 
   - [Auto-DeepLab:Hierarchical Neural Architecture Search for Semantic Image Segmentation](https://arxiv.org/pdf/1901.02985.pdf)[2019.01]
 
 
-## Data Augmentation
-
-- Google大脑出品。论文提出的数据增强方式是训练过程常用的技巧：Color operations（Equalize, Contrast, Brightness），Geometric operations（e.g., Rotate,ShearX, TranslationY）
-Bounding box operations（BBox Only Equalize,BBox Only Rotate, BBox Only FlipLR），硬生地设计(22×6×6)^2×5 ≈ 9.6×10^28的搜索空间(当然可以再增加)，延续NAS的设计思路（强化学习+RNN），
-让神经网络选择数据增强的方式和过程。
-    1、图像增强的方式没有什么亮点，但是9.6×10^28的搜索空间，想想都头大。
-    2、不仅仅目标检测，其他分类，分割等计算机视觉任务都可以通过NAS-Data Augmentation训练模型？
-    3、The RNN controller is trained over 20K augmentation policies. The search employed 400 TPU’s over 48 hours,土豪就是这么任性。
-    4、Google最近很多论文都是基于NAS实现，NAS-FPN -> MobileNet v3-> EfficientNet -> NAS Data Augmentation，在EfficientNet时Google的调参就是满满的异类(initial learning rate 0.256 that decays by 0.97 every 2.4 epochs).
-    Google不如一鼓作气让NAS给模型调参，真正实现AutoML,也能解放调参侠的工作量。
-
-  - [Learning Data Augmentation Strategies for Object Detection](https://arxiv.org/pdf/1906.11172.pdf)[2019.06]
 
 
 
-## ReID
-
--澳大利亚欧缇莫的大学
-
-  - [Auto-ReID: Searching for a Part-aware ConvNet for Person Re-Identification](https://arxiv.org/pdf/1903.09776.pdf)[2019.03]
-
-
-## Super-Resolution 
-
-- 小米AI团队团队提出的超分辨率模型。
-
-  - [Fast, Accurate and Lightweight Super-Resolution with Neural Architecture Search](https://arxiv.org/pdf/1901.07261.pdf)[2019.01]
-
-
-
-  - [Architecture Search for Image Inpainting]
 ## Graph CNN
 
 - 2019ICLR论文，Uber等联合提出，基于Graph CNN实现的NAS,性能虽然没有太惊艳，但是基于Graph CNN应该有更广阔用处。
@@ -223,13 +195,6 @@ Bounding box operations（BBox Only Equalize,BBox Only Rotate, BBox Only FlipLR�
 - facebook开源框架，基于MCTS和DNN,解决分类，目标检测，风格迁移，图像描述4个任务。
 
   - [AlphaX: eXploring Neural Architectures with Deep Neural Networks and Monte Carlo Tree Search](https://arxiv.org/pdf/1903.11059.pdf)[2019.03]
-
-## Hyperparameter Optimization
-
-  - [Searching for Activation Functions](https://arxiv.org/pdf/1710.05941.pdf)[2017.10]
-
-## Loss Function
-  - [AM-LFS: AutoML for Loss Function Search](https://arxiv.org/pdf/1905.07375.pdf)[2019.05]
 
 
 ## Benchmark on ImageNet
