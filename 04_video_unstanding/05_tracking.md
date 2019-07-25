@@ -56,10 +56,21 @@ state-of-art，达到论文提出的改变神经网络deeper和wider的目标。
 
   - [Siamese Attentional Keypoint Network for High Performance Visual Tracking](https://arxiv.org/pdf/1904.10128.pdf)
   
-  # Framework
+- CVPR2019论文。
+
+  - [SPM-Tracker: Series-Parallel Matching for Real-Time Visual Object Tracking](https://arxiv.org/pdf/1904.04452.pdf)[2019.04]  
+
+- 北京理工大学，阿联酋阿布扎比联合提出，基于Teacher-Student模式提高tracking运行速率。
+    
+  疑问：Teacher-Student是一种训练方式还是一种模型设计方式？
+
+  - [Teacher-Students Knowledge Distillation for Siamese Trackers](https://arxiv.org/pdf/1907.10586.pdf)
+
+# Framework
   
   https://github.com/STVIR/pysot
 # Dataset
+
 - CVPR2019 Tracking and Detection Challenge
 
   - [CVPR19 Tracking and Detection Challenge:How crowded can it get?](https://arxiv.org/pdf/1906.04567.pdf)
