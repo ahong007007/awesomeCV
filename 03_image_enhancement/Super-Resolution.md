@@ -15,6 +15,11 @@ Single image super-resolution (SISR)是从低分辨率图像恢复高分辨率�
   - [Learning a Deep Convolutional Network for Image Super-Resolution](http://personal.ie.cuhk.edu.hk/~ccloy/files/eccv_2014_deepresolution.pdf)
 
 
+- ECCV2016论文，汤晓鸥组在SRCNN基础上改进，提出Fast Super-Resolution Convolutional Neural Networks (FSRCNN)：1、用转置卷积替代插值运算，2、收缩mapping layer特征维度，最后1x1卷积扩张。3、用3x3卷积核代替大卷积核(大卷积核和小卷积核谁更高效？专题总结)。
+这篇论文提到SRCNN的时间参数(240×240 image,上采样3倍，1.32 fps,再次证明论文没有提到的就是弱点）。FSRCNN可实现比SRCNN 40倍提速，在不同的上采样倍数没有损失超分质量。
+
+  - [Accelerating the Super-Resolution Convolutional Neural Network](https://arxiv.org/pdf/1608.00367.pdf)[1608.01]
+
 - CVPR2019论文，中科大，自动化所，旷视等联合提出Meta-SR, 单一模型解决任意尺度的 super-resolution。模型包括：Feature Learning Module和MetaUpscale Module。Feature Learning Module
 可使用RDN，EDSR，通用的特征提取模块(类似ResNet/DenseNet)；Meta-Upscale学习不同比率下上采样权重。可使用的损失函数包括L1,L2正则化。Super-Resolution是否可以理解为如何语义分割的上采样过程？super-resolution的backbone，upsample,loss函数都可借鉴分类/分割的设计，遍地都是机会啊。
 
