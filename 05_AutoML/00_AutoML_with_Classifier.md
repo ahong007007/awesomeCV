@@ -143,6 +143,13 @@ MobileNetv3用到的tricks:
 
 - 
   - [EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks](https://arxiv.org/pdf/1905.11946.pdf)[2019.05]
+
+- google提出在NAS架构上使用MDConv(mixed depthwise convolution,混合可分离卷积，但是分组之间的filter滤波器尺寸不同)。
+
+  1.do larger kernels always achieve higher accuracy?论文在论证大卷积核是否有效时，直接给出结论，但是测试条件是？
+  
+  - [MixNet: Mixed Depthwise Convolutional Kernels](https://arxiv.org/pdf/1907.09595v1.pdf)[2019.07]
+  
 ## Detection
 
 - 中科院自动化所和旷视联合提出，Object Detection with FPN on COCO优于ResNet101,但是FLOPs比ResNet50低。基于ShuffleNetV2的架构也有较好的表现。
