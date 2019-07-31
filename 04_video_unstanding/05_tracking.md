@@ -1,3 +1,9 @@
+
+# survey 
+
+- 意大利萨勒诺大学等对MOT综述
+
+  - [Deep Learning in Video Multi-Object Tracking: A Survey](https://arxiv.org/pdf/1907.12740.pdf)[2019.07]
 # tracking
 
 - SiamFC，ECCV2016论文，牛津大学Luca Bertinetto等提出，深度学习方法在目标跟踪领域的破冰之作。使用函数f(z,x)来比较模板图像z域候选图像x的相似度，
