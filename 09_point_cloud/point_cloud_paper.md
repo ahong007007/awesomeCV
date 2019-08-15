@@ -13,7 +13,7 @@ DenseFusion: 6D Object Pose Estimation by Iterative Dense Fusion. [pdf](https://
 
 - CVPR2017论文。
 
-  - [PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation](http://openaccess.thecvf.com/content_cvpr_2017/papers/Qi_PointNet_Deep_Learning_CVPR_2017_paper.pdf)
+  - [PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation](http://openaccess.thecvf.com/content_cvpr_2017/papers/Qi_PointNet_Deep_Learning_CVPR_2017_paper.pdf) :star: :star: :star: :star:
 
 
 - PointNet++论文。

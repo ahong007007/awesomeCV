@@ -61,4 +61,27 @@ Open Source Project
 
 ## github 
 
-paper: https://github.com/Yochengliu/awesome-point-cloud-analysis.git
+paper: [https://github.com/Yochengliu/awesome-point-cloud-analysis.git]
+
+
+## 4. Dataset
+
+Note that some of these datasets don't provide point cloud data, which means you need some toolboxes to convert data from mesh or RGB-D images.
+
+### Shape understanding
+
+- **ModelNet** [[pdf]](https://people.csail.mit.edu/khosla/papers/cvpr2015_wu.pdf) [[Project]](http://modelnet.cs.princeton.edu/)
+- **ShapeNet** [[pdf]](http://shapenet.cs.stanford.edu/shapenet/obj-zip/ShapeNetCore.v2-old/shapenet/tex/TechnicalReport/main.pdf) [[Project]](https://www.shapenet.org/)
+
+### Indoor scenes
+
+- **2D-3D-S** [[pdf]](http://buildingparser.stanford.edu/images/2D-3D-S_2017.pdf) [[Project]](http://buildingparser.stanford.edu/dataset.html)
+- **ScanNet** [[pdf]](https://arxiv.org/pdf/1702.04405.pdf) [[Project]](http://www.scan-net.org/)
+- **SUN RGB-D** [[pdf]](http://rgbd.cs.princeton.edu/paper.pdf) [[Project]](http://rgbd.cs.princeton.edu/)
+
+### Autonomous driving (Lidar point cloud)
+
+- **KITTI** [[pdf]](http://www.cvlibs.net/publications/Geiger2013IJRR.pdf) [[Project]](http://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=3d)
+- **nuScenes** [[pdf]](https://arxiv.org/pdf/1903.11027.pdf) [[Project]](https://www.nuscenes.org/)
+- **Waymo Open dataset** [[Project]](https://waymo.com/open/)
+
