@@ -1,5 +1,17 @@
 # Point cloud
 
+
+<h3> Keywords </h3>
+
+__`dat.`__: dataset &emsp; | &emsp; __`cls.`__: classification &emsp; | &emsp; __`rel.`__: retrieval &emsp; | &emsp; __`seg.`__: segmentation     
+__`det.`__: detection &emsp; | &emsp; __`tra.`__: tracking &emsp; | &emsp; __`pos.`__: pose &emsp; | &emsp; __`dep.`__: depth     
+__`reg.`__: registration &emsp; | &emsp; __`rec.`__: reconstruction &emsp; | &emsp; __`aut.`__: autonomous driving     
+__`oth.`__: other, including normal-related, correspondence, mapping, matching, alignment, compression, generative model...
+
+Statistics: :fire: code is available or the paper is very important
+
+---
+
 ## RGB-D
 1、CVPR2019论文，出自于大名鼎鼎李飞飞组，提出模型，一个用于估计RGB-D图像中已知目标6D姿态的通用框架
 （类似于视频处理的two-stream，分别处理RGB图像和深度图像,DenseFusion融合两路特征）。在YCB-Video
@@ -8,6 +20,16 @@
 论文中6自由度指李群SE(3)（包括旋转和平移），目标是求相机的运动姿态。
 
 DenseFusion: 6D Object Pose Estimation by Iterative Dense Fusion. [pdf](https://arxiv.org/pdf/1901.04780.pdf)
+
+---
+
+# pointcloud registration
+
+- ICCV2017论文，在学习open3d时做实验看到，主要是对彩色点云对齐。
+
+  [ICCV2017][Colored Point Cloud Registration Revisited](http://openaccess.thecvf.com/content_ICCV_2017/papers/Park_Colored_Point_Cloud_ICCV_2017_paper.pdf)
+    
+
 
 # 3D object detection
 
@@ -41,9 +63,5 @@ https://zhuanlan.zhihu.com/p/44809266
 ## Papers 
 
 [Efficient Processing of Large 3D Point Clouds](https://www.researchgate.net/publication/233792575_Efficient_Processing_of_Large_3D_Point_Clouds) Jan Elseberg, Dorit Borrmann, Andreas N̈uchtre, Proceedings of the XXIII International Symposium on Information, Communication and Automation Technologies (ICAT '11), 2011 
-
-[Data Structure for Efficient Processing in 3-D](http://www.roboticsproceedings.org/rss01/p48.pdf) Jean-François Lalonde, Nicolas Vandapel and Martial Hebert, Robotics: Science and Systems I, 2005
-
-[An out-of-core octree for massive point cloud processing](http://rs.tudelft.nl/~rlindenbergh/workshop/WenzelIQmulus.pdf) K. Wenzel, M. Rothermel, D. Fritsch, N. Haala, Workshop on Processing Large Geospatial Data 2014
 
 
