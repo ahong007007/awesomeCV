@@ -55,9 +55,6 @@ FLOPS减少53.5%,TOP1准确率降低1.32%。
 
 # framework
 
-- ECCV2018,韩松提出AMC(AutoML for Model Compression) 
-
-  - [AMC: AutoML for Model Compression and Acceleration on Mobile Devices](https://arxiv.org/pdf/1802.03494.pdf)
 
 - google和微软提出CADNN，对标TVM tensorflow-lite等移动端压缩框架。论文仅有框架之前性能的对比，没有具体算法说明。
 

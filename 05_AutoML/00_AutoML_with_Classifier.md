@@ -150,6 +150,10 @@ MobileNetv3用到的tricks:
   
   - [MixNet: Mixed Depthwise Convolutional Kernels](https://arxiv.org/pdf/1907.09595v1.pdf)[2019.07]
   
+  
+- AutoML与GAN结合，但是仅仅在CIFAR-10做实验，没有ImageNet数据。
+
+  - [AutoGAN: Neural Architecture Search for Generative Adversarial Networks](https://arxiv.org/pdf/1908.03835.pdf)[2019.08]  
 ## Detection
 
 - 中科院自动化所和旷视联合提出，Object Detection with FPN on COCO优于ResNet101,但是FLOPs比ResNet50低。基于ShuffleNetV2的架构也有较好的表现。
