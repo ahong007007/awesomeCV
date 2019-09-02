@@ -3,8 +3,8 @@
 
 <h3> Keywords </h3>
 
-__`dat.`__: dataset &emsp; | &emsp; __`cls.`__: classification &emsp; | &emsp; __`rel.`__: retrieval &emsp; | &emsp; __`seg.`__: segmentation     
-__`det.`__: detection &emsp; | &emsp; __`tra.`__: tracking &emsp; | &emsp; __`pos.`__: pose &emsp; | &emsp; __`dep.`__: depth     
+__`dat.`__: dataset &emsp; | &emsp; __`cls.`__: classification &emsp; | &emsp; __`rel.`__: retrieval &emsp; | &emsp; __`sem.`__: semantic segmentation     
+__`ins.`__: instance segmentation &emsp; |__`det.`__: detection &emsp; | &emsp; __`tra.`__: tracking &emsp; | &emsp; __`pos.`__: pose &emsp; | &emsp; __`dep.`__: depth     
 __`reg.`__: registration &emsp; | &emsp; __`rec.`__: reconstruction &emsp; | &emsp; __`auto`__: autonomous driving     
 __`oth.`__: other, including normal-related, correspondence, mapping, matching, alignment, compression, generative model...
 
@@ -65,6 +65,17 @@ SUN RGB-D具有良好表现。 CNN在3D object classification ,3D object detecti
 - RGB-D Image Analysis and Processing,chapter 3
 
   - [RGB-D image-based Object Detection: from Traditional Methods to Deep Learning Techniques](https://arxiv.org/pdf/1907.09236.pdf)
+
+
+# Segmentation
+
+
+
+- 澳大利亚阿德莱德大学,腾讯优图，香港中文大学等(沈春华项目组)，提出联合语义分割和实例分割的点云分割方法。实例分割主要通过学习的instance embeddings实现(Metric Learning)。
+  个人感觉instance segmentation包含semantic segmentation，前者可直接推导后者。联合学习或联合损失函数可以更好网络训练？
+
+
+  -[2019-CVPR][Associatively Segmenting Instances and Semantics in Point Clouds](https://arxiv.org/pdf/1902.09852.pdf)[__`sem.`__.__`ins.`__]:fire:
 
 # 待阅读
 pointnet point++ ,VoteNet层次理解
