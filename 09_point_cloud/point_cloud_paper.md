@@ -69,9 +69,7 @@ SUN RGB-D具有良好表现。 CNN在3D object classification ,3D object detecti
 
 # Segmentation
 
-
-
-- 澳大利亚阿德莱德大学,腾讯优图，香港中文大学等(沈春华项目组)，提出联合语义分割和实例分割的点云分割方法。实例分割主要通过学习的instance embeddings实现(Metric Learning)。
+- 澳大利亚阿德莱德大学,腾讯优图，香港中文大学等(沈春华项目组)，提出ASIS,联合语义分割和实例分割的点云分割方法。实例分割主要通过学习的instance embeddings实现(Metric Learning)。
   个人感觉instance segmentation包含semantic segmentation，前者可直接推导后者。联合学习或联合损失函数可以更好网络训练？
 
 
