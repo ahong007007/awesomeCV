@@ -7,7 +7,7 @@
 
   - [2019.06][MMDetection: Open MMLab Detection Toolbox and Benchmark](https://arxiv.org/pdf/1906.07155.pdf)
 
-- 
+- 西安电子科技大学关于目标检测的论文综述。
   - [2019.07][A Survey of Deep Learning-based Object Detection](https://arxiv.org/pdf/1907.09408.pdf)
 
 - 新加坡管理大学论文综述。
