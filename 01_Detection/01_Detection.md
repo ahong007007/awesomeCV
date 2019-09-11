@@ -81,6 +81,10 @@ non-local模块修正语义特征。损失函数不平衡：论文设计Balanced
   - [GCNet: Non-local Networks Meet Squeeze-Excitation Networks and Beyond](https://arxiv.org/pdf/1904.11492v1.pdf)[2019.04]
 
 
+- 北京大学等提出的一种改善型backbone，类似于HRNet和Cascade R-CNN（Cascade R-CNN是级联detector,而本文CBNet是级联backbone）。论文最强指标Cascade Mask R-CNN +Triple-ResNeXt152在COCO数据集实现53.3AP，性能上是数据榜首。  
+
+  -[2019][CBNet: A Novel Composite Backbone Network Architecture for Object Detection](https://arxiv.org/pdf/1909.03625.pdf)
+
 ## loss
 
 
