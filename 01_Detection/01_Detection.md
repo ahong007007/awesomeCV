@@ -18,6 +18,7 @@
    Scale imbalance，Spatial imbalance， objective imbalance。论文对各个方面进行归纳，提出问题和分析解决方案。
   **话说imbalance中，头部问题是？**  
   - [2019.09][Imbalance Problems in Object Detection: A Review](https://arxiv.org/pdf/1909.00169.pdf) [github]()
+
 ## Facial Detector
 
 - 天津大学、武汉大学、腾讯AI实验室提出的人脸检测模型，主要针对移动端设计（backbone MobileNet v2）
@@ -84,6 +85,13 @@ non-local模块修正语义特征。损失函数不平衡：论文设计Balanced
 - 北京大学等提出的一种改善型backbone，类似于HRNet和Cascade R-CNN（Cascade R-CNN是级联detector,而本文CBNet是级联backbone）。论文最强指标Cascade Mask R-CNN +Triple-ResNeXt152在COCO数据集实现53.3AP，性能上是数据榜首。  
 
   -[2019][CBNet: A Novel Composite Backbone Network Architecture for Object Detection](https://arxiv.org/pdf/1909.03625.pdf)
+
+## Imbalance
+
+-  中国科学技术大学提出，在Focal Loss基础上解决目标检测前景和背景不平衡问题。论文主要提出三个观点：decoupling objectness from classification, biased initialization, threshold movement。
+不过从数据对比，性能提升不明显。
+
+  - [2019][Revisiting Foreground-Background Imbalance in Object Detectors](https://arxiv.org/pdf/1909.04868.pdf)
 
 ## loss
 
