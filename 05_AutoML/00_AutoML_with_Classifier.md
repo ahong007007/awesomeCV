@@ -21,6 +21,10 @@
   
 - [Automated Machine Learning: State-of-The-Art and Open Challenges](https://arxiv.org/pdf/1906.02287.pdf)
 
+- AutoML一篇设计指导，可以看做是阅读论文指南，比如第三部分，best practices for comparing NAS methods,介绍阅读论文的侧重点。另外提供一个The NAS Best Practices Checklist(https://www.automl.org/wp-content/uploads/NAS/NAS_checklist.pdf)
+简直是论文写作者的福音。
+
+  - [2019][Best Practices for Scientific Research on Neural Architecture Search](https://arxiv.org/pdf/1909.02453.pdf)
 
 ## awesome
 
