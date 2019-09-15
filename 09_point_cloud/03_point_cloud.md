@@ -30,6 +30,25 @@ Statistics: :fire: code is available or the paper is very important
   - [CVPR2019][DenseFusion: 6D Object Pose Estimation by Iterative Dense Fusion](https://arxiv.org/pdf/1901.04780.pdf)
 
 ---
+## classification/Backbone
+- CVPR2017论文。
+
+  - [PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation](http://openaccess.thecvf.com/content_cvpr_2017/papers/Qi_PointNet_Deep_Learning_CVPR_2017_paper.pdf) :star: :star: :star: :star:
+
+
+- PointNet++论文。
+
+ -- [PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space](https://arxiv.org/pdf/1706.02413.pdf)
+
+-  俄勒冈州立大学机器人技术与智能系统（CoRIS）研究所的研究者提出了 PointConv，可以高效的对非均匀采样的 3D 点云数据进行卷积操作，该方法在多个数据集上实现了优秀的性能。
+主要贡献：
+1、提出逆密度重加权卷积操作 PointConv（为了补偿不均匀采样），它能够完全近似任意3D 点集上的 3D 连续卷积。
+2、通过改变求和顺序，提出了高效 PointConv 。
+3、将 PointConv 扩展到反卷积（PointDeconv），以获得更好的分割结果。
+
+  - [CVPR2019] [PointConv: Deep Convolutional Networks on 3D Point Clouds](https://arxiv.org/abs/1811.07246). [[tensorflow](https://github.com/DylanWusee/pointconv)] [__`cls.`__ __`seg.`__] :fire:
+
+---
 
 # pointcloud registration
 
@@ -41,14 +60,6 @@ Statistics: :fire: code is available or the paper is very important
 
 # 3D object detection
 
-- CVPR2017论文。
-
-  - [PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation](http://openaccess.thecvf.com/content_cvpr_2017/papers/Qi_PointNet_Deep_Learning_CVPR_2017_paper.pdf) :star: :star: :star: :star:
-
-
-- PointNet++论文。
-
- -- [PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space](https://arxiv.org/pdf/1706.02413.pdf)
 
 - Facebook何凯明等人提出VoteNet,直接基于点云的3D目标检测模型(无image输入，话说何凯明开始多领域作战)。点云一般是稀疏性，直接
 做检测具有较高难度。论文基于PointNet++,提出VoteNet，由deep point set networks 和 Hough voting组成。论文在ScanNet和
