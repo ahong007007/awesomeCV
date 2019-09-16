@@ -158,6 +158,11 @@ MobileNetv3用到的tricks:
 - AutoML与GAN结合，但是仅仅在CIFAR-10做实验，没有ImageNet数据。
 
   - [AutoGAN: Neural Architecture Search for Generative Adversarial Networks](https://arxiv.org/pdf/1908.03835.pdf)[2019.08]  
+  
+- 华为诺亚凡方舟提出DARTS+。论文任务DARTS存在一个问题：collapse issue（skip-connects导致的优化问题？）。论文提出The Early Stopping 策略(给出两个推论，在skip-connects数量和architecture parameters α
+达到一定条件下)。论文模型SE-DARTS+在SE-Module(训练时使用AutoAugment, mixup etc.)在ImageNet达到TOP 1 22.5%错误率，搜索时间0.2 GPU day
+
+  - [2019.09][DARTS+: Improved Differentiable Architecture Search with Early Stopping](https://arxiv.org/pdf/1909.06035.pdf)   
 ## Detection
 
 - 中科院自动化所和旷视联合提出，Object Detection with FPN on COCO优于ResNet101,但是FLOPs比ResNet50低。基于ShuffleNetV2的架构也有较好的表现。
@@ -214,26 +219,26 @@ Additive Margin Softmax LossArcFace Loss等）。论文基于强化学习的NAS�
 
 ## Benchmark on ImageNet
 
-| Architecture       | Top-1 (%) | Top-5 (%) | Params (M) | +x (M) | GPU | Search cost |
-| --- | --- | --- | --- | --- | ---   | ---    |
-| [Inception-v1](https://arxiv.org/pdf/1409.4842.pdf)       | 30.2      | 10.1      | 6.6        | 1448   | -   | -    |
-| [MobileNet-v1](https://arxiv.org/abs/1704.04861)       | 29.4      | 10.5      | 4.2        | 569    | -   | -    |
-| [ShuffleNet](http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0642.pdf)         | 26.3      | -         | ~5         | 524    | -   | -    |
-| [MobileNetV2](https://arxiv.org/pdf/1801.04381.pdf)     |28.0          |  -       | 3.4M  | 300M  | - | - |
-| MobileNetV2-1.4 |25.3          |  -       |6.9M   | 585M  | - | - |
-| [MobileNetV3](https://arxiv.org/pdf/1905.02244.pdf)     | 24.8 |  - | 5.4M | 219M | -| -|
-| [NASNet-A]((http://openaccess.thecvf.com/content_cvpr_2018/papers/Zoph_Learning_Transferable_Architectures_CVPR_2018_paper.pdf))           | 26.0      | 8.4       | 5.3        | 564    | 450 | 3-4  |
-| NASNet-B           | 27.2      | 8.7       | 5.3        | 488    | 450 | 3-4  |
-| NASNet-C           | 27.5      | 9.0       | 4.9        | 558    | 450 | 3-4  |
-| [AmobebaNet-A](https://arxiv.org/pdf/1802.01548.pdf)       | 25.5      | 8.0       | 5.1        | 555    | 450 |  7   |
-| AmobebaNet-B       | 26.0      | 8.5       | 5.3        | 555    | 450 |  7   |
-| AmobebaNet-C       | 24.3      | 7.6       | 6.4        | 555    | 450 |  7   |
-| [Progressive NAS](http://openaccess.thecvf.com/content_ECCV_2018/papers/Chenxi_Liu_Progressive_Neural_Architecture_ECCV_2018_paper.pdf)    | 25.8      | 8.1       | 5.1        | 588    | 100 | 1.5  |
-| [DARTS-V2](https://arxiv.org/abs/1806.09055)           | 26.9      | 9.0       | 4.9        | 595    |  1  |  1   |
-| [GDAS](https://raw.githubusercontent.com/D-X-Y/GDAS/master/data/GDAS.pdf) | 26.0      | 8.5       | 5.3        | 581    |  1  |  0.21   |
-| [RandWire-WS](https://arxiv.org/pdf/1904.01569.pdf)        | 25.3±0.25 | 7.8       | 5.6±1      |583±6.2 |  -  |   -     |
-| [EfficientNet](https://arxiv.org/pdf/1905.11946.pdf) | 15.4% | 2.9%  | 66 | - | -|-| 
-
+| Architecture       | Top-1 (%) | Top-5 (%) | Params (M) | +x (M) | GPU | Search cost(GPU days) | Search Method|
+| --- | --- | --- | --- | --- | ---   | ---    | --- |
+| [Inception-v1](https://arxiv.org/pdf/1409.4842.pdf)       | 30.2      | 10.1      | 6.6        | 1448   | -   | -    |  |
+| [MobileNet-v1](https://arxiv.org/abs/1704.04861)       | 29.4      | 10.5      | 4.2        | 569    | -   | -    |  |
+| [ShuffleNet](http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/0642.pdf)         | 26.3      | -         | ~5         | 524    | -   | -    |  |
+| [MobileNetV2](https://arxiv.org/pdf/1801.04381.pdf)     |28.0          |  -       | 3.4M  | 300M  | - | - |  |
+| MobileNetV2-1.4 |25.3          |  -       |6.9M   | 585M  | - | - |  |
+| [MobileNetV3](https://arxiv.org/pdf/1905.02244.pdf)     | 24.8 |  - | 5.4M | 219M | -| -|  |
+| [NASNet-A]((http://openaccess.thecvf.com/content_cvpr_2018/papers/Zoph_Learning_Transferable_Architectures_CVPR_2018_paper.pdf))           | 26.0      | 8.4       | 5.3        | 564    | 450 | 3-4  |  |
+| NASNet-B           | 27.2      | 8.7       | 5.3        | 488    | 450 | 3-4  |  |
+| NASNet-C           | 27.5      | 9.0       | 4.9        | 558    | 450 | 3-4  |  |
+| [AmobebaNet-A](https://arxiv.org/pdf/1802.01548.pdf)       | 25.5      | 8.0       | 5.1        | 555    | 450 |  7   |  |
+| AmobebaNet-B       | 26.0      | 8.5       | 5.3        | 555    | 450 |  7   |  |
+| AmobebaNet-C       | 24.3      | 7.6       | 6.4        | 555    | 450 |  7   |  |
+| [Progressive NAS](http://openaccess.thecvf.com/content_ECCV_2018/papers/Chenxi_Liu_Progressive_Neural_Architecture_ECCV_2018_paper.pdf)    | 25.8      | 8.1       | 5.1        | 588    | 100 | 1.5  |  |
+| [DARTS-V2](https://arxiv.org/abs/1806.09055)           | 26.9      | 9.0       | 4.9        | 595    |  1  |  1   |  |
+| [GDAS](https://raw.githubusercontent.com/D-X-Y/GDAS/master/data/GDAS.pdf) | 26.0      | 8.5       | 5.3        | 581    |  1  |  0.21   |  |
+| [RandWire-WS](https://arxiv.org/pdf/1904.01569.pdf)        | 25.3±0.25 | 7.8       | 5.6±1      |583±6.2 |  -  |   -     |  |
+| [EfficientNet](https://arxiv.org/pdf/1905.11946.pdf) | 15.4 | 2.9  | 66 | - | -|-|   |
+|[DARTS+](https://arxiv.org/pdf/1909.06035.pdf)        | 22.5  |6.4  |6.1 |594|  1 |0.2 | gradient|
 
 Auto is the new black — Google AutoML, Microsoft Automated ML, AutoKeras and auto-sklearn
 
