@@ -1,4 +1,10 @@
 
+# ICDAR
+
+- 本论文主要介绍ICDAR2019 Robust Reading Challenge on Arbitrary-Shaped Text（RRC-ArT）的进展，包括 i)scene text detection, ii)scene text recognition, and iii) scene text spotting(同时包括检测和识别。)
+
+  - [2019.09][ICDAR2019 Robust Reading Challenge on Arbitrary-Shaped Text (RRC-ArT)](https://arxiv.org/pdf/1909.07145.pdf)
+
 # Scene Text Detection
 - 商汤和香港中文大学联合提出的场景文字检测模型。基于Mask RCNN框架，不同点在于mask分支，
 mask rcnn预测的是每个像素是否前景和背景，既{0,1}，而论文提出的Pyramid Mask Text Detector 
