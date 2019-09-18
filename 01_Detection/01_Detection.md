@@ -84,8 +84,12 @@ non-local模块修正语义特征。损失函数不平衡：论文设计Balanced
 
 - 北京大学等提出的一种改善型backbone，类似于HRNet和Cascade R-CNN（Cascade R-CNN是级联detector,而本文CBNet是级联backbone）。论文最强指标Cascade Mask R-CNN +Triple-ResNeXt152在COCO数据集实现53.3AP，性能上是数据榜首。  
 
-  -[2019][CBNet: A Novel Composite Backbone Network Architecture for Object Detection](https://arxiv.org/pdf/1909.03625.pdf)
+  -[2019.09][CBNet: A Novel Composite Backbone Network Architecture for Object Detection](https://arxiv.org/pdf/1909.03625.pdf)
 
+
+- 韩国高等理工学院提出Cascade RPN。
+
+  -[2019.09][Cascade RPN: Delving into High-Quality Region Proposal Network with Adaptive Convolution](https://arxiv.org/pdf/1909.06720.pdf)
 ## Imbalance
 
 -  中国科学技术大学提出，在Focal Loss基础上解决目标检测前景和背景不平衡问题。论文主要提出三个观点：decoupling objectness from classification, biased initialization, threshold movement。
