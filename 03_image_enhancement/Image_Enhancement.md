@@ -4,7 +4,9 @@
 
  - [Blind Deblurring using Deep Learning: A Survey](https://arxiv.org/pdf/1907.10128.pdf)[2019.07]
 
+- Image inpainting综述
 
+  - [2019.09][Image inpainting: A review](https://arxiv.org/pdf/1909.06399.pdf)
 # Super-Resolution
 
 - CVPR2019论文，中科大，自动化所，旷视等联合提出Meta-SR, 单一模型解决任意尺度的 super-resolution。模型包括：Feature Learning Module和MetaUpscale Module。Feature Learning Module
