@@ -5,6 +5,9 @@
 
   - [2019.09][ICDAR2019 Robust Reading Challenge on Arbitrary-Shaped Text (RRC-ArT)](https://arxiv.org/pdf/1909.07145.pdf)
 
+- 介绍ICDAR 2019 LSVT(Large-scale Street View Text)数据集，任务，评估方法和竞赛结果摘要。
+
+  - [2019.09][ICDAR 2019 Competition on Large-scale Street View Text with Partial Labeling -RRC-LSVT](https://arxiv.org/pdf/1909.07741.pdf)
 # Scene Text Detection
 - 商汤和香港中文大学联合提出的场景文字检测模型。基于Mask RCNN框架，不同点在于mask分支，
 mask rcnn预测的是每个像素是否前景和背景，既{0,1}，而论文提出的Pyramid Mask Text Detector 
