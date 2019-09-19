@@ -7,6 +7,10 @@
 - Image inpainting综述
 
   - [2019.09][Image inpainting: A review](https://arxiv.org/pdf/1909.06399.pdf)
+  
+- 图像去除雨滴算法综述
+
+  - [2019.09][A Survey on Rain Removal from Video and Single Image](https://arxiv.org/pdf/1909.08326.pdf)
 # Super-Resolution
 
 - CVPR2019论文，中科大，自动化所，旷视等联合提出Meta-SR, 单一模型解决任意尺度的 super-resolution。模型包括：Feature Learning Module和MetaUpscale Module。Feature Learning Module
