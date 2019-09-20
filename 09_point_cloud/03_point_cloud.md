@@ -57,7 +57,7 @@ Statistics: :fire: code is available or the paper is very important
   - [ICCV2017][Colored Point Cloud Registration Revisited](http://openaccess.thecvf.com/content_ICCV_2017/papers/Park_Colored_Point_Cloud_ICCV_2017_paper.pdf)
     
 
-
+---
 # 3D object detection
 
 
@@ -70,12 +70,18 @@ SUN RGB-D具有良好表现。 CNN在3D object classification ,3D object detecti
   - [Deep Hough Voting for 3D Object Detection in Point Clouds](https://arxiv.org/pdf/1904.09664.pdf)
 
 - 
-  - [Going Deeper with Point Networks](https://arxiv.org/pdf/1907.00960.pdf)
+  - [2019.07][Going Deeper with Point Networks](https://arxiv.org/pdf/1907.00960.pdf)
+  
+- 港中文的贾佳亚教授实验室作品，思想类似于类似于RCNN在二维目标检测方法，采用两阶段方法：第一阶段基于生成粗略预测结果，第二阶段结合Raw 点云生成精确检测结果。
+  2D目标检测的更多trick比如Cascade RPN什么时候用在三维上？拭目以待。
+  
+    - [2019.09][Fast Point R-CNN](https://arxiv.org/abs/1908.02990) [__`det.`__ __`aut.`__]
   
 - RGB-D Image Analysis and Processing,chapter 3
 
   - [RGB-D image-based Object Detection: from Traditional Methods to Deep Learning Techniques](https://arxiv.org/pdf/1907.09236.pdf)
 
+---
 
 # Segmentation
           
