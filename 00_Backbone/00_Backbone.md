@@ -1,4 +1,4 @@
-
+[![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 # Backbone
 
 - Res2Net,南开大学提出。计算机视觉的主题是提取更好的特征表示，多尺度特征提取是图像分类，识别，检测，分割的重要手段，
