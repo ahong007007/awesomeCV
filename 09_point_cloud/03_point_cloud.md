@@ -77,7 +77,7 @@ SUN RGB-D具有良好表现。 CNN在3D object classification ,3D object detecti
   
   - [2019.09][Fast Point R-CNN](https://arxiv.org/abs/1908.02990) [__`det.`__ __`aut.`__]
   
-
+- 二维图像的YOLO算法应用于三维点云检测和跟踪。
 
   - [2019][Complexer-YOLO: Real-Time 3D Object Detection and Tracking on Semantic Point Clouds](https://arxiv.org/abs/1904.07537) [[pytorch](https://github.com/AI-liu/Complex-YOLO)] [__`det.`__ __`tra.`__ __`aut.`__] :fire:
 
