@@ -9,6 +9,7 @@
 
   - [2019.09][ICDAR 2019 Competition on Large-scale Street View Text with Partial Labeling -RRC-LSVT](https://arxiv.org/pdf/1909.07741.pdf)
 # Scene Text Detection
+
 - 商汤和香港中文大学联合提出的场景文字检测模型。基于Mask RCNN框架，不同点在于mask分支，
 mask rcnn预测的是每个像素是否前景和背景，既{0,1}，而论文提出的Pyramid Mask Text Detector 
 (PMTD) 预测是[0,1]（中心点接近1，边缘点接近0，可是和立体图形有什么关系？）。论文图1显示标注
@@ -24,7 +25,6 @@ mask rcnn预测的是每个像素是否前景和背景，既{0,1}，而论文提
   如果语义分割图一开始就是黏连一起，如果保证最小的kernel情况下字符串不黏连？ OHEM如何实现？
 
   - [Shape Robust Text Detection with Progressive Scale Expansion Network](https://arxiv.org/pdf/1806.02559.pdf)[1806.02]
-
 
 
 Look More Than Once: An Accurate Detector for Text of Arbitrary Shapes
