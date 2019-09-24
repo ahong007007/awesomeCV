@@ -162,7 +162,10 @@ MobileNetv3用到的tricks:
 - 华为诺亚凡方舟提出DARTS+。论文任务DARTS存在一个问题：collapse issue（skip-connects导致的优化问题？）。论文提出The Early Stopping 策略(给出两个推论，在skip-connects数量和architecture parameters α
 达到一定条件下)。论文模型SE-DARTS+在SE-Module(训练时使用AutoAugment, mixup etc.)在ImageNet达到TOP 1 22.5%错误率，搜索时间0.2 GPU day
 
-  - [2019.09][DARTS+: Improved Differentiable Architecture Search with Early Stopping](https://arxiv.org/pdf/1909.06035.pdf)   
+  - [2019.09][DARTS+: Improved Differentiable Architecture Search with Early Stopping](https://arxiv.org/pdf/1909.06035.pdf) 
+  
+  *最近看一本书，《算法之美》，有一个最优停止理论，包括相亲问题、见好就收、苏丹嫁妆、售房问题，秘书问题，都可以用最优停止理论来选择合适的停止时机。DARTS是不是也可以套用？*  
+    
 ## Detection
 
 - 中科院自动化所和旷视联合提出，Object Detection with FPN on COCO优于ResNet101,但是FLOPs比ResNet50低。基于ShuffleNetV2的架构也有较好的表现。
