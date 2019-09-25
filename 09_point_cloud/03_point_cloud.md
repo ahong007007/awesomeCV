@@ -48,6 +48,11 @@ Statistics: :fire: code is available or the paper is very important
 
   - [CVPR2019] [PointConv: Deep Convolutional Networks on 3D Point Clouds](https://arxiv.org/abs/1811.07246). [[tensorflow](https://github.com/DylanWusee/pointconv)] [__`cls.`__ __`seg.`__] :fire:
 
+- 论文提出ShufflePointNet，基于二维分组卷积和论文提出ShuffleNet,在三维点云的应用。
+
+  - [2019.09][Go Wider: An Efficient Neural Network for Point Cloud Analysis via Group Convolutions](https://arxiv.org/pdf/1909.10431.pdf)
+
+
 ---
 
 # pointcloud registration
