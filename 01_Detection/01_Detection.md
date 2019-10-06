@@ -90,6 +90,12 @@ non-local模块修正语义特征。损失函数不平衡：论文设计Balanced
 - 韩国高等理工学院提出Cascade RPN。
 
   -[2019.09][Cascade RPN: Delving into High-Quality Region Proposal Network with Adaptive Convolution](https://arxiv.org/pdf/1909.06720.pdf)
+
+## Tiny
+ 
+自滑铁卢大学提出YOLO Nano 的网络，他们通过人与机器协同设计模型架构大大提升了性能。YOLO Nano 大小只有 4.0MB 左右，比 Tiny YOLOv2 和 Tiny YOLOv3 分别小了 15.1 倍和 8.3 倍，性能却有较为显著的提升。
+
+  -[2019.10][YOLO Nano: a Highly Compact You Only Look Once Convolutional Neural Network for Object Detection](https://arxiv.org/pdf/1910.01271.pdf)
 ## Imbalance
 
 -  中国科学技术大学提出，在Focal Loss基础上解决目标检测前景和背景不平衡问题。论文主要提出三个观点：decoupling objectness from classification, biased initialization, threshold movement。
