@@ -19,6 +19,9 @@
   **话说imbalance中，头部问题是？**  
   - [2019.09][Imbalance Problems in Object Detection: A Review](https://arxiv.org/pdf/1909.00169.pdf) [github]()
 
+- state of art
+
+  - https://paperswithcode.com/sota/object-detection-on-coco
 ## Facial Detector
 
 - 天津大学、武汉大学、腾讯AI实验室提出的人脸检测模型，主要针对移动端设计（backbone MobileNet v2）
