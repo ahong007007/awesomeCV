@@ -69,10 +69,11 @@ Fast Interactive Object Annotation with Curve-GCN.[pdf](https://arxiv.org/pdf/19
 ---
 # point 
 
-- ICCV2019 oral论文，贯通GCN和CNN，并且实现对点云分割处理。CNN一般用于处理图像，视频音频，文本，而GCN处理社交网络，城市网络，点云等。GCN受限于梯度弥散问题，层数比较少（3-6 lays）
-.论文延续CNN策略，基于DenseNet,ResNet等(skip connections)，让多个GCN拼接，同时使用空洞卷积等，增加感受视野。论文在3D数据集(S3DIS)效果,点云的语义分割好于pointNet++等模型。
-
-  -[2019][ICCV][DeepGCNs: Making GCNs Go as Deep as CNNs](https://arxiv.org/pdf/1910.06849.pdf)
+- 阿卜杜拉国王科技大学(KAUST)提出DeepGCN系列，ICCV2019 oral论文，贯通GCN和CNN，并且实现对点云分割处理。CNN一般用于处理图像，视频音频，文本，而GCN处理社交网络，城市网络，点云等。GCN受限于梯度弥散问题，层数比较少（3-6 lays）
+.论文延续CNN策略，基于DenseNet,ResNet等(skip connections)，让多个GCN拼接，同时使用空洞卷积等，增加感受视野。论文在3D数据集(S3DIS)效果,点云的语义分割好于pointNet++等模型，在生物数据集PPI也做相关验证。
+ 
+  -[2019][ICCV][Can GCNs Go as Deep as CNNs?](https://arxiv.org/pdf/1904.03751.pdf)
+  -[2019][DeepGCNs: Making GCNs Go as Deep as CNNs](https://arxiv.org/pdf/1910.06849.pdf)
 
 # about awesome
 
@@ -80,7 +81,6 @@ Fast Interactive Object Annotation with Curve-GCN.[pdf](https://arxiv.org/pdf/19
 ---
 # 待记录
 
-Can GCNs Go as Deep as CNNs?.[pdf](https://arxiv.org/pdf/1904.03751.pdf)
 
 Deep Learning on Graphs For Computer Vision — CNN, RNN, and GNN
 
