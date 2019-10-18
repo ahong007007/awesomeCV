@@ -97,8 +97,10 @@ SUN RGB-D具有良好表现。 CNN在3D object classification ,3D object detecti
 
 # Segmentation
           
-#ICRA 2018
+- 点云领域的经典论文。点云具有无序，局部相关性，平移不变性(旋转，平移)三个特征。论文同时提出两个定理：(1)PointNet的网络结构能够拟合任意的连续集合函数，(2)PointNet能够总结出表示某类物体形状的关键点，基于这些关键点PointNet能够判别物体的类别。
+这样的能力决定了PointNet对噪声和数据缺失的鲁棒性。
 
+  - [2016][PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation](https://arxiv.org/pdf/1612.00593.pdf)
 - 
 
   - [SqueezeSeg: Convolutional Neural Nets with Recurrent CRF for Real-Time Road-Object Segmentation from 3D LiDAR Point Cloud]
@@ -119,3 +121,33 @@ https://zhuanlan.zhihu.com/p/44809266
 
 
 
+GeoNet: Deep Geodesic Networks for Point Cloud Analysis
+PointNet
+GeoNet: Deep Geodesic Networks for Point Cloud Analysis
+PointNet++
+PointRCNN:3D Object Proposal Generation and Detection from Point Cloud
+PointConv: Deep Convolutional Networks on 3D Point Clouds
+3D Fully Convolutional Network for Vehicle Detection in Point Cloud	
+Large-scale Point cloud segmentation with superpoint graphs,	
+Unstructured point cloud semantic labeling using deep segmentation networks
+Generalizing discrete convolutions for unstructured point clouds
+Point Cloud Oversegmentation with Graph-Structured Deep Metric Learning
+PointSIFT: A SIFT-like Network Module for 3D Point Cloud Semantic Segmentation    
+PointPillars: Fast Encoders for Object Detection from Point Cloud
+RepNet: Weakly Supervised Training of an Adversarial Reprojection Network for 3D Human Pose Estimation	cvpr2019
+SGPN: Similarity Group Proposal Network for 3D Point Cloud Instance Segmentation
+
+
+Deep hough voting for 3d object detection in point clouds
+
+
+3124,L3-Net: Towards Learning based LiDAR Localization for Autonomous Driving,Weixin Lu (Baidu ADU)
+
+SDRSAC: Semidefinite-Based Randomized Approach for Robust Point Cloud Registration without Correspondences,Huu Minh Le (Queensland University of Technology)*
+PointNetLK: Robust & Efficient Point Cloud Registration using PointNet,Hunter M Goforth (Carnegie Mellon University)*
+,PVNet: Pixel-wise Voting Network for 6DoF Pose Estimation,"sida peng (Zhejiang University)
+,Object Tracking by Reconstruction with View-Specific Discriminative Correlation Filters,Ugur Kart (Tampere University of Technology)*
+1781,"Large-Scale, Metric Structure from Motion for Unordered Light Fields",Sotiris Nousias (University College London)*
+2491,Recurrent MVSNet for High-resolution Multi-view Stereo Depth Inference,Yao Yao (The Hong Kong University of Science and Technology)
+1935,GA-Net: Guided Aggregation Net for End-to-end Stereo Matching,Feihu Zhang (University of Oxford)*
+Learning Depth with Convolutional Spatial Propagation Network，Xinjing Cheng（baidu）2018，arkiv
