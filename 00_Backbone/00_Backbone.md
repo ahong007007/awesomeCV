@@ -1,4 +1,5 @@
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+---
 # Backbone
 
 - Res2Net,南开大学提出。计算机视觉的主题是提取更好的特征表示，多尺度特征提取是图像分类，识别，检测，分割的重要手段，
@@ -34,12 +35,13 @@ depthwise conv、pointwise conv、groupwise conv减少模型计算量，轮提�
 - FaceBook作品，在ImageNet Top 1 86.4%。
 
   - [2019][Fixing the train-test resolution discrepancy](https://arxiv.org/pdf/1906.06423.pdf)
-
+---
 ## others
 - Facebook作品，论文没有提出任何模型，或针对特定任务改进。论文任务公开数据集COCO/ImageNet/OpenIamge等对地理位置或收入水平低区域存在偏差，相应的图像数据分布较少。话说假如训练的模型可以识别全球目标的，在欠发达区域使用率也较少吧。
 
   - [Does Object Recognition Work for Everyone?](https://arxiv.org/pdf/1906.02659.pdf)
 
+---
 ## 待记录
 
 [An Empirical Study of Spatial Attention Mechanisms in Deep Networks](https://arxiv.org/pdf/1904.05873.pdf)
