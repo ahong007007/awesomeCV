@@ -121,7 +121,6 @@ https://zhuanlan.zhihu.com/p/44809266
 
 
 
-GeoNet: Deep Geodesic Networks for Point Cloud Analysis
 PointNet
 GeoNet: Deep Geodesic Networks for Point Cloud Analysis
 PointNet++
