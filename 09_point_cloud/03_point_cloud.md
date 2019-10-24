@@ -31,14 +31,25 @@ Statistics: :fire: code is available or the paper is very important
 
 ---
 ## classification/Backbone
-- CVPR2017论文。
 
-  - [PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation](http://openaccess.thecvf.com/content_cvpr_2017/papers/Qi_PointNet_Deep_Learning_CVPR_2017_paper.pdf) :star: :star: :star: :star:
+- 斯坦福大学提出，点云领域的经典论文，用于解决点云分类，语义分割和目标识别(分类和分割任务共用backbone)。
+PointNet之前的方法集中在点云投影二维平面，点云划分Voxel等方式。而本文直接对点云操作。点云具有无序，局部相关性，平移不变性(旋转，平移)三个特征。论文同时提出两个结论：(1)PointNet的网络结构能够拟合任意的连续集合函数，(2)PointNet能够总结出表示某类物体形状的关键点，基于这些关键点PointNet能够判别物体的类别。
+这样的能力决定了PointNet对噪声和数据缺失的鲁棒性。
+  - 两次用到T-Net,T-Net是3*3的矩阵，对每个点云做旋转对齐。实验分析T-Net没有明显作用。
+  - 缺点卷积计算是conv1d，单独对每个点云做卷积，没有利用点云的周围特征。在背景噪声复杂时，不具有鲁棒性。
+  - 所有点云提取全局特征，而不是局部特征。
+  - 点云存储位置相邻并不意味真实空间相邻。
+  - [CVPR2017][PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation](https://arxiv.org/pdf/1612.00593.pdf) :star: :star: :star: :star:
 
 
-- PointNet++论文。
-
- -- [PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space](https://arxiv.org/pdf/1706.02413.pdf)
+- 斯坦福大学提出PointNet升级版PointNet++。主要解决两个问题：a对点云如何分组，b.如何提取局部特征。模型主要包括
+  - sampling layer(farthest point sampling {FPS} algorithm):选择N个中心点。
+  - grouping layer：Ball query生成N个局部区域，参数包括：中心点的数量K，球的半径。
+  - PointNet layer：输入网络之前的点云球体，坐标会更新为球中心的相对坐标，类似Batch Norm。
+  - hierarchical structure，PointNet++的backbone，由sampling&grouping&PointNet交叠组成。
+  - 非均匀点云的处理，论文使用Multi-scale grouping (MSG) and Multi-resolution grouping (MRG)多尺度处理。MSG+DP相对单尺度SSG，有更好的鲁棒性。
+  
+ -- [NIPS2017][PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space](https://arxiv.org/pdf/1706.02413.pdf)
 
 -  俄勒冈州立大学机器人技术与智能系统（CoRIS）研究所的研究者提出了 PointConv，可以高效的对非均匀采样的 3D 点云数据进行卷积操作，该方法在多个数据集上实现了优秀的性能。
 主要贡献：
@@ -48,10 +59,9 @@ Statistics: :fire: code is available or the paper is very important
 
   - [CVPR2019] [PointConv: Deep Convolutional Networks on 3D Point Clouds](https://arxiv.org/abs/1811.07246). [[tensorflow](https://github.com/DylanWusee/pointconv)] [__`cls.`__ __`seg.`__] :fire:
 
-- 论文提出ShufflePointNet，基于二维分组卷积和论文提出ShuffleNet,在三维点云的应用。
+- 论文提出ShufflePointNet，基于二维分组卷积和论文ShuffleNet,在三维点云的应用。
 
   - [2019.09][Go Wider: An Efficient Neural Network for Point Cloud Analysis via Group Convolutions](https://arxiv.org/pdf/1909.10431.pdf)
-
 
 ---
 
@@ -97,10 +107,6 @@ SUN RGB-D具有良好表现。 CNN在3D object classification ,3D object detecti
 
 # Segmentation
           
-- 点云领域的经典论文。点云具有无序，局部相关性，平移不变性(旋转，平移)三个特征。论文同时提出两个定理：(1)PointNet的网络结构能够拟合任意的连续集合函数，(2)PointNet能够总结出表示某类物体形状的关键点，基于这些关键点PointNet能够判别物体的类别。
-这样的能力决定了PointNet对噪声和数据缺失的鲁棒性。
-
-  - [2016][PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation](https://arxiv.org/pdf/1612.00593.pdf)
 - 
 
   - [SqueezeSeg: Convolutional Neural Nets with Recurrent CRF for Real-Time Road-Object Segmentation from 3D LiDAR Point Cloud]
@@ -121,9 +127,9 @@ https://zhuanlan.zhihu.com/p/44809266
 
 
 
-PointNet
+
 GeoNet: Deep Geodesic Networks for Point Cloud Analysis
-PointNet++
+
 PointRCNN:3D Object Proposal Generation and Detection from Point Cloud
 PointConv: Deep Convolutional Networks on 3D Point Clouds
 3D Fully Convolutional Network for Vehicle Detection in Point Cloud	
