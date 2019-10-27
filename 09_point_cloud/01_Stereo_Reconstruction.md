@@ -28,7 +28,7 @@ survey/overview/review
 
 ## Stereo Matching
 
-- [2018][CVPR][Learning for Disparity Estimation Through Feature Constancy(https://arxiv.org/pdf/1712.01039.pdf)
+- [2018][CVPR][Learning for Disparity Estimation Through Feature Constancy](https://arxiv.org/pdf/1712.01039.pdf)
 
 - stereo reconstruction is decomposed into three important steps: feature extraction (for matching cost
 computation), matching cost aggregation and disparity prediction.本文主要介绍实现Stereo Matching。
@@ -37,15 +37,16 @@ computation), matching cost aggregation and disparity prediction.本文主要介
 ---  
 ## Multi-View Stereo
 
-
-- 传统multi-view stereo(MVS)利用空间几何基本原理，旨在利用多张影像(影像及对应的相机几何)恢复出三维场景。香港科技大学和深圳altizure团队提出的基于Deep learning的高精度高效率的三维重建网络，
-包括特征提取，Depth map估计，三维点云生成网络。
+- 传统multi-view stereo(MVS)利用空间几何基本原理，旨在利用多张影像(影像及对应的相机几何)恢复出三维场景，基本假设是Lambertian反射，既目标表面不吸收任何入射光，在自然场景如玻璃，低纹理特征等场景导致重建失败。香港科技大学和深圳altizure团队提出的基于Deep learning的高精度高效率的三维重建网络MVSNet(ECCV2018 oral)，
+包括如特征提取，差分单应矩阵，基于方差的多视觉相识度度量，Depth map估计与修正，实现三维点云生成网络。
   - 缺点：过于耗费内存，难以应用到大尺度场景的问题。
-  - 在室内数据集和简单室外数据集效果尚可，相比。
+  - 在室内数据集DTU和简单室外场景数据集Tanks and Temples验证，没有室外自然场景的尝试。
 
   - [2018 ECCV][MVSNet: Depth Inference for Unstructured Multi-view Stereo](https://arxiv.org/pdf/1804.02505.pdf)
 
-- MVSNet改进版。
+- CVPR2019论文，香港大学提出的MVSNet升级改进版。MVSNet过于耗费内存在于Cost Volume Regularization对所有的3D volumes同时进行。论文提出的R-MVSnet引入了循环神经网络架构，依序地在深度方向通过GRU单元正则化2D feature map.
+R-MVSNet实现可学习的Depth map的估计，其他非学习模块包括图像预处理，Depth map，滤波与融合。
+  - R-MVSNet在可学习的MVS进一步尝试，在室内数据DTUE、TH3D以及简单室外数据集Tanks and Temples,优于传统MVS框架OpenMVS,COLMAP等，离真实的室外场景三维重建更进一步。
 
   - [2019][CVPR][Recurrent MVSNet for High-resolution Multi-view Stereo Depth Inference](https://arxiv.org/pdf/1902.10556.pdf)
 
@@ -75,4 +76,5 @@ large-scale scene reconstruction. ACM Transactions on Graphics (TOG) (2017)
   
 #待记录
 
- PoseNet，VINet，Perspective Transformer Net，SfMNet，CNN-SLAM，SurfaceNet，3D-R2N2，MVSNet
+ PoseNet，VINet，Perspective Transformer Net，SfMNet，CNN-SLAM，SurfaceNet，3D-R2N2，MVSNet,DeepMVS
+ MVDepthNet、DeMoN、DPSNet、MaskMVS，双目的有PSMNet
