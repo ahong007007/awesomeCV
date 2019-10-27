@@ -9,7 +9,7 @@
 
   - [2019.09][ICDAR 2019 Competition on Large-scale Street View Text with Partial Labeling -RRC-LSVT](https://arxiv.org/pdf/1909.07741.pdf)
 
-- 百度提出的C-SVT(Chinese Street View Text)中文街景地图数据集,包含3万真实标注的自然场景数据，40万部分标注数据集。
+- 百度开源C-SVT(Chinese Street View Text)中文街景地图数据集,包含3万真实标注的自然场景数据，40万部分标注数据集。
 
   - [ICCV2019][Chinese Street View Text: Large-scale Chinese Text Reading with Partially Supervised Learning](http://openaccess.thecvf.com/content_ICCV_2019/papers/Sun_Chinese_Street_View_Text_Large-Scale_Chinese_Text_Reading_With_Partially_ICCV_2019_paper.pdf)
 ---
