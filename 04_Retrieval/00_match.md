@@ -6,17 +6,28 @@
 -[Google Landmark Retrieval 2019](https://www.kaggle.com/c/landmark-retrieval-2019)(https://github.com/cvdfoundation/google-landmark)
 
 
-# paper 
-- 
+# paper
+ 
+- DELF
+
   - [Large-Scale Image Retrieval with Attentive Deep Local Features](https://arxiv.org/pdf/1612.06321.pdf)
 
 -
   - [ACTNET: end-to-end learning of feature activations and multi-stream aggregation for effective instance image retrieval](https://arxiv.org/pdf/1907.05794.pdf)
 
--
+- 巴黎多芬纳大学,捷克理工大学,苏黎世联邦理工学院,微软等联合提出，基于deep learning的pipline。传统提取特征的SIFT等，基于detect-then-describe方式。而论文类似RCNN的pipleline,detect-and-describe。
+先基于backbone提取特征，在local descriptor维度计算soft-NMS,在channel维度计算ratio-to-max，最后归一化计算图像像素对应的detection score。训练集基于Day-Night，直接使用深度信息，不需要标注。在测试阶段
+使用多尺度detection，提高匹配算法的鲁棒性。
+
+  - 疑问：开源代码代码中训练使用的是model.py中的SoftDetectionModule，测试使用的是model_test.py的HardDetectionModule，流程不太一样，待解决。
   - [2019][CVPR][D2-Net: A Trainable CNN for Joint Description and Detection of Local Features](https://arxiv.org/pdf/1905.03561v1.pdf)
+  - [Supplementary Material](https://dsmn.ml/files/d2-net/d2-net-supp.pdf)[github](https://github.com/mihaidusmanu/d2-net)
   
   
 -  1st place in the Google Landmark Retrieval 2019 challenge;3rd place in the Google Landmark Recognition 2019 challenge
 
   - [2019][Large-scale Landmark Retrieval/Recognition under a Noisy and Diverse Dataset](https://arxiv.org/pdf/1906.04087v2.pdf)
+
+
+
+LF-Net、SuperPoint 
