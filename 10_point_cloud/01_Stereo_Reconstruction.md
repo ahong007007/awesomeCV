@@ -40,6 +40,11 @@ survey/overview/review
 computation), matching cost aggregation and disparity prediction.本文主要介绍实现Stereo Matching。
 
   -[2019][GA-Net: Guided Aggregation Net for End-to-end Stereo Matching](https://arxiv.org/pdf/1904.06587.pdf)
+  
+--
+## Depth Estimation 
+
+  - [2018[CVPR][MegaDepth: Learning Single-View Depth Prediction from Internet Photos](https://arxiv.org/pdf/1804.00607.pdf)  
 ---  
 ## Multi-View Stereo
 
@@ -56,9 +61,9 @@ R-MVSNet实现可学习的Depth map的估计，其他非学习模块包括图像
 
   - [2019][CVPR][Recurrent MVSNet for High-resolution Multi-view Stereo Depth Inference](https://arxiv.org/pdf/1902.10556.pdf)
 
-- 清华大学与香港科技大学提出，基于Point-MVSNet解决MVS问题。包括Coarse Depth Prediction Network，Coarse Depth Map Prediction,Refned Depth Map Predictions，
-Coarse到refined修订。
-  - 缺点：主要针对单目标重建，以及scan9这样简单数据集。
+- 清华大学与香港科技大学提出，基于Point-MVSNet解决MVS问题。不同于MVSNet/R-MVSNet基于cost volume的方式，Point-MVSNet直接预测深度图和点云图，包括Coarse Depth Prediction Network,Refned Predictions和Final prediction，
+Coarse到refined修订。论文在DTU和Tanks and Temples数据集取得state-of-art水平。
+  - 论文开源，实现主要针对简单重建，以及scan9这样简单数据集。
 
   - [2019][ICCV][Point-Based Multi-View Stereo Network](https://arxiv.org/pdf/1908.04422.pdf)[github](https://github.com/callmeray/PointMVSNet)
   
