@@ -12,8 +12,8 @@
 
 - [Google Landmark Retrieval 2019](https://www.kaggle.com/c/landmark-retrieval-2019)(https://github.com/cvdfoundation/google-landmark)
 
-- Oxford 5k and
-- Paris 6k datasets
+- Oxford 5k and Oxf105k
+- Paris 6k Par106k
 
 # paper
  
@@ -23,8 +23,9 @@ backbone基于ResNet50(ImageNet预训练),图像首先预处理(输入图像分�
 Fine-tuning和Attention-based训练。模型训练集只需要分类的标注，没有像素级的标注。
 为了提高图像检索效率，使用PCA把特征维度减少到40。
   - google基于CNN的匹配三年连发三篇定会文章，果然高产。
-  - 疑问：论文描述训练过程， 有裁剪和缩放到224*224，有裁剪和缩放到720*720，以何为准？
+  - 疑问：论文描述训练过程， 有裁剪和缩放到224*224，有裁剪和缩放到720*720，以何为准？分别对应两阶段训练的策略。
   - Descriptor Fine-tuning和Attention-based是怎样的过程？
+  - [github](https://github.com/tensorflow/models/tree/master/research/delf)
   - [2017][ICCV][Large-Scale Image Retrieval with Attentive Deep Local Features](https://arxiv.org/pdf/1612.06321.pdf)
   - [2018][CVPR][Revisiting Oxford and Paris: Large-Scale Image Retrieval Benchmarking](https://arxiv.org/pdf/1803.11285.pdf)
 
