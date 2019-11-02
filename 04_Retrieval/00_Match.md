@@ -59,6 +59,7 @@ Fine-tuning和Attention-based训练。模型训练集只需要分类的标注，
 3.借助于区域特征融合R-ASMK(regional aggregated selective match kernel)，实现图像鉴别：第一阶段生成VLAD描述子，第二阶段基于求和池化和归一化。
 论文提出的模型以大欺小，基于Google Landmarks dataset数据训练的模型DELF-GLD，在ROxford 和RParis 数据集实现state-of-art水平。
 
+  - DELF在线计算平台[https://colab.research.google.com/github/tensorflow/hub/blob/master/examples/colab/tf_hub_delf_module.ipynb#scrollTo=mVaKXT3cMSib]
   - [2019][CVPR][Detect-to-Retrieve: Efficient Regional Aggregation for Image Search](https://arxiv.org/pdf/1812.01584.pdf) 
 -
   - [ACTNET: end-to-end learning of feature activations and multi-stream aggregation for effective instance image retrieval](https://arxiv.org/pdf/1907.05794.pdf)
