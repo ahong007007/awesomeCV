@@ -36,6 +36,7 @@ mask rcnn预测的是每个像素是否前景和背景，既{0,1}，而论文提
 Look More Than Once: An Accurate Detector for Text of Arbitrary Shapes
 
 
+
 # Scene Text Recognition
 
 - 论文提出一个框架模型，包括Spatial Transformer Network，Feature extraction，Sequence modeling，predictor，每个
