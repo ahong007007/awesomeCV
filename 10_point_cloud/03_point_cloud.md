@@ -117,6 +117,13 @@ SUN RGB-D具有良好表现。 CNN在3D object classification ,3D object detecti
 
   - [CVPR2019][Associatively Segmenting Instances and Semantics in Point Clouds](https://arxiv.org/pdf/1902.09852.pdf)[__`sem.`__.__`ins.`__]:fire:
 
+
+---
+# 6D Pose Estimation
+
+- CVPR2019论文，浙江大学提出6D Pose Estimation，输入2D图片和3D模型特征数据，在3D空间中检测目标的位置和姿态，应用之一是实现AR中目标的运动估计。
+
+  - [CVPR][2019][PVNet: Pixel-wise Voting Network for 6DoF Pose Estimation](https://arxiv.org/pdf/1812.11788.pdf)
 ---
 # Point Cloud Analysis
 
@@ -155,7 +162,7 @@ Deep hough voting for 3d object detection in point clouds
 
 SDRSAC: Semidefinite-Based Randomized Approach for Robust Point Cloud Registration without Correspondences,Huu Minh Le (Queensland University of Technology)*
 PointNetLK: Robust & Efficient Point Cloud Registration using PointNet,Hunter M Goforth (Carnegie Mellon University)*
-,PVNet: Pixel-wise Voting Network for 6DoF Pose Estimation,"sida peng (Zhejiang University)
+
 ,Object Tracking by Reconstruction with View-Specific Discriminative Correlation Filters,Ugur Kart (Tampere University of Technology)*
 1781,"Large-Scale, Metric Structure from Motion for Unordered Light Fields",Sotiris Nousias (University College London)*
 2491,Recurrent MVSNet for High-resolution Multi-view Stereo Depth Inference,Yao Yao (The Hong Kong University of Science and Technology)

@@ -82,6 +82,9 @@ multiple-view stereopsis. International Journal of Computer Vision (IJCV) (2016)
 Knapitsch, A., Park, J., Zhou, Q.Y., Koltun, V.: Tanks and temples: Benchmarking
 large-scale scene reconstruction. ACM Transactions on Graphics (TOG) (2017)
 
+
+https://github.com/tsattler/visuallocalizationbenchmark
+
   - [2017][CVPR][A Multi-View Stereo Benchmark with High-Resolution Images and Multi-Camera Videos](http://www.cvlibs.net/publications/Schoeps2017CVPR.pdf)
   
   
