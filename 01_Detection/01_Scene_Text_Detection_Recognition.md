@@ -25,16 +25,13 @@ mask rcnn预测的是每个像素是否前景和背景，既{0,1}，而论文提
 
   - [Pyramid Mask Text Detector](https://arxiv.org/pdf/1903.11800.pdf)[1903.11]
 
-
 - CVPR2019论文，南京大学提出，Progressive Scale Expansion Network (PSENet),基于语义分割的方法解决密集字符黏连的问题。在FPN拼接特征图基础上，人为缩放ground truth，计算不同kernel（文字块的核心）的语义分割图。论文有两个重要的超参数：number of scales n，缩放的数目，minimal scale m缩放的尺度。依次求连通域、渐进扩展算法合并各分割图，得到最终的实例分割。训练损失函数采用 dice coefficient计算相似性，OHEM分离正负样本。
 
   如果语义分割图一开始就是黏连一起，如果保证最小的kernel情况下字符串不黏连？ OHEM如何实现？
 
   - [Shape Robust Text Detection with Progressive Scale Expansion Network](https://arxiv.org/pdf/1806.02559.pdf)[1806.02]
 
-
 Look More Than Once: An Accurate Detector for Text of Arbitrary Shapes
-
 
 
 # Scene Text Recognition
@@ -55,6 +52,7 @@ Attention模型可以取得最佳效果（没有考虑实时性）。再次证�
 
 
 ## Datasets
+
 
 | Dataset (Year) | Image Num (train/test) | Text Num (train/test) | Orientation| Language| Characteristics | Detec/Recog Task |
 |:------:|:------:|:------:|:------:|:------:|:------:|:------:|

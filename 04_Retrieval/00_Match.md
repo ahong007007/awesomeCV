@@ -39,7 +39,10 @@
 
 - https://image-matching-workshop.github.io/leaderboard/
 
-# paper
+# Paper
+
+- match一篇经典论文。
+  - [CVPR][2012][Three things everyone should know to improve object retrieval](https://www.robots.ox.ac.uk/~vgg/publications/2012/Arandjelovic12/arandjelovic12.pdf)
  
 - ICCV2017论文，Google提出Google-Landmarks Dataset数据集和DELF(DEep Local Feature)算法。
 Google-Landmarks包含100万图像，11万检索图像,图片分布在187个国家，4872城市。DELF基于CNN计算实现大规模数据检索，包括特征提取和匹配。
@@ -76,16 +79,19 @@ Fine-tuning和Attention-based训练。模型训练集只需要分类的标注，
   - [2019][CVPR][D2-Net: A Trainable CNN for Joint Description and Detection of Local Features](https://arxiv.org/pdf/1905.03561v1.pdf)
   - [Supplementary Material](https://dsmn.ml/files/d2-net/d2-net-supp.pdf)[github](https://github.com/mihaidusmanu/d2-net)
   
+-
+D2-Net和R2D2都依赖dense gt correspondences, 比如D2-Net依赖MegaDepth，而R2D2是用EpicFlow自己插值出来的，获取成本和精度都是麻烦事。  
   
--  1st place in the Google Landmark Retrieval 2019 challenge;3rd place in the Google Landmark Recognition 2019 challenge
+- Landmarks CVPR19 workshop论文。Google Landmark检索第一名和识别第三名。看这篇论文用了很多tricks,Google-Landmarks-v2数据清洗，backbone集成6个模型：FishNet-150,ResNet-101和ResNetXt101等，
+损失函数结合人脸识别的cosine-based softmax losses。cosine annealing,mean-pooling (GeM)，finetuning,Discriminative-Reranking等。从实验数据看，Ensemble 6 models仅提升1%，但是实时性应该打折扣。
 
   - [2019][Large-scale Landmark Retrieval/Recognition under a Noisy and Diverse Dataset](https://arxiv.org/pdf/1906.04087v2.pdf)
-
+  - https://github.com/lyakaap/Landmark2019-1st-and-3rd-Place-Solution
+  - https://drive.google.com/file/d/1QmC4UKRhIXNW-sa8jxV5b7I6QbPKvJsi/view
 
 
 #待记录
 LF-Net、SuperPoint 
 Visual Localization Using Sparse Semantic 3D Map
-Global: GeM pooling [Radenovic et al., PAMI’18], Detect-to-Retrieve [Teichmann et al.,
+Global: GeM pooling [Radenovic et al., PAMI’18], 
 CVPR’19], or simply embeddings before classifier
-○ Local: DELF [Noh et al., ICCV’17]
