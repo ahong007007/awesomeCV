@@ -1,18 +1,15 @@
 
 # survey/overview/review
 
+---
 ## paper
 - NAS一篇综述，从Search Space，search strategy performance论述NAS.
 
   - [Neural Architecture Search: A Survey](https://arxiv.org/pdf/1808.05377.pdf)
-
-
 - 香港中文大学，第四范式综述。
-
   - [Taking the Human out of Learning Applications:A Survey on Automated Machine Learning](https://arxiv.org/pdf/1810.13306.pdf)[2018.10]
 
 - 机器学习的survey，和Neural Architecture Search不相关。
-
   - [Survey on Automated Machine Learning](https://arxiv.org/pdf/1904.12054.pdf)
 
 - IBM Martin团队对NAS总结。
@@ -26,12 +23,15 @@
 
   - [2019][Best Practices for Scientific Research on Neural Architecture Search](https://arxiv.org/pdf/1909.02453.pdf)
 
+---
 ## awesome
 
 - [D-X-Y/Awesome-NAS](https://github.com/D-X-Y/Awesome-NAS)
 - [awesome-automl-papers](https://github.com/hibayesian/awesome-automl-papers)
 - https://github.com/datasystemsgrouput/automl_survey
+- https://paperswithcode.com/task/automl
 
+---
 
 ## Blogs
 - [What’s the deal with Neural Architecture Search?](https://determined.ai/blog/neural-architecture-search/)
@@ -44,9 +44,15 @@
 - Illustrated: Efficient Neural Architecture Search
   - https://towardsdatascience.com/illustrated-efficient-neural-architecture-search-5f7387f9fb6
 - [Illustrated: Efficient Neural Architecture Search](https://towardsdatascience.com/illustrated-efficient-neural-architecture-search-5f7387f9fb6)
-
+- [Neural Architecture Search at CVPR 2019](https://drsleep.github.io/NAS-at-CVPR-2019/)
   
-## classifier
+## Workshop
+
+- [Neural Architects Workshop ICCV2019](https://neuralarchitects.org/)
+
+---
+
+# classifier
 
 - 2017 ICLR论文。google 首次尝试使用NAS构造CNN模型，基于RNN和强化学习的思路，训练和测试集CIFAR-10。RNN作为控制器，生成变长字符串，控制child network网络模型的连接。
 child network在验证数据集反馈准确率作为reward信息，计算策略的梯度更新控制器。重复以上过程，控制器将学习如何随着时间的推移改进其搜索。
@@ -166,58 +172,6 @@ MobileNetv3用到的tricks:
   
   *最近看一本书，《算法之美》，有一个最优停止理论，包括相亲问题、见好就收、苏丹嫁妆、售房问题，秘书问题，都可以用最优停止理论来选择合适的停止时机。DARTS是不是也可以套用？*  
     
-## Detection
-
-- 中科院自动化所和旷视联合提出，Object Detection with FPN on COCO优于ResNet101,但是FLOPs比ResNet50低。基于ShuffleNetV2的架构也有较好的表现。
-
-  - [DetNAS: Neural Architecture Search on Object Detection](https://arxiv.org/pdf/1903.10979v1.pdf)[2019.03]
-
-- Google基于AutoML提出Detection模型，基于RetinaNet网络，解决FPN多尺度金字塔问题。通过Neural Architecture Search搜索各种类型的
-top-down,bottom-up特征层的连接方式（还是连连看），取得state-of-art的mAP同时降低推断时间。100 TPU的模型也不是可轻易实现。
-
-  - [NAS-FPN: Learning Scalable Feature Pyramid Architecture for Object Detection](https://arxiv.org/pdf/1904.07392.pdf)[2019.04]
-  
- - 西工大提出，基于one-stage object detector (FCOS)的基础，基本运算包括可分离卷积，空洞卷积，可变形卷积，搜索空间包括FPN，Prediction Head和Head Weight Sharing。论文第一句话说的好：The success of deep neural networks relies on significant architecture engineering，现在Deep learning就是在各种架构上作文章。论文的trick使用比NAS-FPN多，但是性能仅仅相比one-stage模型提升1%，相比two-stage还是有较大差距，说明搜索架构的backbone还很重要，关键有一个较优的先验知识。论文虽然在搜索时间上有优势（强化学习30GPU days可完成？存疑），性能上却没有优势。
- 
-  - [NAS-FCOS: Fast Neural Architecture Search for Object Detection](https://arxiv.org/pdf/1906.04423.pdf)[2019.06]
-
-## Recognition
-
-- 华为等提出的人脸识别模型，在MS-Celeb-1M和LFW数据集state-of-art。主流人脸识别模型集中于度量学习（Metric Learning）和分类损失函数函数改进（Cross-Entropy Loss，Angular-Softmax Loss，
-Additive Margin Softmax LossArcFace Loss等）。论文基于强化学习的NAS设计，network size 和latency作为reward(论文的实验没有对比测试latency或者模型尺寸)，仅说明最小网络参数NASC 16M。
-这是NAS在人脸识别的首测尝试，分类，检测，识别都有涉及，图像分割应该不远。
-
-  - [Neural Architecture Search for Deep Face Recognition](https://arxiv.org/pdf/1904.09523.pdf)[2019.04]
-
-## Semantic  Segmentation
-
-- CVPR2019论文，驭势科技，新加坡国立大学等联合提出轻量型分类和语义分割网络，成为"东风"网络，主要解决Speed/Accuracy trade-off问题，性能接近于deeplab v2但是速度>50 fps。
-论文的backbone基于典型residual block，但是提出Acc(x)和Lat(x)用于评价准确率和推断时间，节省神经网络的随机搜索。另外没有选用RNN/LSTM,而是Random select an architecture。
-论文提出的算法，训练200个模型架构时已经去除438个模型架构，每个模型训练5-7个小时(8卡机)。训练200个架构月400GPU/days。
-模型在嵌入式硬件TX2和1080Ti均有评测，准确率和性能均有明显优势。去年有项目曾使用ENet/ICNet，速率尚可准确率不如人意，也许"东风"系列有明显改善。
-
-[Partial Order Pruning: for Best Speed/Accuracy Trade-off in Neural Architecture Search](https://arxiv.org/pdf/1903.03777.pdf)[2019.03]
-
-- 李飞飞团队作品。基于DeepLab系列框架搜索。
-
-  - [Auto-DeepLab:Hierarchical Neural Architecture Search for Semantic Image Segmentation](https://arxiv.org/pdf/1901.02985.pdf)[2019.01]
-
-
-
-
-
-## Graph CNN
-
-- 2019ICLR论文，Uber等联合提出，基于Graph CNN实现的NAS,性能虽然没有太惊艳，但是基于Graph CNN应该有更广阔用处。
-
-  - [Graph HyperNetworks for Neural Architecture Search](https://arxiv.org/pdf/1810.05749.pdf)[2018.10]
-
-
-## Architecture
-
-- facebook开源框架，基于MCTS和DNN,解决分类，目标检测，风格迁移，图像描述4个任务。
-
-  - [AlphaX: eXploring Neural Architectures with Deep Neural Networks and Monte Carlo Tree Search](https://arxiv.org/pdf/1903.11059.pdf)[2019.03]
 
 
 ## Benchmark on ImageNet
