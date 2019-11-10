@@ -45,7 +45,8 @@
   - https://towardsdatascience.com/illustrated-efficient-neural-architecture-search-5f7387f9fb6
 - [Illustrated: Efficient Neural Architecture Search](https://towardsdatascience.com/illustrated-efficient-neural-architecture-search-5f7387f9fb6)
 - [Neural Architecture Search at CVPR 2019](https://drsleep.github.io/NAS-at-CVPR-2019/)
-  
+## somebody
+- https://songhan.mit.edu/publications/
 ## Workshop
 
 - [Neural Architects Workshop ICCV2019](https://neuralarchitects.org/)

@@ -17,7 +17,7 @@ top-down,bottom-up特征层的连接方式（还是连连看），取得state-of
  
   - [NAS-FCOS: Fast Neural Architecture Search for Object Detection](https://arxiv.org/pdf/1906.04423.pdf)[2019.06]
 
- - 华为诺亚方舟和中山大学联合提出针对目标检测的两个更新：Auto-fusion和Auto-head。Auto-fusion主要是针对FPN的特征融合，既任意N层level feature特征融合,主要通过空洞卷积+rate,skip connection,depthwise-separable conv以及上采样/下样实现特征分辨率对齐和融合。Auto-head采用split-transform-merge策略，search space是input nodes和intermediate nodes。
+ - 华为诺亚方舟和中山大学联合提出Auto-FPN,主要针对目标检测的两个更新：Auto-fusion和Auto-head。Auto-fusion针对FPN的特征融合改进，既任意N层level feature特征融合,主要通过空洞卷积+rate,skip connection,depthwise-separable conv以及上采样/下样实现特征分辨率对齐和融合。Auto-head采用split-transform-merge策略，search space是input nodes和intermediate nodes。
   - Auto-FPN可以和Google的NAS-FPN对比阅读。NAS-FPN追求的是高准确率，在COCO-dev达到48.3mAP,Auto-FPN强调的是节省参数，相比SSD-ResNet101(31.2mAP)，Params节省12%。
   - 论文引用了FPN-NAS，但是没有做任何同一纬度的性能数据对比。
   - 论文实验数据集包括Pascal VOC, COCO, BDD, VisualGenome and ADE demonstrate，COCO具有说服力实验数据较少。
@@ -62,6 +62,12 @@ Additive Margin Softmax LossArcFace Loss等）。论文基于强化学习的NAS�
   - [AlphaX: eXploring Neural Architectures with Deep Neural Networks and Monte Carlo Tree Search](https://arxiv.org/pdf/1903.11059.pdf)[2019.03]
 
 # Data Augmentation
+
+- Goole大脑Zoph带队又一CVPR2019论文。论文主要针对图像分分类的数据增强操作，采用16种图像预处理方法：ShearX/Y,TranslateX/Y, Rotate, AutoContrast, Invert, Equalize, Solarize, Posterize, 
+Contrast, Color, Brightness, Sharpness,Cutout, Sample Pairing，结合各种预处理的幅度和概率，生成2.9×10^32搜索空间。结合Google自家的RL NAS方式和不差钱的GPU群，硬生生的基于ResNet/AmoebaNet backbone
+在ImageNet再攀高峰。训练细节已不在重要，也很难有GPU群复现，Google脑洞大开不怕浪费的做法，持续引领NAS领域。
+
+- [2019][CVPR][AutoAugment:Learning Augmentation Strategies from Data](https://zpascal.net/cvpr2019/Cubuk_AutoAugment_Learning_Augmentation_Strategies_From_Data_CVPR_2019_paper.pdf)
 
 - Google大脑出品。论文提出的数据增强方式是训练过程常用的技巧：Color operations（Equalize, Contrast, Brightness），Geometric operations（e.g., Rotate,ShearX, TranslationY）
 Bounding box operations（BBox Only Equalize,BBox Only Rotate, BBox Only FlipLR），硬生地设计(22×6×6)^2×5 ≈ 9.6×10^28的搜索空间(当然可以再增加)，延续NAS的设计思路（强化学习+RNN），
