@@ -67,8 +67,8 @@ Additive Margin Softmax LossArcFace Loss等）。论文基于强化学习的NAS�
 Contrast, Color, Brightness, Sharpness,Cutout, Sample Pairing，结合各种预处理的幅度和概率，生成2.9×10^32搜索空间。结合Google自家的RL NAS方式和不差钱的GPU群，硬生生的基于ResNet/AmoebaNet backbone
 在ImageNet再攀高峰。训练细节已不在重要，也很难有GPU群复现，Google脑洞大开不怕浪费的做法，持续引领NAS领域。
 
-- [2019][CVPR][AutoAugment:Learning Augmentation Strategies from Data](https://zpascal.net/cvpr2019/Cubuk_AutoAugment_Learning_Augmentation_Strategies_From_Data_CVPR_2019_paper.pdf)
-
+  - [2019][CVPR][AutoAugment:Learning Augmentation Strategies from Data](https://zpascal.net/cvpr2019/Cubuk_AutoAugment_Learning_Augmentation_Strategies_From_Data_CVPR_2019_paper.pdf)
+  - https://github.com/tensorflow/models/tree/master/research/autoaugment 
 - Google大脑出品。论文提出的数据增强方式是训练过程常用的技巧：Color operations（Equalize, Contrast, Brightness），Geometric operations（e.g., Rotate,ShearX, TranslationY）
 Bounding box operations（BBox Only Equalize,BBox Only Rotate, BBox Only FlipLR），硬生地设计(22×6×6)^2×5 ≈ 9.6×10^28的搜索空间(当然可以再增加)，延续NAS的设计思路（强化学习+RNN），
 让神经网络选择数据增强的方式和过程。
