@@ -65,6 +65,10 @@ Additive Margin Softmax LossArcFace Loss等）。论文基于强化学习的NAS�
 # Data Augmentation
 - https://paperswithcode.com/task/data-augmentation
 
+- 韩国kakaobrain作品。搜索空间包括autocontrast,cutout，把数据集分成K-fold，每个fold使用超参数（p是否使用增强的概率,λ数据增强的程度）并行训练，K-fold排序top-N策略组合。实验部分ResNet-200在Imagenet性能优于谷歌Augmentation,但是数据数据没有谷歌丰富，在目标检测数据集也有良好表现。
+
+  - [Fast AutoAugment](https://arxiv.org/pdf/1905.00397.pdf)
+  
 - Goole大脑Zoph带队又一CVPR2019论文。论文主要针对图像分分类的数据增强操作，采用16种图像预处理方法：ShearX/Y,TranslateX/Y, Rotate, AutoContrast, Invert, Equalize, Solarize, Posterize, 
 Contrast, Color, Brightness, Sharpness,Cutout, Sample Pairing，结合各种预处理的幅度和概率，生成2.9×10^32搜索空间。结合Google自家的RL NAS方式和不差钱的GPU群，硬生生的基于ResNet/AmoebaNet backbone
 在ImageNet再攀高峰。训练细节已不在重要，也很难有GPU群复现，Google脑洞大开不怕浪费的做法，持续引领NAS领域。
@@ -79,21 +83,14 @@ Bounding box operations（BBox Only Equalize,BBox Only Rotate, BBox Only FlipLR�
     3、The RNN controller is trained over 20K augmentation policies. The search employed 400 TPU’s over 48 hours,土豪就是这么任性。
     4、Google最近很多论文都是基于NAS实现，NAS-FPN -> MobileNet v3-> EfficientNet -> NAS Data Augmentation，在EfficientNet时Google的调参就是满满的异类(initial learning rate 0.256 that decays by 0.97 every 2.4 epochs).
     Google不如一鼓作气让NAS给模型调参，真正实现AutoML,也能解放调参侠的工作量。
-
-- Google大脑出品,依然Zoph带队，招数相同(从AutoAugment 16种缩减到14种)，但是不是让CNN学习怎么数据增光，而是随机选择数据增广的方式(纳尼，数据增广策略不都是随机的嘛)，python代码只有4行。相比Baseline有提高可以理解，
-但是相比基于深度学习训练策略的AutoAugment，Fast AutoAugment，Population Based Augmentation还要好？(数据集为CIFAR-10,SVHN,ImageNet),只是在COCO数据集略输一筹。Google已经在NAS+Augment写了三篇论文，下一步该怎么玩，写一个Auto AutoAugment,说数据增强实验效果比之前随机数据增强方式更好。
-
   - [Learning Data Augmentation Strategies for Object Detection](https://arxiv.org/pdf/1906.11172.pdf)[2019.06]
   - https://github.com/tensorflow/tpu/tree/master/models/official/detection
 
-- Google大脑出品。  
+- Google大脑出品,依然Zoph带队，招数相同(从AutoAugment 16种缩减到14种)，但是不是让CNN学习怎么数据增光，而是随机选择数据增广的方式(纳尼，数据增广策略不都是随机的嘛)，python代码只有4行。相比Baseline有提高可以理解，
+但是相比基于深度学习训练策略的AutoAugment，Fast AutoAugment，Population Based Augmentation还要好？(数据集为CIFAR-10,SVHN,ImageNet),只是在COCO数据集略输一筹。Google已经在NAS+Augment写了三篇论文，下一步该怎么玩，写一个Auto AutoAugment,说数据增强实验效果比之前随机数据增强方式更好。
+ 
   - [RandAugment: Practical data augmentation with no separate search](https://arxiv.org/pdf/1909.13719.pdf)
   - https://github.com/tensorflow/tpu/tree/master/models/official/efficientnet
-    
-- 韩国kakaobrain作品。搜索空间包括autocontrast,cutout，把数据集分成K-fold，每个fold使用超参数（p是否使用增强的概率,λ数据增强的程度）并行训练，K-fold排序top-N策略组合。实验部分ResNet-200在Imagenet性能优于谷歌Augmentation,但是数据数据没有谷歌丰富，在目标检测数据集也有良好表现。
-
-  - [Fast AutoAugment](https://arxiv.org/pdf/1905.00397.pdf)
-
 
 # Super-Resolution 
 
