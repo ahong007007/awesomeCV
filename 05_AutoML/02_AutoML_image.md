@@ -86,8 +86,8 @@ Bounding box operations（BBox Only Equalize,BBox Only Rotate, BBox Only FlipLR�
   - [Learning Data Augmentation Strategies for Object Detection](https://arxiv.org/pdf/1906.11172.pdf)[2019.06]
   - https://github.com/tensorflow/tpu/tree/master/models/official/detection
 
-- Google大脑出品,依然Zoph带队，招数相同(从AutoAugment 16种缩减到14种)，但是不是让CNN学习怎么数据增光，而是随机选择数据增广的方式(纳尼，数据增广策略不都是随机的嘛)，python代码只有4行。相比Baseline有提高可以理解，
-但是相比基于深度学习训练策略的AutoAugment，Fast AutoAugment，Population Based Augmentation还要好？(数据集为CIFAR-10,SVHN,ImageNet),只是在COCO数据集略输一筹。Google已经在NAS+Augment写了三篇论文，下一步该怎么玩，写一个Auto AutoAugment,说数据增强实验效果比之前随机数据增强方式更好。
+- Google大脑出品,依然Zoph带队，招数相同(从AutoAugment 16种缩减到14种)，但是不是让CNN学习怎么数据增广，而是随机选择数据增广的方式(纳尼，数据增广策略不都是随机的嘛)，python代码只有4行。相比Baseline有提高可以理解，
+但是相比基于深度学习训练策略的AutoAugment，Fast AutoAugment，Population Based Augmentation还要好？(数据集为CIFAR-10,SVHN,ImageNet),只是在COCO数据集略输一筹。Google已经在NAS+Augment写了三篇论文，下一步该怎么玩？写一个Auto AutoAugment,说数据增强实验效果比之前随机数据增强方式更好。
  
   - [RandAugment: Practical data augmentation with no separate search](https://arxiv.org/pdf/1909.13719.pdf)
   - https://github.com/tensorflow/tpu/tree/master/models/official/efficientnet

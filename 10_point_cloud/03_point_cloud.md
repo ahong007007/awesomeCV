@@ -75,6 +75,15 @@ PointNet之前的方法集中在点云投影二维平面，点云划分Voxel等�
 ---
 # 3D object detection
 
+- 香港中文大学提出，基于Point cloud->3D Box的3D目标检测方法，基本原理类似2D RCNN结构，两阶段方式：stage-1 基于bottom-up，对点云数据分割前景和背景，生成3D建议候选框，stage-2
+网络将全局语义特征和局部空间特征结合起来，对3D候选框进行优化。
+
+  - stage-1 bottom-up strategy依据：3D场景目标之间没有压盖，3D语义掩码可以直接从3D bounding box 标注中获取，所以3D目标检测问题可以转换为3D语义分割问题。而在2D目标检测中，边界框只能为2D语义分割提供弱监督。
+  - PointRCNN的backbone基于pointnet++/VoxelNet，stage-1包括Foreground point segmentation和Bin-based 3D bounding box generation分支，分布完成前景/背景分割和3D bounding box。Foreground point segmentation使用focal loss来解决室外场景中，由前景点过少带来的类别不平衡问题。
+  - stage-2结合Semantic Features，Foreground Mask，3D RoIs，生成Local Spatial Points和Semantic Features，最终完成3D bounding box优化。
+
+  - [PointRCNN: 3D Object Proposal Generation and Detection from Point Cloud](https://arxiv.org/pdf/1812.04244.pdf)
+  - https://github.com/sshaoshuai/PointRCNN
 
 - Facebook何凯明等人提出VoteNet,直接基于点云的3D目标检测模型(无image输入，话说何凯明开始多领域作战)。点云一般是稀疏性，直接
 做检测具有较高难度。论文基于PointNet++,提出VoteNet，由deep point set networks 和 Hough voting组成。论文在ScanNet和
