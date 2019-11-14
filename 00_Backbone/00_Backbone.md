@@ -36,8 +36,17 @@ depthwise conv、pointwise conv、groupwise conv减少模型计算量，轮提�
 
   - [2019][Fixing the train-test resolution discrepancy](https://arxiv.org/pdf/1906.06423.pdf)
 
-- Google作品，在ImageNet Top 1 87.4%。
+- Google大脑团队提出，backbone基于EfficientNet，self-training framework训练CNN，主要训练过程包括1.在ImageNet真值集训练EfficientNet,此为teacher model。 2.基于训练的EfficientNet对没有标签的ImageNet图像(300M图片量),生成伪标签。
+3.在ImageNet和伪标签训练集，训练student model，训练完成后的student model变成teacher model。重复迭代以上过程，不断生成新的student model。
+  - teacher model训练时没有数据增广策略，而student model时数据采用dropout,Randaugment,stochastic depth策略。
+  - 每次生成的student model参数量大于teacher model。
+  - 训练时有个trick,data balancing。某类中图像较少，复制这类图像。某类中图像较多，置信度较高。
+  - 站在巨人的肩上很重要，EfficientNet、Randaugment都是Google自家产品，TPU自助不限量，大佬太忙，有个idea就可以让小弟做，作出成果的比例不是一般的高。
   - [Self-training with Noisy Student improves ImageNet classification](https://arxiv.org/pdf/1911.04252.pdf)
+
+- Facebook何凯明提出.
+  - 论文提出在不仅在ImagetNet，其它PASCAL VOC, COCO检测/分割7个数据集，MoCo的方法unsupervised性能要强于supervised，那么MoCo+EfficientNet之类的backbone，是否可以强者更强，摘取更高准确率？
+  - [Momentum Contrast for Unsupervised Visual Representation Learning](https://128.84.21.199/pdf/1911.05722.pdf)
 ---
 ## others
 - Facebook作品，论文没有提出任何模型，或针对特定任务改进。论文任务公开数据集COCO/ImageNet/OpenIamge等对地理位置或收入水平低区域存在偏差，相应的图像数据分布较少。话说假如训练的模型可以识别全球目标的，在欠发达区域使用率也较少吧。
