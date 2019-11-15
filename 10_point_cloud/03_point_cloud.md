@@ -82,7 +82,7 @@ PointNet之前的方法集中在点云投影二维平面，点云划分Voxel等�
   - PointRCNN的backbone基于pointnet++/VoxelNet，stage-1包括Foreground point segmentation和Bin-based 3D bounding box generation分支，分布完成前景/背景分割和3D bounding box。Foreground point segmentation使用focal loss来解决室外场景中，由前景点过少带来的类别不平衡问题。
   - stage-2结合Semantic Features，Foreground Mask，3D RoIs，生成Local Spatial Points和Semantic Features，最终完成3D bounding box优化。
 
-  - [PointRCNN: 3D Object Proposal Generation and Detection from Point Cloud](https://arxiv.org/pdf/1812.04244.pdf)
+  - [2019][CVPR][PointRCNN: 3D Object Proposal Generation and Detection from Point Cloud](https://arxiv.org/pdf/1812.04244.pdf)
   - https://github.com/sshaoshuai/PointRCNN
 
 - Facebook何凯明等人提出VoteNet,直接基于点云的3D目标检测模型(无image输入，话说何凯明开始多领域作战)。点云一般是稀疏性，直接
@@ -134,10 +134,10 @@ SUN RGB-D具有良好表现。 CNN在3D object classification ,3D object detecti
 
   - [CVPR][2019][PVNet: Pixel-wise Voting Network for 6DoF Pose Estimation](https://arxiv.org/pdf/1812.11788.pdf)
 ---
-# Point Cloud Analysis
+# Geodesic topology
 
-- CVPR2019 oral,旷视西雅图研究院提出的基于测地距离的点云分析深度网络GeoNet，多任务目标包括点云上采样、法向量估计、网格重建及非刚性形状分类等。
-  - [2019][CVPR][GeoNet: Deep Geodesic Networks for Point Cloud Analysis]()
+- CVPR2019 oral,旷视西雅图研究院提出的基于测地距离的点云分析深度网络GeoNet，个人理解主要针对不连续点云建立拓扑逻辑关系，可用于点云上采样、法向量估计、网格重建及非刚性形状分类等。
+  - [2019][CVPR][GeoNet: Deep Geodesic Networks for Point Cloud Analysis](https://arxiv.org/pdf/1901.00680.pdf)
 
 
 ---
@@ -149,9 +149,7 @@ pvnet,SqueezeSeg ，20190723分享
 https://zhuanlan.zhihu.com/p/44809266
 
 VoteNet层次理解
-GeoNet: Deep Geodesic Networks for Point Cloud Analysis
 
-PointRCNN:3D Object Proposal Generation and Detection from Point Cloud
 PointConv: Deep Convolutional Networks on 3D Point Clouds
 3D Fully Convolutional Network for Vehicle Detection in Point Cloud	
 Large-scale Point cloud segmentation with superpoint graphs,	
