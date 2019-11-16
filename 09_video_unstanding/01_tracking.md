@@ -72,6 +72,8 @@ state-of-art，达到论文提出的改变神经网络deeper和wider的目标。
 
   - [Teacher-Students Knowledge Distillation for Siamese Trackers](https://arxiv.org/pdf/1907.10586.pdf)
 
+- 旷视，浙大联合提出，对SiamFC框架的改进。
+  -[2019][SiamFC++: Towards Robust and Accurate Visual Tracking with Target Estimation Guidelines](https://arxiv.org/pdf/1911.06188.pdf)
 # Framework
   
   https://github.com/STVIR/pysot

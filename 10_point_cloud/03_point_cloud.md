@@ -19,10 +19,16 @@ Statistics: :fire: code is available or the paper is very important
 
   - [2019][A Review of Point Cloud Semantic Segmentation](https://arxiv.org/pdf/1908.08854.pdf)
 
+---
+## benchmark
+- https://paperswithcode.com/task/3d-part-segmentation/latest
+- http://kaldir.vc.in.tum.de/scannet_benchmark/
+## Tutorials
+-https://yochengliu.github.io/files/Report_JIANGMEN_2019-08.pdf
 
 ---
 
-## RGB-D
+# RGB-D
 - CVPR2019论文，出自于大名鼎鼎李飞飞组，提出模型，一个用于估计RGB-D图像中已知目标6D姿态的通用框架
 （类似于视频处理的two-stream，分别处理RGB图像和深度图像,DenseFusion融合两路特征）。在YCB-Video
 和LineMOD数据集验证测试。论文中6自由度指李群SE(3)（包括旋转和平移），目标是求相机的运动姿态。
@@ -30,7 +36,7 @@ Statistics: :fire: code is available or the paper is very important
   - [CVPR2019][DenseFusion: 6D Object Pose Estimation by Iterative Dense Fusion](https://arxiv.org/pdf/1901.04780.pdf)
 
 ---
-## classification/Backbone
+# classification/Backbone
 
 - 斯坦福大学提出，点云领域的经典论文，用于解决点云分类，语义分割和目标识别(分类和分割任务共用backbone)。
 PointNet之前的方法集中在点云投影二维平面，点云划分Voxel等方式。而本文直接对点云操作。点云具有无序，局部相关性，平移不变性(旋转，平移)三个特征。论文同时提出两个结论：(1)PointNet的网络结构能够拟合任意的连续集合函数，(2)PointNet能够总结出表示某类物体形状的关键点，基于这些关键点PointNet能够判别物体的类别。
@@ -51,13 +57,17 @@ PointNet之前的方法集中在点云投影二维平面，点云划分Voxel等�
   
  -- [NIPS2017][PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space](https://arxiv.org/pdf/1706.02413.pdf)[__`cls.`__ __`seg.`__] 
 
--  俄勒冈州立大学机器人技术与智能系统（CoRIS）研究所的研究者提出了 PointConv，可以高效的对非均匀采样的 3D 点云数据进行卷积操作，该方法在多个数据集上实现了优秀的性能。
+-  俄勒冈州立大学机器人技术与智能系统（CoRIS）研究所的研究者提出了PointConv，基于2D卷积推导出3D点云表达式，将3D卷积看做由局部点3D坐标的非线性函数(包括权重和密度)，
+可以高效的对非均匀采样的3D点云数据进行卷积操作，该方法在多个数据集(ModelNet40、ShapeNet和ScanNet)上实现state-of-art。
 主要贡献：
-1、提出逆密度重加权卷积操作 PointConv（为了补偿不均匀采样），它能够完全近似任意3D 点集上的 3D 连续卷积。
-2、通过改变求和顺序，提出了高效 PointConv 。
-3、将 PointConv 扩展到反卷积（PointDeconv），以获得更好的分割结果。
+1、提出逆密度重+权重的卷积操作PointConv，近似拟合3D连续卷积。
+2、通过改变求和顺序，提出了高效PointConv。
+3、将PointConv扩展到反卷积PointDeconv，以获得更好的分割结果。
+论文已经开源tensorflow和pytorch源代码，可用于评估性能。
 
-  - [CVPR2019] [PointConv: Deep Convolutional Networks on 3D Point Clouds](https://arxiv.org/abs/1811.07246). [[tensorflow](https://github.com/DylanWusee/pointconv)] [__`cls.`__ __`seg.`__] :fire:
+  - [CVPR2019] [PointConv: Deep Convolutional Networks on 3D Point Clouds](https://arxiv.org/abs/1811.07246). 
+  [[tensorflow](https://github.com/DylanWusee/pointconv)] [__`cls.`__ __`seg.`__] :fire:
+  [[pytorch]https://github.com/DylanWusee/pointconv]
 
 - 论文提出ShufflePointNet，基于二维分组卷积和论文ShuffleNet,在三维点云的应用。
 
@@ -150,7 +160,6 @@ https://zhuanlan.zhihu.com/p/44809266
 
 VoteNet层次理解
 
-PointConv: Deep Convolutional Networks on 3D Point Clouds
 3D Fully Convolutional Network for Vehicle Detection in Point Cloud	
 Large-scale Point cloud segmentation with superpoint graphs,	
 Unstructured point cloud semantic labeling using deep segmentation networks
