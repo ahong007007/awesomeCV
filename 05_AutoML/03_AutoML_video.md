@@ -1,7 +1,8 @@
 # survey/overview/review
+---
+# Classify
 
-
-
+---
 # video Segmentation
 
 BubbleNets: Learning to Select the Guidance Frame in Video Object Segmentation by Deep Sorting Frames
@@ -11,7 +12,7 @@ BubbleNets: Learning to Select the Guidance Frame in Video Object Segmentation b
 
   - [The 2019 DAVIS Challenge on VOS:Unsupervised Multi-Object Segmentation](https://arxiv.org/pdf/1905.00737.pdf)
 
-
+---
 # Action Recognition
 数据集：kinetics,HMDB
 - CVPR2019论文，中科院自动化研究所模式识别实验室和中科大提出的Skeleton-based行为识别(Action Recognition)算法，基于
@@ -41,6 +42,14 @@ Northwestern-UCLA dataset数据集state-of-art水平。
 
   - [Video Action Recognition Via Neural Architecture Searching](https://arxiv.org/pdf/1907.04632.pdf)[2019.07]
 
+- Google团队提出AssembleNet，主要解决视频行为识别问题，框架也可推广到其他视频分析领域。视频分析一般框架为3D CNN和Two stream。论文采用类似Two stream策略，自动化搜索时序特征和空间特征的multi-stream连接方式和神经网络架构。
+randomly connecting思想来自于RandWire network，网络架构可看做有向无环图，实现任意stream之间的连接(high-level connectivity)，训练方法采用进化学习。
+实验结果在Moments in Time和Charades数据集，均优于I3D，slowFast等视频分析框架。
+ - 论文没有说明使用TPU数量和训练时间，依Google的个性，应该是大力出奇迹。
+ - 强化学习/DARTS/one shot等在图像领域的成功case，可以在视频领域来一波。
+ - [2019][AssembleNet: Searching for Multi-Stream Neural Connectivity in Video Architectures](https://arxiv.org/pdf/1905.13209.pdf)
+
+---
 
 ## ReID
 
