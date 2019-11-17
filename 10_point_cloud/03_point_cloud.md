@@ -126,6 +126,12 @@ SUN RGB-D具有良好表现。 CNN在3D object classification ,3D object detecti
 
 # Segmentation
           
+- CVPR2018,上海交通大学卢策吾团队MVIG实验室提出PointSIFT。论文基于SIFT思路推广到3D点云，编码点云8个方向信息，自适应合适的表征尺度。论文设计的PointSIFT module可集成在PointNet系列框架中。
+网络模型的基本架构有三部分组成，PointSIFT模块，Set abstraction (SA,PointNet++下采样过程)和feature propagation(FP，PointNet++上采样过程)。
+  - 论文借助SIFT思想表达三维信息，更多的2D方法可以用于3D CNN，比如PointSIFT类似encoder-decoder的架构，各个feature level之间连接可以更好的特征融合。
+  - 3D点云由于稀疏性和无序性，不能直接使用CNN，如何提取高效特征并借助于2D语义分割开放的研究思路，不失为好的研究方向。
+  -[2018][CVPR][PointSIFT: A SIFT-like Network Module for 3D Point Cloud Semantic Segmentation](https://arxiv.org/pdf/1807.00652.pdf)[__`sem.`__]:fire:          
+          
 - 
 
   - [SqueezeSeg: Convolutional Neural Nets with Recurrent CRF for Real-Time Road-Object Segmentation from 3D LiDAR Point Cloud]
@@ -160,7 +166,7 @@ https://zhuanlan.zhihu.com/p/44809266
 
 VoteNet层次理解
 
-3D Fully Convolutional Network for Vehicle Detection in Point Cloud	
+
 Large-scale Point cloud segmentation with superpoint graphs,	
 Unstructured point cloud semantic labeling using deep segmentation networks
 Generalizing discrete convolutions for unstructured point clouds
