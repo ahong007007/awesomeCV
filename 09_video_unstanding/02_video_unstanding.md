@@ -1,4 +1,7 @@
 
+#video recognition
+
+ 
 # ReID
 
 1、阿联酋IIAI研究院提出ReID模型。图像匹配和人脸识别，一般基于representation learning，泛化能力较弱。论文提出local matching， adaptive convolution kernels去和

@@ -42,6 +42,9 @@ Northwestern-UCLA dataset数据集state-of-art水平。
 
   - [Video Action Recognition Via Neural Architecture Searching](https://arxiv.org/pdf/1907.04632.pdf)[2019.07]
 
+- 
+  - [ICCV][2019][EvaNet: The first evolved video architectures]()
+
 - Google团队提出AssembleNet，主要解决视频行为识别问题，框架也可推广到其他视频分析领域。视频分析一般框架为3D CNN和Two stream。论文采用类似Two stream策略，自动化搜索时序特征和空间特征的multi-stream连接方式和神经网络架构。
 randomly connecting思想来自于RandWire network，网络架构可看做有向无环图，实现任意stream之间的连接(high-level connectivity)，训练方法采用进化学习。
 实验结果在Moments in Time和Charades数据集，均优于I3D，slowFast等视频分析框架。
@@ -49,6 +52,11 @@ randomly connecting思想来自于RandWire network，网络架构可看做有向
  - 强化学习/DARTS/one shot等在图像领域的成功case，可以在视频领域来一波。
  - [2019][AssembleNet: Searching for Multi-Stream Neural Connectivity in Video Architectures](https://arxiv.org/pdf/1905.13209.pdf)
 
+- Google提出的Tiny Video Networks(TVN)，基于AutoMl进化学习算法，搜索空间包括时间和空间特征分辨率，卷积/池化，Non-local layer, context gating,Squeeze-excitation layer等，搜索空间包含10^13运算单元。约束目标包括运行时间和网络参数。
+论文实验的baseline包括(2+1)D ResNets，I3D,S3D等，在Moments-in-time，HMDB,MLB-YouTube，Charades4个数据集验证，将GPU秒级的处理时间降低到10ms，CPU也只有37ms。
+论文将TVN根据准确率和计算时间划分为TVN-1~TVN-4,同时基于scale策略(类似EfficientNet对各个参数的scale)，在准确率和实时性取得平衡。
+ -  Google在AutoML不仅仅是半壁江山的地位了，在显卡集群和先发优势面前，很多小团队难以望其项背。
+ - [Tiny Video Networks: The fastest video understanding networks](https://arxiv.org/pdf/1910.06961.pdf)
 ---
 
 ## ReID
