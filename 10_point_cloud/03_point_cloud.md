@@ -125,6 +125,12 @@ SUN RGB-D具有良好表现。 CNN在3D object classification ,3D object detecti
 ---
 
 # Segmentation
+
+- CVPR2018论文，巴黎东部大学和巴黎圣母大学提出一种点云分割方法：1.将三维点云首先分成简单几何体组成的简单形状，即为超点(superpoints)。 2.由具有丰富属性的超边连接相邻的超点形成的超点图(superpoints graph, SPG)
+3.由graph CNN对superpoints提取上下文信息，分类并得到语义标签。
+  - superpoints基本思路类似于图像分割领域的超像素Superpixel。
+  - [2018][CVPR][Large-scale Point Cloud Semantic Segmentation with Superpoint Graphs](https://arxiv.org/pdf/1711.09869.pdf)  
+  - https://github.com/loicland/superpoint_graph         
           
 - CVPR2018,上海交通大学卢策吾团队MVIG实验室提出PointSIFT。论文基于SIFT思路推广到3D点云，编码点云8个方向信息，自适应合适的表征尺度。论文设计的PointSIFT module可集成在PointNet系列框架中。
 网络模型的基本架构有三部分组成，PointSIFT模块，Set abstraction (SA,PointNet++下采样过程)和feature propagation(FP，PointNet++上采样过程)。
@@ -133,7 +139,6 @@ SUN RGB-D具有良好表现。 CNN在3D object classification ,3D object detecti
   -[2018][CVPR][PointSIFT: A SIFT-like Network Module for 3D Point Cloud Semantic Segmentation](https://arxiv.org/pdf/1807.00652.pdf)[__`sem.`__]:fire:          
           
 - 
-
   - [SqueezeSeg: Convolutional Neural Nets with Recurrent CRF for Real-Time Road-Object Segmentation from 3D LiDAR Point Cloud]
 
 - 澳大利亚阿德莱德大学,腾讯优图，香港中文大学等(沈春华项目组)，提出ASIS,联合语义分割和实例分割的点云分割方法。实例分割主要通过学习的instance embeddings实现(Metric Learning)。
@@ -171,7 +176,6 @@ Large-scale Point cloud segmentation with superpoint graphs,
 Unstructured point cloud semantic labeling using deep segmentation networks
 Generalizing discrete convolutions for unstructured point clouds
 Point Cloud Oversegmentation with Graph-Structured Deep Metric Learning
-PointSIFT: A SIFT-like Network Module for 3D Point Cloud Semantic Segmentation    
 PointPillars: Fast Encoders for Object Detection from Point Cloud
 RepNet: Weakly Supervised Training of an Adversarial Reprojection Network for 3D Human Pose Estimation	cvpr2019
 SGPN: Similarity Group Proposal Network for 3D Point Cloud Instance Segmentation
