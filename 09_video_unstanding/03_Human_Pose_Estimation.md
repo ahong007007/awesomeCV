@@ -36,7 +36,10 @@ COCO，MPII test，PoseTrack2017取得较高的准确率，但是实时性避而
 
   - 3D Hand Shape and Pose Estimation from a Single RGB Image.[pdf](https://arxiv.org/pdf/1903.00812.pdf)
 
-- 
+- 中科院大学黄骏杰，朱政等提出，认为姿态估计存在两个问题：flip导致原图和翻转图像之间姿态估计结果没有对齐，encoding-decoding方法存在较大的统计误差。
+论文提出Unbiased Data Processing，针对两个问题提出的解决方法分别是使用单位长度去度量图像的大小，以及在理想情况下无统计误差的编码解码方法。
+  - 论文中公式很多，一不小心陷入，再难脱身。
+  - backbone基于HRNet，直接提高1AP，而模型增加的计算量较少。
   -[2019][The Devil is in the Details: Delving into Unbiased Data Processing for Human Pose Estimation](https://128.84.21.199/pdf/1911.07524.pdf)
 
 # Person Image Generation
