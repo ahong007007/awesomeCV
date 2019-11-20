@@ -7,7 +7,11 @@ non-Euclidean没有griddded array的数据属性。
  
   - [A survey on Deep Learning Advances on Different 3D Data Representations](https://arxiv.org/pdf/1808.01462.pdf):star: :star: :star: :star:
   
+## Library
 
+- [Kaolin: A PyTorch Library for Accelerating 3D Deep Learning Research](https://arxiv.org/pdf/1911.05063v2.pdf)
+
+---
 Track Advancement of SLAM
 ## 
 

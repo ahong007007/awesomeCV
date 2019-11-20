@@ -26,8 +26,6 @@ COCO，MPII test，PoseTrack2017取得较高的准确率，但是实时性避而
 
 # Hand Pose Estimation
 
-## [2019年3月]
-
 - CVPR2019论文，南洋理工大学提出，two-stacked hourglass network提取特征，Graph CNN在RGB图像重建
 包括3D手势和姿态的3D mesh，合成3D meshes and 3D poses数据集用于训练，借助于depth map fine-tuning.
 最终模型在Nvidia GTX 1080 GPU可以运行50fps。
@@ -38,6 +36,8 @@ COCO，MPII test，PoseTrack2017取得较高的准确率，但是实时性避而
 
   - 3D Hand Shape and Pose Estimation from a Single RGB Image.[pdf](https://arxiv.org/pdf/1903.00812.pdf)
 
+- 
+  -[2019][The Devil is in the Details: Delving into Unbiased Data Processing for Human Pose Estimation](https://128.84.21.199/pdf/1911.07524.pdf)
 
 # Person Image Generation
 
