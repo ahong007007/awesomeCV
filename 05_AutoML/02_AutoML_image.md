@@ -24,6 +24,9 @@ top-down,bottom-up特征层的连接方式（还是连连看），取得state-of
  
   - [2019][ICCV][Auto-FPN: Automatic Network Architecture Adaptation for Object Detection Beyond Classification]
 
+- Google大脑出品,EfficientDet有两部分组成：backbone基于EfficientNet，BiFPN作为feature network，和class/box net layers共享参数，并且在不同分辨率特征重复多次。
+论文没有说EfficientDet的TPU和训练参数，搜索空间，但是同志们，那是EfficientNet和BiFPN血的付出。
+  - [EfficientDet: Scalable and Efficient Object Detection](https://arxiv.org/pdf/1911.09070.pdf)
 ---
 
 # Recognition
