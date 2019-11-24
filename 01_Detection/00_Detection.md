@@ -102,9 +102,16 @@ non-local模块修正语义特征。损失函数不平衡：论文设计Balanced
 
 ## Tiny
  
-自滑铁卢大学提出YOLO Nano 的网络，他们通过人与机器协同设计模型架构大大提升了性能。YOLO Nano 大小只有 4.0MB 左右，比 Tiny YOLOv2 和 Tiny YOLOv3 分别小了 15.1 倍和 8.3 倍，性能却有较为显著的提升。
+- 自滑铁卢大学提出YOLO Nano 的网络，他们通过人与机器协同设计模型架构大大提升了性能。YOLO Nano 大小只有 4.0MB 左右，比 Tiny YOLOv2 和 Tiny YOLOv3 分别小了 15.1 倍和 8.3 倍，性能却有较为显著的提升。
 
   -[2019.10][YOLO Nano: a Highly Compact You Only Look Once Convolutional Neural Network for Object Detection](https://arxiv.org/pdf/1910.01271.pdf)
+
+- 腾讯，香港科技大学联合提出，One-stage目标检测框架RefineDetLite，解决在CPU场景下实时性问题。backbone基于Res2Net，anchor refinement module (ARM)提出粗略anchor，object detection module (ODM) 融合
+特征金字塔特征修订anchor，生成最终的分类信息和检测框。论文的训练策略包括IOU-guided loss对负样本抑制, classes-aware weighting 解决样本类别不平衡和balanced multitask training多任务训练，最终实现
+RefineDetLite++在MSCOCO数据集29.6AP&131ms。
+  - 论文提出的模型，虽然一直倡导非GPU而是CPU，实际在Intel i7-6700@3.40GHz测试，貌似和mobile实际运行有差距。 
+  - 论文提出的RefineDetLite，包含coarse loss module和refined loss module，仅仅是没有ROI pooling，个人感觉和two-stage的目标检测框架没太多区别，
+  - [2019][RefineDetLite: A Lightweight One-stage Object Detection Framework for CPU-only Devices](https://arxiv.org/pdf/1911.08855.pdf)  
 
 ---
 
