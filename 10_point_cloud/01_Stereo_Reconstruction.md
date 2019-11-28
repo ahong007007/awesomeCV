@@ -45,6 +45,8 @@ computation), matching cost aggregation and disparity prediction.本文主要介
 ## Depth Estimation 
 
   - [2018[CVPR][MegaDepth: Learning Single-View Depth Prediction from Internet Photos](https://arxiv.org/pdf/1804.00607.pdf)  
+  
+  - [2019][SelfVIO: Self-Supervised Deep Monocular Visual-Inertial Odometry and Depth Estimation](https://arxiv.org/pdf/1911.09968.pdf)
 ---  
 ## Multi-View Stereo
 
@@ -85,9 +87,9 @@ large-scale scene reconstruction. ACM Transactions on Graphics (TOG) (2017)
 
 https://github.com/tsattler/visuallocalizationbenchmark
 
-  - [2017][CVPR][A Multi-View Stereo Benchmark with High-Resolution Images and Multi-Camera Videos](http://www.cvlibs.net/publications/Schoeps2017CVPR.pdf)
-  
-  
+- [2017][CVPR][A Multi-View Stereo Benchmark with High-Resolution Images and Multi-Camera Videos](http://www.cvlibs.net/publications/Schoeps2017CVPR.pdf)
+    
+- [2019][BlendedMVS: A Large-scale Dataset for Generalized Multi-view Stereo Networks]  
 #待记录
 
  PoseNet，VINet，Perspective Transformer Net，SfMNet，CNN-SLAM，SurfaceNet，3D-R2N2，MVSNet,DeepMVS
