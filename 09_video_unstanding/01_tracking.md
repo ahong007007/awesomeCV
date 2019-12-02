@@ -74,6 +74,16 @@ state-of-art，达到论文提出的改变神经网络deeper和wider的目标。
 
 - 旷视，浙大联合提出，对SiamFC框架的改进。
   -[2019][SiamFC++: Towards Robust and Accurate Visual Tracking with Target Estimation Guidelines](https://arxiv.org/pdf/1911.06188.pdf)
+
+- 德国亚琛工业大学，英国牛津大学大学联合提出，基于re-detection思路解决Tracking+video segmentation问题。
+近两年在Siamese方向很多论文，re-detection作为传统方法思路不算剑走偏锋，但是论文横跨Tracking+video segmentation领域，同时在10个有影响力的数据集
+做实验，佩服这份工作细致和耐心，在某些领域可能2-3个数据集就能发一篇水文。
+  - 论文backbone基于Faster R-CNN，aligning proposals取代cross-correlation，Re-Detection Head包括from First Frame和from Previous Frame两部分。Tracklet Dynamic
+Programming Algorithm相当于对之前帧特征的融合。Object Segmentation分支采用Box2Seg预测当前帧的分割。
+  - Faster R-CNN在COCO数据集仅支持80分类，而论文Siam R-CNN声称支持任意目标跟踪。proposals从1000增加到10000可以增加召回，但是网络性能很慢(1fps)，
+  采用利用previous-frame re-detections(up to 100)可以实现95.5%召回。previous-frame在VOS领域也是常用操作之一。
+  
+  -[2019][Siam R-CNN: Visual Tracking by Re-Detection](https://arxiv.org/pdf/1911.12836.pdf)
 # Framework
   
   https://github.com/STVIR/pysot
