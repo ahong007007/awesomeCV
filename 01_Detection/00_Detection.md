@@ -20,6 +20,9 @@
   **话说imbalance中，头部问题是？**  
   - [2019.09][Imbalance Problems in Object Detection: A Review](https://arxiv.org/pdf/1909.00169.pdf) [github]()
 
+- 西弗吉尼亚大学提出一种评估目标检测理论准确率上限：91.6% on VOC (test2007), 78.2% on COCO (val2017), and 58.9% on OpenImages V4 (validation)。
+  - [2019][Empirical Upper-bound in Object Detection and More](https://arxiv.org/pdf/1911.12451.pdf)
+  
 - state of art
 
   - https://paperswithcode.com/sota/object-detection-on-coco
