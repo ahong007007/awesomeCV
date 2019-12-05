@@ -21,7 +21,7 @@ The Moments in Time (MiT) datasetvis a large-scale video classification dataset 
 
 # training
 
-- FackbookRoss Girshick，Kaiming He等提出快速训练视频理解模型的方法Multigrid:从固定的mini-batch，到根据时间和空间分辨率调整的动态mini-batch，加速视频理解模的训练，同时实现准确率提升
+- Fackbook Ross Girshick，Kaiming He等提出快速训练视频理解模型的方法Multigrid:从固定的mini-batch，到根据时间和空间分辨率调整的动态mini-batch，加速视频理解模的训练，同时实现准确率提升
 0.8%。论文实验模型基于I3D, nonlocal, SlowFast等，数据集包括Kinetics, Something-Something,Charades), 实现4.5倍加速训练，从128GPU到1GPU完成视频模型训练成为可行。
 
   - [2019][A Multigrid Method for Efficiently Training Video Models](https://arxiv.org/pdf/1912.00998.pdf)
