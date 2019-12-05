@@ -31,8 +31,13 @@ top-down,bottom-up特征层的连接方式（还是连连看），取得state-of
 -华为诺亚方舟出品。
   - [SM-NAS: Structural-to-Modular Neural Architecture Search for Object Detection](https://arxiv.org/pdf/1911.09929.pdf)
 
-- Google Quoc V.Le团队作品。
+- Google Quoc V.Le团队作品提出MnasFPN，解决移动终端低延迟场景的目标检测。backbone基于MobileNetV2，参考NAS-FPN对多尺度特征递归融合，MnasFPN对FPN架构做调整：
+优化 depthwise convolution和inverted residual block，对应FPN部分的SDO和IRB，论文搜索的是SDO和IRB部分的超参数，降低head的计算量。论文所得框架基于MnasNet，
+
+  - 在COCO val2017数据集，分类性能高的backbone MobileNetV3 + MnasFPN竟然弱于MobileNetV2 + MnasFPN 0.6mAP,比较怪异。
+  - 模型搜索训练时间大于1000 Hours *1 TPUv2。NAS依然是土豪们的游戏。
   - [MnasFPN : Learning Latency-aware Pyramid Architecture for Object Detection on Mobile Devices](https://arxiv.org/pdf/1912.01106.pdf)
+  
 ---
 
 # Recognition
