@@ -164,6 +164,12 @@ NVIDIA Tesla P100 GPU运行，CenterNet511-104 340ms/image，比CornerNet511-104
 要么选择速度和准确率平衡的轻量化网络。感叹目标检测领域的飞速发展。CV行业在分类和检测日新月异。
 
   - [CornerNet-Lite: Efficient Keypoint Based Object Detection](https://arxiv.org/pdf/1904.08900.pdf)[2019.04] [github](https://github.com/princeton-vl/CornerNet-Lite)
+  
+- 中科院自动化所模式识别实验室提出。论文首先比较Anchor-free和Anchor-based最大的不同在于正负样本的训练样本，相同正负样本情况下可以达到同样的性能；根据检测目标的静态特性，提出ATSS自适应训练样本选择策略(adaptive training sample selection)。
+
+  - 目标检测一般划分为anchorbased and anchor-free。anchorbased可划分为one stage 和two stage；anchor-free可细分为keypoint-based和center-based。（划分依据？）
+  - [2019][Bridging the Gap Between Anchor-based and Anchor-free Detection via Adaptive Training Sample Selection](https://arxiv.org/pdf/1912.02424v1.pdf)
+  - https://github.com/sfzhang15/ATSS
 
 ---
 
