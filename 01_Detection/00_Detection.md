@@ -165,9 +165,11 @@ NVIDIA Tesla P100 GPU运行，CenterNet511-104 340ms/image，比CornerNet511-104
 
   - [CornerNet-Lite: Efficient Keypoint Based Object Detection](https://arxiv.org/pdf/1904.08900.pdf)[2019.04] [github](https://github.com/princeton-vl/CornerNet-Lite)
   
-- 中科院自动化所模式识别实验室提出。论文首先比较Anchor-free和Anchor-based最大的不同在于正负样本的训练样本，相同正负样本情况下可以达到同样的性能；根据检测目标的静态特性，提出ATSS自适应训练样本选择策略(adaptive training sample selection)。
-
-  - 目标检测一般划分为anchorbased and anchor-free。anchorbased可划分为one stage 和two stage；anchor-free可细分为keypoint-based和center-based。（划分依据？）
+- 中科院自动化所模式识别实验室提出目标检测领域anchor based and anchor-free本质不同：训练模型时正负样本采样策略，相同正负样本情况下可以达到同样的性能；根据检测目标的静态特性，提出ATSS自适应训练样本选择策略(adaptive training sample selection)。
+在ASTT改进下， anchor based and anchor-free性能均有提升，且达到state-of-art 50.7%AP。
+  - 目标检测一般划分为anchorbased and anchor-free。anchorbased可划分为one stage 和two stage；anchor-free可细分为keypoint-based和center-based。
+  - ATSS过程很容易理解，替代直接使用IOU作为候选框的阈值，首先选择ground-truth中心最近的k个候选框，计算均值和方差作为IOU阈值，去除中心点在检测目标之外的候选框。整个过程中只有一个超参数k，且对模型影响小。
+  - 论文没有多网络模型任何改进，仅仅是训练时样本的改进，大道至简，返璞归真。
   - [2019][Bridging the Gap Between Anchor-based and Anchor-free Detection via Adaptive Training Sample Selection](https://arxiv.org/pdf/1912.02424v1.pdf)
   - https://github.com/sfzhang15/ATSS
 
