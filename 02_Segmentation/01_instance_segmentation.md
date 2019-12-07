@@ -20,6 +20,10 @@ b.target category训练方式。个人感觉MaskIoU和score不是线性相关，
 
 -ICCV2019论文
   - [InstaBoost: Boosting Instance Segmentation via Probability Map Guided Copy-Pasting](https://arxiv.org/pdf/1908.07801v1.pdf)
+ 
+#Panoptic Segmentation
+ - 
+- [2019][Panoptic-DeepLab:A Simple, Strong, and Fast Baseline for Bottom-Up Panoptic Segmentation](https://arxiv.org/pdf/1911.10194.pdf) 
    
 
 ---
