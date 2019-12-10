@@ -6,6 +6,12 @@
 -PyTorch官方文档框架介绍。
 
   -[PyTorch: An Imperative Style, High-Performance Deep Learning Library](https://arxiv.org/pdf/1912.01703v1.pdf)
+---
+#survey
+
+- 关于CNN的一篇综述。包括CNN各个组件，演化历史，内容不够深入也不够全面，但是可以作为复习的框架。
+
+  -[A Survey of the Recent Architectures of Deep Convolutional Neural Networks](https://arxiv.org/pdf/1901.06032.pdf)
 
 
 ---
