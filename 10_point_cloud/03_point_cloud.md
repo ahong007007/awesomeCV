@@ -73,6 +73,8 @@ PointNet之前的方法集中在点云投影二维平面，点云划分Voxel等�
 
   - [2019.09][Go Wider: An Efficient Neural Network for Point Cloud Analysis via Group Convolutions](https://arxiv.org/pdf/1909.10431.pdf)
 
+- 法国国家航空航天中心提出。
+  - [2019][ConvPoint: continuous convolutions for point cloud processing](https://arxiv.org/pdf/1904.02375.pdf)
 ---
 
 # pointcloud registration
@@ -172,7 +174,6 @@ https://zhuanlan.zhihu.com/p/44809266
 VoteNet层次理解
 
 
-Large-scale Point cloud segmentation with superpoint graphs,	
 Unstructured point cloud semantic labeling using deep segmentation networks
 Generalizing discrete convolutions for unstructured point clouds
 Point Cloud Oversegmentation with Graph-Structured Deep Metric Learning
@@ -190,7 +191,5 @@ SDRSAC: Semidefinite-Based Randomized Approach for Robust Point Cloud Registrati
 PointNetLK: Robust & Efficient Point Cloud Registration using PointNet,Hunter M Goforth (Carnegie Mellon University)*
 
 ,Object Tracking by Reconstruction with View-Specific Discriminative Correlation Filters,Ugur Kart (Tampere University of Technology)*
-1781,"Large-Scale, Metric Structure from Motion for Unordered Light Fields",Sotiris Nousias (University College London)*
-2491,Recurrent MVSNet for High-resolution Multi-view Stereo Depth Inference,Yao Yao (The Hong Kong University of Science and Technology)
-1935,GA-Net: Guided Aggregation Net for End-to-end Stereo Matching,Feihu Zhang (University of Oxford)*
+
 Learning Depth with Convolutional Spatial Propagation Network，Xinjing Cheng（baidu）2018，arkiv

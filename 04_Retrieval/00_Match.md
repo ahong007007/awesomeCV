@@ -79,11 +79,10 @@ Fine-tuning和Attention-based训练。模型训练集只需要分类的标注，
   - 疑问：开源代码代码中训练使用的是model.py中的SoftDetectionModule，测试使用的是model_test.py的HardDetectionModule，流程不太一样，待解决。
   - 目前开源代码给的backbone是VGG19，ResNet50/ResNet101是否有更好的表现？特征提取时可以用GPU实现，匹配需要用CPU，对模型加速？
   - Aachen Day-Night localization dataset数据集图片在5K+左右量级。
+  - D2-Net和R2D2都依赖dense gt correspondences, 比如D2-Net依赖MegaDepth，而R2D2是用EpicFlow自己插值出来的，获取成本和精度都是麻烦事。 
   - [2019][CVPR][D2-Net: A Trainable CNN for Joint Description and Detection of Local Features](https://arxiv.org/pdf/1905.03561v1.pdf)
   - [Supplementary Material](https://dsmn.ml/files/d2-net/d2-net-supp.pdf)[github](https://github.com/mihaidusmanu/d2-net)
-  
--
-D2-Net和R2D2都依赖dense gt correspondences, 比如D2-Net依赖MegaDepth，而R2D2是用EpicFlow自己插值出来的，获取成本和精度都是麻烦事。  
+   
   
 - Landmarks CVPR19 workshop论文。Google Landmark检索第一名和识别第三名。看这篇论文用了很多tricks,Google-Landmarks-v2数据清洗，backbone集成6个模型：FishNet-150,ResNet-101和ResNetXt101等，
 损失函数结合人脸识别的cosine-based softmax losses。cosine annealing,mean-pooling (GeM)，finetuning,Discriminative-Reranking等。从实验数据看，Ensemble 6 models仅提升1%，但是实时性应该打折扣。
