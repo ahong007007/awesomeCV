@@ -84,6 +84,11 @@ Programming Algorithm相当于对之前帧特征的融合。Object Segmentation�
   采用利用previous-frame re-detections(up to 100)可以实现95.5%召回。previous-frame在VOS领域也是常用操作之一。
   
   -[2019][Siam R-CNN: Visual Tracking by Re-Detection](https://arxiv.org/pdf/1911.12836.pdf)
+
+- 中科院提出的SiamMan，backbone基于Siam网络架构，多任务学习包括三个分支：分类，回归和定位。个人认为由于引入空洞卷积，多尺度特征，多尺度Attention等trick，特征表达能力强。
+  -引入mask分支，或者previous-frame,准确率是不是更好。
+  -网络需要足够的特征表达能力，实时性可能欠佳。workstation（Intel i7-7800X）, 8G memory, 2*RTX2080 GPUs 实现45fps。
+  -[2019][SiamMan: Siamese Motion-aware Network for Visual Tracking](https://arxiv.org/pdf/1912.05515.pdf) 
 # Framework
   
   https://github.com/STVIR/pysot
