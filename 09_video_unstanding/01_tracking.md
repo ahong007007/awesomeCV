@@ -89,6 +89,8 @@ Programming Algorithm相当于对之前帧特征的融合。Object Segmentation�
   -引入mask分支，或者previous-frame,准确率是不是更好。
   -网络需要足够的特征表达能力，实时性可能欠佳。workstation（Intel i7-7800X）, 8G memory, 2*RTX2080 GPUs 实现45fps。
   -[2019][SiamMan: Siamese Motion-aware Network for Visual Tracking](https://arxiv.org/pdf/1912.05515.pdf) 
+
+---
 # Framework
   
   https://github.com/STVIR/pysot

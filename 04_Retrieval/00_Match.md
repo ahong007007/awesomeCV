@@ -4,6 +4,7 @@
 - CVPR2017论文，比对SIFT、SIFT-PCA、 DSP-SIFT、 ConvOpt、 DeepDesc 、TFeat、 LIFT等算法的性能。
   - [2017][CVPR][Comparative Evaluation of Hand-Crafted and Learned Local Features](https://demuc.de/papers/schoenberger2017comparative.pdf)
 
+- [2019][A Benchmark on Tricks for Large-scale Image Retrieval](https://arxiv.org/pdf/1907.11854.pdf)
 - https://github.com/willard-yuan/awesome-cbir-papers
 - https://paperswithcode.com/task/image-retrieval
 ---
@@ -45,6 +46,11 @@
 - https://image-matching-workshop.github.io/leaderboard/
 - https://www.visuallocalization.net/benchmark/
 
+## Google Landmark Retrieval 2019
+
+-百度基于PaddlePaddle的开源方案。鉴于PaddlePaddle小众，工业项目设计实在不敢用。
+ -[2019][2nd Place and 2nd Place Solution to Kaggle Landmark Recognition and Retrieval Competition 2019]
+
 ---
 # Paper
 
@@ -84,7 +90,7 @@ Fine-tuning和Attention-based训练。模型训练集只需要分类的标注，
   - 目前开源代码给的backbone是VGG19，ResNet50/ResNet101是否有更好的表现？特征提取时可以用GPU实现，匹配需要用CPU，对模型加速？
   - Aachen Day-Night localization dataset数据集图片在5K+左右量级。
   - D2-Net和R2D2都依赖dense gt correspondences, 比如D2-Net依赖MegaDepth，而R2D2是用EpicFlow自己插值出来的，获取成本和精度都是麻烦事。 
-  - [2019][CVPR][D2-Net: A Trainable CNN for Joint Description and Detection of Local Features](https://arxiv.org/pdf/1905.03561v1.pdf)
+  - [2019][CVPR][D2-Net: A Trainable CNN for Joint Description and Detection of Local Features](https://arxiv.org/pdf/1905.03561v1.pdf):star: :star: :star: :star: :star:
   - [Supplementary Material](https://dsmn.ml/files/d2-net/d2-net-supp.pdf)[github](https://github.com/mihaidusmanu/d2-net)
    
   
@@ -97,7 +103,8 @@ Fine-tuning和Attention-based训练。模型训练集只需要分类的标注，
 
 -CVPR2019论文科技大学提出，两种增强局部特征描述符上下文信息的方法：high level图像表示的视觉上下文信息和关键点分布的几何上下文信息。
 
-  - [2019][CVPR][ContextDesc: Local Descriptor Augmentation with Cross-Modality Context](https://arxiv.org/pdf/1904.04084.pdf)
+  - [2019][CVPR][ContextDesc: Local Descriptor Augmentation with Cross-Modality Context](https://arxiv.org/pdf/1904.04084.pdf):star: :star: :star: :star: :star:
+  - https://github.com/lzx551402/contextdesc
   
 - NIPS2019论文，浙江大学提出，主要解决在不同视角图像的匹配关系。论文不是在旋转图像上直接提取特征，而是包含两个分支：直接在旋转图像的特征金字塔提取特征和在变化图像的特征金字塔提取特征，再经过分组卷积和
 Bilinear Pool，提取像素的描述符。模型需要和特征检测器(Superpoint/DoG/LF-Net)配合，不是end-to-end方式。如论文使用的评测数据集HPSequences和SUN3D数据量都不足1K,对比试验也仅仅基于SIFT和GeoDesc，实验数据不具有代表性，但是提出对图像/特征均进行映射变变换，具有参考意义。
