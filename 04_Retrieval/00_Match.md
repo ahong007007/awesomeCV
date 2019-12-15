@@ -111,6 +111,12 @@ Bilinear Pool，提取像素的描述符。模型需要和特征检测器(Superp
   - [NIPS][2019][GIFT: Learning Transformation-Invariant Dense Visual Descriptors via Group CNNs](https://arxiv.org/pdf/1911.05932.pdf) 
   -  
 
+# Ransac
+
+- CVPR2019论文，对RANSAC的改进。包含第三方python库pymagsac，可以无缝替代RANSAC。
+
+  -[2019][MAGSAC++, a fast, reliable and accurate robust estimator](https://arxiv.org/pdf/1912.05909v1.pdf)
+  -https://github.com/ducha-aiki/pymagsac
 
 #待记录
 LF-Net、SuperPoint 
