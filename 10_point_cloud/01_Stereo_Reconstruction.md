@@ -74,7 +74,7 @@ Coarse到refined修订。论文在DTU和Tanks and Temples数据集取得state-of
 
   -[2019][CVPR][SceneCode: Monocular Dense Semantic Reconstruction using Learned Encoded Scene Representations](https://zpascal.net/cvpr2019/Zhi_SceneCode_Monocular_Dense_Semantic_Reconstruction_Using_Learned_Encoded_Scene_Representations_CVPR_2019_paper.pdf)
   
--北大深圳研究生院，香港大学联合提出，融合多尺度深度图，多指标约束增强点云重建。feature network and differentiable homography,coarse-to-fine depth map这三个过程类似前人工作MVSNet/PointMVSNet系列。重要改进是
+-北大深圳研究生院，香港大学联合提出PVA-MVSNet，融合多尺度深度图，多指标约束增强点云重建。feature network and differentiable homography,coarse-to-fine depth map这三个过程类似前人工作MVSNet/PointMVSNet系列。重要改进是
 多尺度深度估计的融合，提高准确率同时提升效率。
 
   -[Pyramid Multi-view Stereo Net with Self-adaptive View Aggregation](https://arxiv.org/pdf/1912.03001v1.pdf)
