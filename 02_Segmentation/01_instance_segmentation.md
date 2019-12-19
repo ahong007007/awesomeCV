@@ -21,6 +21,9 @@ b.target category训练方式。个人感觉MaskIoU和score不是线性相关，
 -ICCV2019论文
   - [InstaBoost: Boosting Instance Segmentation via Probability Map Guided Copy-Pasting](https://arxiv.org/pdf/1908.07801v1.pdf)
  
+- 何凯明团队新作，针对语义分割和实体分割提出图像渲染方法。语义分割的特征分辨率一般为1/8图像，Mask RCNN是28*28,这些特征分辨率比较低，上采样过程中目标边缘过于平滑，丢失细节信息。
+ 
+ -[2019][PointRend: Image Segmentation as Rendering](https://arxiv.org/pdf/1912.08193.pdf)
 #Panoptic Segmentation
  - 
 - [2019][Panoptic-DeepLab:A Simple, Strong, and Fast Baseline for Bottom-Up Panoptic Segmentation](https://arxiv.org/pdf/1911.10194.pdf) 
