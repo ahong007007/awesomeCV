@@ -111,7 +111,7 @@ Bilinear Pool，提取像素的描述符。模型需要和特征检测器(Superp
   - [NIPS][2019][GIFT: Learning Transformation-Invariant Dense Visual Descriptors via Group CNNs](https://arxiv.org/pdf/1911.05932.pdf) 
   -  
 -
-  -[2019][R2D2: Repeatable and Reliable Detector and Descriptor]()
+  -[2019][R2D2: Repeatable and Reliable Detector and Descriptor](https://arxiv.org/pdf/1906.06195.pdf)
 
 ## Visual localization challenge
 - 苏黎世自动驾驶实验室出品，解决视觉定位问题。论文应该是通提出的HF-Net三维重建点云，然后通过检索方式在线获取图片的相机姿态。应用创新点在于在线实时（Backbone MobileNetv1-v2）。
