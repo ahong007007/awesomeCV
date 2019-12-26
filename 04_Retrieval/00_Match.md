@@ -89,7 +89,8 @@ Fine-tuning和Attention-based训练。模型训练集只需要分类的标注，
   - 疑问：开源代码代码中训练使用的是model.py中的SoftDetectionModule，测试使用的是model_test.py的HardDetectionModule，流程不太一样，待解决。
   - 目前开源代码给的backbone是VGG19，ResNet50/ResNet101是否有更好的表现？特征提取时可以用GPU实现，匹配需要用CPU，对模型加速？
   - Aachen Day-Night localization dataset数据集图片在5K+左右量级。
-  - D2-Net和R2D2都依赖dense gt correspondences, 比如D2-Net依赖MegaDepth，而R2D2是用EpicFlow自己插值出来的，获取成本和精度都是麻烦事。 
+  - D2-Net和R2D2都依赖dense gt correspondences, 比如D2-Net依赖MegaDepth，而R2D2是用EpicFlow自己插值出来的，获取成本和精度都是麻烦事。
+  - 使用缺点：D2-net多尺度提取1.8w*512特征，显存12G，M40GPU, 4-5s/picture。两张图的图片匹配需要30s。匹配特征容易集中，既图像的一部分匹配点较多，另一部分没有匹配点。 
   - [2019][CVPR][D2-Net: A Trainable CNN for Joint Description and Detection of Local Features](https://arxiv.org/pdf/1905.03561v1.pdf):star: :star: :star: :star: :star:
   - [Supplementary Material](https://dsmn.ml/files/d2-net/d2-net-supp.pdf)[github](https://github.com/mihaidusmanu/d2-net)
    
@@ -109,8 +110,9 @@ Fine-tuning和Attention-based训练。模型训练集只需要分类的标注，
 - NIPS2019论文，浙江大学提出，主要解决在不同视角图像的匹配关系。论文不是在旋转图像上直接提取特征，而是包含两个分支：直接在旋转图像的特征金字塔提取特征和在变化图像的特征金字塔提取特征，再经过分组卷积和
 Bilinear Pool，提取像素的描述符。模型需要和特征检测器(Superpoint/DoG/LF-Net)配合，不是end-to-end方式。如论文使用的评测数据集HPSequences和SUN3D数据量都不足1K,对比试验也仅仅基于SIFT和GeoDesc，实验数据不具有代表性，但是提出对图像/特征均进行映射变变换，具有参考意义。
   - [NIPS][2019][GIFT: Learning Transformation-Invariant Dense Visual Descriptors via Group CNNs](https://arxiv.org/pdf/1911.05932.pdf) 
-  -  
--
+
+- CVPR2019论文。对于重复特征区域(棋盘格，树木等场景)，显著性的特征不容易区分，需要置信度区分。论文在输出descriptors和reliability同时，输出repeatability。
+
   -[2019][R2D2: Repeatable and Reliable Detector and Descriptor](https://arxiv.org/pdf/1906.06195.pdf)
 
 ## Visual localization challenge
