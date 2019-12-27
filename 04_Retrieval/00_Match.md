@@ -52,11 +52,23 @@
  -[2019][2nd Place and 2nd Place Solution to Kaggle Landmark Recognition and Retrieval Competition 2019]
 
 ---
-# Paper
+# End-to-end matching pipeline
 
 - match一篇经典论文。
   - [CVPR][2012][Three things everyone should know to improve object retrieval](https://www.robots.ox.ac.uk/~vgg/publications/2012/Arandjelovic12/arandjelovic12.pdf)
  
+ 
+- 洛桑联邦理工学院(EPFL)提出的CNN一个框架实现detection+orientation estimation+feature description，准确性完胜经典特征匹配方法SIFT。
+  网络结构：基于Siamese Network，训练集特征点来自于SfM的特征点(SIFT提取的特征？)，输入是特征点所在的多尺度图像块。STN修正图像块得到特征点检测和方向估计.
+  训练过程：首先训练描述符，然后用来训练方向估计，最后训练特征点检测；
+  对比试验：论文把三个结构分布用SIFT替代，交叉试验论文只有LIFT的三个部分效果最好。
+  缺点：速度慢。一般论文没有实时性对比数据，默认实时性不行。
+
+  - [2016][ECCV][LIFT: Learned Invariant Feature Transform](https://arxiv.org/pdf/1603.09114.pdf) 
+  - https://github.com/cvlab-epfl/LIFT
+-
+  - [SuperPoint: Self Supervised Interest Point Detection and Description](https://arxiv.org/pdf/1712.07629.pdf)
+   
 - ICCV2017论文，Google提出Google-Landmarks Dataset数据集和DELF(DEep Local Feature)算法。
 Google-Landmarks包含100万图像，11万检索图像,图片分布在187个国家，4872城市。DELF基于CNN计算实现大规模数据检索，包括特征提取和匹配。
 backbone基于ResNet50(ImageNet预训练),图像首先预处理(输入图像分辨率中心裁剪和缩放，用于训练)，训练过程包括两个阶段：Descriptor 
@@ -77,8 +89,6 @@ Fine-tuning和Attention-based训练。模型训练集只需要分类的标注，
 
   - DELF在线计算平台[https://colab.research.google.com/github/tensorflow/hub/blob/master/examples/colab/tf_hub_delf_module.ipynb#scrollTo=mVaKXT3cMSib]
   - [2019][CVPR][Detect-to-Retrieve: Efficient Regional Aggregation for Image Search](https://arxiv.org/pdf/1812.01584.pdf) 
--
-  - [ACTNET: end-to-end learning of feature activations and multi-stream aggregation for effective instance image retrieval](https://arxiv.org/pdf/1907.05794.pdf)
 
 - 巴黎多芬纳大学,微软等联合提出D2-Net，基于CNN提取描述子特征。传统提取特征的SIFT等是先检测关键点再提取描述子方式(detect-then-describe)，特征是稀疏的。
 而论文提出detect-and-describe：先基于backbone提取特征，在local descriptor维度计算soft-NMS,在channel维度计算ratio-to-max，最后归一化计算图像像素对应的描述子，
@@ -107,27 +117,38 @@ Fine-tuning和Attention-based训练。模型训练集只需要分类的标注，
   - [2019][CVPR][ContextDesc: Local Descriptor Augmentation with Cross-Modality Context](https://arxiv.org/pdf/1904.04084.pdf):star: :star: :star: :star: :star:
   - https://github.com/lzx551402/contextdesc
   
+- NIPS2019论文。对于重复特征区域(棋盘格，树木等场景)，显著性的特征不容易区分，需要置信度区分。论文在输出descriptors和reliability同时，输出repeatability。
+
+  -[2019][R2D2: Repeatable and Reliable Detector and Descriptor](https://arxiv.org/pdf/1906.06195.pdf)
+
+- 
+  -[2019][Reinforced Feature Points:Optimizing Feature Detection and Description for a High-Level Task](https://arxiv.org/pdf/1912.00623.pdf) 
+---
+
+## Descriptors
 - NIPS2019论文，浙江大学提出，主要解决在不同视角图像的匹配关系。论文不是在旋转图像上直接提取特征，而是包含两个分支：直接在旋转图像的特征金字塔提取特征和在变化图像的特征金字塔提取特征，再经过分组卷积和
 Bilinear Pool，提取像素的描述符。模型需要和特征检测器(Superpoint/DoG/LF-Net)配合，不是end-to-end方式。如论文使用的评测数据集HPSequences和SUN3D数据量都不足1K,对比试验也仅仅基于SIFT和GeoDesc，实验数据不具有代表性，但是提出对图像/特征均进行映射变变换，具有参考意义。
   - [NIPS][2019][GIFT: Learning Transformation-Invariant Dense Visual Descriptors via Group CNNs](https://arxiv.org/pdf/1911.05932.pdf) 
 
-- CVPR2019论文。对于重复特征区域(棋盘格，树木等场景)，显著性的特征不容易区分，需要置信度区分。论文在输出descriptors和reliability同时，输出repeatability。
-
-  -[2019][R2D2: Repeatable and Reliable Detector and Descriptor](https://arxiv.org/pdf/1906.06195.pdf)
-
+---
 ## Visual localization challenge
 - 苏黎世自动驾驶实验室出品，解决视觉定位问题。论文应该是通提出的HF-Net三维重建点云，然后通过检索方式在线获取图片的相机姿态。应用创新点在于在线实时（Backbone MobileNetv1-v2）。
 
   - [2019][CVPR][From Coarse to Fine: Robust Hierarchical Localization at Large Scale](http://openaccess.thecvf.com/content_CVPR_2019/papers/Sarlin_From_Coarse_to_Fine_Robust_Hierarchical_Localization_at_Large_Scale_CVPR_2019_paper.pdf)
 
-# Ransac
+## Geometric verification
 
 - CVPR2019论文，对RANSAC的改进。包含第三方python库pymagsac，可以无缝替代RANSAC。
 
   -[2019][MAGSAC++, a fast, reliable and accurate robust estimator](https://arxiv.org/pdf/1912.05909v1.pdf)
   -https://github.com/ducha-aiki/pymagsac
+---
+#retrieval
 
-#待记录
+  - [ACTNET: end-to-end learning of feature activations and multi-stream aggregation for effective instance image retrieval]
+
+---
+##待记录
 LF-Net、SuperPoint 
 Visual Localization Using Sparse Semantic 3D Map
 Global: GeM pooling [Radenovic et al., PAMI’18], 
