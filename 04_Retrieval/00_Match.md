@@ -1,4 +1,5 @@
 ---
+
 # overview/review/survey
 
 - CVPR2017论文，比对SIFT、SIFT-PCA、 DSP-SIFT、 ConvOpt、 DeepDesc 、TFeat、 LIFT等算法的性能。
@@ -7,17 +8,24 @@
 - [2019][A Benchmark on Tricks for Large-scale Image Retrieval](https://arxiv.org/pdf/1907.11854.pdf)
 - https://github.com/willard-yuan/awesome-cbir-papers
 - https://paperswithcode.com/task/image-retrieval
+- https://github.com/shamangary/awesome-local-global-descriptor
+
+
 ---
 
 # Dataset
+
+
+- Phototourism :a 715-image reconstruction of Notre Dame Cathedral in Paris.
+  -http://phototour.cs.washington.edu/datasets/
 
 - HPatches:580 image pairs。
   - [A benchmark and evaluation of handcrafted and learned local descriptors](https://github.com/hpatches/hpatches-benchmark)
   
 - [Long-team visual localization](https://www.visuallocalization.net/benchmark/)
   - Aachen Day-Night dataset:Reference images:4,328,Query images:922 (824 daytime, 98 nighttime)
-- Oxford 5k and Oxf105k
-- Paris 6k Par106k
+  - Oxford 5k and Oxf105k
+  - Paris 6k Par106k
 
 - [Google Landmarks Dataset v1](https://github.com/cvdfoundation/google-landmark)
   - https://www.kaggle.com/google/google-landmarks-dataset
@@ -40,6 +48,7 @@
   - https://landmarksworkshop.github.io/CVPRW2019/
   - The goal of the Landmark Recognition 2019 challenge is to recognize a landmark presented in a query image, 
    while the goal of Landmark Retrieval 2019 is to find all images showing that landmark. 
+
 ---
 
 # benchmark
@@ -66,6 +75,13 @@
 
   - [2016][ECCV][LIFT: Learned Invariant Feature Transform](https://arxiv.org/pdf/1603.09114.pdf) 
   - https://github.com/cvlab-epfl/LIFT
+  
+-香港科技大学提出GeoDesc，整合多视图几何约束的局部特征子学习方法，在数据生成、数据采样、和损失函数三个方面对匹配进行改善。
+  - 数据生成：借助传统SFM方法，得到三维点及其对应的一系列像素块的对应关系。进一步基于Delaunay triangulation对点云滤波。
+  - 数据采样：通过像素块/图片对的几何相似度估计，构建"硬"样本，硬是指“同一三维点对应的不同像素块差异尽可能大，不同三维点对应的像素块差异尽可能小”。
+  - 损失函数：包括结构损失函数以及几何损失函数。
+  - [2016][ECCV][GeoDesc: Learning Local Descriptors by Integrating Geometry Constraints](https://arxiv.org/pdf/1807.06294.pdf)  
+
 -
   - [SuperPoint: Self Supervised Interest Point Detection and Description](https://arxiv.org/pdf/1712.07629.pdf)
    
