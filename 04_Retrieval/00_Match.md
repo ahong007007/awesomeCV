@@ -63,7 +63,7 @@
 ---
 # End-to-end matching pipeline
 
--重读图像匹配领域经典算法SIFT，追根溯源寻求特征匹配来龙去脉。太多算法直接使用CNN，失去探索探索和对原理的理解。根据Opencv对SIFT总结，对比原论文，主要有以下几个部分：
+-最近因为项目需要，重读图像匹配领域经典算法SIFT，追根溯源寻求特征匹配来龙去脉。这几年算法大多直接CNN，个人失去探索本源和对原理的理解。根据Opencv对SIFT总结，对比原论文，主要有以下几个部分：
   -Scale-space peak Selection：对多尺度图像高斯模糊处理，图像金字塔生成Difference of Gaussians(DoG)， 搜索DoG空间极值点,获取潜在特征点。特征是在多尺度空间获取， 所以具有多尺度不变形。
   -Keypoint Localization：Hessian matrix计算主曲率，去除位于图像边缘和无明显差异特征点。
   -Orientation Assignment：使用直方图统计邻域内像素的梯度和方向。梯度直方图将360°平均分配36个bins。以直方图中最大值作为该关键点的主方向。为了增强匹配的鲁棒性，只保留峰值大于主方向峰值80％的方向作为该关键点的辅方向。
