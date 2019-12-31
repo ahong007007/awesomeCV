@@ -7,6 +7,8 @@ non-Euclidean没有griddded array的数据属性。
  
   - [A survey on Deep Learning Advances on Different 3D Data Representations](https://arxiv.org/pdf/1808.01462.pdf):star: :star: :star: :star:
   
+- 国防科大提出点云综述。
+  - [Deep Learning for 3D Point Clouds: A Survey](https://arxiv.org/pdf/1912.12033.pdf)  
 ## Library
 
 - [Kaolin: A PyTorch Library for Accelerating 3D Deep Learning Research](https://arxiv.org/pdf/1911.05063v2.pdf)
@@ -29,6 +31,8 @@ and Analysis of Shapes: lecture 7](http://www.enseignement.polytechnique.fr/info
 
 
 ## SfM 
+-"使用LF-Net进行三维重建"，在OpenMVG中集成特征检测算法 
+ - https://www.jianshu.com/p/f198c7b39193
 
 VisualSFM: A Visual Structure from Motion System
 Colmap: a general-purpose Structure-from-Motion (SfM) and Multi-View Stereo (MVS) pipeline with a graphical and command-line interface.
