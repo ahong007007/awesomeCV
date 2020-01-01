@@ -49,11 +49,20 @@
   - The goal of the Landmark Recognition 2019 challenge is to recognize a landmark presented in a query image, 
    while the goal of Landmark Retrieval 2019 is to find all images showing that landmark. 
 
+  - Aachen Day-Night
+  - Extended CMU Seasons
+  - InLoc
+  - RobotCar Seasons
+  - SILDa Weather and Time of Day Dataset
+
 ---
 
 # benchmark
-- https://image-matching-workshop.github.io/leaderboard/
-- https://www.visuallocalization.net/benchmark/
+
+- CVPR2019workshop:Local Features & Beyond
+  - https://image-matching-workshop.github.io/leaderboard/
+- CVPR2019workshop:Long-term Visual Localization
+  - https://www.visuallocalization.net/benchmark/
 
 ## Google Landmark Retrieval 2019
 
@@ -94,6 +103,11 @@
 -
   - [SuperPoint: Self Supervised Interest Point Detection and Description](https://arxiv.org/pdf/1712.07629.pdf)
    
+- NIPS2018论文。索尼，epfl提出局部特征提取方法。
+  - 缺点：训练和测试数据集简单，容易过拟合。室内数据集是ScanNet，室外使用25 photo-tourism image。
+  - [LF-Net][LF-Net: Learning Local Features from Images](https://arxiv.org/pdf/1805.09662.pdf)   
+  - https://github.com/vcg-uvic/lf-net-release
+  
 - ICCV2017论文，Google提出Google-Landmarks Dataset数据集和DELF(DEep Local Feature)算法。
 Google-Landmarks包含100万图像，11万检索图像,图片分布在187个国家，4872城市。DELF基于CNN计算实现大规模数据检索，包括特征提取和匹配。
 backbone基于ResNet50(ImageNet预训练),图像首先预处理(输入图像分辨率中心裁剪和缩放，用于训练)，训练过程包括两个阶段：Descriptor 
@@ -125,7 +139,8 @@ Fine-tuning和Attention-based训练。模型训练集只需要分类的标注，
   - 目前开源代码给的backbone是VGG19，ResNet50/ResNet101是否有更好的表现？特征提取时可以用GPU实现，匹配需要用CPU，对模型加速？
   - Aachen Day-Night localization dataset数据集图片在5K+左右量级。
   - D2-Net和R2D2都依赖dense gt correspondences, 比如D2-Net依赖MegaDepth，而R2D2是用EpicFlow自己插值出来的，获取成本和精度都是麻烦事。
-  - 使用缺点：D2-net多尺度提取1.8w*512特征，显存12G，M40GPU, 4-5s/picture。两张图的图片匹配需要30s。匹配特征容易集中，既图像的一部分匹配点较多，另一部分没有匹配点。 
+  - 使用缺点：D2-net多尺度提取1.8w*512特征，显存12G，M40GPU, 4-5s/picture。两张图的图片匹配需要30s。匹配特征容易集中，既图像的一部分匹配点较多，另一部分没有匹配点。
+  - keypoint localization不太准， 难以集成到SfM或者SLAM对geometry很敏感的任务。
   - [2019][CVPR][D2-Net: A Trainable CNN for Joint Description and Detection of Local Features](https://arxiv.org/pdf/1905.03561v1.pdf):star: :star: :star: :star: :star:
   - [Supplementary Material](https://dsmn.ml/files/d2-net/d2-net-supp.pdf)[github](https://github.com/mihaidusmanu/d2-net)
    
@@ -137,10 +152,6 @@ Fine-tuning和Attention-based训练。模型训练集只需要分类的标注，
   - https://github.com/lyakaap/Landmark2019-1st-and-3rd-Place-Solution
   - https://drive.google.com/file/d/1QmC4UKRhIXNW-sa8jxV5b7I6QbPKvJsi/view
 
--CVPR2019论文科技大学提出，两种增强局部特征描述符上下文信息的方法：high level图像表示的视觉上下文信息和关键点分布的几何上下文信息。
-
-  - [2019][CVPR][ContextDesc: Local Descriptor Augmentation with Cross-Modality Context](https://arxiv.org/pdf/1904.04084.pdf):star: :star: :star: :star: :star:
-  - https://github.com/lzx551402/contextdesc
   
 - NIPS2019论文。对于重复特征区域(棋盘格，树木等场景)，显著性的特征不容易区分，需要置信度区分。论文在输出descriptors和reliability同时，输出repeatability。
 
@@ -150,17 +161,28 @@ Fine-tuning和Attention-based训练。模型训练集只需要分类的标注，
   -[2019][Reinforced Feature Points:Optimizing Feature Detection and Description for a High-Level Task](https://arxiv.org/pdf/1912.00623.pdf) 
 ---
 
+## Detector
+
+-CVPR2019论文科技大学提出，两种增强局部特征描述符上下文信息的方法：high level图像表示的视觉上下文信息和关键点分布的几何上下文信息。
+  - [2019][CVPR][ContextDesc: Local Descriptor Augmentation with Cross-Modality Context](https://arxiv.org/pdf/1904.04084.pdf):star: :star: :star: :star: :star:
+  - https://github.com/lzx551402/contextdesc
+  
+  -[2019][CVPR][SOSNet:Second Order Similarity Regularization for Local Descriptor Learning]
+  - https://github.com/yuruntian/SOSNet
+---
 ## Descriptors
 - NIPS2019论文，浙江大学提出，主要解决在不同视角图像的匹配关系。论文不是在旋转图像上直接提取特征，而是包含两个分支：直接在旋转图像的特征金字塔提取特征和在变化图像的特征金字塔提取特征，再经过分组卷积和
 Bilinear Pool，提取像素的描述符。模型需要和特征检测器(Superpoint/DoG/LF-Net)配合，不是end-to-end方式。如论文使用的评测数据集HPSequences和SUN3D数据量都不足1K,对比试验也仅仅基于SIFT和GeoDesc，实验数据不具有代表性，但是提出对图像/特征均进行映射变变换，具有参考意义。
   - [NIPS][2019][GIFT: Learning Transformation-Invariant Dense Visual Descriptors via Group CNNs](https://arxiv.org/pdf/1911.05932.pdf) 
+---
+## Matching
 
 ---
 ## Visual localization challenge
 - 苏黎世自动驾驶实验室出品，解决视觉定位问题。论文应该是通提出的HF-Net三维重建点云，然后通过检索方式在线获取图片的相机姿态。应用创新点在于在线实时（Backbone MobileNetv1-v2）。
 
   - [2019][CVPR][From Coarse to Fine: Robust Hierarchical Localization at Large Scale](http://openaccess.thecvf.com/content_CVPR_2019/papers/Sarlin_From_Coarse_to_Fine_Robust_Hierarchical_Localization_at_Large_Scale_CVPR_2019_paper.pdf)
-
+---
 ## Geometric verification
 
 - CVPR2019论文，对RANSAC的改进。包含第三方python库pymagsac，可以无缝替代RANSAC。
@@ -171,6 +193,9 @@ Bilinear Pool，提取像素的描述符。模型需要和特征检测器(Superp
 #retrieval
 
   - [ACTNET: end-to-end learning of feature activations and multi-stream aggregation for effective instance image retrieval]
+
+## SfM
+
 
 ---
 ##待记录
