@@ -100,8 +100,15 @@
   - 损失函数：包括结构损失函数以及几何损失函数。
   - [2016][ECCV][GeoDesc: Learning Local Descriptors by Integrating Geometry Constraints](https://arxiv.org/pdf/1807.06294.pdf)  
 
--
+-Magic Leap公司提出的一种自学习训练特征检测与匹配方法。特征点匹配是像素级实现，很难人工直接标注，主流基于CNN的方法是SfM提取特征点或者三维点云匹配点训练。
+论文提出的自学习方法，合成数据集训练网络。分为三个阶段：
+  - Interest Point Pre-Training：利用基本几何元素(直线，多面体等)渲染得到真值，训练MagicPoint网络得到提取基本形状元素特征点的模型。
+  - Interest Point Self-Labeling：对一般图像(MS-COCO数据集)做单应变换，MajicPoint模型对图像提取特征点，获取匹配点真值并训练网络。
+  - Joint Training：对任意两张图像的两对图像warp求loss，优化匹配点距离(非匹配点距离大，匹配点距离小)，得到特征点的描述符。
+  - 疑问：描述符的feature map分辨率为原始图像的1/8，8x8的图像patch公用一个描述符？
+  - 缺点：论文没有公布训练集和训练代码，youtube有论文模型的演示效果，在高清图像和视频表现欠佳。
   - [SuperPoint: Self Supervised Interest Point Detection and Description](https://arxiv.org/pdf/1712.07629.pdf)
+  - https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork
    
 - NIPS2018论文。索尼，epfl提出局部特征提取方法。
   - 缺点：训练和测试数据集简单，容易过拟合。室内数据集是ScanNet，室外使用25 photo-tourism image。
@@ -199,7 +206,7 @@ Bilinear Pool，提取像素的描述符。模型需要和特征检测器(Superp
 
 ---
 ##待记录
-LF-Net、SuperPoint 
+SuperPoint 
 Visual Localization Using Sparse Semantic 3D Map
 Global: GeM pooling [Radenovic et al., PAMI’18], 
 CVPR’19], or simply embeddings before classifier
