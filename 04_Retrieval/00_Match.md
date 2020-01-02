@@ -182,16 +182,9 @@ Fine-tuning和Attention-based训练。模型训练集只需要分类的标注，
 Bilinear Pool，提取像素的描述符。模型需要和特征检测器(Superpoint/DoG/LF-Net)配合，不是end-to-end方式。如论文使用的评测数据集HPSequences和SUN3D数据量都不足1K,对比试验也仅仅基于SIFT和GeoDesc，实验数据不具有代表性，但是提出对图像/特征均进行映射变变换，具有参考意义。
   - [NIPS][2019][GIFT: Learning Transformation-Invariant Dense Visual Descriptors via Group CNNs](https://arxiv.org/pdf/1911.05932.pdf) 
 ---
-## Matching
 
----
-## Visual localization challenge
-- 苏黎世自动驾驶实验室出品，解决视觉定位问题。论文应该是通提出的HF-Net三维重建点云，然后通过检索方式在线获取图片的相机姿态。应用创新点在于在线实时（Backbone MobileNetv1-v2）。
 
-  - [2019][CVPR][From Coarse to Fine: Robust Hierarchical Localization at Large Scale](http://openaccess.thecvf.com/content_CVPR_2019/papers/Sarlin_From_Coarse_to_Fine_Robust_Hierarchical_Localization_at_Large_Scale_CVPR_2019_paper.pdf)
 
-- 
-  - [2019][Visual Localization Using Sparse Semantic 3D Map](https://arxiv.org/pdf/1904.03803.pdf)
 
 ---
 ## Geometric verification
