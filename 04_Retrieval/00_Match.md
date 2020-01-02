@@ -59,9 +59,9 @@
 
 # benchmark
 
-- CVPR2019workshop:Local Features & Beyond
-  - https://image-matching-workshop.github.io/leaderboard/
-- CVPR2019workshop:Long-term Visual Localization
+- CVPR2019 workshop:Local Features & Beyond
+  - https://image-matching-workshop.github.io/
+- CVPR2019 workshop:Long-term Visual Localization
   - https://www.visuallocalization.net/benchmark/
 
 ## Google Landmark Retrieval 2019
@@ -100,7 +100,7 @@
   - 损失函数：包括结构损失函数以及几何损失函数。
   - [2016][ECCV][GeoDesc: Learning Local Descriptors by Integrating Geometry Constraints](https://arxiv.org/pdf/1807.06294.pdf)  
 
--Magic Leap公司提出的一种自学习训练特征检测与匹配方法。特征点匹配是像素级实现，很难人工直接标注，主流基于CNN的方法是SfM提取特征点或者三维点云匹配点训练。
+-Magic Leap公司提出的一种自学习训练特征检测与匹配方法。实现特征点匹配是需要像素级像素级匹配，很难人工直接标注，主流基于CNN的方法是SfM提取特征点或者三维点云匹配点训练。
 论文提出的自学习方法，合成数据集训练网络。分为三个阶段：
   - Interest Point Pre-Training：利用基本几何元素(直线，多面体等)渲染得到真值，训练MagicPoint网络得到提取基本形状元素特征点的模型。
   - Interest Point Self-Labeling：对一般图像(MS-COCO数据集)做单应变换，MajicPoint模型对图像提取特征点，获取匹配点真值并训练网络。
@@ -189,6 +189,10 @@ Bilinear Pool，提取像素的描述符。模型需要和特征检测器(Superp
 - 苏黎世自动驾驶实验室出品，解决视觉定位问题。论文应该是通提出的HF-Net三维重建点云，然后通过检索方式在线获取图片的相机姿态。应用创新点在于在线实时（Backbone MobileNetv1-v2）。
 
   - [2019][CVPR][From Coarse to Fine: Robust Hierarchical Localization at Large Scale](http://openaccess.thecvf.com/content_CVPR_2019/papers/Sarlin_From_Coarse_to_Fine_Robust_Hierarchical_Localization_at_Large_Scale_CVPR_2019_paper.pdf)
+
+- 
+  - [2019][Visual Localization Using Sparse Semantic 3D Map](https://arxiv.org/pdf/1904.03803.pdf)
+
 ---
 ## Geometric verification
 
@@ -197,16 +201,13 @@ Bilinear Pool，提取像素的描述符。模型需要和特征检测器(Superp
   -[2019][MAGSAC++, a fast, reliable and accurate robust estimator](https://arxiv.org/pdf/1912.05909v1.pdf)
   -https://github.com/ducha-aiki/pymagsac
 ---
-#retrieval
-
-  - [ACTNET: end-to-end learning of feature activations and multi-stream aggregation for effective instance image retrieval]
 
 ## SfM
 
 
 ---
 ##待记录
-SuperPoint 
-Visual Localization Using Sparse Semantic 3D Map
+
+
 Global: GeM pooling [Radenovic et al., PAMI’18], 
 CVPR’19], or simply embeddings before classifier
