@@ -18,6 +18,8 @@ Statistics: :fire: code is available or the paper is very important
 - 论文从点云采集方式(image-derived,LiDAR,RGB-D,SAR)，点云数据集，点云分割方法（edge-based,regin growing,model fitting,unsupervised clustering-based），点云语义分割方法等，是个人认为是点云语义分割入门材料。
 
   - [2019][A Review of Point Cloud Semantic Segmentation](https://arxiv.org/pdf/1908.08854.pdf)
+- 点云对齐领域的论文综述。
+  - [2019][Target-less registration of point clouds: A review](https://arxiv.org/pdf/1912.12756.pdf)
 
 ---
 ## benchmark
