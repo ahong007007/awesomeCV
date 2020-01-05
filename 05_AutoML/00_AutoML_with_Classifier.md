@@ -173,6 +173,8 @@ MobileNetv3用到的tricks:
   
   *最近看一本书，《算法之美》，有一个最优停止理论，包括相亲问题、见好就收、苏丹嫁妆、售房问题，秘书问题，都可以用最优停止理论来选择合适的停止时机。DARTS是不是也可以套用？*  
     
+- NIPS2019论文，MIT韩松团队作品。论文提出加速ResNet50  1.3倍，节省1.6x资源，同时保持精度不显著下降。
+  -[2019][Neural-Hardware Architecture Search](http://mlforsystems.org/assets/papers/neurips2019/neural_hardware_lin_2019.pdf)    
 
 
 
