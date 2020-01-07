@@ -23,7 +23,11 @@ b.target category训练方式。个人感觉MaskIoU和score不是线性相关，
  
 - 何凯明团队新作，针对语义分割和实体分割提出图像渲染方法。语义分割的特征分辨率一般为1/8图像，Mask RCNN是28*28,这些特征分辨率比较低，上采样过程中目标边缘过于平滑，丢失细节信息。
  
- -[2019][PointRend: Image Segmentation as Rendering](https://arxiv.org/pdf/1912.08193.pdf)
+  -[2019][PointRend: Image Segmentation as Rendering](https://arxiv.org/pdf/1912.08193.pdf)
+ 
+-阿德雷得大学，字节跳动联合提出实例分割方法：整体框架类似于YOLO，bottom-up学习像素属于同一个实例的办法(DenseRePoints,polygen,SSAP)。
+  -[2019][SOLO: Segmenting Objects by Locations](https://arxiv.org/pdf/1912.04488.pdf)
+   
 #Panoptic Segmentation
  - 
 - [2019][Panoptic-DeepLab:A Simple, Strong, and Fast Baseline for Bottom-Up Panoptic Segmentation](https://arxiv.org/pdf/1911.10194.pdf) 
