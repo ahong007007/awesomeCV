@@ -38,6 +38,11 @@ top-down,bottom-up特征层的连接方式（还是连连看），取得state-of
   - 模型搜索训练时间大于1000 Hours *1 TPUv2。NAS依然是土豪们的游戏。
   - [MnasFPN : Learning Latency-aware Pyramid Architecture for Object Detection on Mobile Devices](https://arxiv.org/pdf/1912.01106.pdf)
   
+  
+-论文同时搜索backbone和decoder，用scale-permuted的方法搜索，模型FLOPs小，表现很强，在检测和分类任务上都取得了很好的结果。
+
+  -[SpineNet: Learning Scale-Permuted Backbone for Recognition and Localization](https://arxiv.org/pdf/1912.05027.pdf)
+
 ---
 
 # Recognition
@@ -105,6 +110,8 @@ Bounding box operations（BBox Only Equalize,BBox Only Rotate, BBox Only FlipLR�
  
   - [RandAugment: Practical data augmentation with no separate search](https://arxiv.org/pdf/1909.13719.pdf)
   - https://github.com/tensorflow/tpu/tree/master/models/official/efficientnet
+  
+
 
 # Super-Resolution 
 
