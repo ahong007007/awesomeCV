@@ -1,6 +1,13 @@
 # awesome-point-cloud-processing
 
+## Framework
+
 ## survey/overview/review 
+
+- Det3D 点云目标检测框架。
+
+  -[Class-balanced Grouping and Sampling for Point Cloud 3D Object Detection](https://arxiv.org/pdf/1908.09492.pdf)
+  -https://github.com/poodarchu/Det3D
 
 - 深度学习如何处理3维数据的综述论文。论文对3维数据表示分为两类： Euclidean 和non-Euclidean。Euclidean具有griddded array数据结构，allows for a global parametrization and a common system of coordinates，具有平移不变性。
 non-Euclidean没有griddded array的数据属性。
@@ -14,11 +21,12 @@ non-Euclidean没有griddded array的数据属性。
 - [Kaolin: A PyTorch Library for Accelerating 3D Deep Learning Research](https://arxiv.org/pdf/1911.05063v2.pdf)
 
 ---
-Track Advancement of SLAM
-## 
+
+## Track Advancement of SLAM
 
  帝国理工的Andrew J.Davison 教授
  ETHz、UZH的Davide. Scaramuzza教授
+ 
  
 ## Tutorials
 
