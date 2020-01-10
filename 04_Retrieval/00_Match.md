@@ -107,12 +107,12 @@
   - Joint Training：对任意两张图像的两对图像warp求loss，优化匹配点距离(非匹配点距离大，匹配点距离小)，得到特征点的描述符。
   - 疑问：描述符的feature map分辨率为原始图像的1/8，8x8的图像patch公用一个描述符？
   - 缺点：论文没有公布训练集和训练代码，youtube有论文模型的演示效果，在高清图像和视频表现欠佳。
-  - [SuperPoint: Self Supervised Interest Point Detection and Description](https://arxiv.org/pdf/1712.07629.pdf)
+  - [2018][CVPRW][SuperPoint: Self Supervised Interest Point Detection and Description](https://arxiv.org/pdf/1712.07629.pdf)
   - https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork
    
 - NIPS2018论文。索尼，epfl提出局部特征提取方法。
   - 缺点：训练和测试数据集简单，容易过拟合。室内数据集是ScanNet，室外使用25 photo-tourism image。
-  - [LF-Net][LF-Net: Learning Local Features from Images](https://arxiv.org/pdf/1805.09662.pdf)   
+  - [2018][NIPS][LF-Net: Learning Local Features from Images](https://arxiv.org/pdf/1805.09662.pdf)   
   - https://github.com/vcg-uvic/lf-net-release
   
 - ICCV2017论文，Google提出Google-Landmarks Dataset数据集和DELF(DEep Local Feature)算法。
@@ -149,7 +149,8 @@ Fine-tuning和Attention-based训练。模型训练集只需要分类的标注，
   - 使用缺点：D2-net多尺度提取1.8w*512特征，显存12G，M40GPU, 4-5s/picture。两张图的图片匹配需要30s。匹配特征容易集中，既图像的一部分匹配点较多，另一部分没有匹配点。
   - keypoint localization不太准， 难以集成到SfM或者SLAM对geometry很敏感的任务。
   - [2019][CVPR][D2-Net: A Trainable CNN for Joint Description and Detection of Local Features](https://arxiv.org/pdf/1905.03561v1.pdf):star: :star: :star: :star: :star:
-  - [Supplementary Material](https://dsmn.ml/files/d2-net/d2-net-supp.pdf)[github](https://github.com/mihaidusmanu/d2-net)
+  - [Supplementary Material](https://dsmn.ml/files/d2-net/d2-net-supp.pdf)
+  - [github](https://github.com/mihaidusmanu/d2-net)
    
   
 - Landmarks CVPR19 workshop论文。Google Landmark检索第一名和识别第三名。看这篇论文用了很多tricks,Google-Landmarks-v2数据清洗，backbone集成6个模型：FishNet-150,ResNet-101和ResNetXt101等，
@@ -159,10 +160,16 @@ Fine-tuning和Attention-based训练。模型训练集只需要分类的标注，
   - https://github.com/lyakaap/Landmark2019-1st-and-3rd-Place-Solution
   - https://drive.google.com/file/d/1QmC4UKRhIXNW-sa8jxV5b7I6QbPKvJsi/view
 
+-论文基于LF-Net框架，提出增加感受野和改进是损失函数，在HPatches训练网络。缺点：HPatches数据量少，网络容易过拟合。
+  -[2019][CVPR][RF-Net: An End-to-End Image Matching Network based on Receptive Field](https://github.com/Xylon-Sean/rfnet)
+- 
+  -[2019][ICCV][ELF: Embedded Localisation of Features in Pre-Trained CNN](https://github.com/abenbihi/elf)
+  
+-  
   
 - NIPS2019论文。对于重复特征区域(棋盘格，树木等场景)，显著性的特征不容易区分，需要置信度区分。论文在输出descriptors和reliability同时，输出repeatability。
 
-  -[2019][R2D2: Repeatable and Reliable Detector and Descriptor](https://arxiv.org/pdf/1906.06195.pdf)
+  -[2019][NIPS][R2D2: Repeatable and Reliable Detector and Descriptor](https://arxiv.org/pdf/1906.06195.pdf)
 
 - 
   -[2019][Reinforced Feature Points:Optimizing Feature Detection and Description for a High-Level Task](https://arxiv.org/pdf/1912.00623.pdf) 
