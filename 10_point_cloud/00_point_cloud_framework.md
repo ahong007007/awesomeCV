@@ -1,13 +1,6 @@
 # awesome-point-cloud-processing
 
-## Framework
-
 ## survey/overview/review 
-
-- Det3D 点云目标检测框架。
-
-  -[Class-balanced Grouping and Sampling for Point Cloud 3D Object Detection](https://arxiv.org/pdf/1908.09492.pdf)
-  -https://github.com/poodarchu/Det3D
 
 - 深度学习如何处理3维数据的综述论文。论文对3维数据表示分为两类： Euclidean 和non-Euclidean。Euclidean具有griddded array数据结构，allows for a global parametrization and a common system of coordinates，具有平移不变性。
 non-Euclidean没有griddded array的数据属性。
@@ -15,11 +8,24 @@ non-Euclidean没有griddded array的数据属性。
   - [A survey on Deep Learning Advances on Different 3D Data Representations](https://arxiv.org/pdf/1808.01462.pdf):star: :star: :star: :star:
   
 - 国防科大提出点云综述。
-  - [Deep Learning for 3D Point Clouds: A Survey](https://arxiv.org/pdf/1912.12033.pdf)  
+  - [Deep Learning for 3D Point Clouds: A Survey](https://arxiv.org/pdf/1912.12033.pdf)
+    
 ## Library
 
-- [Kaolin: A PyTorch Library for Accelerating 3D Deep Learning Research](https://arxiv.org/pdf/1911.05063v2.pdf)
+- 旷视，中科院自动化所联合提出CBGS：class-balanced采样解决类别不平衡，multi-group head解决同时多目标检测，改善网络模型架构
+，损失函数，训练策略。通用点云目标检测框架Det3D兼容KITTI/Lyft数据集，包含Point Pillars/PointNet++等model zoo,提高点云研发效率。
+  - 论文在CVPR2019自动驾驶workshop 点云目标检测获得第一名。论文提出的3点点云处理框架Det3D复用mmcv,mmdetection等代码，取得STOA性能。
+  - 缺点：Multi-group Head是每一类一组。因为 nuScenes 3D Detection Challenge是10类别，论文框架是10组。当数据集有80或跟更多类别，需要N个Head? 模型
+  的可扩展能力较弱。
+  - [Class-balanced Grouping and Sampling for Point Cloud 3D Object Detection](https://arxiv.org/pdf/1908.09492.pdf)
+  - https://github.com/poodarchu/Det3D
+  
+-英伟达发布点云加速框架Kaolin。  
+  - [Kaolin: A PyTorch Library for Accelerating 3D Deep Learning Research](https://arxiv.org/pdf/1911.05063v2.pdf)
 
+##Leadboard 
+
+- https://www.nuscenes.org/object-detection?externalData=all&mapData=all&modalities=Any
 ---
 
 ## Track Advancement of SLAM
