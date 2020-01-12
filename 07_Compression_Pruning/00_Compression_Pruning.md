@@ -25,6 +25,10 @@ Discrimination-aware Channel Pruning for Deep Neural Networks[PDF](https://arxiv
 
 ## weight pruning
 
+华为提出的一种量化方法， 把乘法约等于位移操作，提出针对位移操作的求导数方法。从实验结果看，在ImageNet的准确率即使使用DenseNet201也没有高于70%
+，在硬件实现的加速数据也没有给出，只能说思想有参考价值，工程实践无价值。
+  -[2019][DeepShift: Towards Multiplication-Less Neural Networks](https://arxiv.org/pdf/1905.13298.pdf)
+
 ## filter pruning
 
 - CVPR2019论文，电子信息技术研究院和华为等提出。论文提出filter pruning的一种维度norm-based，Filter Pruning via Geometric Median (FPGM) 实现the most replaceable contribution
