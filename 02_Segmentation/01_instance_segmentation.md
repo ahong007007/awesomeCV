@@ -27,6 +27,9 @@ b.target category训练方式。个人感觉MaskIoU和score不是线性相关，
  
 -阿德雷得大学，字节跳动联合提出实例分割方法：整体框架类似于YOLO，bottom-up学习像素属于同一个实例的办法(DenseRePoints,polygen,SSAP)。
   -[2019][SOLO: Segmenting Objects by Locations](https://arxiv.org/pdf/1912.04488.pdf)
+  
+-阿德雷得大学，华为等联合提出，基于Top down 和bottom Up方的改进。
+  -[2020][BlendMask: Top-Down Meets Bottom-Up for Instance Segmentation](https://arxiv.org/pdf/2001.00309.pdf)
    
 #Panoptic Segmentation
  - 
