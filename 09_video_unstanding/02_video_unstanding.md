@@ -1,7 +1,10 @@
 
-#video recognition
+# video recognition
 
- 
+# Moving Objects
+-运动相机检测运动目标，很有挑战性高。
+  - [2019][Moving Objects Detection with a Moving Camera: A Comprehensive Review]
+
 # ReID
 
 - 北京理工大学等对ReID的综述文章。 
