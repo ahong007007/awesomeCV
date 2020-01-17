@@ -1,5 +1,9 @@
 
 # Video Object Segmentation
+## survey/overview/review
+
+-图像分割综述
+  - [2020][Image Segmentation Using Deep Learning:A Survey](https://arxiv.org/pdf/2001.05566.pdf)
 
 ## [DAVIS 2018](https://davischallenge.org/challenge2018/publications.html/ "DAVIS2018")
 
