@@ -1,20 +1,23 @@
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 ---
+
 # Framework
 
 -PyTorch官方文档框架介绍。
 
   -[PyTorch: An Imperative Style, High-Performance Deep Learning Library](https://arxiv.org/pdf/1912.01703v1.pdf)
+
 ---
-#survey
+
+# survey
 
 - 关于CNN的一篇综述。包括CNN各个组件，演化历史，内容不够深入也不够全面，但是可以作为复习的框架。
 
   -[A Survey of the Recent Architectures of Deep Convolutional Neural Networks](https://arxiv.org/pdf/1901.06032.pdf)
 
-
 ---
+
 # Backbone
 
 - Res2Net,南开大学提出。计算机视觉的主题是提取更好的特征表示，多尺度特征提取是图像分类，识别，检测，分割的重要手段，
@@ -25,13 +28,12 @@ top-1分类误差降低0.93%，而FLOPs降低69%。期待源码以及更多领�
 
   - [Res2Net: A New Multi-scale Backbone Architecture](https://arxiv.org/pdf/1904.01169.pdf) :star::star::star::star::star:
 
-
 - 威斯康星大学麦迪逊分校和亚马逊等联合提出移动端分类神经网络架构：ANTNets(Attention NesTed Network),相比MobileNetv2，ImageNet
 Top1 提升 0.8%，速度提升20%（157ms iphone 5s).论文主要是设计神经网络，架构基于Block堆叠，每个Block包括1x1，3x3 dwise，Channel attention，Group-wise，
 Inverted Residual Block。Channel attention与SENet不同，论文提出的Channel attention是自适应学习，从输入端到输出端Reduction Ratio (r)逐渐增加。
 分类网络有两个设计方向：何凯明等提出的RandWire-WS和各个conv组件排列组合，怎么看都像是升级版的连连看。
 
-  缺点：depth multiplier (a = 1.4)时与MobileNetv2性能接近，差别不明显。
+  - 缺点：depth multiplier (a = 1.4)时与MobileNetv2性能接近，差别不明显。
 
   - [ANTNets: Mobile Convolutional Neural Networks for Resource Efficient Image Classification](https://arxiv.org/pdf/1904.03775.pdf)
 
@@ -46,7 +48,6 @@ depthwise conv、pointwise conv、groupwise conv减少模型计算量，轮提�
 
   - [EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks](https://arxiv.org/pdf/1905.11946.pdf)
 
-
 - FaceBook作品，在ImageNet Top 1 86.4%。
 
   - [2019][Fixing the train-test resolution discrepancy](https://arxiv.org/pdf/1906.06423.pdf)
@@ -59,25 +60,28 @@ depthwise conv、pointwise conv、groupwise conv减少模型计算量，轮提�
   - 站在巨人的肩上很重要，EfficientNet、Randaugment都是Google自家产品，TPU自助不限量，大佬太忙，有个idea就可以让小弟做，作出成果的比例不是一般的高。
   - [Self-training with Noisy Student improves ImageNet classification](https://arxiv.org/pdf/1911.04252.pdf)
 
-- Facebook何凯明提出.
-  - 论文提出在不仅在ImagetNet，其它PASCAL VOC, COCO检测/分割7个数据集，MoCo的方法unsupervised性能要强于supervised，那么MoCo+EfficientNet之类的backbone，是否可以强者更强，摘取更高准确率？
+- Facebook何凯明提出。论文提出在不仅在ImagetNet，其它PASCAL VOC, COCO检测/分割7个数据集，MoCo的方法unsupervised性能要强于supervised，那么MoCo+EfficientNet之类的backbone，是否可以强者更强，摘取更高准确率？
+
   - [Momentum Contrast for Unsupervised Visual Representation Learning](https://128.84.21.199/pdf/1911.05722.pdf)
+
 ---
+
 ## others
+
 - Facebook作品，论文没有提出任何模型，或针对特定任务改进。论文任务公开数据集COCO/ImageNet/OpenIamge等对地理位置或收入水平低区域存在偏差，相应的图像数据分布较少。话说假如训练的模型可以识别全球目标的，在欠发达区域使用率也较少吧。
 
   - [Does Object Recognition Work for Everyone?](https://arxiv.org/pdf/1906.02659.pdf)
 
 ---
+
 ## 待记录
 
 [An Empirical Study of Spatial Attention Mechanisms in Deep Networks](https://arxiv.org/pdf/1904.05873.pdf)
 
-
 ## Knowledge
 
-  - [A guide to convolution arithmetic for deep learning](https://arxiv.org/pdf/1603.07285.pdf)
-  - [A guide to receptive field arithmetic for Convolutional Neural Networks](https://medium.com/mlreview/a-guide-to-receptive-field-arithmetic-for-convolutional-neural-networks-e0f514068807)
+- [A guide to convolution arithmetic for deep learning](https://arxiv.org/pdf/1603.07285.pdf)
 
+- [A guide to receptive field arithmetic for Convolutional Neural Networks](https://medium.com/mlreview/a-guide-to-receptive-field-arithmetic-for-convolutional-neural-networks-e0f514068807)
 
-https://paperswithcode.com/area/computer-vision
+- https://paperswithcode.com/area/computer-vision
