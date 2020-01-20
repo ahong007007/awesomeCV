@@ -227,7 +227,5 @@ UnitBox，IoU-Net，GIoU
 
 Adaptive NMS: Refining Pedestrian Detection in a Crowd.[pdf](https://arxiv.org/pdf/1904.03629.pdf)
 
-
 CVPR2019
 [All You Need is a Few Shifts: Designing Efficient Convolutional Neural Networks for Image Classification](https://arxiv.org/pdf/1903.05285.pdf)
-
