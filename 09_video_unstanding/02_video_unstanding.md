@@ -4,6 +4,10 @@
 
 ## survey/overview/Review
 
+- 天津大学关于无人机在计算机视觉领域的检测和跟踪进行全面的综述，包括当前面临的挑战，提出未来的发展和改进方向，提供一个大规模的无人机捕获数据集visDrone：
+包含image object detection, video object detection, single object tracking, multi-object tracking四大类别数据集。
+  - [Vision Meets Drones: Past, Present and Future](https://arxiv.org/pdf/2001.06303.pdf)
+
 ---
 
 ## video recognition
@@ -42,6 +46,3 @@ Spatial temporal graph convolutional networks for skeletonbased action recogniti
 Videos as Space-Time Region Graphs ECCV2018.
 
 ## dataset
-
-- 包含image object detection, video object detection, single object tracking, multi-object tracking四大类别数据集。
-  - [Vision Meets Drones: Past, Present and Future]
