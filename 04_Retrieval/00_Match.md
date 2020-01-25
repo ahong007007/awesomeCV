@@ -1,6 +1,7 @@
----
-
 # overview/review/survey
+
+- TPAMI综述，包含从SIFT到2017年的图像检索发展。
+  - [SIFT Meets CNN: A Decade Survey of Instance Retrieval](https://arxiv.org/pdf/1608.01807.pdf)
 
 - CVPR2017论文，比对SIFT、SIFT-PCA、 DSP-SIFT、 ConvOpt、 DeepDesc 、TFeat、 LIFT等算法的性能。
   - [2017][CVPR][Comparative Evaluation of Hand-Crafted and Learned Local Features](https://demuc.de/papers/schoenberger2017comparative.pdf)
@@ -9,7 +10,6 @@
 - https://github.com/willard-yuan/awesome-cbir-papers
 - https://paperswithcode.com/task/image-retrieval
 - https://github.com/shamangary/awesome-local-global-descriptor
-
 
 ---
 
@@ -162,7 +162,6 @@ Fine-tuning和Attention-based训练。模型训练集只需要分类的标注，
 
 -论文基于LF-Net框架，提出增加感受野和改进是损失函数，在HPatches训练网络。缺点：HPatches数据量少，网络容易过拟合。
   -[2019][CVPR][RF-Net: An End-to-End Image Matching Network based on Receptive Field](https://github.com/Xylon-Sean/rfnet)
-- 
   -[2019][ICCV][ELF: Embedded Localisation of Features in Pre-Trained CNN](https://github.com/abenbihi/elf)
   
 -  
@@ -183,27 +182,27 @@ Fine-tuning和Attention-based训练。模型训练集只需要分类的标注，
   
   -[2019][CVPR][SOSNet:Second Order Similarity Regularization for Local Descriptor Learning]
   - https://github.com/yuruntian/SOSNet
+
 ---
+
 ## Descriptors
+
 - NIPS2019论文，浙江大学提出，主要解决在不同视角图像的匹配关系。论文不是在旋转图像上直接提取特征，而是包含两个分支：直接在旋转图像的特征金字塔提取特征和在变化图像的特征金字塔提取特征，再经过分组卷积和
 Bilinear Pool，提取像素的描述符。模型需要和特征检测器(Superpoint/DoG/LF-Net)配合，不是end-to-end方式。如论文使用的评测数据集HPSequences和SUN3D数据量都不足1K,对比试验也仅仅基于SIFT和GeoDesc，实验数据不具有代表性，但是提出对图像/特征均进行映射变变换，具有参考意义。
   - [NIPS][2019][GIFT: Learning Transformation-Invariant Dense Visual Descriptors via Group CNNs](https://arxiv.org/pdf/1911.05932.pdf) 
----
-
-
-
 
 ---
+
 ## Geometric verification
 
 - CVPR2019论文，对RANSAC的改进。包含第三方python库pymagsac，可以无缝替代RANSAC。
 
   -[2019][MAGSAC++, a fast, reliable and accurate robust estimator](https://arxiv.org/pdf/1912.05909v1.pdf)
   -https://github.com/ducha-aiki/pymagsac
+
 ---
 
 ## SfM
-
 
 ---
 ##待记录
