@@ -13,8 +13,7 @@
 
 ---
 
-# Dataset
-
+## Dataset
 
 - Phototourism :a 715-image reconstruction of Notre Dame Cathedral in Paris.
   -http://phototour.cs.washington.edu/datasets/
@@ -57,7 +56,7 @@
 
 ---
 
-# benchmark
+## benchmark
 
 - CVPR2019 workshop:Local Features & Beyond
   - https://image-matching-workshop.github.io/
@@ -70,21 +69,21 @@
  -[2019][2nd Place and 2nd Place Solution to Kaggle Landmark Recognition and Retrieval Competition 2019]
 
 ---
-# End-to-end matching pipeline
 
--最近因为项目需要，重读图像匹配领域经典算法SIFT，追根溯源寻求特征匹配来龙去脉。这几年算法大多直接CNN，个人失去探索本源和对原理的理解。根据Opencv对SIFT总结，对比原论文，主要有以下几个部分：
+## End-to-end matching pipeline
+
+- 最近因为项目需要，重读图像匹配领域经典算法SIFT，追根溯源寻求特征匹配来龙去脉。这几年算法大多直接CNN，个人失去探索本源和对原理的理解。根据Opencv对SIFT总结，对比原论文，主要有以下几个部分：
   -Scale-space peak Selection：对多尺度图像高斯模糊处理，图像金字塔生成Difference of Gaussians(DoG)， 搜索DoG空间极值点,获取潜在特征点。特征是在多尺度空间获取， 所以具有多尺度不变形。
   -Keypoint Localization：Hessian matrix计算主曲率，去除位于图像边缘和无明显差异特征点。
   -Orientation Assignment：使用直方图统计邻域内像素的梯度和方向。梯度直方图将360°平均分配36个bins。以直方图中最大值作为该关键点的主方向。为了增强匹配的鲁棒性，只保留峰值大于主方向峰值80％的方向作为该关键点的辅方向。
   -Keypoint descriptor：特征点为中心选16x16的区域，划分为16个4*4子区域。每个4*4计算8个方向直方图，得到128维度特征向量。
   -Keypoint Matching:采用最接近距离与第二最接近距离之比0.8，去除无效匹配点。
-  - [Distinctive Image Features from Scale-Invariant Keypoints](https://www.cs.ubc.ca/~lowe/papers/ijcv04.pdf)
-  - https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_sift_intro/py_sift_intro.html
+  -[Distinctive Image Features from Scale-Invariant Keypoints](https://www.cs.ubc.ca/~lowe/papers/ijcv04.pdf)
+  -https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_sift_intro/py_sift_intro.html
 
 - match一篇经典论文。
   - [CVPR][2012][Three things everyone should know to improve object retrieval](https://www.robots.ox.ac.uk/~vgg/publications/2012/Arandjelovic12/arandjelovic12.pdf)
- 
- 
+  
 - 洛桑联邦理工学院(EPFL)提出的CNN一个框架实现detection+orientation estimation+feature description，准确性完胜经典特征匹配方法SIFT。
   网络结构：基于Siamese Network，训练集特征点来自于SfM的特征点(SIFT提取的特征？)，输入是特征点所在的多尺度图像块。STN修正图像块得到特征点检测和方向估计.
   训练过程：首先训练描述符，然后用来训练方向估计，最后训练特征点检测；
@@ -94,13 +93,13 @@
   - [2016][ECCV][LIFT: Learned Invariant Feature Transform](https://arxiv.org/pdf/1603.09114.pdf) 
   - https://github.com/cvlab-epfl/LIFT
   
--香港科技大学提出GeoDesc，整合多视图几何约束的局部特征子学习方法，在数据生成、数据采样、和损失函数三个方面对匹配进行改善。
+- 香港科技大学提出GeoDesc，整合多视图几何约束的局部特征子学习方法，在数据生成、数据采样、和损失函数三个方面对匹配进行改善。
   - 数据生成：借助传统SFM方法，得到三维点及其对应的一系列像素块的对应关系。进一步基于Delaunay triangulation对点云滤波。
   - 数据采样：通过像素块/图片对的几何相似度估计，构建"硬"样本，硬是指“同一三维点对应的不同像素块差异尽可能大，不同三维点对应的像素块差异尽可能小”。
   - 损失函数：包括结构损失函数以及几何损失函数。
   - [2016][ECCV][GeoDesc: Learning Local Descriptors by Integrating Geometry Constraints](https://arxiv.org/pdf/1807.06294.pdf)  
 
--Magic Leap公司提出的一种自学习训练特征检测与匹配方法。实现特征点匹配是需要像素级像素级匹配，很难人工直接标注，主流基于CNN的方法是SfM提取特征点或者三维点云匹配点训练。
+- Magic Leap公司提出的一种自学习训练特征检测与匹配方法。实现特征点匹配是需要像素级像素级匹配，很难人工直接标注，主流基于CNN的方法是SfM提取特征点或者三维点云匹配点训练。
 论文提出的自学习方法，合成数据集训练网络。分为三个阶段：
   - Interest Point Pre-Training：利用基本几何元素(直线，多面体等)渲染得到真值，训练MagicPoint网络得到提取基本形状元素特征点的模型。
   - Interest Point Self-Labeling：对一般图像(MS-COCO数据集)做单应变换，MajicPoint模型对图像提取特征点，获取匹配点真值并训练网络。
@@ -109,7 +108,7 @@
   - 缺点：论文没有公布训练集和训练代码，youtube有论文模型的演示效果，在高清图像和视频表现欠佳。
   - [2018][CVPRW][SuperPoint: Self Supervised Interest Point Detection and Description](https://arxiv.org/pdf/1712.07629.pdf)
   - https://github.com/MagicLeapResearch/SuperPointPretrainedNetwork
-   
+
 - NIPS2018论文。索尼，epfl提出局部特征提取方法。
   - 缺点：训练和测试数据集简单，容易过拟合。室内数据集是ScanNet，室外使用25 photo-tourism image。
   - [2018][NIPS][LF-Net: Learning Local Features from Images](https://arxiv.org/pdf/1805.09662.pdf)   
@@ -151,8 +150,7 @@ Fine-tuning和Attention-based训练。模型训练集只需要分类的标注，
   - [2019][CVPR][D2-Net: A Trainable CNN for Joint Description and Detection of Local Features](https://arxiv.org/pdf/1905.03561v1.pdf):star: :star: :star: :star: :star:
   - [Supplementary Material](https://dsmn.ml/files/d2-net/d2-net-supp.pdf)
   - [github](https://github.com/mihaidusmanu/d2-net)
-   
-  
+
 - Landmarks CVPR19 workshop论文。Google Landmark检索第一名和识别第三名。看这篇论文用了很多tricks,Google-Landmarks-v2数据清洗，backbone集成6个模型：FishNet-150,ResNet-101和ResNetXt101等，
 损失函数结合人脸识别的cosine-based softmax losses。cosine annealing,mean-pooling (GeM)，finetuning,Discriminative-Reranking等。从实验数据看，Ensemble 6 models仅提升1%，但是实时性应该打折扣。
 
@@ -164,19 +162,17 @@ Fine-tuning和Attention-based训练。模型训练集只需要分类的标注，
   -[2019][CVPR][RF-Net: An End-to-End Image Matching Network based on Receptive Field](https://github.com/Xylon-Sean/rfnet)
   -[2019][ICCV][ELF: Embedded Localisation of Features in Pre-Trained CNN](https://github.com/abenbihi/elf)
   
--  
-  
 - NIPS2019论文。对于重复特征区域(棋盘格，树木等场景)，显著性的特征不容易区分，需要置信度区分。论文在输出descriptors和reliability同时，输出repeatability。
-
   -[2019][NIPS][R2D2: Repeatable and Reliable Detector and Descriptor](https://arxiv.org/pdf/1906.06195.pdf)
 
-- 
+- 强化学习在图像特征匹配中的应用。
   -[2019][Reinforced Feature Points:Optimizing Feature Detection and Description for a High-Level Task](https://arxiv.org/pdf/1912.00623.pdf) 
+
 ---
 
 ## Detector
 
--CVPR2019论文科技大学提出，两种增强局部特征描述符上下文信息的方法：high level图像表示的视觉上下文信息和关键点分布的几何上下文信息。
+- CVPR2019论文科技大学提出，两种增强局部特征描述符上下文信息的方法：high level图像表示的视觉上下文信息和关键点分布的几何上下文信息。
   - [2019][CVPR][ContextDesc: Local Descriptor Augmentation with Cross-Modality Context](https://arxiv.org/pdf/1904.04084.pdf):star: :star: :star: :star: :star:
   - https://github.com/lzx551402/contextdesc
   
@@ -202,11 +198,7 @@ Bilinear Pool，提取像素的描述符。模型需要和特征检测器(Superp
 
 ---
 
-## SfM
-
----
-##待记录
-
+## 待记录
 
 Global: GeM pooling [Radenovic et al., PAMI’18], 
 CVPR’19], or simply embeddings before classifier
