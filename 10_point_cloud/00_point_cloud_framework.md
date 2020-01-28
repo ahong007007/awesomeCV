@@ -96,10 +96,9 @@ Open Source Project
 
 - [**Laser Scanning Forum**](https://www.laserscanningforum.com/forum/) Laser Scanning Forum
 
-## github 
+## github
 
 paper: [https://github.com/Yochengliu/awesome-point-cloud-analysis.git]
-
 
 ## 4. Dataset
 
@@ -121,8 +120,6 @@ Note that some of these datasets don't provide point cloud data, which means you
 - **KITTI** [[pdf]](http://www.cvlibs.net/publications/Geiger2013IJRR.pdf) [[Project]](http://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark=3d)
 - **nuScenes** [[pdf]](https://arxiv.org/pdf/1903.11027.pdf) [[Project]](https://www.nuscenes.org/)
 - **Waymo Open dataset** [[Project]](https://waymo.com/open/)
-
-
 
 - [[KITTI](http://www.cvlibs.net/datasets/kitti/)] The KITTI Vision Benchmark Suite. [__`det.`__]
 - [[ModelNet](http://modelnet.cs.princeton.edu/)] The Princeton ModelNet . [__`cls.`__]
