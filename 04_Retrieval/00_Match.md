@@ -18,8 +18,9 @@
 - Phototourism :a 715-image reconstruction of Notre Dame Cathedral in Paris.
   - <http://phototour.cs.washington.edu/datasets/>
 
-- HPatches:580 image pairs。
-  - [A benchmark and evaluation of handcrafted and learned local descriptors](https://github.com/hpatches/hpatches-benchmark)
+- HPatches:580 image pairs。包含三个任务: patch verification, image matching and patch retrieval。
+  - [A benchmark and evaluation of handcrafted and learned local descriptors]
+  - <https://github.com/hpatches/hpatches-benchmark>
   
 - [Long-team visual localization](https://www.visuallocalization.net/benchmark/)
   - Aachen Day-Night dataset:Reference images:4,328,Query images:922 (824 daytime, 98 nighttime)
@@ -99,7 +100,10 @@
   - 损失函数：包括结构损失函数以及几何损失函数。
   - [2016][ECCV][GeoDesc: Learning Local Descriptors by Integrating Geometry Constraints](https://arxiv.org/pdf/1807.06294.pdf)  
 
-- 中科院自动化所提出，CVPR2017论文，提取一种基于孪生网络提取图像块描述子方法。
+- 中科院自动化所提出，CVPR2017论文，提取一种基于孪生网络提取图像块描述子方法。论文主要有三个创新工作：
+  - progressive sampling strategy：随机采样获取正样本和负样本，通过L2范数计算特征描述子的距离矩阵。
+  - 损失函数包括：描述子相似性，描述子紧密性，中间过程特征。
+  - 
   - [2017][CVPR][L2-Net: Deep Learning of Discriminative Patch Descriptor in Euclidean Space](http://www.nlpr.ia.ac.cn/fanbin/pub/L2-Net_CVPR17.pdf)
   - <https://github.com/yuruntian/L2-Net>
 
@@ -202,6 +206,10 @@ Bilinear Pool，提取像素的描述符。模型需要和特征检测器(Superp
 
 ---
 
+## Tricks
+
+Siamese and triplet networks
+
 ## 待记录
 
 Global: GeM pooling [Radenovic et al., PAMI’18]
@@ -209,4 +217,4 @@ CVPR’19], or simply embeddings before classifier
 
 patchmatch
 
-https://zhuanlan.zhihu.com/p/31402513
+<https://zhuanlan.zhihu.com/p/31402513>
