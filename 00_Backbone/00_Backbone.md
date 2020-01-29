@@ -16,6 +16,8 @@
 
   -[A Survey of the Recent Architectures of Deep Convolutional Neural Networks](https://arxiv.org/pdf/1901.06032.pdf)
 
+- <https://paperswithcode.com/task/image-classification>
+
 ---
 
 # Backbone
@@ -83,5 +85,3 @@ depthwise conv、pointwise conv、groupwise conv减少模型计算量，轮提�
 - [A guide to convolution arithmetic for deep learning](https://arxiv.org/pdf/1603.07285.pdf)
 
 - [A guide to receptive field arithmetic for Convolutional Neural Networks](https://medium.com/mlreview/a-guide-to-receptive-field-arithmetic-for-convolutional-neural-networks-e0f514068807)
-
-- https://paperswithcode.com/area/computer-vision
