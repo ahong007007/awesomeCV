@@ -11,34 +11,45 @@ __`oth.`__: other, including normal-related, correspondence, mapping, matching, 
 Statistics: :fire: code is available or the paper is very important
 
 ---
-# survey/review/overview
 
-  - [2017][a review of point clouds segmentation and classification algorithms](https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/XLII-2-W3/339/2017/isprs-archives-XLII-2-W3-339-2017.pdf)
+## survey/review/overview
+
+- [2017][a review of point clouds segmentation and classification algorithms](https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/XLII-2-W3/339/2017/isprs-archives-XLII-2-W3-339-2017.pdf)
 
 - 论文从点云采集方式(image-derived,LiDAR,RGB-D,SAR)，点云数据集，点云分割方法（edge-based,regin growing,model fitting,unsupervised clustering-based），点云语义分割方法等，是个人认为是点云语义分割入门材料。
 
+- 点云语义分割综述.
   - [2019][A Review of Point Cloud Semantic Segmentation](https://arxiv.org/pdf/1908.08854.pdf)
+
 - 点云对齐领域的论文综述。
   - [2019][Target-less registration of point clouds: A review](https://arxiv.org/pdf/1912.12756.pdf)
 
+- 3D检测框恢复6D姿态估计。
+  - [2020][A Review on Object Pose Recovery: from 3D Bounding Box Detectors to Full 6D Pose Estimators](https://arxiv.org/pdf/2001.10609.pdf) 
+
 ---
+
 ## benchmark
+
 - https://paperswithcode.com/task/3d-part-segmentation/latest
 - http://kaldir.vc.in.tum.de/scannet_benchmark/
+
 ## Tutorials
--https://yochengliu.github.io/files/Report_JIANGMEN_2019-08.pdf
+
+- <https://yochengliu.github.io/files/Report_JIANGMEN_2019-08.pdf>
 
 ---
 
 # RGB-D
+
 - CVPR2019论文，出自于大名鼎鼎李飞飞组，提出模型，一个用于估计RGB-D图像中已知目标6D姿态的通用框架
 （类似于视频处理的two-stream，分别处理RGB图像和深度图像,DenseFusion融合两路特征）。在YCB-Video
 和LineMOD数据集验证测试。论文中6自由度指李群SE(3)（包括旋转和平移），目标是求相机的运动姿态。
-
   - [CVPR2019][DenseFusion: 6D Object Pose Estimation by Iterative Dense Fusion](https://arxiv.org/pdf/1901.04780.pdf)
 
 ---
-# classification/Backbone
+
+## classification/Backbone
 
 - 斯坦福大学提出，点云领域的经典论文，用于解决点云分类，语义分割和目标识别(分类和分割任务共用backbone)。
 PointNet之前的方法集中在点云投影二维平面，点云划分Voxel等方式。而本文直接对点云操作。点云具有无序，局部相关性，平移不变性(旋转，平移)三个特征。论文同时提出两个结论：(1)PointNet的网络结构能够拟合任意的连续集合函数，(2)PointNet能够总结出表示某类物体形状的关键点，基于这些关键点PointNet能够判别物体的类别。
@@ -49,7 +60,6 @@ PointNet之前的方法集中在点云投影二维平面，点云划分Voxel等�
   - 点云存储位置相邻并不意味真实空间相邻。
   - [CVPR2017][PointNet: Deep Learning on Point Sets for 3D Classification and Segmentation](https://arxiv.org/pdf/1612.00593.pdf)[__`cls.`__ __`seg.`__]  :star: :star: :star: :star:
 
-
 - 斯坦福大学提出PointNet升级版PointNet++。主要解决两个问题：a对点云如何分组，b.如何提取局部特征。模型主要包括
   - sampling layer(farthest point sampling {FPS} algorithm):选择N个中心点。
   - grouping layer：Ball query生成N个局部区域，参数包括：中心点的数量K，球的半径。
@@ -59,7 +69,7 @@ PointNet之前的方法集中在点云投影二维平面，点云划分Voxel等�
   
  -- [NIPS2017][PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space](https://arxiv.org/pdf/1706.02413.pdf)[__`cls.`__ __`seg.`__] 
 
--  俄勒冈州立大学机器人技术与智能系统（CoRIS）研究所的研究者提出了PointConv，基于2D卷积推导出3D点云表达式，将3D卷积看做由局部点3D坐标的非线性函数(包括权重和密度)，
+- 俄勒冈州立大学机器人技术与智能系统（CoRIS）研究所的研究者提出了PointConv，基于2D卷积推导出3D点云表达式，将3D卷积看做由局部点3D坐标的非线性函数(包括权重和密度)，
 可以高效的对非均匀采样的3D点云数据进行卷积操作，该方法在多个数据集(ModelNet40、ShapeNet和ScanNet)上实现state-of-art。
 主要贡献：
 1、提出逆密度重+权重的卷积操作PointConv，近似拟合3D连续卷积。
@@ -72,22 +82,21 @@ PointNet之前的方法集中在点云投影二维平面，点云划分Voxel等�
   [[pytorch]https://github.com/DylanWusee/pointconv]
 
 - 论文提出ShufflePointNet，基于二维分组卷积和论文ShuffleNet,在三维点云的应用。
-
   - [2019.09][Go Wider: An Efficient Neural Network for Point Cloud Analysis via Group Convolutions](https://arxiv.org/pdf/1909.10431.pdf)
 
 - 法国国家航空航天中心提出。
   - [2019][ConvPoint: continuous convolutions for point cloud processing](https://arxiv.org/pdf/1904.02375.pdf)
+
 ---
 
-# pointcloud registration
+## pointcloud registration
 
 - ICCV2017论文，在学习open3d时做实验看到，主要是对彩色点云对齐。
-
   - [ICCV2017][Colored Point Cloud Registration Revisited](http://openaccess.thecvf.com/content_ICCV_2017/papers/Park_Colored_Point_Cloud_ICCV_2017_paper.pdf)
-    
 
 ---
-# 3D object detection
+
+## 3D object detection
 
 - 香港中文大学提出，基于Point cloud->3D Box的3D目标检测方法，基本原理类似2D RCNN结构，两阶段方式：stage-1 基于bottom-up，对点云数据分割前景和背景，生成3D建议候选框，stage-2
 网络将全局语义特征和局部空间特征结合起来，对3D候选框进行优化。
@@ -119,7 +128,6 @@ SUN RGB-D具有良好表现。 CNN在3D object classification ,3D object detecti
 
   - [2019][Complexer-YOLO: Real-Time 3D Object Detection and Tracking on Semantic Point Clouds](https://arxiv.org/abs/1904.07537) [[pytorch](https://github.com/AI-liu/Complex-YOLO)] [__`det.`__ __`tra.`__ __`aut.`__] :fire:
 
-
 ---
 
 - RGB-D Image Analysis and Processing,chapter 3
@@ -128,20 +136,20 @@ SUN RGB-D具有良好表现。 CNN在3D object classification ,3D object detecti
 
 ---
 
-# Segmentation
+## Segmentation
 
 - CVPR2018论文，巴黎东部大学和巴黎圣母大学提出一种点云分割方法：1.将三维点云首先分成简单几何体组成的简单形状，即为超点(superpoints)。 2.由具有丰富属性的超边连接相邻的超点形成的超点图(superpoints graph, SPG)
 3.由graph CNN对superpoints提取上下文信息，分类并得到语义标签。
   - superpoints基本思路类似于图像分割领域的超像素Superpixel。
   - [2018][CVPR][Large-scale Point Cloud Semantic Segmentation with Superpoint Graphs](https://arxiv.org/pdf/1711.09869.pdf)  
-  - https://github.com/loicland/superpoint_graph         
-          
+  - https://github.com/loicland/superpoint_graph
+
 - CVPR2018,上海交通大学卢策吾团队MVIG实验室提出PointSIFT。论文基于SIFT思路推广到3D点云，编码点云8个方向信息，自适应合适的表征尺度。论文设计的PointSIFT module可集成在PointNet系列框架中。
 网络模型的基本架构有三部分组成，PointSIFT模块，Set abstraction (SA,PointNet++下采样过程)和feature propagation(FP，PointNet++上采样过程)。
   - 论文借助SIFT思想表达三维信息，更多的2D方法可以用于3D CNN，比如PointSIFT类似encoder-decoder的架构，各个feature level之间连接可以更好的特征融合。
   - 3D点云由于稀疏性和无序性，不能直接使用CNN，如何提取高效特征并借助于2D语义分割开放的研究思路，不失为好的研究方向。
   -[2018][CVPR][PointSIFT: A SIFT-like Network Module for 3D Point Cloud Semantic Segmentation](https://arxiv.org/pdf/1807.00652.pdf)[__`sem.`__]:fire:          
-          
+
 - 
   - [SqueezeSeg: Convolutional Neural Nets with Recurrent CRF for Real-Time Road-Object Segmentation from 3D LiDAR Point Cloud]
 
@@ -164,7 +172,6 @@ SUN RGB-D具有良好表现。 CNN在3D object classification ,3D object detecti
 
 - CVPR2019 oral,旷视西雅图研究院提出的基于测地距离的点云分析深度网络GeoNet，个人理解主要针对不连续点云建立拓扑逻辑关系，可用于点云上采样、法向量估计、网格重建及非刚性形状分类等。
   - [2019][CVPR][GeoNet: Deep Geodesic Networks for Point Cloud Analysis](https://arxiv.org/pdf/1901.00680.pdf)
-
 
 ---
 
