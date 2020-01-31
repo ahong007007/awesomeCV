@@ -63,7 +63,6 @@ depthwise conv、pointwise conv、groupwise conv减少模型计算量，轮提�
   - [Self-training with Noisy Student improves ImageNet classification](https://arxiv.org/pdf/1911.04252.pdf)
 
 - Facebook何凯明提出。论文提出在不仅在ImagetNet，其它PASCAL VOC, COCO检测/分割7个数据集，MoCo的方法unsupervised性能要强于supervised，那么MoCo+EfficientNet之类的backbone，是否可以强者更强，摘取更高准确率？
-
   - [Momentum Contrast for Unsupervised Visual Representation Learning](https://128.84.21.199/pdf/1911.05722.pdf)
 
 ---
@@ -71,7 +70,6 @@ depthwise conv、pointwise conv、groupwise conv减少模型计算量，轮提�
 ## others
 
 - Facebook作品，论文没有提出任何模型，或针对特定任务改进。论文任务公开数据集COCO/ImageNet/OpenIamge等对地理位置或收入水平低区域存在偏差，相应的图像数据分布较少。话说假如训练的模型可以识别全球目标的，在欠发达区域使用率也较少吧。
-
   - [Does Object Recognition Work for Everyone?](https://arxiv.org/pdf/1906.02659.pdf)
 
 ---
