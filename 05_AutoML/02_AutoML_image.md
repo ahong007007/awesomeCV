@@ -2,33 +2,29 @@
 # Detection
 
 - 中科院自动化所和旷视联合提出，Object Detection with FPN on COCO优于ResNet101,但是FLOPs比ResNet50低。基于ShuffleNetV2的架构也有较好的表现。
-
   - [DetNAS: Neural Architecture Search on Object Detection](https://arxiv.org/pdf/1903.10979v1.pdf)[2019.03]
 
 - Google基于AutoML提出Detection模型，基于RetinaNet网络，解决FPN多尺度金字塔问题。通过Neural Architecture Search搜索各种类型的
 top-down,bottom-up特征层的连接方式（还是连连看），取得state-of-art的mAP同时降低推断时间。100 TPU的模型也不是可轻易实现。
-
   - [NAS-FPN: Learning Scalable Feature Pyramid Architecture for Object Detection](https://arxiv.org/pdf/1904.07392.pdf)[2019.04]
   
- - 西工大提出，基于one-stage object detector (FCOS)的基础，基本运算包括可分离卷积，空洞卷积，可变形卷积，搜索空间包括FPN，Prediction Head和Head Weight Sharing。
+- 西工大提出，基于one-stage object detector (FCOS)的基础，基本运算包括可分离卷积，空洞卷积，可变形卷积，搜索空间包括FPN，Prediction Head和Head Weight Sharing。
  论文第一句话说的好：The success of deep neural networks relies on significant architecture engineering，现在Deep learning就是在各种架构上作文章。
  论文的trick使用比NAS-FPN多，但是性能仅仅相比one-stage模型提升1%，相比two-stage还是有较大差距，说明搜索架构的backbone还很重要，关键有一个较优的先验知识。
  论文虽然在搜索时间上有优势（强化学习30GPU days可完成？存疑），性能上却没有优势。
- 
   - [NAS-FCOS: Fast Neural Architecture Search for Object Detection](https://arxiv.org/pdf/1906.04423.pdf)[2019.06]
 
- - 华为诺亚方舟和中山大学联合提出Auto-FPN,主要针对目标检测的两个更新：Auto-fusion和Auto-head。Auto-fusion针对FPN的特征融合改进，既任意N层level feature特征融合,主要通过空洞卷积+rate,skip connection,depthwise-separable conv以及上采样/下样实现特征分辨率对齐和融合。Auto-head采用split-transform-merge策略，search space是input nodes和intermediate nodes。
+- 华为诺亚方舟和中山大学联合提出Auto-FPN,主要针对目标检测的两个更新：Auto-fusion和Auto-head。Auto-fusion针对FPN的特征融合改进，既任意N层level feature特征融合,主要通过空洞卷积+rate,skip connection,depthwise-separable conv以及上采样/下样实现特征分辨率对齐和融合。Auto-head采用split-transform-merge策略，search space是input nodes和intermediate nodes。
   - Auto-FPN可以和Google的NAS-FPN对比阅读。NAS-FPN追求的是高准确率，在COCO-dev达到48.3mAP,Auto-FPN强调的是节省参数，相比SSD-ResNet101(31.2mAP)，Params节省12%。
   - 论文引用了FPN-NAS，但是没有做任何同一纬度的性能数据对比。
   - 论文实验数据集包括Pascal VOC, COCO, BDD, VisualGenome and ADE demonstrate，COCO具有说服力实验数据较少。
- 
   - [2019][ICCV][Auto-FPN: Automatic Network Architecture Adaptation for Object Detection Beyond Classification]
 
 - Google大脑出品,EfficientDet有两部分组成：backbone基于EfficientNet，BiFPN作为feature network，和class/box net layers共享参数，并且在不同分辨率特征重复多次。
 论文没有说EfficientDet的TPU和训练参数，搜索空间，但是同志们，那是EfficientNet和BiFPN血的付出。
   - [EfficientDet: Scalable and Efficient Object Detection](https://arxiv.org/pdf/1911.09070.pdf)
 
--华为诺亚方舟出品。
+- 华为诺亚方舟出品。
   - [SM-NAS: Structural-to-Modular Neural Architecture Search for Object Detection](https://arxiv.org/pdf/1911.09929.pdf)
 
 - Google Quoc V.Le团队作品提出MnasFPN，解决移动终端低延迟场景的目标检测。backbone基于MobileNetV2，参考NAS-FPN对多尺度特征递归融合，MnasFPN对FPN架构做调整：
@@ -37,11 +33,22 @@ top-down,bottom-up特征层的连接方式（还是连连看），取得state-of
   - 在COCO val2017数据集，分类性能高的backbone MobileNetV3 + MnasFPN竟然弱于MobileNetV2 + MnasFPN 0.6mAP,比较怪异。
   - 模型搜索训练时间大于1000 Hours *1 TPUv2。NAS依然是土豪们的游戏。
   - [MnasFPN : Learning Latency-aware Pyramid Architecture for Object Detection on Mobile Devices](https://arxiv.org/pdf/1912.01106.pdf)
-  
-  
--论文同时搜索backbone和decoder，用scale-permuted的方法搜索，模型FLOPs小，表现很强，在检测和分类任务上都取得了很好的结果。
+- 论文同时搜索backbone和decoder，用scale-permuted的方法搜索，模型FLOPs小，表现很强，在检测和分类任务上都取得了很好的结果。
+  - [SpineNet: Learning Scale-Permuted Backbone for Recognition and Localization](https://arxiv.org/pdf/1912.05027.pdf)
 
-  -[SpineNet: Learning Scale-Permuted Backbone for Recognition and Localization](https://arxiv.org/pdf/1912.05027.pdf)
+- 华为诺亚方舟和中山大学联合提出，从目标检测整个pipline搜索backbone，neck,FPN,RPN,head。论文包含两个阶段的搜索：首选Structural-level粗略搜索每个组件的结构，Modular-level再细化搜索每个结构的超参数。
+  - 为什么拆分Structural-level：论文实验证明COCO和VOC数据集的差别导致模型准确率现在差异，不同的数据集需要确定不同的框架。COCO数据集测试，基于ResNet50的cascade rcnn比ResNet101的faster rcnn速度和准确率性能更高，这说明要综合考虑分辨率、主干网络等因素影响。
+  - Structural-level包括image size(三种分辨率)、backbone(ResNet系列、ResNeXt系列和MobileNet v2)，feature fusion neck， rpn(with RPN/without RPN和GA-RPN)和rcnn(RCNN，RetinaNet head和Cascade RCNN)组件,评价指标推断时间和准确率。
+  - Modular-level主要搜索每个模块的超参数，包括基本的channel，ResNet的basic block/bottleneck和ResNeXt和MobileNet的block。评价指标floaps和准确率。
+这部分评价指标是floaps和准确率。
+  - 论文首次采用Structural-level和Modular-level两步走策略，并且包含目标检测的two-stage的框架，实验原理清晰，数据详实，性能指标优异。
+  - google系列的论文很多是从单一组件考虑，比如NAS-FPN，AutoAugment等方法，从单一角度比较有效，所有的trick增加一起是否有效？不仅仅目标检测，图像分类，语义分割/实体分割，视频理解的trick自动搜索，是否也能现在提高性能？
+  透过屏幕感觉一大波论文迎面而来。
+  - [AAAI2020][SM-NAS: Structural-to-Modular Neural Architecture Search for Object Detection](https://arxiv.org/pdf/1911.09929.pdf)
+
+- google出品。
+  - #TODO
+  - [SpineNet: Learning Scale-Permuted Backbone for Recognition and Localization](https://arxiv.org/pdf/1912.05027.pdf)
 
 ---
 
