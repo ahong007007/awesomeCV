@@ -1,11 +1,13 @@
 
-# survey/overview/review
+# AutoML
 
 ---
-## paper
-- NAS一篇综述，从Search Space，search strategy performance论述NAS.
 
+## survey/overview/review
+
+- NAS一篇综述，从Search Space，search strategy performance论述NAS.
   - [Neural Architecture Search: A Survey](https://arxiv.org/pdf/1808.05377.pdf)
+
 - 香港中文大学，第四范式综述。
   - [Taking the Human out of Learning Applications:A Survey on Automated Machine Learning](https://arxiv.org/pdf/1810.13306.pdf)[2018.10]
 
@@ -13,17 +15,16 @@
   - [Survey on Automated Machine Learning](https://arxiv.org/pdf/1904.12054.pdf)
 
 - IBM Martin团队对NAS总结。
-
   - [A Survey on Neural Architecture Search](https://arxiv.org/pdf/1905.01392.pdf)
-  
-- [Automated Machine Learning: State-of-The-Art and Open Challenges](https://arxiv.org/pdf/1906.02287.pdf)
+- 一篇AutoML综述，不但有框架分析，也有算法分析。内容详实，脑图有料，写PPT必备参考。
+  - [Automated Machine Learning: State-of-The-Art and Open Challenges](https://arxiv.org/pdf/1906.02287.pdf)
 
 - AutoML一篇设计指导，可以看做是阅读论文指南，比如第三部分，best practices for comparing NAS methods,介绍阅读论文的侧重点。另外提供一个The NAS Best Practices Checklist(https://www.automl.org/wp-content/uploads/NAS/NAS_checklist.pdf)
 简直是论文写作者的福音。
-
   - [2019][Best Practices for Scientific Research on Neural Architecture Search](https://arxiv.org/pdf/1909.02453.pdf)
 
 ---
+
 ## awesome
 
 - [D-X-Y/Awesome-NAS](https://github.com/D-X-Y/Awesome-NAS)
@@ -34,6 +35,7 @@
 ---
 
 ## Blogs
+
 - [What’s the deal with Neural Architecture Search?](https://determined.ai/blog/neural-architecture-search/)
 - [Google Could AutoML](https://cloud.google.com/vision/automl/docs/beginners-guide)
 - [PocketFlow](https://pocketflow.github.io/)
@@ -45,15 +47,12 @@
   - https://towardsdatascience.com/illustrated-efficient-neural-architecture-search-5f7387f9fb6
 - [Illustrated: Efficient Neural Architecture Search](https://towardsdatascience.com/illustrated-efficient-neural-architecture-search-5f7387f9fb6)
 - [Neural Architecture Search at CVPR 2019](https://drsleep.github.io/NAS-at-CVPR-2019/)
-## somebody
 - https://songhan.mit.edu/publications/
-## Workshop
-
 - [Neural Architects Workshop ICCV2019](https://neuralarchitects.org/)
 
 ---
 
-# classifier
+## classifier
 
 - 2017 ICLR论文。google 首次尝试使用NAS构造CNN模型，基于RNN和强化学习的思路，训练和测试集CIFAR-10。RNN作为控制器，生成变长字符串，控制child network网络模型的连接。
 child network在验证数据集反馈准确率作为reward信息，计算策略的梯度更新控制器。重复以上过程，控制器将学习如何随着时间的推移改进其搜索。
@@ -124,7 +123,6 @@ cross-entropy计算精度，Latency基于速查表（预先计算9种layer-wise�
 - CVPR2019论文(oral)，悉尼科技大学和百度联合提出GDAS(Differentiable Architecture Sampler)。搜索空间是基于FBNet提出的Stochastic super net，梯度运算同样基于GumbelSoftmax。论文改进在训练方式：首先CIFAR训练，选择normal cell用于ImageNet网络设计。
 normal cell输入为two previous cells。Reduction Cell是人工设计。论文的加速设计是基于hij(one-hot vector),既计算BP时只有一个支路。轮设计的GDAS (FRC) 在V100 GPU仅运行4个小时，远远高于state-of-art
 的搜索效率。
-
   - [Searching for A Robust Neural Architecture in Four GPU Hours](https://raw.githubusercontent.com/D-X-Y/GDAS/master/data/GDAS.pdf)
   
 - google最新设计MobileNetv3,应用于移动端CPU。网络的架构基于NAS实现的MnasNet，根据图像分辨率，准确率和实时性设计两个模型MobileNetV3-Large和MobileNetV3-Small。在分类，目标检测和语义分割验证performance。
@@ -139,42 +137,31 @@ MobileNetv3用到的tricks:
 
   - [Searching for MobileNetV3](https://arxiv.org/pdf/1905.02244.pdf)[2019.05]
   
-  
 - 卡内基·梅隆大学，微软，哈工大联合提出，基于differentiable NAS的Single-Path NAS策略(共享卷积核参数，降低计算资源)，backbone类似于MobileNetv2设计，搜索空间包括SEnet,3x3,5x5卷积,可分离卷积，Skip ops等。
   24 TPU-hours实现架构搜索，Top 1性能优于MobileNet v3,推断延时80ms(Pixel 1)，在人类先验知识基础上完全是机器设计。轮最后提出的NAS hyperparameter optimization问题不理解。 
-
   - [Single-Path Mobile AutoML: Efficient ConvNet Design and NAS Hyperparameter Optimization](https://arxiv.org/pdf/1907.00959.pdf)[2019.07]
 
 - 小米团队楚洋洋，张勃等新作。
-
   - [FairNAS: Rethinking Evaluation Fairness of Weight Sharing Neural Architecture Search](https://arxiv.org/pdf/1907.01845.pdf)[2019.07]
 
-
-- 
+- /# TODO
   - [EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks](https://arxiv.org/pdf/1905.11946.pdf)[2019.05]
 
 - google提出在NAS架构上使用MDConv(mixed depthwise convolution,混合可分离卷积，但是分组之间的filter滤波器尺寸不同)。
-
   1.do larger kernels always achieve higher accuracy?论文在论证大卷积核是否有效时，直接给出结论，但是测试条件是？
-  
-  - [MixNet: Mixed Depthwise Convolutional Kernels](https://arxiv.org/pdf/1907.09595v1.pdf)[2019.07]
-  
-  
-- AutoML与GAN结合，但是仅仅在CIFAR-10做实验，没有ImageNet数据。
 
+  - [MixNet: Mixed Depthwise Convolutional Kernels](https://arxiv.org/pdf/1907.09595v1.pdf)[2019.07]
+- AutoML与GAN结合，但是仅仅在CIFAR-10做实验，没有ImageNet数据。
   - [AutoGAN: Neural Architecture Search for Generative Adversarial Networks](https://arxiv.org/pdf/1908.03835.pdf)[2019.08]  
   
 - 华为诺亚凡方舟提出DARTS+。论文任务DARTS存在一个问题：collapse issue（skip-connects导致的优化问题？）。论文提出The Early Stopping 策略(给出两个推论，在skip-connects数量和architecture parameters α
 达到一定条件下)。论文模型SE-DARTS+在SE-Module(训练时使用AutoAugment, mixup etc.)在ImageNet达到TOP 1 22.5%错误率，搜索时间0.2 GPU day
-
   - [2019.09][DARTS+: Improved Differentiable Architecture Search with Early Stopping](https://arxiv.org/pdf/1909.06035.pdf) 
-  
+
   *最近看一本书，《算法之美》，有一个最优停止理论，包括相亲问题、见好就收、苏丹嫁妆、售房问题，秘书问题，都可以用最优停止理论来选择合适的停止时机。DARTS是不是也可以套用？*  
-    
+
 - NIPS2019论文，MIT韩松团队作品。论文提出加速ResNet50  1.3倍，节省1.6x资源，同时保持精度不显著下降。
   -[2019][Neural-Hardware Architecture Search](http://mlforsystems.org/assets/papers/neurips2019/neural_hardware_lin_2019.pdf)    
-
-
 
 ## Benchmark on ImageNet
 
@@ -203,9 +190,7 @@ Auto is the new black — Google AutoML, Microsoft Automated ML, AutoKeras a
 
 https://medium.com/@santiagof/auto-is-the-new-black-google-automl-microsoft-automated-ml-autokeras-and-auto-sklearn-80d1d3c3005c
 
-
-
-Neural architecture search has been applied so far to 
-(1) convnet-based image classifiers, (2) recurrent neural networks, 
-(3) activation functions, (4) SGD optimizers, (5) data augmentation, 
-(6) transformer, (7) object detection and so on.
+Neural architecture search has been applied so far to
+(1) convnet-based image classifiers, (2) recurrent neural networks,
+(3) activation functions, (4) SGD optimizers, (5) data augmentation,
+(6) transformer, (7) object detection and so on
