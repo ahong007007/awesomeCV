@@ -10,18 +10,18 @@
   - [2019.09][ICDAR 2019 Competition on Large-scale Street View Text with Partial Labeling -RRC-LSVT](https://arxiv.org/pdf/1909.07741.pdf)
 
 - 百度开源C-SVT(Chinese Street View Text)中文街景地图数据集,包含3万真实标注的自然场景数据，40万部分标注数据集。
-
   - [ICCV2019][Chinese Street View Text: Large-scale Chinese Text Reading with Partially Supervised Learning](http://openaccess.thecvf.com/content_ICCV_2019/papers/Sun_Chinese_Street_View_Text_Large-Scale_Chinese_Text_Reading_With_Partially_ICCV_2019_paper.pdf)
+
 ---
 
 # Scene Text Detection
 
 - 商汤和香港中文大学联合提出的场景文字检测模型。基于Mask RCNN框架，不同点在于mask分支，
-mask rcnn预测的是每个像素是否前景和背景，既{0,1}，而论文提出的Pyramid Mask Text Detector 
+mask rcnn预测的是每个像素是否前景和背景，既{0,1}，而论文提出的Pyramid Mask Text Detector.
 (PMTD) 预测是[0,1]（中心点接近1，边缘点接近0，可是和立体图形有什么关系？）。论文图1显示标注
 框会导致训练错误，结论是要改变标注方式？根据图1b的解释，应该是mask分支修订矩形检测框，可以直接根据mask图像也可以生成任意检测框。
 论文最难解释的是plane clustering部分。
-论文的实验在ICDAR 2013，2015和2017 MLT均有测试，根据实验结果state-of-art. 
+论文的实验在ICDAR 2013，2015和2017 MLT均有测试，根据实验结果state-of-art.
 
   - [Pyramid Mask Text Detector](https://arxiv.org/pdf/1903.11800.pdf)[1903.11]
 
@@ -32,7 +32,6 @@ mask rcnn预测的是每个像素是否前景和背景，既{0,1}，而论文提
   - [Shape Robust Text Detection with Progressive Scale Expansion Network](https://arxiv.org/pdf/1806.02559.pdf)[1806.02]
 
 Look More Than Once: An Accurate Detector for Text of Arbitrary Shapes
-
 
 # Scene Text Recognition
 
