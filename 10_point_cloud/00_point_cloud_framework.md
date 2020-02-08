@@ -25,6 +25,9 @@ non-Euclidean没有griddded array的数据属性.
 - 英伟达发布点云加速框架Kaolin。  
   - [Kaolin: A PyTorch Library for Accelerating 3D Deep Learning Research](https://arxiv.org/pdf/1911.05063v2.pdf)
 
+- fakebook开源3D处理框架,处理图片数据格式Meshes。完成的功能包括点云和meshes转换，材质渲染，
+  - <https://github.com/facebookresearch/pytorch3d>
+
 ## Leadboard
 
 - <https://www.nuscenes.org/object-detection?externalData=all&mapData=all&modalities=Any>
