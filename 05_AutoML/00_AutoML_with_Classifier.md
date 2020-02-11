@@ -47,7 +47,7 @@
   - https://towardsdatascience.com/illustrated-efficient-neural-architecture-search-5f7387f9fb6
 - [Illustrated: Efficient Neural Architecture Search](https://towardsdatascience.com/illustrated-efficient-neural-architecture-search-5f7387f9fb6)
 - [Neural Architecture Search at CVPR 2019](https://drsleep.github.io/NAS-at-CVPR-2019/)
-- https://songhan.mit.edu/publications/
+- <https://songhan.mit.edu/publications/>
 - [Neural Architects Workshop ICCV2019](https://neuralarchitects.org/)
 
 ---
@@ -118,7 +118,8 @@ Pooling layers prefer large and wide kernel. Early layers prefer small kernel. L
 cross-entropy计算精度，Latency基于速查表（预先计算9种layer-wise计算数据）。Stochastic super net是每一层都让9中架构并联，基于可微分的GumbelSoftmax训练整个super net,根据训练结果Pθ设计网络架构。
 这种可微分方式比RL方式快速很多。
 
- - [FBNet: Hardware-Aware Efficient ConvNet Design via Differentiable Neural Architecture Search](https://arxiv.org/pdf/1812.03443.pdf)[2018.12]
+- berkeley大学提出了一种可微神经架构搜索（DNAS）框架，使用基于梯度的方法去优化卷积网络结构,适用于移动端场景。
+  - [2018][FBNet: Hardware-Aware Efficient ConvNet Design via Differentiable Neural Architecture Search](https://arxiv.org/pdf/1812.03443.pdf)
 
 - CVPR2019论文(oral)，悉尼科技大学和百度联合提出GDAS(Differentiable Architecture Sampler)。搜索空间是基于FBNet提出的Stochastic super net，梯度运算同样基于GumbelSoftmax。论文改进在训练方式：首先CIFAR训练，选择normal cell用于ImageNet网络设计。
 normal cell输入为two previous cells。Reduction Cell是人工设计。论文的加速设计是基于hij(one-hot vector),既计算BP时只有一个支路。轮设计的GDAS (FRC) 在V100 GPU仅运行4个小时，远远高于state-of-art
