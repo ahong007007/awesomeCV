@@ -41,6 +41,16 @@
 
 ## object Detection
 
+- 目标检测领域的奠基之作，王少青，何凯明，Ross Girshick以及孙剑等强强联手。
+论文是RCNN系列的延续，主要包括三个部分：backbone ,Region Proposal Network以及head(包括RoI pooling)。主流两阶段框架也是在此基础上修正。
+  - backbone:从最初的VGG，ResNet，以及Attention机制等，分类的backbone可直接使用替代。backbone是整个网络的共享的卷积层。
+  - Region Proposal Network(RPN)：候选区域生成网络，主要包括一层3*3卷积，两个1*1卷积分支：分类（前景和背景）和坐标修正，对应损失函数分布是Softmax Loss和Smooth L1 Loss。RPN在共享卷积图滑动(40*60),生成9种anchor(三种比例1:1,1:2,2:1三种面积128×128，256×256，512×512，面积应该是原图尺寸，因为特征图只有40*60)。
+  256-d表示特征channel数。#TODO感受野是多少？
+  - ROIPooling : 每个ROI选取对应的特征，并归一下特征尺寸6*6。#TODO为甚是6*6？
+  - head:包括NMS和损失函数SoftmaxLoss、SmoothL1Loss。
+
+  - [Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks](https://arxiv.org/pdf/1506.01497.pdf)
+
 - ICCV2017论文，微软亚洲研究院代季峰等提出DCN(Deformable Convolutional Network),将固定位置的卷积改造为适应物体形变的可变形卷积。
 提出两个模块：deformable convolution 和deformable RoI pooling。所谓的deformable，是在原deformable convolution基础上增加可学习的offset(增加感受野范围)。同理RoI pooling计算上增加偏差实现deformable RoI pooling。论文提出的DCN俨然已经是目标检测领域刷分必备插件。
 
