@@ -47,6 +47,7 @@
   - Region Proposal Network(RPN)：候选区域生成网络，主要包括一层3*3卷积，两个1*1卷积分支：分类（前景和背景）和坐标修正，对应损失函数分布是Softmax Loss和Smooth L1 Loss。RPN在共享卷积图滑动(40*60),生成9种anchor(三种比例1:1,1:2,2:1三种面积128×128，256×256，512×512，面积应该是原图尺寸，因为特征图只有40*60)。
   256-d表示特征channel数。#TODO感受野是多少？
   - ROIPooling : 每个ROI选取对应的特征，并归一下特征尺寸6*6。#TODO为甚是6*6？
+  - ROIPooling:有两次取整操作，Region proposal的xywh取整，对xywh整数区域评价分成K*K单元，对每一单元边界取整。
   - head:包括NMS和损失函数SoftmaxLoss、SmoothL1Loss。
 
   - [Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks](https://arxiv.org/pdf/1506.01497.pdf)

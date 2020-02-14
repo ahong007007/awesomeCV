@@ -1,6 +1,21 @@
+# Instance Segmentation
 
 ---
-# Instance Segmentation
+
+## survey/overview/review
+
+---
+
+## Instance segmentation
+
+- Mask R-CNN是何凯明在实体分割的奠基之作，实体分割基本延续Mask R-CNN的框架,也是延续Faster RCNN框架，增加Mask分支，实现多任务的学习。
+框架包括ResNet-FPN+Fast RCNN+Mask。
+  - backbone:ResNet-FPN.FPN特征提取利器，包括从上往下，横向和从下往上三个方向，实现各个层级的特征融合，具有较强的语义信息和空间信息。
+  conv2，conv3，conv4和conv5对应原图的stride分别是{4,8,16,32}，conv1因为占用内参较多，没有使用。（#TODO使用会不会提高准确率性能？）
+  - Fast RCNN:RPN生成特征金字塔[P2,P3,P4,P5],对应生成多个region proposal。根据RoI在图像中的面积计算对应所在特征层。（训练时有面积，测试时如何确定在那一个特征层）
+  - RoIpooling升级到RoIAlign：每一对RPN的边界xywh取整，且对均分方格内通过双线性插值计算采样点。
+  - 增加Mask预测分支，经过FCN后输出特征分辨率28*28*80。loss函数包括检测和分割分支之和。
+  - [Mask R-CNN](https://arxiv.org/pdf/1703.06870.pdf)
 
 - Ross Girshick，何凯明等人提出TensorMask，解决密集滑动窗口的目标实体分割。从论文的图2的效果看，TensorMask
 可能不如Mask R-CNN，也许作者挑选图错误或图的说明错误。
@@ -34,8 +49,4 @@ b.target category训练方式。个人感觉MaskIoU和score不是线性相关，
 
 ## Panoptic Segmentation
 
-- 
-  
-
-- [2019][Panoptic-DeepLab:A Simple, Strong, and Fast Baseline for Bottom-Up Panoptic Segmentation](https://arxiv.org/pdf/1911.10194.pdf) 
-
+- [2019][Panoptic-DeepLab:A Simple, Strong, and Fast Baseline for Bottom-Up Panoptic Segmentation](https://arxiv.org/pdf/1911.10194.pdf)
