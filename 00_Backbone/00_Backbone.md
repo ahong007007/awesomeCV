@@ -20,7 +20,7 @@
 
 ---
 
-# Backbone
+## backbone
 
 - Res2Net,南开大学提出。计算机视觉的主题是提取更好的特征表示，多尺度特征提取是图像分类，识别，检测，分割的重要手段，
 FPN/ResNet/ResNeXt/DLA/DenseNet等模型都在构造各种提高性能的连接，赏心悦目的美学结构，终极目标应该是何凯明等人提出的
@@ -66,6 +66,16 @@ depthwise conv、pointwise conv、groupwise conv减少模型计算量，轮提�
   - [Momentum Contrast for Unsupervised Visual Representation Learning](https://128.84.21.199/pdf/1911.05722.pdf)
 
 ---
+
+## Tiny Backbone
+
+- google经典作品MobileNet.主要Depthwise Separable Convolution替代普通卷积，特征分辨率缩放因子。
+  - Depthwise Separable Convolution=Depthwise conv+pointwise conv：具体计算过程示意图可参看material目录。
+  - MobileNet提出有影响力的缩放因子：通道缩放因子α和分辨率特征因子β，但是超参数是固定的，损失特征表达能力。EfficientNet延续缩放特征的设计思路，但是可学习的。
+  - 看论文和看leetcode一样，看懂不一定会，细节多扣为什么这样，而不是那样。作者认为的理所当然，自己不能当成必然。 
+  - [MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications](https://arxiv.org/pdf/1704.04861.pdf)
+
+---  
 
 ## others
 
