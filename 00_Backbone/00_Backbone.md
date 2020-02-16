@@ -72,8 +72,18 @@ depthwise conv、pointwise conv、groupwise conv减少模型计算量，轮提�
 - google经典作品MobileNet.主要Depthwise Separable Convolution替代普通卷积，特征分辨率缩放因子。
   - Depthwise Separable Convolution=Depthwise conv+pointwise conv：具体计算过程示意图可参看material目录。
   - MobileNet提出有影响力的缩放因子：通道缩放因子α和分辨率特征因子β，但是超参数是固定的，损失特征表达能力。EfficientNet延续缩放特征的设计思路，但是可学习的。
-  - 看论文和看leetcode一样，看懂不一定会，细节多扣为什么这样，而不是那样。作者认为的理所当然，自己不能当成必然。 
-  - [MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications](https://arxiv.org/pdf/1704.04861.pdf)
+  - MobileNet V1没有shortcut连接，是直筒型结构。
+  - 下采样时strided-conv替代pooling：小模型不容易过拟合，易出现欠拟合。加入pooling层容易丢失有用信息，增加模型欠拟合可能性。
+
+  - 看论文和看leetcode一样，看懂不一定会，细节多扣为什么这样，而不是那样。作者认为的理所当然，自己不能当成必然。
+  - [2018][MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications](https://arxiv.org/pdf/1704.04861.pdf)
+
+- google在移动端设计的backbone又一个经典作品。论文主要有两点改进：Inverted residuals和Linear bottlenecks。
+  - Inverted residuals:ResNet是1*1 0.25倍压缩→标准卷积提特征→1*1 4倍扩张，而Mobile v2采用1*1 6倍扩展→ Depthwise卷积→1*1 6倍压缩。
+  如果在residuals模块采用压缩方式，DW提取特征过少。
+  - Linear bottlenecks:指在bottlenecks取消Relu6。因为Relu6对于负的输入，输出为0。residuals模块在压缩特征，经过Relu6后会损失更多特征表达能力。
+在Xception论文中，已经证明Depthwise-conv后不接relu会更好效果。
+  - [2018][MobileNetV2: Inverted Residuals and Linear Bottlenecks](https://arxiv.org/pdf/1801.04381.pdf)
 
 ---  
 
