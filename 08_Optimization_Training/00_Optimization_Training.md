@@ -21,6 +21,7 @@
   - BN优势：神经网络每层分布相对稳定，加速模型学习速率。减少对网络参数的敏感度，简化调参，网络学习更加稳定；具有一定正则化效果。
   - 适用场景：每个 mini-batch 比较大，数据分布比较接近。在进行训练之前，要做好充分的 shuffle，否则效果差很多。
   - 在ICS基础上，BatchNorm 延伸各种变体：LayerNorm/WeightNorm/CosineNorm。
+  - 推断阶段，输入是单个图像，BN是怎么使用的？
   - [Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift](https://arxiv.org/pdf/1502.03167.pdf)
 
 - CVPR2019论文，布兰迪斯大学和微软联合提出。论文的motation来自于模型的剪枝（pruned）是因为卷积核之间正交性低，而具有跳跃连接的
