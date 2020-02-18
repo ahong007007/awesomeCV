@@ -1,5 +1,6 @@
+# Scene Text Detection & Recognition
 
-# DataSet
+## DataSet
 
 - 本论文主要介绍ICDAR2019 Robust Reading Challenge on Arbitrary-Shaped Text（RRC-ArT）的进展，包括 i)scene text detection, ii)scene text recognition, and iii) scene text spotting(同时包括检测和识别。)
 
@@ -14,7 +15,7 @@
 
 ---
 
-# Scene Text Detection
+## Scene Text Detection
 
 - 商汤和香港中文大学联合提出的场景文字检测模型。基于Mask RCNN框架，不同点在于mask分支，
 mask rcnn预测的是每个像素是否前景和背景，既{0,1}，而论文提出的Pyramid Mask Text Detector.
@@ -33,7 +34,7 @@ mask rcnn预测的是每个像素是否前景和背景，既{0,1}，而论文提
 
 Look More Than Once: An Accurate Detector for Text of Arbitrary Shapes
 
-# Scene Text Recognition
+## Scene Text Recognition
 
 - 论文提出一个框架模型，包括Spatial Transformer Network，Feature extraction，Sequence modeling，predictor，每个
 阶段采用主流的方法，共2×3×2×2= 24种实现方式，从准确率最高的反推，应该是(默认已经检测或分割后的文字区域)STN+Backbone+BiLSTM+
@@ -45,13 +46,11 @@ Attention模型可以取得最佳效果（没有考虑实时性）。再次证�
   - [What is wrong with scene text recognition model comparisons? dataset and model analysis](https://128.84.21.199/pdf/1904.01906.pdf)[1904.01]
 
 
-# Index
+## Index
 
 1、ICCV2017----Focusing Attention: Towards Accurate Text Recognition in Natural Images[pdf](https://arxiv.org/pdf/1709.02054.pdf)[1709.02]
 
-
 ## Datasets
-
 
 | Dataset (Year) | Image Num (train/test) | Text Num (train/test) | Orientation| Language| Characteristics | Detec/Recog Task |
 |:------:|:------:|:------:|:------:|:------:|:------:|:------:|
