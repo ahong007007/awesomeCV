@@ -33,8 +33,9 @@
   
 ## Evaluation Metrics
 
-PSNR
-SSIM
+(Peak Signal-to-Noise Ratio)PSNR 峰值信噪比
+
+(Structural SIMilarity SSIM)结构相似性)
 
 ## dataset
 

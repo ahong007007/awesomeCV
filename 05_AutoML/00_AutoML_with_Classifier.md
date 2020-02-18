@@ -57,17 +57,14 @@
 - 2017 ICLR论文。google 首次尝试使用NAS构造CNN模型，基于RNN和强化学习的思路，训练和测试集CIFAR-10。RNN作为控制器，生成变长字符串，控制child network网络模型的连接。
 child network在验证数据集反馈准确率作为reward信息，计算策略的梯度更新控制器。重复以上过程，控制器将学习如何随着时间的推移改进其搜索。
 论文同时提出固定搜索空间(滤波器宽度/高度[1, 3, 5, 7]，滤波器个数[24,36,48,64]),增加跳跃连接等设计方法。
-  
   google是强化学习的引领者，基于强化学习生成神经网络模型NAS-CNN和NAS-RNN两个架构，虽然数据集仅为CIFAR-10,作为行业开创者使自动生成网络模型成为可能。另外使用800块GPU,
   一般实验室即使有类似idea也难以实施。
-
   - [Neural Architecture Search with Reinforcement Learning](https://arxiv.org/pdf/1611.01578.pdf)[2016.11]
 
 - 继NAS之后，Google又一力作NASNet。论文提出proxy dataset CIFAR-10，通过堆叠训练的Normal Cell和Reduction Cell，生成在ImageNet classification、mobile network和COCO Object detection数据集，
 state-of-art性能。论文实验部分对比Random search网络结构方式有显著优势。
-
   特点：固定cell,每个cell内部学习5个block operation，cnn可以由同构cell进行堆叠而构成。计算量大，500 GPU*4days。结构不规则，特征由RNN学习。 
-  -- [2017.07][Learning Transferable Architectures for Scalable Image Recognition](https://arxiv.org/pdf/1707.07012.pdf)
+  - [2017.07][Learning Transferable Architectures for Scalable Image Recognition](https://arxiv.org/pdf/1707.07012.pdf)
 
 - Google团队提出MnasNet，使用强化学习的思路，提出基于移动终端的CNN模型的神经网络自动搜索方法。论文将实时性结合到主要搜索目标中，
 基于强化学习，将实时性和准确率作为 reward，并且直接使用手机平台（Pixel phones 等）运行模型，测量实时性和准确率，另外根据Params更新A1-A3模型。
@@ -105,7 +102,7 @@ pruning冗余的路径。为了解决显存占用和搜索空间线性增长的�
 Pooling layers prefer large and wide kernel. Early layers prefer small kernel. Late layers prefer large kernel.
 论文从pruning角度解决NAS搜索问题，将NAS和compression连接在一起，compression领域和RL领域很多算法都可以应用在NAS。
 
-  -- [ProxylessNAS: Direct Neural Architecture Search on Target Task and Hardware](https://arxiv.org/pdf/1812.00332.pdf)[2018.12]
+  - [ProxylessNAS: Direct Neural Architecture Search on Target Task and Hardware](https://arxiv.org/pdf/1812.00332.pdf)[2018.12]
 
 - arxiv论文，同济大学和华为诺亚联合提出P-DARTS，基于DARTS基础上改进的NAS方法。论文认为DARTS的搜索和评估架构不一致(depth gaps),导致学习能力降低(貌似performance没有较大提升)。提出策略：
 在搜索过程中渐进式增加网络深度，使得搜索网络深度和评估网络深度一致。
@@ -135,7 +132,6 @@ MobileNetv3用到的tricks:
   5、Nonlinearities。论文部分block用h-swish{x*ReLU6(x + 3)/6}代替swish{x*sigmoid(x)}。swish和h-swish在部署时没有准确率差别，但是更容易实现软件和硬件的优化，量化。论文模型在deeper层使用h-swish。
   6、语义分割的R-ASPP模块，是由ASPP(Atrous Spatial Pyramid Pooling)改进，主要包括1*1 卷积和avg-pooling实现。
   MobileNetV3使用tricks较多，但是模型实时性和准确率都是state-of-art，设计过程复杂，使用简单有效。
-
   - [Searching for MobileNetV3](https://arxiv.org/pdf/1905.02244.pdf)[2019.05]
   
 - 卡内基·梅隆大学，微软，哈工大联合提出，基于differentiable NAS的Single-Path NAS策略(共享卷积核参数，降低计算资源)，backbone类似于MobileNetv2设计，搜索空间包括SEnet,3x3,5x5卷积,可分离卷积，Skip ops等。
