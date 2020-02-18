@@ -50,7 +50,7 @@
   - ROIPooling:有两次取整操作，Region proposal的xywh取整，对xywh整数区域评价分成K*K单元，对每一单元边界取整。
   - head:包括NMS和损失函数SoftmaxLoss、SmoothL1Loss。
 
-  - [Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks](https://arxiv.org/pdf/1506.01497.pdf)
+  - [Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks](https://arxiv.org/pdf/1506.01497.pdf) :star::star::star::star::star:
 
 - ICCV2017论文，微软亚洲研究院代季峰等提出DCN(Deformable Convolutional Network),将固定位置的卷积改造为适应物体形变的可变形卷积。
 提出两个模块：deformable convolution 和deformable RoI pooling。所谓的deformable，是在原deformable convolution基础上增加可学习的offset(增加感受野范围)。同理RoI pooling计算上增加偏差实现deformable RoI pooling。论文提出的DCN俨然已经是目标检测领域刷分必备插件。
@@ -63,11 +63,14 @@
   - Feature Mimicking如何实现？
   -[2018.12][Deformable ConvNets v2: More Deformable, Better Results](https://arxiv.org/pdf/1811.11168.pdf)
   
-- CVPR2018论文，加利福尼亚大学圣迭戈分校提出。出发点是在目标检测中提高IoU阈值可提高准确率（影响召回率）。既然不能直接提高IoU，可以分阶段提高IoU的阈值。Faster R-CNN是RCNN的two stage级联，RPN有分类和回归，NMS抑制后ROIpool继续计算分类和回归。既然这样为什么不多级联几次？
-
-  - 1.Cascade R-CNN是R-CNN的多层级联，损失函数也是级联，那么检测框从那一个detector输出？是都输出？
+- CVPR2018论文，加利福尼亚大学圣迭戈分校提出。轮针对两点进行改进：样本减少易过拟合（模型增加，样本减少不过拟合？），使用不同IoU阈导致mismatch。
+出发点是在目标检测分阶段提高IoU的阈值。
+  - Faster R-CNN完成了对目标候选框的两次预测:RPN分类和回归、ROIpooling之后检测和回归。论文延续这一思想，设计三个阶段RCNN的检测和回归，并且逐阶段
+  提升IoU阈值训练检测器。（论文证明三个阶段性能最好）。更新什么样的技术手段，可以再次提升多阶段的检测和回归？#TODO 可以有这样的尝试。
+  - 检测输出：多个header输出的均值作为这个proposal最终的分数
+  - 疑问：1.Cascade R-CNN是R-CNN的多层级联，损失函数也是级联？
   - 2.iterative bounding box和Cascade R-CNN框架相同，只是损失函数不同？
-  - [2017.12][Cascade R-CNN: Delving into High Quality Object Detection](https://arxiv.org/pdf/1712.00726.pdf)
+  - [2017.12][Cascade R-CNN: Delving into High Quality Object Detection](https://arxiv.org/pdf/1712.00726.pdf):star::star::star::star::star:
   
 - Cascade R-CNN更新续篇。从网络结构看是增加Instance segmentation分支，检测(ResNeXt-101)45.8AP->(ResNeXt-152)50.2AP,38.6->42.3AP.
   - [2019.06][Cascade R-CNN: High Quality Object Detection and Instance Segmentation](https://arxiv.org/pdf/1906.09756.pdf)
@@ -81,9 +84,7 @@ Module(FPN多尺度分辨率特征融合)和spatial attention module（RPN->1x1�
 - CVPR2019论文、商汤，浙江大学等联合提出的Libra R-CNN。motivation来自于作者认为的三个不平衡：数据不平衡，特征不平衡，
 损失函数不平衡。数据不平衡采用：N总样本根据IoU分成K个子样本,增加困难样本的采样概率。特征不平衡采用：ResNet Identity 和
 non-local模块修正语义特征。损失函数不平衡：论文设计Balanced L1 Loss（**待验证和理解**）。
-
   论文提出的三个不平衡，可以认为是3个trick，可以集成到其他模型，改进检测的精度。
-
   - [Libra R-CNN: Towards Balanced Learning for Object Detection](https://arxiv.org/pdf/1904.02701.pdf)
 
 - 中国科学院大学等提出Trident Networks，既模型backbone包含的tricks:Multi-branch Block,Weight sharing among branches,Scale-aware Training Scheme(不同尺度目标位于不同分支)，模型最终集万千tricks于一身，基于ResNet-101-Deformable，在COCO test-dev set取得state-of-art，48.4 mAP。
@@ -95,11 +96,7 @@ non-local模块修正语义特征。损失函数不平衡：论文设计Balanced
   - [GCNet: Non-local Networks Meet Squeeze-Excitation Networks and Beyond](https://arxiv.org/pdf/1904.11492v1.pdf)[2019.04]
 
 - 北京大学等提出的一种改善型backbone，类似于HRNet和Cascade R-CNN（Cascade R-CNN是级联detector,而本文CBNet是级联backbone）。论文最强指标Cascade Mask R-CNN +Triple-ResNeXt152在COCO数据集实现53.3AP，性能上是数据榜首。  
-  -[2019.09][CBNet: A Novel Composite Backbone Network Architecture for Object Detection](https://arxiv.org/pdf/1909.03625.pdf)
-
-- 韩国高等理工学院提出Cascade RPN。
-
-  -[2019.09][Cascade RPN: Delving into High-Quality Region Proposal Network with Adaptive Convolution](https://arxiv.org/pdf/1909.06720.pdf)
+  -[2019.09][CBNet: A Novel Composite Backbone Network Architecture for Object Detection](https://arxiv.org/pdf/1909.03625.pdf) :star::star::star::star:
 
 ---
 
@@ -114,7 +111,7 @@ non-local模块修正语义特征。损失函数不平衡：论文设计Balanced
 RefineDetLite++在MSCOCO数据集29.6AP&131ms。
   - 论文提出的模型，虽然一直倡导非GPU而是CPU，实际在Intel i7-6700@3.40GHz测试，貌似和mobile实际运行有差距。 
   - 论文提出的RefineDetLite，包含coarse loss module和refined loss module，仅仅是没有ROI pooling，个人感觉和two-stage的目标检测框架没太多区别。
-  - [2019][RefineDetLite: A Lightweight One-stage Object Detection Framework for CPU-only Devices](https://arxiv.org/pdf/1911.08855.pdf)  
+  - [2019][RefineDetLite: A Lightweight One-stage Object Detection Framework for CPU-only Devices](https://arxiv.org/pdf/1911.08855.pdf) 
 
 ---
 
