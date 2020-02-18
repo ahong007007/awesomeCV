@@ -115,3 +115,12 @@ Inverted Residual Block。Channel attention与SENet不同，论文提出的Chann
 - [A guide to convolution arithmetic for deep learning](https://arxiv.org/pdf/1603.07285.pdf)
 
 - [A guide to receptive field arithmetic for Convolutional Neural Networks](https://medium.com/mlreview/a-guide-to-receptive-field-arithmetic-for-convolutional-neural-networks-e0f514068807)
+
+---
+
+## multilabel-classification
+
+TODO 多标签分类问题
+
+- AI Lab开源的ML-Images。
+  -[Tencent ML-Images: A Large-Scale Multi-Label Image Database for Visual Representation Learning](https://arxiv.org/pdf/1901.01703.pdf)
