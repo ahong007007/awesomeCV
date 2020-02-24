@@ -4,13 +4,24 @@
 
 ---
 
+## Table of Contents
+
+- [Framework](#Framework)
+- [survey](#survey)
+- [backbone](#backbone)
+- [Tiny Backbone](#Tiny Backbone)
+- [Attention](#Attention)
+- [Attention](#Knowledge)
+- [multilabel-classification](#multilabel-classification)
+- [others](#others)
+
+---
+
 ## Framework
 
 -PyTorch官方文档框架介绍。
 
   -[PyTorch: An Imperative Style, High-Performance Deep Learning Library](https://arxiv.org/pdf/1912.01703v1.pdf)
-
----
 
 ## survey
 
@@ -29,7 +40,6 @@ FPN/ResNet/ResNeXt/DLA/DenseNet等模型都在构造各种提高性能的连接�
 网络随机生成器。Res2Net的基本结构很容易理解，基本单元拆分Res2Net为分组卷积和SENet，显著降低计算量同时提高准确率。论文
 在分类，检测，语义分割，实体分割，显著性分割等领域均做了充分的实验，比如Res2Net-50相比ResNet-50，在ImageNet数据集
 top-1分类误差降低0.93%，而FLOPs降低69%。期待源码以及更多领域提高性能和实时性。
-
   - [Res2Net: A New Multi-scale Backbone Architecture](https://arxiv.org/pdf/1904.01169.pdf) :star::star::star::star::star:
 
 - CVPR2019论文，印度坎普尔提出一种改进的卷积方式HetConv(Heterogeneous Kernel-Based Convolution)。相比标准卷积，inception mobilenet等提出
@@ -77,7 +87,6 @@ depthwise conv、pointwise conv、groupwise conv减少模型计算量，轮提�
 在Xception论文中，已经证明Depthwise-conv后不接relu会更好效果。
   - [2018][MobileNetV2: Inverted Residuals and Linear Bottlenecks](https://arxiv.org/pdf/1801.04381.pdf)
 
-
 - 威斯康星大学麦迪逊分校和亚马逊等联合提出移动端分类神经网络架构：ANTNets(Attention NesTed Network),相比MobileNetv2，ImageNet
 Top1 提升 0.8%，速度提升20%（157ms iphone 5s).论文主要是设计神经网络，架构基于Block堆叠，每个Block包括1x1，3x3 dwise，Channel attention，Group-wise，
 Inverted Residual Block。Channel attention与SENet不同，论文提出的Channel attention是自适应学习，从输入端到输出端Reduction Ratio (r)逐渐增加。
@@ -85,20 +94,11 @@ Inverted Residual Block。Channel attention与SENet不同，论文提出的Chann
   - 缺点：depth multiplier (a = 1.4)时与MobileNet v2性能接近，差别不明显。
   - [ANTNets: Mobile Convolutional Neural Networks for Resource Efficient Image Classification](https://arxiv.org/pdf/1904.03775.pdf)
 
----  
-
-## others
-
-- Facebook作品，论文没有提出任何模型，或针对特定任务改进。论文任务公开数据集COCO/ImageNet/OpenIamge等对地理位置或收入水平低区域存在偏差，相应的图像数据分布较少。话说假如训练的模型可以识别全球目标的，在欠发达区域使用率也较少吧。
-  - [Does Object Recognition Work for Everyone?](https://arxiv.org/pdf/1906.02659.pdf)
-
 ---
 
 ## Attention
 
-[An Empirical Study of Spatial Attention Mechanisms in Deep Networks](https://arxiv.org/pdf/1904.05873.pdf)
-
----
+- [An Empirical Study of Spatial Attention Mechanisms in Deep Networks](https://arxiv.org/pdf/1904.05873.pdf)
 
 ## Knowledge
 
@@ -112,11 +112,10 @@ Inverted Residual Block。Channel attention与SENet不同，论文提出的Chann
   - ReLU/BN/droupout元素不改变感受野。
   - CNN的感受野通常大于输入分辨率。
   - 深度CNN为保持分辨率每个conv都要加padding，所以等效到输入图像的padding非常大。
-- [A guide to convolution arithmetic for deep learning](https://arxiv.org/pdf/1603.07285.pdf)
 
-- [A guide to receptive field arithmetic for Convolutional Neural Networks](https://medium.com/mlreview/a-guide-to-receptive-field-arithmetic-for-convolutional-neural-networks-e0f514068807)
+  - [A guide to convolution arithmetic for deep learning](https://arxiv.org/pdf/1603.07285.pdf)
 
----
+  - [A guide to receptive field arithmetic for Convolutional Neural Networks](https://medium.com/mlreview/a-guide-to-receptive-field-arithmetic-for-convolutional-neural-networks-e0f514068807)
 
 ## multilabel-classification
 
@@ -124,3 +123,10 @@ TODO 多标签分类问题
 
 - AI Lab开源的ML-Images。
   -[Tencent ML-Images: A Large-Scale Multi-Label Image Database for Visual Representation Learning](https://arxiv.org/pdf/1901.01703.pdf)
+
+---  
+
+## others
+
+- Facebook作品，论文没有提出任何模型，或针对特定任务改进。论文任务公开数据集COCO/ImageNet/OpenIamge等对地理位置或收入水平低区域存在偏差，相应的图像数据分布较少。话说假如训练的模型可以识别全球目标的，在欠发达区域使用率也较少吧。
+  - [Does Object Recognition Work for Everyone?](https://arxiv.org/pdf/1906.02659.pdf)
