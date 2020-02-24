@@ -11,7 +11,7 @@
 - [backbone](#backbone)
 - [Tiny Backbone](#Tiny Backbone)
 - [Attention](#Attention)
-- [Attention](#Knowledge)
+- [Knowledge](#Knowledge)
 - [multilabel-classification](#multilabel-classification)
 - [others](#others)
 
