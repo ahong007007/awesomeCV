@@ -9,7 +9,7 @@
 - [Framework](#Framework)
 - [survey](#survey)
 - [backbone](#backbone)
-- [Tiny Backbone](#Tiny Backbone)
+- [tiny_backbone](#tiny_backbone)
 - [Attention](#Attention)
 - [Knowledge](#Knowledge)
 - [multilabel-classification](#multilabel-classification)
@@ -57,7 +57,7 @@ depthwise conv、pointwise conv、groupwise conv减少模型计算量，轮提�
 
   - [2019][Fixing the train-test resolution discrepancy](https://arxiv.org/pdf/1906.06423.pdf)
 
-- Google大脑团队提出，backbone基于EfficientNet，self-training framework训练CNN，主要训练过程包括1.在ImageNet真值集训练EfficientNet,此为teacher model。 2.基于训练的EfficientNet对没有标签的ImageNet图像(300M图片量),生成伪标签。
+- Google大脑团队提出NoisyStudent，backbone基于EfficientNet，self-training framework训练CNN，主要训练过程包括1.在ImageNet真值集训练EfficientNet,此为teacher model。 2.基于训练的EfficientNet对没有标签的ImageNet图像(300M图片量),生成伪标签。
 3.在ImageNet和伪标签训练集，训练student model，训练完成后的student model变成teacher model。重复迭代以上过程，不断生成新的student model。
   - teacher model训练时没有数据增广策略，而student model时数据采用dropout,Randaugment,stochastic depth策略。
   - 每次生成的student model参数量大于teacher model。
@@ -70,7 +70,7 @@ depthwise conv、pointwise conv、groupwise conv减少模型计算量，轮提�
 
 ---
 
-## Tiny Backbone
+## tiny_backbone
 
 - google经典作品MobileNet.主要Depthwise Separable Convolution替代普通卷积，特征分辨率缩放因子。
   - Depthwise Separable Convolution=Depthwise conv+pointwise conv：具体计算过程示意图可参看material目录。
