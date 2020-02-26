@@ -57,6 +57,7 @@ MaskIoU Head，代码也是facebook 开源框架maskrcnn_benchmark基础上直�
 
 - 阿德雷得大学，华为等联合提出，基于Top down 和bottom Up方的改进。
   - 改进：MaskRCNN的 Mask Head。 Mask RCNN的head 特征分辨率resolution低，没有引入丰富的底层特征。
+  - Feature map 计算更多，但是为什么比MaskRCNN更快？
   - [2020][BlendMask: Top-Down Meets Bottom-Up for Instance Segmentation](https://arxiv.org/pdf/2001.00309.pdf)
 
 ---
