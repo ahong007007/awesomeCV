@@ -2,11 +2,21 @@
 
 ---
 
-## survey/overview/review
+## Table of Contents
+
+- [survey](#survey)
+- [Instance_segmentation](#Instance_segmentation)
+- [Panoptic_Segmentation](#Panoptic_Segmentation)
 
 ---
 
-## Instance segmentation
+## survey
+
+survey/overview/review
+
+---
+
+## Instance_segmentation
 
 - Mask R-CNN是何凯明在实体分割的奠基之作，实体分割基本延续Mask R-CNN的框架,也是延续Faster RCNN框架，增加Mask分支，实现多任务的学习。
 框架包括ResNet-FPN+Fast RCNN+Mask。
@@ -24,9 +34,9 @@
 
 - CVPR2019论文，华中科技大学和地平线联合提出。Motivation来自于Mask RCNN的有classification和classification score，但是Mask
 没有score，导致的mask quality不匹配（引入Mask IoU计算，避免detection IoU相同而mask无法优化的问题）。论文在Mask RCNN基础上增加
-MaskIoU Head，代码也是facebook 开源框架maskrcnn_benchmark基础上直接修订，简单有效。论文的Ablation study实验证明：a.MaskIoU的框架最有效方式，
-b.target category训练方式。个人感觉MaskIoU和score不是线性相关，应该还有很多坑可以填。
-
+MaskIoU Head，代码也是facebook 开源框架maskrcnn_benchmark基础上直接修订，简单有效。论文的Ablation study实验证明：
+  - a.MaskIoU的框架最有效方式，
+  - b.target category训练方式。个人感觉MaskIoU和score不是线性相关，应该还有很多坑可以填。
   - [Mask Scoring R-CNN](https://arxiv.org/pdf/1903.00241.pdf)
   
 - CVPR2019论文，香港中文大学，商汤等联合提出，1st in the COCO 2018 Challenge Object Detection Task。实体分割是目标检测和语义分割结合，
@@ -45,11 +55,12 @@ b.target category训练方式。个人感觉MaskIoU和score不是线性相关，
 - 阿德雷得大学，字节跳动联合提出实例分割方法：整体框架类似于YOLO，bottom-up学习像素属于同一个实例的办法(DenseRePoints,polygen,SSAP)。
   - [2019][SOLO: Segmenting Objects by Locations](https://arxiv.org/pdf/1912.04488.pdf)
 
--阿德雷得大学，华为等联合提出，基于Top down 和bottom Up方的改进。
-  -[2020][BlendMask: Top-Down Meets Bottom-Up for Instance Segmentation](https://arxiv.org/pdf/2001.00309.pdf)
+- 阿德雷得大学，华为等联合提出，基于Top down 和bottom Up方的改进。
+  - 改进：MaskRCNN的 Mask Head。 Mask RCNN的head 特征分辨率resolution低，没有引入丰富的底层特征。
+  - [2020][BlendMask: Top-Down Meets Bottom-Up for Instance Segmentation](https://arxiv.org/pdf/2001.00309.pdf)
 
 ---
 
-## Panoptic Segmentation
+## Panoptic_Segmentation
 
 - [2019][Panoptic-DeepLab:A Simple, Strong, and Fast Baseline for Bottom-Up Panoptic Segmentation](https://arxiv.org/pdf/1911.10194.pdf)
