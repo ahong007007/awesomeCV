@@ -1,21 +1,22 @@
 # Scene Text Detection & Recognition
 
-## DataSet
+---
 
-- 本论文主要介绍ICDAR2019 Robust Reading Challenge on Arbitrary-Shaped Text（RRC-ArT）的进展，包括 i)scene text detection, ii)scene text recognition, and iii) scene text spotting(同时包括检测和识别。)
-
-  - [2019.09][ICDAR2019 Robust Reading Challenge on Arbitrary-Shaped Text (RRC-ArT)](https://arxiv.org/pdf/1909.07145.pdf)
-
-- 介绍ICDAR 2019 LSVT(Large-scale Street View Text)数据集，任务，评估方法和竞赛结果摘要。
-
-  - [2019.09][ICDAR 2019 Competition on Large-scale Street View Text with Partial Labeling -RRC-LSVT](https://arxiv.org/pdf/1909.07741.pdf)
-
-- 百度开源C-SVT(Chinese Street View Text)中文街景地图数据集,包含3万真实标注的自然场景数据，40万部分标注数据集。
-  - [ICCV2019][Chinese Street View Text: Large-scale Chinese Text Reading with Partially Supervised Learning](http://openaccess.thecvf.com/content_ICCV_2019/papers/Sun_Chinese_Street_View_Text_Large-Scale_Chinese_Text_Reading_With_Partially_ICCV_2019_paper.pdf)
+- [survey](#survey)
+- [Scene_Text_Detection](#Scene_Text_Detection)
+- [Scene_Text_Recognition](#Scene_Text_Recognition)
+- [DataSet](#DataSet)
 
 ---
 
-## Scene Text Detection
+## survey
+
+- <https://paperswithcode.com/task/scene-text-recognition>
+- <https://paperswithcode.com/task/scene-text-detection>
+
+---
+
+## Scene_Text_Detection
 
 - 商汤和香港中文大学联合提出的场景文字检测模型。基于Mask RCNN框架，不同点在于mask分支，
 mask rcnn预测的是每个像素是否前景和背景，既{0,1}，而论文提出的Pyramid Mask Text Detector.
@@ -34,7 +35,7 @@ mask rcnn预测的是每个像素是否前景和背景，既{0,1}，而论文提
 
 Look More Than Once: An Accurate Detector for Text of Arbitrary Shapes
 
-## Scene Text Recognition
+## Scene_Text_Recognition
 
 - 论文提出一个框架模型，包括Spatial Transformer Network，Feature extraction，Sequence modeling，predictor，每个
 阶段采用主流的方法，共2×3×2×2= 24种实现方式，从准确率最高的反推，应该是(默认已经检测或分割后的文字区域)STN+Backbone+BiLSTM+
@@ -51,6 +52,15 @@ Attention模型可以取得最佳效果（没有考虑实时性）。再次证�
 1、ICCV2017----Focusing Attention: Towards Accurate Text Recognition in Natural Images[pdf](https://arxiv.org/pdf/1709.02054.pdf)[1709.02]
 
 ## Datasets
+
+- 本论文主要介绍ICDAR2019 Robust Reading Challenge on Arbitrary-Shaped Text（RRC-ArT）的进展，包括 i)scene text detection, ii)scene text recognition, and iii) scene text spotting(同时包括检测和识别。)
+  - [2019.09][ICDAR2019 Robust Reading Challenge on Arbitrary-Shaped Text (RRC-ArT)](https://arxiv.org/pdf/1909.07145.pdf)
+
+- 介绍ICDAR 2019 LSVT(Large-scale Street View Text)数据集，任务，评估方法和竞赛结果摘要。
+  - [2019.09][ICDAR 2019 Competition on Large-scale Street View Text with Partial Labeling -RRC-LSVT](https://arxiv.org/pdf/1909.07741.pdf)
+
+- 百度开源C-SVT(Chinese Street View Text)中文街景地图数据集,包含3万真实标注的自然场景数据，40万部分标注数据集。
+  - [ICCV2019][Chinese Street View Text: Large-scale Chinese Text Reading with Partially Supervised Learning](http://openaccess.thecvf.com/content_ICCV_2019/papers/Sun_Chinese_Street_View_Text_Large-Scale_Chinese_Text_Reading_With_Partially_ICCV_2019_paper.pdf)
 
 | Dataset (Year) | Image Num (train/test) | Text Num (train/test) | Orientation| Language| Characteristics | Detec/Recog Task |
 |:------:|:------:|:------:|:------:|:------:|:------:|:------:|

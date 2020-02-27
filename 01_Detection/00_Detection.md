@@ -1,8 +1,23 @@
 # Detection
 
+## Table of Contents
+
+- [survey](#survey)
+- [Facial_Detector](#Facial_Detector)
+- [Object_Detection](#Object_Detection)
+- [Tiny](#Tiny)
+- [Imbalance](#Imbalance)
+- [loss](#loss)
+- [one_stage](one_stage)
+
 ---
 
-## survey/overview/review
+## survey
+
+- survey/overview/review
+
+- state of art
+  - <https://paperswithcode.com/sota/object-detection-on-coco>
 
 - 香港中文大学，商汤等联合提出的MMDetection，包括检测模型，实体分割等state-of-art模型框架源码，属业界良心。
 
@@ -23,12 +38,9 @@
 - 西弗吉尼亚大学提出一种评估目标检测理论准确率上限：91.6% on VOC (test2007), 78.2% on COCO (val2017), and 58.9% on OpenImages V4 (validation)。
   - [2019][Empirical Upper-bound in Object Detection and More](https://arxiv.org/pdf/1911.12451.pdf)
   
-- state of art
-  - <https://paperswithcode.com/sota/object-detection-on-coco>
-
 ---
 
-## Facial Detector
+## Facial_Detector
 
 - 天津大学、武汉大学、腾讯AI实验室提出的人脸检测模型，主要针对移动端设计（backbone MobileNet v2)在高通845上达到140fps的实时性。论文主要提出一个解决类别不均衡问题（侧脸、正脸、抬头、低头、表情、遮挡等各种类型）：增加困难类别和样本的损失函数权重。
 
@@ -39,7 +51,7 @@
 
 ---
 
-## object Detection
+## Object_Detection
 
 - 目标检测领域的奠基之作，王少青，何凯明，Ross Girshick以及孙剑等强强联手。
 论文是RCNN系列的延续，主要包括三个部分：backbone ,Region Proposal Network以及head(包括RoI pooling)。主流两阶段框架也是在此基础上修正。
@@ -125,11 +137,18 @@ RefineDetLite++在MSCOCO数据集29.6AP&131ms。
 
 ## loss
 
-  - [Generalized Intersection over Union: A Metric and A Loss for Bounding Box Regression](https://arxiv.org/pdf/1902.09630.pdf)[2019.02]
+- [Generalized Intersection over Union: A Metric and A Loss for Bounding Box Regression](https://arxiv.org/pdf/1902.09630.pdf)[2019.02]
+
+- AAAI2020论文，天津大学，中国人民公安大学等提出。IoU预测目标框是目标检测领域的重要组成。常规IoU loss计算方法,仅用于候选框和gt有交叠区域，无交叠时没有梯度生成。GIoU loss惩罚项，但是gt和候选框存在包关系时直接退化为IoU。论文在两个loss基础上引入惩罚项，提出Distance-IoU(DIoU) Loss和Complete IoU(CIoU) Loss用于目标检测BBox进一步回归，收敛速度快，准确率高，容易集成于NMS。
+  - DIoU Loss可以直接最小化两个目标框的距离，在包含框在水平或垂直方向时，回归loss下降更快。
+  - Complete IoU(CIoU),包含交叠像素面积,中心点距离，长宽比，可以更好描述检测框的位置关系。
+  - NMS阶段使用DIoU作为评价尺度，同时考虑IoU和中心点距离，进一步提高目标检测性能。
+  - 论文提出的trick，在PASAC2007和COCO2017均明显涨点。在state-of-art模型比如Cascade R-CNN等，是否有进一步良好表现？
+  - [2019][Distance-IoU Loss: Faster and Better Learning for Bounding Box Regression](https://arxiv.org/pdf/1911.08287.pdf) :star::star::star::star::star:
 
 ---
 
-## one-stage
+## one_stage
 
 - 商汤和香港中文大学联合提出，ICLR2019论文，实在没看懂啥意思。
 
@@ -164,19 +183,12 @@ NVIDIA Tesla P100 GPU运行，CenterNet511-104 340ms/image，比CornerNet511-104
   - 目标检测一般划分为anchorbased and anchor-free。anchorbased可划分为one stage 和two stage；anchor-free可细分为keypoint-based和center-based。
   - ATSS过程很容易理解，替代直接使用IOU作为候选框的阈值，首先选择ground-truth中心最近的k个候选框，计算均值和方差作为IOU阈值，去除中心点在检测目标之外的候选框。整个过程中只有一个超参数k，且对模型影响小。
   - 论文没有多网络模型任何改进，仅仅是训练时样本的改进，大道至简，返璞归真。
-  - [2019][Bridging the Gap Between Anchor-based and Anchor-free Detection via Adaptive Training Sample Selection](https://arxiv.org/pdf/1912.02424v1.pdf)
+  - [2019][Bridging the Gap Between Anchor-based and Anchor-free Detection via Adaptive Training Sample Selection](https://arxiv.org/pdf/1912.02424v1.pdf) :star::star::star::star::star:
   - <https://github.com/sfzhang15/ATSS>
-
-- AAAI2020论文，天津大学，中国人民公安大学等提出。IoU预测目标框是目标检测领域的重要组成。常规IoU loss计算方法,仅用于候选框和gt有交叠区域，无交叠时没有梯度生成。GIoU loss惩罚项，但是gt和候选框存在包关系时直接退化为IoU。论文在两个loss基础上引入惩罚项，提出Distance-IoU(DIoU) Loss和Complete IoU(CIoU) Loss用于目标检测BBox进一步回归，收敛速度快，准确率高，容易集成于NMS。
-  - DIoU Loss可以直接最小化两个目标框的距离，在包含框在水平或垂直方向时，回归loss下降更快。
-  - Complete IoU(CIoU),包含交叠像素面积,中心点距离，长宽比，可以更好描述检测框的位置关系。
-  - NMS阶段使用DIoU作为评价尺度，同时考虑IoU和中心点距离，进一步提高目标检测性能。
-  - 论文提出的trick，在PASAC2007和COCO2017均明显涨点。在state-of-art模型比如Cascade R-CNN等，是否有进一步良好表现？
-  - [2019][Distance-IoU Loss: Faster and Better Learning for Bounding Box Regression](https://arxiv.org/pdf/1911.08287.pdf)
 
 ---
 
-## NMS系列
+## NMS_Series
 
 2017----Soft-NMS----Improving Object Detection With One Line of Code
 
@@ -202,7 +214,7 @@ maskrcnn-benchmark
 
 ---
 
-# tricks
+## tricks
 
 1.backbone与特征提取
 
@@ -230,7 +242,7 @@ UnitBox，IoU-Net，GIoU
 
 类别不平衡（增加样本）,数据增强
 
-# 待记录
+## 待记录
 
 Adaptive NMS: Refining Pedestrian Detection in a Crowd.[pdf](https://arxiv.org/pdf/1904.03629.pdf)
 
