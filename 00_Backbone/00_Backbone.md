@@ -30,6 +30,8 @@
   -[A Survey of the Recent Architectures of Deep Convolutional Neural Networks](https://arxiv.org/pdf/1901.06032.pdf)
 
 - <https://paperswithcode.com/task/image-classification>
+- <https://www.reddit.com/r/computervision/>
+- <https://www.reddit.com/r/MachineLearning/>
 
 ---
 
