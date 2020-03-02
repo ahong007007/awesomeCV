@@ -19,9 +19,12 @@
 
 ## Framework
 
--PyTorch官方文档框架介绍。
+- PyTorch官方文档框架介绍。
 
-  -[PyTorch: An Imperative Style, High-Performance Deep Learning Library](https://arxiv.org/pdf/1912.01703v1.pdf)
+  - [PyTorch: An Imperative Style, High-Performance Deep Learning Library](https://arxiv.org/pdf/1912.01703v1.pdf)
+- 阿里巴巴退出移动端加速推断框架。
+  - [MNN: A Universal and Efficient Inference Engine](https://arxiv.org/pdf/2002.12418.pdf)
+  - <https://github.com/alibaba/MNN>
 
 ## survey
 
