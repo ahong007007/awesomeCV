@@ -1,18 +1,30 @@
 # Point cloud
 
-
 <h3> Keywords </h3>
 
-__`dat.`__: dataset &emsp; | &emsp; __`cls.`__: classification &emsp; | &emsp; __`rel.`__: retrieval &emsp; | &emsp; __`sem.`__: semantic segmentation     
-__`ins.`__: instance segmentation &emsp; |__`det.`__: detection &emsp; | &emsp; __`tra.`__: tracking &emsp; | &emsp; __`pos.`__: pose &emsp; | &emsp; __`dep.`__: depth     
-__`reg.`__: registration &emsp; | &emsp; __`rec.`__: reconstruction &emsp; | &emsp; __`auto`__: autonomous driving     
+__`dat.`__: dataset &emsp; | &emsp; __`cls.`__: classification &emsp; | &emsp; __`rel.`__: retrieval &emsp; | &emsp; __`sem.`__: semantic segmentation
+__`ins.`__: instance segmentation &emsp; |__`det.`__: detection &emsp; | &emsp; __`tra.`__: tracking &emsp; | &emsp; __`pos.`__: pose &emsp; | &emsp; __`dep.`__: depth
+__`reg.`__: registration &emsp; | &emsp; __`rec.`__: reconstruction &emsp; | &emsp; __`auto`__: autonomous driving
 __`oth.`__: other, including normal-related, correspondence, mapping, matching, alignment, compression, generative model...
 
 Statistics: :fire: code is available or the paper is very important
 
+## Table of Contents
+
+- [survey](#survey)
+- [benchmark](#benchmark)
+- [RGB-D](#RGB-D)
+- [classification](#classification)
+- [3D-object-detection](#3D-object-detection)
+- [Segmentation](#Segmentation)
+- [6D—Pose-Estimation](#6D—Pose-Estimation)
+- [Geodesic-topology](#Geodesic-topology)
+
 ---
 
-## survey/review/overview
+## survey
+
+survey/review/overview
 
 - [2017][a review of point clouds segmentation and classification algorithms](https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/XLII-2-W3/339/2017/isprs-archives-XLII-2-W3-339-2017.pdf)
 
@@ -33,14 +45,11 @@ Statistics: :fire: code is available or the paper is very important
 
 - https://paperswithcode.com/task/3d-part-segmentation/latest
 - http://kaldir.vc.in.tum.de/scannet_benchmark/
-
-## Tutorials
-
 - <https://yochengliu.github.io/files/Report_JIANGMEN_2019-08.pdf>
 
 ---
 
-# RGB-D
+## RGB-D
 
 - CVPR2019论文，出自于大名鼎鼎李飞飞组，提出模型，一个用于估计RGB-D图像中已知目标6D姿态的通用框架
 （类似于视频处理的two-stream，分别处理RGB图像和深度图像,DenseFusion融合两路特征）。在YCB-Video
@@ -49,7 +58,7 @@ Statistics: :fire: code is available or the paper is very important
 
 ---
 
-## classification/Backbone
+## classification
 
 - 斯坦福大学提出，点云领域的经典论文，用于解决点云分类，语义分割和目标识别(分类和分割任务共用backbone)。
 PointNet之前的方法集中在点云投影二维平面，点云划分Voxel等方式。而本文直接对点云操作。点云具有无序，局部相关性，平移不变性(旋转，平移)三个特征。论文同时提出两个结论：(1)PointNet的网络结构能够拟合任意的连续集合函数，(2)PointNet能够总结出表示某类物体形状的关键点，基于这些关键点PointNet能够判别物体的类别。
@@ -89,7 +98,7 @@ PointNet之前的方法集中在点云投影二维平面，点云划分Voxel等�
 
 ---
 
-## 3D object detection
+## 3D-object-detection
 
 - 香港中文大学提出，基于Point cloud->3D Box的3D目标检测方法，基本原理类似2D RCNN结构，两阶段方式：stage-1 基于bottom-up，对点云数据分割前景和背景，生成3D建议候选框，stage-2
 网络将全局语义特征和局部空间特征结合起来，对3D候选框进行优化。
@@ -155,22 +164,24 @@ SUN RGB-D具有良好表现。 CNN在3D object classification ,3D object detecti
   - 论文提出随机降采样策略：
   - 论文提出有效的局部特征聚合模块使得网络模型适用于增加大规模点云感受野。
   - [2020][CVPR][RandLA-Net: Efficient Semantic Segmentation of Large-Scale Point Clouds](https://arxiv.org/pdf/1911.11236.pdf)
+  - <https://github.com/QingyongHu/RandLA-Net>
 
 ---
 
-# 6D—Pose Estimation
+## 6D—Pose-Estimation
 
 - CVPR2019论文，浙江大学提出6D Pose Estimation，输入2D图片和3D模型特征数据，在3D空间中检测目标的位置和姿态，应用之一是实现AR中目标的运动估计。
 
   - [CVPR][2019][PVNet: Pixel-wise Voting Network for 6DoF Pose Estimation](https://arxiv.org/pdf/1812.11788.pdf)
+
 ---
-# Geodesic topology
+
+## Geodesic-topology
 
 - CVPR2019 oral,旷视西雅图研究院提出的基于测地距离的点云分析深度网络GeoNet，个人理解主要针对不连续点云建立拓扑逻辑关系，可用于点云上采样、法向量估计、网格重建及非刚性形状分类等。
   - [2019][CVPR][GeoNet: Deep Geodesic Networks for Point Cloud Analysis](https://arxiv.org/pdf/1901.00680.pdf)
 
 ---
-
 
 ## 待阅读
 
@@ -178,8 +189,6 @@ pvnet,SqueezeSeg ，20190723分享
 https://zhuanlan.zhihu.com/p/44809266
 
 VoteNet层次理解
-
-
 Unstructured point cloud semantic labeling using deep segmentation networks
 Generalizing discrete convolutions for unstructured point clouds
 Point Cloud Oversegmentation with Graph-Structured Deep Metric Learning
@@ -187,9 +196,7 @@ PointPillars: Fast Encoders for Object Detection from Point Cloud
 RepNet: Weakly Supervised Training of an Adversarial Reprojection Network for 3D Human Pose Estimation	cvpr2019
 SGPN: Similarity Group Proposal Network for 3D Point Cloud Instance Segmentation
 
-
 Deep hough voting for 3d object detection in point clouds
-
 
 3124,L3-Net: Towards Learning based LiDAR Localization for Autonomous Driving,Weixin Lu (Baidu ADU)
 
