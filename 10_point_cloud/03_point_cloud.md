@@ -89,13 +89,6 @@ PointNet之前的方法集中在点云投影二维平面，点云划分Voxel等�
 
 ---
 
-## pointcloud registration
-
-- ICCV2017论文，在学习open3d时做实验看到，主要是对彩色点云对齐。
-  - [ICCV2017][Colored Point Cloud Registration Revisited](http://openaccess.thecvf.com/content_ICCV_2017/papers/Park_Colored_Point_Cloud_ICCV_2017_paper.pdf)
-
----
-
 ## 3D object detection
 
 - 香港中文大学提出，基于Point cloud->3D Box的3D目标检测方法，基本原理类似2D RCNN结构，两阶段方式：stage-1 基于bottom-up，对点云数据分割前景和背景，生成3D建议候选框，stage-2
@@ -158,11 +151,14 @@ SUN RGB-D具有良好表现。 CNN在3D object classification ,3D object detecti
   
   - [CVPR2019][Associatively Segmenting Instances and Semantics in Point Clouds](https://arxiv.org/pdf/1902.09852.pdf)[__`sem.`__.__`ins.`__]:fire:
 
-- 
-  -[2019][One Framework to Register Them All: PointNet Encoding for Point Cloud Alignment](https://arxiv.org/pdf/1912.05766v1.pdf)
+- PointNet系列论文只能在small-scale点云实现语义分割，对于large scale只能通过切分方式，这种切分会让一个物体变成两个物体。论文任务传统降采样方法代价昂贵，特征学习模块代价高，特征感受野受限。
+  - 论文提出随机降采样策略：
+  - 论文提出有效的局部特征聚合模块使得网络模型适用于增加大规模点云感受野。
+  - [2020][CVPR][RandLA-Net: Efficient Semantic Segmentation of Large-Scale Point Clouds](https://arxiv.org/pdf/1911.11236.pdf)
 
 ---
-# 6D Pose Estimation
+
+# 6D—Pose Estimation
 
 - CVPR2019论文，浙江大学提出6D Pose Estimation，输入2D图片和3D模型特征数据，在3D空间中检测目标的位置和姿态，应用之一是实现AR中目标的运动估计。
 
