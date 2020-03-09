@@ -18,7 +18,7 @@ Statistics: :fire: code is available or the paper is very important
 - [classification](#classification)
 - [3D-object-detection](#3D-object-detection)
 - [Segmentation](#Segmentation)
-- [6D—Pose-Estimation](#6D—Pose-Estimation)
+- [6D-Pose-Estimation](#6D—Pose-Estimation)
 - [Geodesic-topology](#Geodesic-topology)
 
 ---
@@ -45,6 +45,7 @@ survey/review/overview
 ## benchmark
 
 - <https://paperswithcode.com/task/3d-part-segmentation/latest>
+- <https://paperswithcode.com/area/computer-vision/3d>
 - <http://kaldir.vc.in.tum.de/scannet_benchmark/>
 - <https://yochengliu.github.io/files/Report_JIANGMEN_2019-08.pdf>
 
@@ -178,7 +179,7 @@ SUN RGB-D具有良好表现。 CNN在3D object classification ,3D object detecti
 
 ---
 
-## 6D—Pose-Estimation
+## 6D-Pose-Estimation
 
 - CVPR2019论文，浙江大学提出6D Pose Estimation，输入2D图片和3D模型特征数据，在3D空间中检测目标的位置和姿态，应用之一是实现AR中目标的运动估计。
 
