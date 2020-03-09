@@ -14,6 +14,7 @@ Statistics: :fire: code is available or the paper is very important
 - [survey](#survey)
 - [benchmark](#benchmark)
 - [RGB-D](#RGB-D)
+- [Augment](#Augment)
 - [classification](#classification)
 - [3D-object-detection](#3D-object-detection)
 - [Segmentation](#Segmentation)
@@ -43,8 +44,8 @@ survey/review/overview
 
 ## benchmark
 
-- https://paperswithcode.com/task/3d-part-segmentation/latest
-- http://kaldir.vc.in.tum.de/scannet_benchmark/
+- <https://paperswithcode.com/task/3d-part-segmentation/latest>
+- <http://kaldir.vc.in.tum.de/scannet_benchmark/>
 - <https://yochengliu.github.io/files/Report_JIANGMEN_2019-08.pdf>
 
 ---
@@ -57,6 +58,15 @@ survey/review/overview
   - [CVPR2019][DenseFusion: 6D Object Pose Estimation by Iterative Dense Fusion](https://arxiv.org/pdf/1901.04780.pdf)
 
 ---
+
+## Augment
+
+- 香港中文大学提出的，点云增强方法。
+  - 点云稀疏性，单点云规模一般较大，需要做增强？构建大规模场景数据集，相比ImageNet的困难在哪里？
+  - PointAugment framework中，feedback的理论依据？ #TODO
+  - 论文只是在ModelNet40做验证，是否过拟合，有更复杂一些数据集可验证性能？
+  - [2020][CVPR][PointAugment: an Auto-Augmentation Framework for Point Cloud Classification](https://arxiv.org/pdf/2002.10876.pdf)
+  - <https://github.com/liruihui/PointAugment>
 
 ## classification
 
