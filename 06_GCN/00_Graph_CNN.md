@@ -1,4 +1,19 @@
-# overview
+# Graph CNN
+
+---
+
+## Table of Contents
+
+- [survey](#survey)
+- [awesome](#awesome)
+- [classifier](#classifier)
+- [ReID](#ReID)
+- [tracking](#tracking)
+- [Multi-Label](#Multi-Label)
+
+---
+
+## survey
 
 - [Deep Learning on Graphs: A Survey](https://arxiv.org/pdf/1812.04202.pdf)
 
@@ -14,11 +29,19 @@
 - GCN kernel介绍
   - [2019][Graph Kernels: A Survey](https://arxiv.org/pdf/1904.12218.pdf)
 
-## about awesome
+
+---
+
+## awesome
 
 - [naganandy/graph-based-deep-learning-literature](https://github.com/naganandy/graph-based-deep-learning-literature)
 
-## Classification
+- 图卷积网络评测集。
+  - [Open Graph Benchmark](https://ogb.stanford.edu/)
+
+---
+
+## classification
 
 1、CVPR 2019论文，中山大学和加利福尼亚大学洛杉矶分校联合提出，主要提出Graph CNN代替CNN实现分类和分割等计算机视觉任务。论文用数学定义
 Graph CNN是MLP，CNN，non-local network更抽象定义，在ImageNet-1k Classification， COCO Object Detection and Segmentation以及
@@ -26,15 +49,21 @@ CUHK03 Person Re-identification均有不俗战绩。论文的代码已经开源�
 
 Adaptively Connected Neural Networks.[pdf](https://arxiv.org/pdf/1904.03579.pdf)
 
+---
+
 ## ReID
 
 Learning Context Graph for Person Search.[pdf](https://arxiv.org/pdf/1904.01830.pdf)
+
+--- 
 
 ## tracking
 
 Graph Convolutional Tracking
 
 http://nlpr-web.ia.ac.cn/mmc/homepage/jygao/gct_cvpr2019.html#
+
+---
 
 ## Multi-Label
 
