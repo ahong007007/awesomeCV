@@ -18,9 +18,22 @@ LSP, FashionPose, PASCAL Person Layout,J-HMDB, MSCOCO, MPII, AI Challenger
 
 ## awesome_blog
 
-[An Overview of Human Pose Estimation with Deep Learning](https://medium.com/beyondminds/an-overview-of-human-pose-estimation-with-deep-learning-d49eb656739b)
+- [An Overview of Human Pose Estimation with Deep Learning](https://medium.com/beyondminds/an-overview-of-human-pose-estimation-with-deep-learning-d49eb656739b)
+- [A 2019 guide to Human Pose Estimation with Deep Learning](https://nanonets.com/blog/human-pose-estimation-2d-guide/)
 
 ## 2D_Human_Pose_Estimation
+
+- top-down
+  - CPM
+  - Hourglass
+  - CPN
+  - Simple Baselines
+  - HRNet
+  - MSPN
+- bottom-up
+  - openpose
+  - Hourglass+Associative Embedding
+  - HigherHRNet
 
 - CVPR2019论文，微软和中科大联合提出。一般CNN是先降低网络的特征分辨率再恢复高分辨率，容易损失特征。
 作者提出保存高分辨率的网络架构，降低降采样的频率和多尺度融合。保存的特征分辨率高意味着运算量大，不能做到实时性。
@@ -35,6 +48,12 @@ COCO，MPII test，PoseTrack2017取得较高的准确率，但是实时性避而
   - flip没有对齐，分类，检测，分割都有可能存在类似的问题？
   - backbone基于HRNet，直接提高1AP，而模型增加的计算量较少。
   -[2019][The Devil is in the Details: Delving into Unbiased Data Processing for Human Pose Estimation](https://128.84.21.199/pdf/1911.07524.pdf)
+
+- HRNet是Top-down结构。HigherHRNet是Bottom-up,主要解决scale variation和small person的问题。
+  - 采用Image pyramid，推图像上采样，生成的feature map融合：Heatmap Aggregation。
+  - 特征金字塔在经典检测和分割应用较多，用其他领域的idear对本领域的更新，属于组合创新吧。
+  - [2020][CVPR][HigherHRNet: Scale-Aware Representation Learning for Bottom-Up Human Pose Estimation](https://arxiv.org/pdf/1908.10357.pdf)
+  - <https://github.com/HRNet/Higher-HRNet-Human-Pose-Estimation>
 
 ## 3D_Human_Pose_Estimation
 
