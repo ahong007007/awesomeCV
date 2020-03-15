@@ -38,8 +38,10 @@ survey/overview/review
 
 - [D-X-Y/Awesome-NAS](https://github.com/D-X-Y/Awesome-NAS)
 - [awesome-automl-papers](https://github.com/hibayesian/awesome-automl-papers)
-- https://github.com/datasystemsgrouput/automl_survey
-- https://paperswithcode.com/task/automl
+- <https://github.com/datasystemsgrouput/automl_survey>
+- <https://paperswithcode.com/task/automl>
+- google开源自家的autoML设计。
+  - <https://github.com/google/automl>
 
 ---
 
