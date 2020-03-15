@@ -2,6 +2,11 @@
 
 ---
 
+## survey
+
+- 浪潮发布关于超参数优化的论文综述:包括超参数设计中的搜索空间和搜索算法，较为全面。
+  - [2020][Hyper-Parameter Optimization: A Review of Algorithms and Applications](https://arxiv.org/pdf/2003.05689.pdf)
+
 ## Convolution Operator
 
 - Why GEMM is at the heart of deep learning
