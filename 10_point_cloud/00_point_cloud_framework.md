@@ -20,7 +20,7 @@ non-Euclidean没有griddded array的数据属性.
   - 缺点：Multi-group Head是每一类一组。因为 nuScenes 3D Detection Challenge是10类别，论文框架是10组。当数据集有80或跟更多类别，需要N个Head? 模型
   的可扩展能力较弱。
   - [Class-balanced Grouping and Sampling for Point Cloud 3D Object Detection](https://arxiv.org/pdf/1908.09492.pdf)
-  - https://github.com/poodarchu/Det3D
+  - <https://github.com/poodarchu/Det3D>
   
 - 英伟达发布点云加速框架Kaolin。  
   - [Kaolin: A PyTorch Library for Accelerating 3D Deep Learning Research](https://arxiv.org/pdf/1911.05063v2.pdf)
@@ -51,7 +51,7 @@ and Analysis of Shapes: lecture 7](http://www.enseignement.polytechnique.fr/info
 ## SfM
 
 - 使用LF-Net进行三维重建"，在OpenMVG中集成特征检测算法.
-  - https://www.jianshu.com/p/f198c7b39193
+  - <https://www.jianshu.com/p/f198c7b39193>
 
 VisualSFM: A Visual Structure from Motion System
 Colmap: a general-purpose Structure-from-Motion (SfM) and Multi-View Stereo (MVS) pipeline with a graphical and command-line interface.
