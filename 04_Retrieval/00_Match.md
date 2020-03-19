@@ -1,4 +1,16 @@
-# overview/review/survey
+# match
+
+## Table of Contents
+
+- [survey](#survey)
+- [Dataset](#backbone)
+- [benchmark](#benchmark)
+- [Detector](#Detector)
+- [Descriptors](#Descriptors)
+
+## survey
+
+overview/review/survey
 
 - TPAMI综述，包含从SIFT到2017年的图像检索发展。
   - [SIFT Meets CNN: A Decade Survey of Instance Retrieval](https://arxiv.org/pdf/1608.01807.pdf)
@@ -103,7 +115,6 @@
 - 中科院自动化所提出，CVPR2017论文，提取一种基于孪生网络提取图像块描述子方法。论文主要有三个创新工作：
   - progressive sampling strategy：随机采样获取正样本和负样本，通过L2范数计算特征描述子的距离矩阵。
   - 损失函数包括：描述子相似性，描述子紧密性，中间过程特征。
-  - 
   - [2017][CVPR][L2-Net: Deep Learning of Discriminative Patch Descriptor in Euclidean Space](http://www.nlpr.ia.ac.cn/fanbin/pub/L2-Net_CVPR17.pdf)
   - <https://github.com/yuruntian/L2-Net>
 
@@ -140,7 +151,7 @@ Fine-tuning和Attention-based训练。模型训练集只需要分类的标注，
 3.借助于区域特征融合R-ASMK(regional aggregated selective match kernel)，实现图像鉴别：第一阶段生成VLAD描述子，第二阶段基于求和池化和归一化。
 论文提出的模型以大欺小，基于Google Landmarks dataset数据训练的模型DELF-GLD，在ROxford 和RParis 数据集实现state-of-art水平。
 
-  - DELF在线计算平台[https://colab.research.google.com/github/tensorflow/hub/blob/master/examples/colab/tf_hub_delf_module.ipynb#scrollTo=mVaKXT3cMSib]
+  - DELF在线计算平台<https://colab.research.google.com/github/tensorflow/hub/blob/master/examples/colab/tf_hub_delf_module.ipynb#scrollTo=mVaKXT3cMSib>
   - [2019][CVPR][Detect-to-Retrieve: Efficient Regional Aggregation for Image Search](https://arxiv.org/pdf/1812.01584.pdf) 
 
 - 巴黎多芬纳大学,微软等联合提出D2-Net，基于CNN提取描述子特征。传统提取特征的SIFT等是先检测关键点再提取描述子方式(detect-then-describe)，特征是稀疏的。
@@ -161,7 +172,6 @@ Fine-tuning和Attention-based训练。模型训练集只需要分类的标注，
 
 - Landmarks CVPR19 workshop论文。Google Landmark检索第一名和识别第三名。看这篇论文用了很多tricks,Google-Landmarks-v2数据清洗，backbone集成6个模型：FishNet-150,ResNet-101和ResNetXt101等，
 损失函数结合人脸识别的cosine-based softmax losses。cosine annealing,mean-pooling (GeM)，finetuning,Discriminative-Reranking等。从实验数据看，Ensemble 6 models仅提升1%，但是实时性应该打折扣。
-
   - [2019][Large-scale Landmark Retrieval/Recognition under a Noisy and Diverse Dataset](https://arxiv.org/pdf/1906.04087v2.pdf)
   - <https://github.com/lyakaap/Landmark2019-1st-and-3rd-Place-Solution>
   - <https://drive.google.com/file/d/1QmC4UKRhIXNW-sa8jxV5b7I6QbPKvJsi/view>
@@ -174,7 +184,7 @@ Fine-tuning和Attention-based训练。模型训练集只需要分类的标注，
   -[2019][NIPS][R2D2: Repeatable and Reliable Detector and Descriptor](https://arxiv.org/pdf/1906.06195.pdf)
 
 - 强化学习在图像特征匹配中的应用。
-  -[2019][Reinforced Feature Points:Optimizing Feature Detection and Description for a High-Level Task](https://arxiv.org/pdf/1912.00623.pdf) 
+  -[2019][Reinforced Feature Points:Optimizing Feature Detection and Description for a High-Level Task](https://arxiv.org/pdf/1912.00623.pdf)
 
 ---
 
@@ -183,7 +193,6 @@ Fine-tuning和Attention-based训练。模型训练集只需要分类的标注，
 - CVPR2019论文科技大学提出，两种增强局部特征描述符上下文信息的方法：high level图像表示的视觉上下文信息和关键点分布的几何上下文信息。
   - [2019][CVPR][ContextDesc: Local Descriptor Augmentation with Cross-Modality Context](https://arxiv.org/pdf/1904.04084.pdf):star: :star: :star: :star: :star:
   - <https://github.com/lzx551402/contextdesc>
-  
   -[2019][CVPR][SOSNet:Second Order Similarity Regularization for Local Descriptor Learning]
   - <https://github.com/yuruntian/SOSNet>
 
@@ -193,14 +202,13 @@ Fine-tuning和Attention-based训练。模型训练集只需要分类的标注，
 
 - NIPS2019论文，浙江大学提出，主要解决在不同视角图像的匹配关系。论文不是在旋转图像上直接提取特征，而是包含两个分支：直接在旋转图像的特征金字塔提取特征和在变化图像的特征金字塔提取特征，再经过分组卷积和
 Bilinear Pool，提取像素的描述符。模型需要和特征检测器(Superpoint/DoG/LF-Net)配合，不是end-to-end方式。如论文使用的评测数据集HPSequences和SUN3D数据量都不足1K,对比试验也仅仅基于SIFT和GeoDesc，实验数据不具有代表性，但是提出对图像/特征均进行映射变变换，具有参考意义。
-  - [NIPS][2019][GIFT: Learning Transformation-Invariant Dense Visual Descriptors via Group CNNs](https://arxiv.org/pdf/1911.05932.pdf) 
+  - [NIPS][2019][GIFT: Learning Transformation-Invariant Dense Visual Descriptors via Group CNNs](https://arxiv.org/pdf/1911.05932.pdf)
 
 ---
 
 ## Geometric verification
 
 - CVPR2019论文，对RANSAC的改进。包含第三方python库pymagsac，可以无缝替代RANSAC。
-
   -[2019][MAGSAC++, a fast, reliable and accurate robust estimator](https://arxiv.org/pdf/1912.05909v1.pdf)
   -<https://github.com/ducha-aiki/pymagsac>
 
