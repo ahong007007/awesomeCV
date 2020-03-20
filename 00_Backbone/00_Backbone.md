@@ -58,10 +58,11 @@ depthwise conv、pointwise conv、groupwise conv减少模型计算量，轮提�
 
   - [EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks](https://arxiv.org/pdf/1905.11946.pdf)
 
-- FaceBook作品，在ImageNet Top 1 86.4%。当训练与测试时使用的图像分辨率差异较大时，分类器模型会出现性能差异，一般解决方法是数据增强，包括图像的裁剪，水平翻转和色彩抖动。
+- FaceBook作品，提出FixResNeXt，ImageNet Top 1 86.4%。当训练与测试时使用的图像分辨率差异较大时，分类器模型会出现性能差异，一般解决方法是数据增强，包括图像的裁剪，水平翻转和色彩抖动。
 论文中很多噱头，只是表明图像不同分辨率之间的差异。
   - 论文训练集中使用分辨率低的图像训练，分辨率高的图像做测试。
   - fine-tuning。在训练模型后，通过图像的scale调节，fine-tuning模型。
+  - 论文验证scale的策略不仅仅在ImageNet有效，在其他任务迁移后也可提升性能。
   - [2019][Fixing the train-test resolution discrepancy](https://arxiv.org/pdf/1906.06423.pdf)
   - [2020][Fixing the train-test resolution discrepancy: FixEfficientNet](https://arxiv.org/pdf/2003.08237v1.pdf)
 
