@@ -64,6 +64,7 @@ depthwise conv、pointwise conv、groupwise conv减少模型计算量，轮提�
   - fine-tuning。在训练模型后，通过图像的scale调节，fine-tuning模型。
   - 论文验证scale的策略不仅仅在ImageNet有效，在其他任务迁移后也可提升性能。
   - [2019][Fixing the train-test resolution discrepancy](https://arxiv.org/pdf/1906.06423.pdf)
+
 - FaceBook最新提出在FixRes基础上延伸的FixEfficientNet，top-1：88.5%和top-5：98.7%的准确率，state-of-art水平。
   - FixRes解决的是训练，测试两个阶段图像预处理方面的不同导致的性能差异，FixEfficientNet论文只是一个技术报告，貌似创新点在于 fine-tuning阶段的label smoothing。
   - FixRes时论文写了很多水公式，实际技巧几行代码就能数清楚。而FixEfficientNet SOTA水平，按照国内的揍性，怎么也得水出一片顶会论文吧。
