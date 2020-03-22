@@ -37,7 +37,10 @@
 
 - 西弗吉尼亚大学提出一种评估目标检测理论准确率上限：91.6% on VOC (test2007), 78.2% on COCO (val2017), and 58.9% on OpenImages V4 (validation)。
   - [2019][Empirical Upper-bound in Object Detection and More](https://arxiv.org/pdf/1911.12451.pdf)
-  
+
+- 目标检测发展20年历程。
+  - [Object Detection in 20 Years: A Survey](https://arxiv.org/pdf/1905.05055.pdf)
+
 ---
 
 ## Facial_Detector
