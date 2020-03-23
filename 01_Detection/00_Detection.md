@@ -189,6 +189,9 @@ NVIDIA Tesla P100 GPU运行，CenterNet511-104 340ms/image，比CornerNet511-104
   - [2019][Bridging the Gap Between Anchor-based and Anchor-free Detection via Adaptive Training Sample Selection](https://arxiv.org/pdf/1912.02424v1.pdf) :star::star::star::star::star:
   - <https://github.com/sfzhang15/ATSS>
 
+- 西安交通大学，旷视能联合提出，基于CenterNet的改进。
+  - [2020][CentripetalNet: Pursuing High-quality Keypoint Pairs for Object Detection](https://arxiv.org/pdf/2003.09119.pdf)
+
 ---
 
 ## NMS_Series
