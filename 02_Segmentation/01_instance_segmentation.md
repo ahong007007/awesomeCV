@@ -60,6 +60,13 @@ MaskIoU Head，代码也是facebook 开源框架maskrcnn_benchmark基础上直�
   - Feature map 计算更多，但是为什么比MaskRCNN更快？
   - [2020][BlendMask: Top-Down Meets Bottom-Up for Instance Segmentation](https://arxiv.org/pdf/2001.00309.pdf)
 
+- 阿德雷得大学，同济大学，字节跳动联合提出快速实例分割方法,在SOLO 基础上有两个主要创新点：Dynamic和Faster。
+  - mask learning是动态的：convolution kernel learning and feature learning，让动态的kernel和feature map卷积生成mask. mask learning貌似STN的变种？
+  - Faster：主要通过升级NMS到Matrix NMS实现。Matrix NMS计算高效且提升performance。
+  - Stronger:COCO的三个数据集验证性能,instance segmentation,object detection and panoptic segmentation.
+  - 论文既然强调Stronger的思想,mask learning和Matrix NMS是否可以移植到two-stage检测，分类领域？filter learning是否可在计算机视觉推广?
+  - [SOLOv2: Dynamic, Faster and Stronger](https://arxiv.org/pdf/2003.10152.pdf)
+
 ---
 
 ## Panoptic_Segmentation
