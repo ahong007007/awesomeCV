@@ -3,7 +3,7 @@
 ## Table of Contents
 
 - [survey](#survey)
-- [Dataset](#backbone)
+- [Dataset](#Dataset)
 - [benchmark](#benchmark)
 - [Detector](#Detector)
 - [Descriptors](#Descriptors)
@@ -71,10 +71,12 @@ overview/review/survey
 
 ## benchmark
 
-- CVPR2019 workshop:Local Features & Beyond
+- CVPR workshop:Local Features & Beyond
   - <https://image-matching-workshop.github.io/>
-- CVPR2019 workshop:Long-term Visual Localization
+- CVPR workshop:Long-term Visual Localization
   - <https://www.visuallocalization.net/benchmark/>
+- Image Matching Challenge 2020
+  - [Image Matching across Wide Baselines: From Paper to Practice](https://arxiv.org/pdf/2003.01587.pdf)
 
 ## Google Landmark Retrieval 2019
 
@@ -177,14 +179,23 @@ Fine-tuning和Attention-based训练。模型训练集只需要分类的标注，
   - <https://drive.google.com/file/d/1QmC4UKRhIXNW-sa8jxV5b7I6QbPKvJsi/view>
 
 - 论文基于LF-Net框架，提出增加感受野和改进是损失函数，在HPatches训练网络。缺点：HPatches数据量少，网络容易过拟合。
-  -[2019][CVPR][RF-Net: An End-to-End Image Matching Network based on Receptive Field](https://github.com/Xylon-Sean/rfnet)
-  -[2019][ICCV][ELF: Embedded Localisation of Features in Pre-Trained CNN](https://github.com/abenbihi/elf)
+  - [2019][CVPR][RF-Net: An End-to-End Image Matching Network based on Receptive Field](https://github.com/Xylon-Sean/rfnet)
+  - [2019][ICCV][ELF: Embedded Localisation of Features in Pre-Trained CNN](https://github.com/abenbihi/elf)
   
 - NIPS2019论文。对于重复特征区域(棋盘格，树木等场景)，显著性的特征不容易区分，需要置信度区分。论文在输出descriptors和reliability同时，输出repeatability。
-  -[2019][NIPS][R2D2: Repeatable and Reliable Detector and Descriptor](https://arxiv.org/pdf/1906.06195.pdf)
+  - [2019][NIPS][R2D2: Repeatable and Reliable Detector and Descriptor](https://arxiv.org/pdf/1906.06195.pdf)
 
 - 强化学习在图像特征匹配中的应用。
-  -[2019][Reinforced Feature Points:Optimizing Feature Detection and Description for a High-Level Task](https://arxiv.org/pdf/1912.00623.pdf)
+  - [2019][Reinforced Feature Points:Optimizing Feature Detection and Description for a High-Level Task](https://arxiv.org/pdf/1912.00623.pdf)
+
+- 香港科技大学等提出ASLFeat，目标是提取准确的局部特征和匹配能力。
+  - 论文认为匹配性能的提升有两个限制：特征点缺乏shape-awareness几何形变能力，关键点定位不准确难以解决相机模型的鲁棒性。
+  - 论文提出三个创新：deformable convolutional network解决几何形变；特征金字塔实现 low-level和high的特征融合；在D2net基础上，改进peakiness measurement。
+  - loss函数设计：在D2net基础上改进hardest-contrastive,更容易收敛。
+  - 模型在图像匹配(HPatches)效果明显，但是在3D reconstructionn(ETH benchmark)和Visual Localization(Aachen Day-Night dataset)等验证结果貌似和D2Net,R2D2不相上下，没有state-of-art水平。
+  - ASLFeat缺点：大尺度旋转的问题没有很好解决(谁来拯救形变？)， 特征点提取10K，匹配阶段会很耗时。
+  - [ASLFeat: Learning Local Features of Accurate Shape and Localization](https://arxiv.org/pdf/2003.10071.pdf)
+  - <https://github.com/lzx551402/ASLFeat>
 
 ---
 
