@@ -1,12 +1,31 @@
 # visual SLAM
 
----
-
-## survey/review/overview
-
-- Visual SLAM algorithms: a survey from 2010 to 2016
+visual SLAM ≈ realtime sfm
 
 ---
+
+## survey
+
+survey/review/overview
+
+- [Visual SLAM algorithms: a survey from 2010 to 2016](https://www.researchgate.net/publication/318235730_Visual_SLAM_algorithms_a_survey_from_2010_to_2016)
+- [Past, Present, and Future of Simultaneous Localization and Mapping: Toward the Robust-Perception Age](http://rpg.ifi.uzh.ch/docs/TRO16_cadena.pdf)
+
+---
+
+## framework
+
+- 名古屋大学提出的OpenVSLAM框架，基于indirect，相机设备支持monocular,stereo, RGBD，相机模型支持perspective, fisheye,equirectangular。
+  - [OpenVSLAM: A Versatile Visual SLAM Framework](https://arxiv.org/pdf/1910.01122v2.pdf)
+
+---
+
+## vSLAM
+
+- [Good Feature Matching: Towards Accurate, Robust VO/VSLAM with Low Latency](https://arxiv.org/pdf/2001.00714.pdf)
+
+- 法国法雷奥提出的自动停车系统，基于视觉方案，包括Lidar，4个鱼眼摄像头。
+  - [Trained Trajectory based Automated Parking System using Visual SLAM](https://arxiv.org/pdf/2001.02161v2.pdf)
 
 ## Laboratory
 
@@ -25,7 +44,3 @@
 
 - HKUST Aerial Robotics Group: http://uav.ust.hk/group/ (比如https://github.com/HKUST-Aerial-Robotics/VINS-Mono)
 - ZJU Computer Vision Group: http://www.zjucvg.net/ (比如http://www.zjucvg.net/rkslam/rkslam.html)
-
-# vSLAM
-
--[Good Feature Matching: Towards Accurate, Robust VO/VSLAM with Low Latency](https://arxiv.org/pdf/2001.00714.pdf)
