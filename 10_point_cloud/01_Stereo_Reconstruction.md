@@ -1,17 +1,26 @@
 # Multi-View Stereo Reconstruction
-<h1> 
 
+<h1>
 ```diff
 - Recent papers (from 2017)
 ```
-
 </h1>
 
 <h3> Keywords </h3>
 
-__`Mon.`__: Monocular &emsp; 
+__`Mon.`__: Monocular &emsp;
 
 Statistics: :fire: code is available & stars >= 100 &emsp;|&emsp; :star: citation >= 50
+
+--
+
+- [survey](#survey)
+- [SfM](#SfM)
+- [dynamic-reconstruction](#dynamic-reconstruction)
+- [Stereo-Matching](#Stereo-Matching)
+- [Depth-Estimation](#Depth-Estimation)
+- [Multi-View-Stereo](#Multi-View-Stereo)
+- [Benchmark](#Benchmark)
 
 ---
 
@@ -25,7 +34,7 @@ survey/overview/review
 
 - 本文主要介绍基于image(单目标物体)的三维重建方法，可以看做indoor场景的子集。
 
-  - [2019][Image-based 3D Object Reconstruction: State-of-the-Art and Trends in the Deep Learning Era](https://arxiv.org/pdf/1906.06543.pdf):star: :star: :star: :star:
+  - [2019][Image-based 3D Object Reconstruction: State-of-the-Art and Trends in the Deep Learning Era](https://arxiv.org/pdf/1906.06543v3.pdf):star: :star: :star: :star:
 
 - 介绍Depth Estimation的一篇博文。
   - [2019][Research Guide for Depth Estimation with Deep Learning](https://heartbeat.fritz.ai/research-guide-for-depth-estimation-with-deep-learning-1a02a439b834)
@@ -33,10 +42,26 @@ survey/overview/review
 
   - <http://robustvision.net/index.php>
   - <https://github.com/tsattler/visuallocalizationbenchmark>
+  - <https://paperswithcode.com/task/3d-reconstruction/latest#code>
 
 ---
 
-## Stereo Matching
+## SfM
+
+- 香港科技大学朱思语(现在入职阿里巴巴),目标是解决城市级别百万级图像全局重建问题，采用的手段基于分而治之的思想。
+  - [Very Large-Scale Global SfM by Distributed Motion Averaging](https://zpascal.net/cvpr2018/Zhu_Very_Large-Scale_Global_CVPR_2018_paper.pdf)
+
+---
+
+## dynamic-reconstruction
+
+- 德国亚琛工业大学提出的dynamic object reconstructions，实现Object Tracking, Segmentation and dynamic object Fusion的融合。
+  - [Track to Reconstruct and Reconstruct to Track](https://arxiv.org/pdf/1910.00130v2.pdf)
+  - <https://github.com/tobiasfshr/MOTSFusion>
+
+---
+
+## Stereo-Matching
 
 - [2018][CVPR][Learning for Disparity Estimation Through Feature Constancy](https://arxiv.org/pdf/1712.01039.pdf)
 
@@ -47,7 +72,7 @@ computation), matching cost aggregation and disparity prediction.本文主要介
   
 --
 
-## Depth Estimation
+## Depth-Estimation
 
 - [2018[CVPR][MegaDepth: Learning Single-View Depth Prediction from Internet Photos](https://arxiv.org/pdf/1804.00607.pdf)  
   
@@ -55,7 +80,7 @@ computation), matching cost aggregation and disparity prediction.本文主要介
 
 ---
 
-## Multi-View Stereo
+## Multi-View-Stereo
 
 - 传统multi-view stereo(MVS)利用空间几何基本原理，旨在利用多张影像(影像及对应的相机几何)恢复出三维场景，基本假设是Lambertian反射，既目标表面不吸收任何入射光，在自然场景如玻璃，低纹理特征等场景导致重建失败。香港科技大学和深圳altizure团队提出的基于Deep learning的高精度高效率的三维重建网络MVSNet(ECCV2018 oral)，
 包括如特征提取，差分单应矩阵，基于方差的多视觉相识度度量，Depth map估计与修正，实现三维点云生成网络。
@@ -76,16 +101,14 @@ Coarse到refined修订。论文在DTU和Tanks and Temples数据集取得state-of
 
   - [2019][ICCV][Point-Based Multi-View Stereo Network](https://arxiv.org/pdf/1908.04422.pdf)[github](https://github.com/callmeray/PointMVSNet)
   
-
 - Andrew教授项目组，基于单目视觉+语义分割的室内语义三维重建方法。
 
   -[2019][CVPR][SceneCode: Monocular Dense Semantic Reconstruction using Learned Encoded Scene Representations](https://zpascal.net/cvpr2019/Zhi_SceneCode_Monocular_Dense_Semantic_Reconstruction_Using_Learned_Encoded_Scene_Representations_CVPR_2019_paper.pdf)
   
--北大深圳研究生院，香港大学联合提出PVA-MVSNet，融合多尺度深度图，多指标约束增强点云重建。feature network and differentiable homography,coarse-to-fine depth map这三个过程类似前人工作MVSNet/PointMVSNet系列。重要改进是
+- 北大深圳研究生院，香港大学联合提出PVA-MVSNet，融合多尺度深度图，多指标约束增强点云重建。feature network and differentiable homography,coarse-to-fine depth map这三个过程类似前人工作MVSNet/PointMVSNet系列。重要改进是
 多尺度深度估计的融合，提高准确率同时提升效率。
-
-  -[Pyramid Multi-view Stereo Net with Self-adaptive View Aggregation](https://arxiv.org/pdf/1912.03001v1.pdf)
-  -https://github.com/yhw-yhw/PVAMVSNet
+  - [Pyramid Multi-view Stereo Net with Self-adaptive View Aggregation](https://arxiv.org/pdf/1912.03001v1.pdf)
+  - <https://github.com/yhw-yhw/PVAMVSNet>
 
 ---
 
@@ -96,19 +119,23 @@ Coarse到refined修订。论文在DTU和Tanks and Temples数据集取得state-of
 
 ---
 
-## Dataset
+## Benchmark
 
 - Stereo benchmark: ETH3D
-Aanæs, H., Jensen, R.R., Vogiatzis, G., Tola, E., Dahl, A.B.: Large-scale data for
-multiple-view stereopsis. International Journal of Computer Vision (IJCV) (2016)
+  - [2016][IJCV][Large-scale data for multiple-view stereopsis. International Journal of Computer Vision]
 
-Knapitsch, A., Park, J., Zhou, Q.Y., Koltun, V.: Tanks and temples: Benchmarking
-large-scale scene reconstruction. ACM Transactions on Graphics (TOG) (2017)
+- Tanks and temple.
+  - [2017][TOG][Tanks and temples: Benchmarking large-scale scene reconstruction]. ACM Transactions on Graphics (TOG) (2017)
 
 - [2017][CVPR][A Multi-View Stereo Benchmark with High-Resolution Images and Multi-Camera Videos](http://www.cvlibs.net/publications/Schoeps2017CVPR.pdf)
-- [2019][BlendedMVS: A Large-scale Dataset for Generalized Multi-view Stereo Networks]  
+
+- BlendedMVS is a large-scale MVS dataset for generalized multi-view stereo networks.The dataset contains over 17k MVS training samples covering a variety of scenes, including architectures, sculptures and small objects.
+  - [2019][BlendedMVS: A Large-scale Dataset for Generalized Multi-view Stereo Networks](https://arxiv.org/pdf/1911.10127v1.pdf)  
+  - <https://github.com/YoYo000/BlendedMVS>
 
 ## 待记录
 
  PoseNet，VINet，Perspective Transformer Net，SfMNet，CNN-SLAM，SurfaceNet，3D-R2N2，MVSNet,DeepMVS
  MVDepthNet、DeMoN、DPSNet、MaskMVS，双目的有PSMNet
+ sparse reconstruction
+ dense reconstruction
