@@ -189,8 +189,12 @@ NVIDIA Tesla P100 GPU运行，CenterNet511-104 340ms/image，比CornerNet511-104
   - [2019][Bridging the Gap Between Anchor-based and Anchor-free Detection via Adaptive Training Sample Selection](https://arxiv.org/pdf/1912.02424v1.pdf) :star::star::star::star::star:
   - <https://github.com/sfzhang15/ATSS>
 
-- 西安交通大学，旷视能联合提出，基于CenterNet的改进。
+- 西安交通大学，商汤科技能联合提出，实现anchor free的目标检测和实例分割，在cornerNet/CenterNet基础上改进.backbone基于Hourglass Network,两个分支：预测检测框的左上角，右下角角点的同时，预测centripetal Shift；另外一个分支实现Instance Mask.
+  - 目标重叠度较高的情况下，centripetal Shift可以实现左上角和右下角的配对？
+  - COCO test-dev 检测48AP ,实体分割40.2AP。
+  - #TODO 物体的角点没有任何特征，为什么不直接预测目标？
   - [2020][CentripetalNet: Pursuing High-quality Keypoint Pairs for Object Detection](https://arxiv.org/pdf/2003.09119.pdf)
+  - <https://github.com/KiveeDong/CentripetalNet>
 
 ---
 
