@@ -15,7 +15,7 @@ Statistics: :fire: code is available & stars >= 100 &emsp;|&emsp; :star: citatio
 --
 
 - [survey](#survey)
-- [SfM](#SfM)
+- [reconstruction](#reconstruction)
 - [dynamic-reconstruction](#dynamic-reconstruction)
 - [Stereo-Matching](#Stereo-Matching)
 - [Depth-Estimation](#Depth-Estimation)
@@ -38,22 +38,47 @@ survey/overview/review
 
 - 介绍Depth Estimation的一篇博文。
   - [2019][Research Guide for Depth Estimation with Deep Learning](https://heartbeat.fritz.ai/research-guide-for-depth-estimation-with-deep-learning-1a02a439b834)
-- Robust Vision Challenge
 
+- [State of the Art on 3D Reconstruction with RGB-D Cameras](http://zollhoefer.com/papers/EG18_RecoSTAR/paper.pdf)
+
+- Robust Vision Challenge
   - <http://robustvision.net/index.php>
   - <https://github.com/tsattler/visuallocalizationbenchmark>
   - <https://paperswithcode.com/task/3d-reconstruction/latest#code>
 
 ---
 
-## SfM
+## reconstruction
+
+### indoor
+
+- 微软在2011年提出的KinectFusion，基于RGB-D相机三维重建的开山之作，首次实现实时稠密的三维重建。
+  - KinectFusion 算法使用固定体积的网格模型表示重建的三维场景,重建范围有限。
+  - 没有回环检测和回环优化，相机累计误差大。
+  - [2011][KinectFusion: Real-Time Dense Surface Mapping and Tracking](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/ismar2011.pdf)
+  - [2016][KinectFusion: Real-time 3D Reconstruction and Interaction Using a Moving Depth Camera](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/kinectfusion-uist-comp.pdf)
+
+- 大名鼎鼎的Thomas Whelan，在KinectFusion基础上改进，位姿估计结合了ICP和直接法，融合了回环检测和回环优化，且使用deformation graph做非刚性变换，使得回环位置可以对齐。
+  - [2012][Kintinuous: Spatially Extended KinectFusion](https://www.ri.cmu.edu/pub_files/2012/7/Whelan12rssw.pdf)
+
+- BundleFusion，输入为RGB+depth，数据流首先需要做帧与帧之间的对应关系匹配，做全局位姿优化，对整体做漂移校正。
+  - 匹配关系使用sparse-then-dense。先使用稀疏的SIFT特征点来进行比较粗糙的配准，然后使用稠密的几何和光度连续性进行更加细致的配准。
+  - 位姿优化方使用分层的local-to-global。
+  - [BundleFusion: Real-time Globally Consistent 3D Reconstruction using On-the-fly Surface Re-integration](https://arxiv.org/pdf/1604.01093.pdf)
+
+### outdoor
 
 - 香港科技大学朱思语(现在入职阿里巴巴),目标是解决城市级别百万级图像全局重建问题，采用的手段基于分而治之的思想。
-  - [Very Large-Scale Global SfM by Distributed Motion Averaging](https://zpascal.net/cvpr2018/Zhu_Very_Large-Scale_Global_CVPR_2018_paper.pdf)
+  - [2018][Very Large-Scale Global SfM by Distributed Motion Averaging](https://zpascal.net/cvpr2018/Zhu_Very_Large-Scale_Global_CVPR_2018_paper.pdf)
 
 ---
 
 ## dynamic-reconstruction
+
+- 第一篇动态场景三维重建论文。
+  -首先将每帧获取到的动态目标通过某种变换，转换到一个canonical 空间中，即在该空间中创建一个静态的物体表面模型；
+基于每帧的olumetric warp field,将canonical 空间模型还原到live frame。
+  - [2015][CVPR][DynamicFusion: Reconstruction and Tracking of Non-rigid Scenes in Real-Time](https://rse-lab.cs.washington.edu/papers/dynamic-fusion-cvpr-2015.pdf)
 
 - 德国亚琛工业大学提出的dynamic object reconstructions，实现Object Tracking, Segmentation and dynamic object Fusion的融合。
   - [Track to Reconstruct and Reconstruct to Track](https://arxiv.org/pdf/1910.00130v2.pdf)
@@ -129,7 +154,7 @@ Coarse到refined修订。论文在DTU和Tanks and Temples数据集取得state-of
 
 - [2017][CVPR][A Multi-View Stereo Benchmark with High-Resolution Images and Multi-Camera Videos](http://www.cvlibs.net/publications/Schoeps2017CVPR.pdf)
 
-- BlendedMVS is a large-scale MVS dataset for generalized multi-view stereo networks.The dataset contains over 17k MVS training samples covering a variety of scenes, including architectures, sculptures and small objects.
+- BlendedMVS is a large-scale MVS dataset for generalized multi-view stereo networks.The dataset contains over 17k MVS training samples (113个场景)covering a variety of scenes, including architectures, sculptures and small objects.
   - [2019][BlendedMVS: A Large-scale Dataset for Generalized Multi-view Stereo Networks](https://arxiv.org/pdf/1911.10127v1.pdf)  
   - <https://github.com/YoYo000/BlendedMVS>
 
