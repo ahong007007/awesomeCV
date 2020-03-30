@@ -196,6 +196,10 @@ NVIDIA Tesla P100 GPU运行，CenterNet511-104 340ms/image，比CornerNet511-104
   - [2020][CentripetalNet: Pursuing High-quality Keypoint Pairs for Object Detection](https://arxiv.org/pdf/2003.09119.pdf)
   - <https://github.com/KiveeDong/CentripetalNet>
 
+- 马里兰大学帕克分校提出的快速目标检测方法，backbone基础上包括Corner Attentive Module，Center Attentive Module，Attention Transitive Module，
+在三个attention模块基础上Aggregation Attentive Module生成最终的检测框。
+  - [SaccadeNet: A Fast and Accurate Object Detector](https://arxiv.org/pdf/2003.12125.pdf)
+
 ---
 
 ## NMS_Series
