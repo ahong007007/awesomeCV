@@ -82,6 +82,9 @@ overview/review/survey
 
 - 百度基于PaddlePaddle的开源方案。鉴于PaddlePaddle小众，工业项目设计实在不敢用。
   - [2019][2nd Place and 2nd Place Solution to Kaggle Landmark Recognition and Retrieval Competition 2019]
+- The 1st Place Solution of the Google Landmark 2019 Retrieval Challenge and the 3rd Place Solution of the Recognition Challenge.
+  - [Two-stage Discriminative Re-ranking for Large-scale Landmark Retrieval](https://arxiv.org/pdf/2003.11211.pdf)
+  - <https://github.com/lyakaap/Landmark2019-1st-and-3rd-Place-Solution>
 
 ---
 
