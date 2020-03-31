@@ -46,6 +46,7 @@ survey/review/overview
 
 - <https://paperswithcode.com/task/3d-part-segmentation/latest>
 - <https://paperswithcode.com/area/computer-vision/3d>
+- <https://paperswithcode.com/task/3d-object-detection>
 - <http://kaldir.vc.in.tum.de/scannet_benchmark/>
 - <https://yochengliu.github.io/files/Report_JIANGMEN_2019-08.pdf>
 
@@ -86,20 +87,18 @@ PointNet之前的方法集中在点云投影二维平面，点云划分Voxel等�
   - PointNet layer：输入网络之前的点云球体，坐标会更新为球中心的相对坐标，类似Batch Norm。
   - hierarchical structure，PointNet++的backbone，由sampling&grouping&PointNet交叠组成。
   - 非均匀点云的处理，论文使用Multi-scale grouping (MSG) and Multi-resolution grouping (MRG)多尺度处理。MSG+DP相对单尺度SSG，有更好的鲁棒性。
-  
- -- [NIPS2017][PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space](https://arxiv.org/pdf/1706.02413.pdf)[__`cls.`__ __`seg.`__] 
+  - [NIPS2017][PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space](https://arxiv.org/pdf/1706.02413.pdf)[__`cls.`__ __`seg.`__] 
 
 - 俄勒冈州立大学机器人技术与智能系统（CoRIS）研究所的研究者提出了PointConv，基于2D卷积推导出3D点云表达式，将3D卷积看做由局部点3D坐标的非线性函数(包括权重和密度)，
 可以高效的对非均匀采样的3D点云数据进行卷积操作，该方法在多个数据集(ModelNet40、ShapeNet和ScanNet)上实现state-of-art。
 主要贡献：
-1、提出逆密度重+权重的卷积操作PointConv，近似拟合3D连续卷积。
-2、通过改变求和顺序，提出了高效PointConv。
-3、将PointConv扩展到反卷积PointDeconv，以获得更好的分割结果。
-论文已经开源tensorflow和pytorch源代码，可用于评估性能。
-
-  - [CVPR2019] [PointConv: Deep Convolutional Networks on 3D Point Clouds](https://arxiv.org/abs/1811.07246). 
-  [[tensorflow](https://github.com/DylanWusee/pointconv)] [__`cls.`__ __`seg.`__] :fire:
-  [[pytorch]https://github.com/DylanWusee/pointconv]
+  - 1、提出逆密度重+权重的卷积操作PointConv，近似拟合3D连续卷积。
+  - 2、通过改变求和顺序，提出了高效PointConv。
+  - 3、将PointConv扩展到反卷积PointDeconv，以获得更好的分割结果。
+  - 论文已经开源tensorflow和pytorch源代码，可用于评估性能。
+  - [CVPR2019] [PointConv: Deep Convolutional Networks on 3D Point Clouds](https://arxiv.org/abs/1811.07246)
+  - [[tensorflow](https://github.com/DylanWusee/pointconv)] [__`cls.`__ __`seg.`__] :fire:
+  - [[pytorch](https://github.com/DylanWusee/pointconv)
 
 - 论文提出ShufflePointNet，基于二维分组卷积和论文ShuffleNet,在三维点云的应用。
   - [2019.09][Go Wider: An Efficient Neural Network for Point Cloud Analysis via Group Convolutions](https://arxiv.org/pdf/1909.10431.pdf)
