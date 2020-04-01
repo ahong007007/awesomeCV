@@ -81,6 +81,13 @@ depthwise conv、pointwise conv、groupwise conv减少模型计算量，轮提�
 - Facebook何凯明提出。论文提出在不仅在ImagetNet，其它PASCAL VOC, COCO检测/分割7个数据集，MoCo的方法unsupervised性能要强于supervised，那么MoCo+EfficientNet之类的backbone，是否可以强者更强，摘取更高准确率？
   - [Momentum Contrast for Unsupervised Visual Representation Learning](https://128.84.21.199/pdf/1911.05722.pdf)
 
+- CSPNet：可以增强CNN学习能力的新型Backbone.
+  - [CSPNet: A New Backbone that can Enhance Learning Capability of CNN](https://arxiv.org/pdf/1911.11929.pdf)
+  - <https://github.com/WongKinYiu/CrossStagePartialNetworks>
+
+- Facebook何凯明团队提出，手动设计网络和NAS结合。
+  - [Designing Network Design Spaces](https://arxiv.org/pdf/2003.13678.pdf)
+
 ---
 
 ## tiny_backbone
