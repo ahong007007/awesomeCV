@@ -135,6 +135,10 @@ Coarse到refined修订。论文在DTU和Tanks and Temples数据集取得state-of
   - [Pyramid Multi-view Stereo Net with Self-adaptive View Aggregation](https://arxiv.org/pdf/1912.03001v1.pdf)
   - <https://github.com/yhw-yhw/PVAMVSNet>
 
+- 上海大学科技大学提出的Fast-MVSNet.
+  - [Fast-MVSNet: Sparse-to-Dense Multi-View Stereo With Learned Propagation and Gauss-Newton Refinement](https://arxiv.org/pdf/2003.13017.pdf)
+  - <https://github.com/svip-lab/FastMVSNet>
+
 ---
 
 - 传统方法是基于多视角几何计算PnP,RANSAC算法高效但是迭代复杂度高。基于深度学习的方法计算PnP是近些年的一个方向。
