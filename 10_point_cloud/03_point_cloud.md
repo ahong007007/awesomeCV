@@ -140,7 +140,7 @@ SUN RGB-D具有良好表现。 CNN在3D object classification ,3D object detecti
 
   - [2019][Complexer-YOLO: Real-Time 3D Object Detection and Tracking on Semantic Point Clouds](https://arxiv.org/abs/1904.07537) [[pytorch](https://github.com/AI-liu/Complex-YOLO)] [__`det.`__ __`tra.`__ __`aut.`__] :fire:
 
-- 论文将Grid-based(Voxel-based)和Point-based结合，通过两个阶段策略：the voxel-to-keypoint 3D scene encoding，the keypoint-to-grid RoI feature abstraction
+- 商汤，香港中文大学联合实验室提出，论文将Grid-based(Voxel-based)和Point-based结合，通过两个阶段策略：the voxel-to-keypoint 3D scene encoding，the keypoint-to-grid RoI feature abstraction
 实现3D的目标检测。
   - 话说串行的优势在哪里，为什么不用并行？
   - [PV-RCNN: Point-Voxel Feature Set Abstraction for 3D Object Detection](https://arxiv.org/pdf/1912.13192.pdf)
