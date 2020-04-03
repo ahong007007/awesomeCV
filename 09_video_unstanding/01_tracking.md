@@ -1,5 +1,15 @@
+# visual-tracking
 
-# survey
+---
+
+## Table of Contents
+
+- [survey](#survey)
+- [Framework](#Framework)
+- [tracking](#tracking)
+- [Dataset](#Dataset)
+
+## survey
 
 - 意大利萨勒诺大学等对MOT综述
 
@@ -7,7 +17,13 @@
 
 ---
 
-# tracking
+## Framework
+  
+  <https://github.com/STVIR/pysot>
+
+---
+
+## tracking
 
 - SiamFC，ECCV2016论文，牛津大学Luca Bertinetto等提出，深度学习方法在目标跟踪领域的破冰之作。使用函数f(z,x)来比较模板图像z域候选图像x的相似度，
 相似度越高，则得分越高。首个基于深度特征却又能保持实时性的跟踪方案，跟踪速度在GPU上达到了86fps（帧每秒），而且其性能超过了绝大多数实时跟踪器。
@@ -23,7 +39,7 @@
 - CVPR2019论文，中科院自动化所（王强）和牛津大学提出SiamMask,目标跟踪和视频分割结合的多任务学习网络。VOT2015以后数据集难度不断增加，
 目标预测从轴对齐矩形框到旋转框，其实是mask的一种近视。直接生成mask，可以获取更高精确度的旋转矩形框，这是论文的初衷。
 
-  - 缺点：a.Siammask的mask预测分支采用SharpMask语义分割模型，精度可使用替代模型提高。
+  - 缺点：a.SiamMask的mask预测分支采用SharpMask语义分割模型，精度可使用替代模型提高。
   - b.目前tracking没有专门处理消失问题（object traker如果从当前画面离开或完全遮挡），特别的，siammask挺容易受到具有语义的distractor影响。
   - [Fast Online Object Tracking and Segmentation: A Unifying Approach](https://arxiv.org/pdf/1812.05050.pdf)
 
@@ -74,23 +90,40 @@ Programming Algorithm相当于对之前帧特征的融合。Object Segmentation�
 - 中科院提出的SiamMan，backbone基于Siam网络架构，多任务学习包括三个分支：分类，回归和定位。个人认为由于引入空洞卷积，多尺度特征，多尺度Attention等trick，特征表达能力强。
   -引入mask分支，或者previous-frame,准确率是不是更好。
   -网络需要足够的特征表达能力，实时性可能欠佳。workstation（Intel i7-7800X）, 8G memory, 2*RTX2080 GPUs 实现45fps。
-  -[2019][SiamMan: Siamese Motion-aware Network for Visual Tracking](https://arxiv.org/pdf/1912.05515.pdf) 
+  -[2019][SiamMan: Siamese Motion-aware Network for Visual Tracking](https://arxiv.org/pdf/1912.05515.pdf)
+
+- [SiamRPN++: Evolution of Siamese Visual Tracking with Very Deep Networks](http://openaccess.thecvf.com/content_CVPR_2019/papers/Li_SiamRPN_Evolution_of_Siamese_Visual_Tracking_With_Very_Deep_Networks_CVPR_2019_paper.pdf)
+
+- SiamDW
+  - [Deeper and Wider Siamese Networks for Real-Time Visual Tracking](http://openaccess.thecvf.com/content_CVPR_2019/papers/Zhang_Deeper_and_Wider_Siamese_Networks_for_Real-Time_Visual_Tracking_CVPR_2019_paper.pdf)
+
+- [SiamFC++: Towards Robust and Accurate Visual Tracking with Target Estimation Guidelines](https://arxiv.org/pdf/1911.06188.pdf)
+
+- 中科院自动化所等提出将检测和跟踪统一到一个框架。
+  - 检测和跟踪区别：检测属于class-specific，和类别相关，类别内无区别。跟踪和类别无关，但是和同一个目标相关。检测不需要模板，而跟踪需要模板。
+  - 论文提出target-guidance模块，引导检测器定位跟踪目标。
+  - 提出anchored更新策略，避免模型的过拟合。
+  - [Bridging the Gap Between Detection and Tracking: A Unified Approach](http://openaccess.thecvf.com/content_ICCV_2019/papers/Huang_Bridging_the_Gap_Between_Detection_and_Tracking_A_Unified_Approach_ICCV_2019_paper.pdf)
+
+- [GradNet: Gradient-Guided Network for Visual Object Tracking]
+
+- 中科院，微软提出，将tracking 和Instance Detection统一框架。
+  - [Tracking by Instance Detection: A Meta-Learning Approach](https://arxiv.org/pdf/2004.00830.pdf)
+
+- 计算机视觉已经不满足于图像的分类/检测/分割和视频理解的多任务学习，开始迈向点云。图像+视频+点云,4维度世界（三维度空间和时间维度），连接真实世界。
+
+  - [Tracking Objects as Points](https://arxiv.org/pdf/2004.01177.pdf)
+  - <https://github.com/xingyizhou/CenterTrack>
 
 ---
 
-# Framework
-  
-  https://github.com/STVIR/pysot
-
----
-
-# Dataset
+## Dataset
 
 - CVPR2019 Tracking and Detection Challenge
 
   - [CVPR19 Tracking and Detection Challenge:How crowded can it get?](https://arxiv.org/pdf/1906.04567.pdf)
   
-# 待更新
+## 待更新
 
 Martin大神新作，需要仔细研读
 
