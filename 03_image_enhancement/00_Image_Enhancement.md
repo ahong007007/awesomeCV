@@ -24,6 +24,12 @@
 - CVPR2019论文，香港中文大学等提出。论文假设自然图像的光照图有着相对简单的先验，让网络模型去学习image-to-illumination mapping，实现retinex的图像增强。另外论文提出损失函数是Reconstruction Loss(L2)+Smoothness Loss+Color Loss。论文在MIT-Adobe FiveK( 5,000 raw images)之外标注3,000训练集训练模型(什么样的模型用这么少的训练集？)backbone使用VGG16,Titan X Pascal GPU训练40 epochs。
   - [Underexposed Photo Enhancement using Deep Illumination Estimation](http://jiaya.me/papers/photoenhance_cvpr19.pdf)
   
+## Obstructions
+
+- 台湾大学，谷歌提出，图像去除遮挡算法。
+  - [Learning to See Through Obstructions](https://arxiv.org/pdf/2004.01180.pdf)
+  - <https://github.com/alex04072000/ObstructionRemoval>
+
 ## Evaluation Metrics
 
 PSNR and SSIM
@@ -31,3 +37,4 @@ PSNR and SSIM
 ## dataset
 
 MIT-Adobe FiveK
+
