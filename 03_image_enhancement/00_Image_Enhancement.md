@@ -30,6 +30,10 @@
   - [Learning to See Through Obstructions](https://arxiv.org/pdf/2004.01180.pdf)
   - <https://github.com/alex04072000/ObstructionRemoval>
 
+## Background-Matting
+
+- [Background Matting: The World is Your Green Screen](https://arxiv.org/pdf/2004.00626.pdf)
+
 ## Evaluation Metrics
 
 PSNR and SSIM
