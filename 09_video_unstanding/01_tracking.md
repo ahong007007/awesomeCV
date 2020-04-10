@@ -148,7 +148,7 @@ project链接：https://cis.temple.edu/lasot/
 
 Graph Convolutional Tracking
 
-http://nlpr-web.ia.ac.cn/mmc/homepage/jygao/gct_cvpr2019.html#
+<http://nlpr-web.ia.ac.cn/mmc/homepage/jygao/gct_cvpr2019.html#>
 
 Learning Discriminative Model Prediction for Tracking.[pdf](https://128.84.21.199/pdf/1904.07220.pdf)
 
