@@ -18,6 +18,8 @@ survey/review/overview
 - 名古屋大学提出的OpenVSLAM框架，基于indirect，相机设备支持monocular,stereo, RGBD，相机模型支持perspective, fisheye,equirectangular。
   - [OpenVSLAM: A Versatile Visual SLAM Framework](https://arxiv.org/pdf/1910.01122v2.pdf)
 
+- [Kimera: an Open-Source Library for Real-Time Metric-Semantic Localization and Mapping](https://arxiv.org/pdf/1910.02490v3.pdf)
+
 ---
 
 ## vSLAM
