@@ -21,6 +21,10 @@
   
   <https://github.com/STVIR/pysot>
 
+- FairMOT
+  - [A Simple Baseline for Multi-Object Tracking](https://arxiv.org/pdf/2004.01888.pdf)
+  -<https://github.com/ifzhang/FairMOT>
+
 ---
 
 ## tracking
