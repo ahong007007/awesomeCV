@@ -11,8 +11,8 @@
 
 ## survey
 
-- <https://paperswithcode.com/task/scene-text-recognition>
 - <https://paperswithcode.com/task/scene-text-detection>
+- <https://paperswithcode.com/task/scene-text-recognition>
 
 ---
 
@@ -35,6 +35,10 @@ mask rcnn预测的是每个像素是否前景和背景，既{0,1}，而论文提
 
 Look More Than Once: An Accurate Detector for Text of Arbitrary Shapes
 
+- 深圳码龙科技作品。backbone基于resnet50+hourglass88。单字(英文字符)检测与识别网络。
+  - head包含Character Branch 和 Text Detection Branch。
+  - [Convolutional Character Networks](https://arxiv.org/pdf/1910.07954v1.pdf)
+
 ## Scene_Text_Recognition
 
 - 论文提出一个框架模型，包括Spatial Transformer Network，Feature extraction，Sequence modeling，predictor，每个
@@ -45,7 +49,6 @@ Attention模型可以取得最佳效果（没有考虑实时性）。再次证�
   对应的目标区域准确对齐(Index 1)，其实使用商汤的PMTD预测文本行中心位置即可，节省计算资源。
 
   - [What is wrong with scene text recognition model comparisons? dataset and model analysis](https://128.84.21.199/pdf/1904.01906.pdf)[1904.01]
-
 
 ## Index
 
