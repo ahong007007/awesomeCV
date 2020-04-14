@@ -113,6 +113,14 @@ non-local模块修正语义特征。损失函数不平衡：论文设计Balanced
 - 北京大学等提出的一种改善型backbone，类似于HRNet和Cascade R-CNN（Cascade R-CNN是级联detector,而本文CBNet是级联backbone）。论文最强指标Cascade Mask R-CNN +Triple-ResNeXt152在COCO数据集实现53.3AP，性能上是数据榜首。  
   -[2019.09][CBNet: A Novel Composite Backbone Network Architecture for Object Detection](https://arxiv.org/pdf/1909.03625.pdf) :star::star::star::star:
 
+- google在EfficientNet基础上开发的EfficientDet。
+  - backbone:基于EfficientNet.
+  - BiFPN: 两个特征金字塔叠加，同时融合了任意两层的feature，有尺寸不一致，会upsample/pooling保证相同的分辨力.
+  - efficientnet也好，efficientdet也好，都是参数驱动型的网络，参数是贯穿每一层的。
+  - [EfficientDet: Scalable and Efficient Object Detection](https://arxiv.org/pdf/1911.09070.pdf)
+  - <https://zhuanlan.zhihu.com/p/129016081>
+  - <https://github.com/zylo117/Yet-Another-EfficientDet-Pytorch>
+
 ---
 
 ## Tiny
