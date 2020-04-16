@@ -40,10 +40,10 @@ overview/review/survey
   - Paris 6k Par106k
 
 - [Google Landmarks Dataset v1](https://github.com/cvdfoundation/google-landmark)
-  - https://www.kaggle.com/google/google-landmarks-dataset
+  - <https://www.kaggle.com/google/google-landmarks-dataset>
 
 - [Google Landmarks Dataset v2](https://github.com/cvdfoundation/google-landmark)
-  - https://drive.google.com/file/d/1d-xOKHTedhUjk5rsNmIInhyRMCUJbPC7/view
+  - <https://drive.google.com/file/d/1d-xOKHTedhUjk5rsNmIInhyRMCUJbPC7/view>
     - ● Recognition Training set
     - ○ 4.1M images (3.7x increase)
     - ○ 200K unique landmarks (4x increase)
@@ -73,8 +73,11 @@ overview/review/survey
 
 - CVPR workshop:Local Features & Beyond
   - <https://image-matching-workshop.github.io/>
+
 - CVPR workshop:Long-term Visual Localization
   - <https://www.visuallocalization.net/benchmark/>
+
+- <https://vision.uvic.ca/image-matching-challenge/>
 - Image Matching Challenge 2020
   - [Image Matching across Wide Baselines: From Paper to Practice](https://arxiv.org/pdf/2003.01587.pdf)
 
