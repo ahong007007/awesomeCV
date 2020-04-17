@@ -137,7 +137,7 @@ non-local模块修正语义特征。损失函数不平衡：论文设计Balanced
   - soft-NMS algorithm 更新到adj-NMS：NMS阈值0.5，先过滤一部分检测框，然后在更新NMS阈值权重。
   - 引入progressive constraint（PC）损失，来帮助检测器性能大幅度超越传统的检测器头部。
   - trick包括deformable convnet，multi-scale testing，averaging the parameters of epoch。
-  - [1st Place Solutions for OpenImage2019 - Object Detection and Instance Segmentation](https://arxiv.org/pdf/2003.07557.pdf)
+  - [CVPR2020][1st Place Solutions for OpenImage2019 - Object Detection and Instance Segmentation](https://arxiv.org/pdf/2003.07557.pdf)
 
 ---
 
