@@ -43,6 +43,17 @@
 
 ---
 
+## dataset
+
+- OpenImages V5 dataset
+  - 1.74M images, 14.6M bounding boxes, and 500 categories consisting of five different levels.
+
+- COCO
+
+- Object365
+
+---
+
 ## Facial_Detector
 
 - 天津大学、武汉大学、腾讯AI实验室提出的人脸检测模型，主要针对移动端设计（backbone MobileNet v2)在高通845上达到140fps的实时性。论文主要提出一个解决类别不均衡问题（侧脸、正脸、抬头、低头、表情、遮挡等各种类型）：增加困难类别和样本的损失函数权重。
@@ -120,6 +131,13 @@ non-local模块修正语义特征。损失函数不平衡：论文设计Balanced
   - [EfficientDet: Scalable and Efficient Object Detection](https://arxiv.org/pdf/1911.09070.pdf)
   - <https://zhuanlan.zhihu.com/p/129016081>
   - <https://github.com/zylo117/Yet-Another-EfficientDet-Pytorch>
+
+- 商汤香港中文大学联合实验室提出，帮助港中文商汤联合实验室取得OpenImage Object Detection Challenge 2019 冠军。
+  - 提出了基于任务间空间自适应解耦（task-aware spatial disentanglement，TSD）的检测算法，对于分类任务和回归任务，分别让其学习各自适应的proposal和特征提取器。
+  - soft-NMS algorithm 更新到adj-NMS：NMS阈值0.5，先过滤一部分检测框，然后在更新NMS阈值权重。
+  - 引入progressive constraint（PC）损失，来帮助检测器性能大幅度超越传统的检测器头部。
+  - trick包括deformable convnet，multi-scale testing，averaging the parameters of epoch。
+  - [1st Place Solutions for OpenImage2019 - Object Detection and Instance Segmentation](https://arxiv.org/pdf/2003.07557.pdf)
 
 ---
 
