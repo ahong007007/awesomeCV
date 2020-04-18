@@ -36,8 +36,11 @@ overview/review/survey
   
 - [Long-team visual localization](https://www.visuallocalization.net/benchmark/)
   - Aachen Day-Night dataset:Reference images:4,328,Query images:922 (824 daytime, 98 nighttime)
-  - Oxford 5k and Oxf105k
-  - Paris 6k Par106k
+
+- Oxford 5k and Oxf105k
+  - 
+- Paris 6k Par106k
+  - 
 
 - [Google Landmarks Dataset v1](https://github.com/cvdfoundation/google-landmark)
   - <https://www.kaggle.com/google/google-landmarks-dataset>
@@ -138,7 +141,7 @@ overview/review/survey
 
 - NIPS2018论文。索尼，epfl提出局部特征提取方法。
   - 缺点：训练和测试数据集简单，容易过拟合。室内数据集是ScanNet，室外使用25 photo-tourism image。
-  - [2018][NIPS][LF-Net: Learning Local Features from Images](https://arxiv.org/pdf/1805.09662.pdf)   
+  - [2018][NIPS][LF-Net: Learning Local Features from Images](https://arxiv.org/pdf/1805.09662.pdf)
   - <https://github.com/vcg-uvic/lf-net-release>
   
 - ICCV2017论文，Google提出Google-Landmarks Dataset数据集和DELF(DEep Local Feature)算法。
@@ -160,7 +163,7 @@ Fine-tuning和Attention-based训练。模型训练集只需要分类的标注，
 论文提出的模型以大欺小，基于Google Landmarks dataset数据训练的模型DELF-GLD，在ROxford 和RParis 数据集实现state-of-art水平。
 
   - DELF在线计算平台<https://colab.research.google.com/github/tensorflow/hub/blob/master/examples/colab/tf_hub_delf_module.ipynb#scrollTo=mVaKXT3cMSib>
-  - [2019][CVPR][Detect-to-Retrieve: Efficient Regional Aggregation for Image Search](https://arxiv.org/pdf/1812.01584.pdf) 
+  - [2019][CVPR][Detect-to-Retrieve: Efficient Regional Aggregation for Image Search](https://arxiv.org/pdf/1812.01584.pdf)
 
 - 巴黎多芬纳大学,微软等联合提出D2-Net，基于CNN提取描述子特征。传统提取特征的SIFT等是先检测关键点再提取描述子方式(detect-then-describe)，特征是稀疏的。
 而论文提出detect-and-describe：先基于backbone提取特征，在local descriptor维度计算soft-NMS,在channel维度计算ratio-to-max，最后归一化计算图像像素对应的描述子，
@@ -223,11 +226,17 @@ Bilinear Pool，提取像素的描述符。模型需要和特征检测器(Superp
 
 ---
 
-## Geometric verification
+## Geometric-verification
+
+DEGENSAC GC-RANSAC  MAGSAC
 
 - CVPR2019论文，对RANSAC的改进。包含第三方python库pymagsac，可以无缝替代RANSAC。
   -[2019][MAGSAC++, a fast, reliable and accurate robust estimator](https://arxiv.org/pdf/1912.05909v1.pdf)
   -<https://github.com/ducha-aiki/pymagsac>
+
+- <https://vision.uvic.ca/image-matching-challenge/submit/index.html#tac>
+
+  - OpenCV RANSAC: 100k. Note that OpenCV fixes the number of iterations to 1k, but we have a patched version which removes this limitation. We recommend not using this option as it is not available on all the evaluation clusters and typically performs the worst.
 
 ---
 
