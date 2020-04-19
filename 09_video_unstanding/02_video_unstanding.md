@@ -41,7 +41,6 @@ Fast pathway，分别处理低帧率图像空间语义信息和高帧率运动�
   - [A Transductive Approach for Video Object Segmentation](https://arxiv.org/pdf/2004.07193.pdf)
   - <https://github.com/microsoft/transductive-vos.pytorch>
 
-
 ## Moving-Objects
 
 - 运动相机检测运动目标，很有挑战性高。
