@@ -35,6 +35,13 @@ Fast pathway，分别处理低帧率图像空间语义信息和高帧率运动�
 - Facebook出品，基于自家Fast-slow更新。基本思路在google EfficientNet延伸，在3D卷积中对各个系数进行调整：持续视觉，帧率，图像特征分辨率，宽度和深度。搜索空间要比EfficientNet更复杂。
   - [X3D: Expanding Architectures for Efficient Video Recognition](https://arxiv.org/pdf/2004.04730.pdf)
 
+## video-segment
+
+- 微软提出的视频分割方法。
+  - [A Transductive Approach for Video Object Segmentation](https://arxiv.org/pdf/2004.07193.pdf)
+  - <https://github.com/microsoft/transductive-vos.pytorch>
+
+
 ## Moving-Objects
 
 - 运动相机检测运动目标，很有挑战性高。
