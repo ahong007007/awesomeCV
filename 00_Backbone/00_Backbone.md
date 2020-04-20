@@ -88,6 +88,13 @@ depthwise conv、pointwise conv、groupwise conv减少模型计算量，轮提�
 - Facebook何凯明团队提出，手动设计网络和NAS结合。
   - [Designing Network Design Spaces](https://arxiv.org/pdf/2003.13678.pdf)
 
+- 亚马逊李沐等提出ResNeSt超越ResNet的各种变体：SENet、ResNeXt、EfficientNet.
+  - backbone是计算机视觉的基础，目标检测，分割和各种姿态分析都是基于backbone开发。NAS可以显著提高backbone，但是浪费较多CPU/GPU资源，论文提出一种基于ResNet手工设计的神经网络架构,增加channel之间的特征表达，可用于CV的各个领域。
+  - ResNeSt更像是SK-Net，分组卷积，attention机制的排列组合。
+  - 性能显著提升，参数量却没有明显增加? 并行的cardinal group没有增加显存和运算时间？
+  - 模型的训练有很多策略，Large Mini-batch Distributed Training，Label Smoothing，Mixup、Large Crop Size、Regularization等。没有什么算法是一招制敌。
+  - [ResNeSt: Split-Attention Networks](https://hangzhang.org/files/resnest.pdf)
+
 ---
 
 ## tiny_backbone
