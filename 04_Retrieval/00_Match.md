@@ -19,9 +19,11 @@ overview/review/survey
   - [2017][CVPR][Comparative Evaluation of Hand-Crafted and Learned Local Features](https://demuc.de/papers/schoenberger2017comparative.pdf)
 
 - [2019][A Benchmark on Tricks for Large-scale Image Retrieval](https://arxiv.org/pdf/1907.11854.pdf)
+- [微信扫一扫，图像检索](https://mp.weixin.qq.com/s/fiUUkT7hyJwXmAGQ1kMcqQ)
 - <https://github.com/willard-yuan/awesome-cbir-papers>
 - <https://paperswithcode.com/task/image-retrieval>
 - <https://github.com/shamangary/awesome-local-global-descriptor>
+- [Image Registration: From SIFT to Deep Learning](https://www.sicara.ai/blog/2019-07-16-image-registration-deep-learning)
 
 ---
 
@@ -33,14 +35,16 @@ overview/review/survey
 - HPatches:580 image pairs。包含三个任务: patch verification, image matching and patch retrieval。
   - [A benchmark and evaluation of handcrafted and learned local descriptors]
   - <https://github.com/hpatches/hpatches-benchmark>
-  
-- [Long-team visual localization](https://www.visuallocalization.net/benchmark/)
-  - Aachen Day-Night dataset:Reference images:4,328,Query images:922 (824 daytime, 98 nighttime)
+
+- MegaDepth
+  - 1,070,468 images from 196 different scenes and reconstructed by COLMAP along with their depth maps and intrinsics/extrinsics matrices.
+  - <https://research.cs.cornell.edu/megadepth/>
+
+- Aachen Day-Night dataset:Reference images:4,328,Query images:922 (824 daytime, 98 nighttime)
+  - [Long-team visual localization](https://www.visuallocalization.net/benchmark/)
 
 - Oxford 5k and Oxf105k
-  - 
 - Paris 6k Par106k
-  - 
 
 - [Google Landmarks Dataset v1](https://github.com/cvdfoundation/google-landmark)
   - <https://www.kaggle.com/google/google-landmarks-dataset>
@@ -61,10 +65,9 @@ overview/review/survey
 - [Google Landmark Retrieval 2019](https://www.kaggle.com/c/landmark-retrieval-2019)
   - <https://github.com/cvdfoundation/google-landmark>
   - <https://landmarksworkshop.github.io/CVPRW2019/>
-  - The goal of the Landmark Recognition 2019 challenge is to recognize a landmark presented in a query image, 
-   while the goal of Landmark Retrieval 2019 is to find all images showing that landmark. 
+  - The goal of the Landmark Recognition 2019 challenge is to recognize a landmark presented in a query image,
+   while the goal of Landmark Retrieval 2019 is to find all images showing that landmark.
 
-  - Aachen Day-Night
   - Extended CMU Seasons
   - InLoc
   - RobotCar Seasons
