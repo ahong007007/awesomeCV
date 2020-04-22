@@ -237,8 +237,11 @@ DEGENSAC GC-RANSAC  MAGSAC
   -[2019][MAGSAC++, a fast, reliable and accurate robust estimator](https://arxiv.org/pdf/1912.05909v1.pdf)
   -<https://github.com/ducha-aiki/pymagsac>
 
-- <https://vision.uvic.ca/image-matching-challenge/submit/index.html#tac>
+- ETH Zurich提出，基于ttentional Graph Neural Network+Optimal Matching Layer，解决RANSAC匹配不准确的问题。
+  - [SuperGlue: Learning Feature Matching with Graph Neural Networks](https://arxiv.org/pdf/1911.11763.pdf)
+  - <https://github.com/magicleap/SuperGluePretrainedNetwork>
 
+- <https://vision.uvic.ca/image-matching-challenge/submit/index.html#tac>
   - OpenCV RANSAC: 100k. Note that OpenCV fixes the number of iterations to 1k, but we have a patched version which removes this limitation. We recommend not using this option as it is not available on all the evaluation clusters and typically performs the worst.
 
 ---
