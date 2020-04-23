@@ -27,6 +27,10 @@ overview/review/survey
 
 ---
 
+## 
+
+--
+
 ## Dataset
 
 - Phototourism :a 715-image reconstruction of Notre Dame Cathedral in Paris.
@@ -83,8 +87,8 @@ overview/review/survey
 - CVPR workshop:Long-term Visual Localization
   - <https://www.visuallocalization.net/benchmark/>
 
-- <https://vision.uvic.ca/image-matching-challenge/>
 - Image Matching Challenge 2020
+  - <https://vision.uvic.ca/image-matching-challenge/>
   - [Image Matching across Wide Baselines: From Paper to Practice](https://arxiv.org/pdf/2003.01587.pdf)
 
 ## Google Landmark Retrieval 2019
@@ -223,6 +227,9 @@ Fine-tuning和Attention-based训练。模型训练集只需要分类的标注，
 
 ## Descriptors
 
+- 
+  [SOSNet: Second Order Similarity Regularization for Local Descriptor Learning](https://arxiv.org/pdf/1904.05019.pdf)
+
 - NIPS2019论文，浙江大学提出，主要解决在不同视角图像的匹配关系。论文不是在旋转图像上直接提取特征，而是包含两个分支：直接在旋转图像的特征金字塔提取特征和在变化图像的特征金字塔提取特征，再经过分组卷积和
 Bilinear Pool，提取像素的描述符。模型需要和特征检测器(Superpoint/DoG/LF-Net)配合，不是end-to-end方式。如论文使用的评测数据集HPSequences和SUN3D数据量都不足1K,对比试验也仅仅基于SIFT和GeoDesc，实验数据不具有代表性，但是提出对图像/特征均进行映射变变换，具有参考意义。
   - [NIPS][2019][GIFT: Learning Transformation-Invariant Dense Visual Descriptors via Group CNNs](https://arxiv.org/pdf/1911.05932.pdf)
@@ -231,7 +238,16 @@ Bilinear Pool，提取像素的描述符。模型需要和特征检测器(Superp
 
 ## Geometric-verification
 
-DEGENSAC GC-RANSAC  MAGSAC
+DEGENSAC GC-RANSAC  
+
+- Robert B. Fisher等人提出。
+  - 随机抽样一致（RANSAC）是一种通过使用观测到的数据点来估计数学模型参数的迭代方法。
+  - [1981][Random sample consensus: a paradigm for model fitting with applications to image analysis and automated cartography](https://apps.dtic.mil/dtic/tr/fulltext/u2/a460585.pdf)
+
+- Czech Technical University(捷克理工大学)提出对RANSAC的改进。
+  - 论文提出了一种阈值一致性算法，RANSAC需要设定内点阈值？
+  - 新的模型质量评估函数和新的迭代条件。
+  - [MAGSAC: marginalizing sample consensus](https://arxiv.org/pdf/1803.07469.pdf)
 
 - CVPR2019论文，对RANSAC的改进。包含第三方python库pymagsac，可以无缝替代RANSAC。
   -[2019][MAGSAC++, a fast, reliable and accurate robust estimator](https://arxiv.org/pdf/1912.05909v1.pdf)
