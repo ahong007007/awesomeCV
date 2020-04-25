@@ -226,6 +226,11 @@ NVIDIA Tesla P100 GPU运行，CenterNet511-104 340ms/image，比CornerNet511-104
 在三个attention模块基础上Aggregation Attentive Module生成最终的检测框。
   - [SaccadeNet: A Fast and Accurate Object Detector](https://arxiv.org/pdf/2003.12125.pdf)
 
+- Alexey Bochkovskiy等作品，计算机视觉领域最好的论文之一。不仅仅是一篇论文，更是一篇综述，把CNN的各种trick总结一遍，并且给出设计原则和依据。实验数据翔实，有理有据。
+  - 集成学习，WRC, CSP,CmBN, SAT, Mish activation, Mosaic data augmentation, DropBlock regularization, and CIoU loss，各种trick集成一身，设计臃肿，但是速度飞快，性能高超。
+  - 按照作者的思路，也可以在two-stage阶段写一篇佳作。
+  - [YOLOv4: Optimal Speed and Accuracy of Object Detection](https://arxiv.org/pdf/2004.10934.pdf)
+  
 ---
 
 ## NMS_Series
