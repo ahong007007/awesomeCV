@@ -227,6 +227,9 @@ Fine-tuning和Attention-based训练。模型训练集只需要分类的标注，
 
 ## Descriptors
 
+- 继承L2Net，对Patch提取特征向量。
+  - [Working hard to know your neighbor's margins: Local descriptor learning loss](https://arxiv.org/pdf/1705.10872.pdf)
+  - <https://github.com/DagnyT/hardnet>
 - 
   [SOSNet: Second Order Similarity Regularization for Local Descriptor Learning](https://arxiv.org/pdf/1904.05019.pdf)
 
@@ -253,7 +256,7 @@ DEGENSAC GC-RANSAC
   -[2019][MAGSAC++, a fast, reliable and accurate robust estimator](https://arxiv.org/pdf/1912.05909v1.pdf)
   -<https://github.com/ducha-aiki/pymagsac>
 
-- ETH Zurich提出，基于ttentional Graph Neural Network+Optimal Matching Layer，解决RANSAC匹配不准确的问题。
+- ETH Zurich提出，基于Attentional Graph Neural Network+Optimal Matching Layer，解决RANSAC匹配不准确的问题。
   - [SuperGlue: Learning Feature Matching with Graph Neural Networks](https://arxiv.org/pdf/1911.11763.pdf)
   - <https://github.com/magicleap/SuperGluePretrainedNetwork>
 
