@@ -1,14 +1,11 @@
-# Awesome Autonomous Vehicles: 
+# Awesome Autonomous Vehicles:
+
 [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
 精选无人驾驶资源列表，修改自[takeitallsource/awesome-autonomous-vehicles](https://github.com/takeitallsource/awesome-autonomous-vehicles) :fire:. 
 
-> 除此之外，将继续跟随最新资源
-
-## 贡献
-
-希望大家自由给列表进行pull request~~
-
 ## Table of Contents
+
+* [survey](#survey)
 * [基础](#基础)
 * [课程](#课程)
 * [研究实验室](#研究实验室)
@@ -22,6 +19,12 @@
 * [媒体](#媒体)
 * [法规](#法规)
 
+## survey
+
+* d
+  * [Deep Learning for Image and Point Cloud Fusion in Autonomous Driving: A Review](https://arxiv.org/pdf/2004.05224.pdf)
+
+* d
 
 ## 基础
 
