@@ -27,10 +27,6 @@ overview/review/survey
 
 ---
 
-## 
-
---
-
 ## Dataset
 
 - Phototourism :a 715-image reconstruction of Notre Dame Cathedral in Paris.
@@ -72,6 +68,8 @@ overview/review/survey
   - The goal of the Landmark Recognition 2019 challenge is to recognize a landmark presented in a query image,
    while the goal of Landmark Retrieval 2019 is to find all images showing that landmark.
 
+- 图像街景识别数据集。
+  - [Mapillary Street-Level Sequences: A Dataset for Lifelong Place Recognition](https://research.mapillary.com/img/publications/CVPR20c.pdf)
   - Extended CMU Seasons
   - InLoc
   - RobotCar Seasons
@@ -230,7 +228,8 @@ Fine-tuning和Attention-based训练。模型训练集只需要分类的标注，
 - 继承L2Net，对Patch提取特征向量。
   - [Working hard to know your neighbor's margins: Local descriptor learning loss](https://arxiv.org/pdf/1705.10872.pdf)
   - <https://github.com/DagnyT/hardnet>
-- 
+
+- 论文提出对描述子距离度量的改进。First Order Similarity (FOS) loss近似认为是描述子的L1距离，论文提出Second Order Similarity Regularization(SOS)，用FOS+SOS作为损失函数度量特征向量的距离。
   [SOSNet: Second Order Similarity Regularization for Local Descriptor Learning](https://arxiv.org/pdf/1904.05019.pdf)
 
 - NIPS2019论文，浙江大学提出，主要解决在不同视角图像的匹配关系。论文不是在旋转图像上直接提取特征，而是包含两个分支：直接在旋转图像的特征金字塔提取特征和在变化图像的特征金字塔提取特征，再经过分组卷积和
