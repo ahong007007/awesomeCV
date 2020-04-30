@@ -95,8 +95,7 @@ Programming Algorithm相当于对之前帧特征的融合。Object Segmentation�
   -引入mask分支，或者previous-frame,准确率是不是更好。
   -网络需要足够的特征表达能力，实时性可能欠佳。workstation（Intel i7-7800X）, 8G memory, 2*RTX2080 GPUs 实现45fps。
   -[2019][SiamMan: Siamese Motion-aware Network for Visual Tracking](https://arxiv.org/pdf/1912.05515.pdf)
-
-- [SiamRPN++: Evolution of Siamese Visual Tracking with Very Deep Networks](http://openaccess.thecvf.com/content_CVPR_2019/papers/Li_SiamRPN_Evolution_of_Siamese_Visual_Tracking_With_Very_Deep_Networks_CVPR_2019_paper.pdf)
+  - [SiamRPN++: Evolution of Siamese Visual Tracking with Very Deep Networks](http://openaccess.thecvf.com/content_CVPR_2019/papers/Li_SiamRPN_Evolution_of_Siamese_Visual_Tracking_With_Very_Deep_Networks_CVPR_2019_paper.pdf)
 
 - SiamDW
   - [Deeper and Wider Siamese Networks for Real-Time Visual Tracking](http://openaccess.thecvf.com/content_CVPR_2019/papers/Zhang_Deeper_and_Wider_Siamese_Networks_for_Real-Time_Visual_Tracking_CVPR_2019_paper.pdf)
@@ -115,10 +114,17 @@ Programming Algorithm相当于对之前帧特征的融合。Object Segmentation�
   - [Tracking by Instance Detection: A Meta-Learning Approach](https://arxiv.org/pdf/2004.00830.pdf)
 
 - 计算机视觉已经不满足于图像的分类/检测/分割和视频理解的多任务学习，开始迈向点云。图像+视频+点云,4维度世界（三维度空间和时间维度），连接真实世界。
-
+  - 貌似没有和真正的点云结合？
   - [Tracking Objects as Points](https://arxiv.org/pdf/2004.01177.pdf)
   - <https://github.com/xingyizhou/CenterTrack>
 
+- 论文在SiamMask基础上，提出SiamMask_E。主要改进在rotate bounding box.
+  - 论文先在mask使用椭圆拟合，旋转垂直中心，旋转角a;做近视box，和最小box做交集，得到的box再做放射变换旋转到原先的角度-a。
+  - 为什么在垂直中心得到的box是最合适的？ 
+  - 同样是box，检测框可以用倾斜的做旋转，可以借鉴？
+  - [Fast Visual Object Tracking with Rotated Bounding Boxes](https://arxiv.org/pdf/1907.03892v5.pdf)
+  - [Bao Xin Chen John K. Tsotsos][York University]
+  - <https://github.com/baoxinchen/siammask_e>
 ---
 
 ## Dataset
@@ -158,4 +164,6 @@ Learning Discriminative Model Prediction for Tracking.[pdf](https://128.84.21.19
 
 ## trade off
 
-illumination, deformation,occlusion and motion,speed
+illumination, deformation,motion blurring, occlusion and motion,speed , partial and full occlusion
+
+target:online and in real-time
