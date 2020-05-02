@@ -253,7 +253,10 @@ Grid R-CNN [PDF](https://arxiv.org/pdf/1811.12030.pdf)
 
 ## framwork
 
+- detectron2继承Detectron和maskrcnn-benchmark，提供丰富的目标检测模型。
+  - [detectron2](https://github.com/facebookresearch/detectron2)
 [simpledet](https://github.com/tusimple/simpledet)
+
 mmdetection
 maskrcnn-benchmark
 
