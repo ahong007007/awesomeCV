@@ -13,6 +13,10 @@
 
 - <https://paperswithcode.com/task/scene-text-detection>
 - <https://paperswithcode.com/task/scene-text-recognition>
+- <https://github.com/HCIILAB/Scene-Text-Recognition>
+- 华南理工大学金连文团队提出的文本检测+识别+数据集，全面概括文本识别的方方面面。
+  - [Text Recognition in the Wild: A Survey](https://arxiv.org/pdf/2005.03492.pdf)
+  - <https://github.com/HCIILAB/Scene-Text-Recognition>
 
 ---
 
