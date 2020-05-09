@@ -148,6 +148,15 @@ Inverted Residual Block。Channel attention与SENet不同，论文提出的Chann
 
 TODO 多标签分类问题
 
+- 介绍文本，图像、视频音频等应用中，如何实现Multi-label的基础问题。
+  - [Mining Multi-label Data](http://lkm.fri.uni-lj.si/xaigor/slo/pedagosko/dr-ui/tsoumakas09-dmkdh.pdf)
+
+- 用机器学习的方式，解决多标签分类的问题。
+  - [A review on multilabel algorithm](https://www.researchgate.net/publication/263813673_A_Review_On_Multi-Label_Learning_Algorithms)
+
+- Multilabel问题的实际应用。
+  - [A Tutorial on Multilabel Learning](https://dl.acm.org/doi/pdf/10.1145/2716262)
+
 - AI Lab开源的ML-Images。
   -[Tencent ML-Images: A Large-Scale Multi-Label Image Database for Visual Representation Learning](https://arxiv.org/pdf/1901.01703.pdf)
 
