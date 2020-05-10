@@ -19,11 +19,13 @@
 
 ## Framework
   
-  <https://github.com/STVIR/pysot>
+- <https://github.com/STVIR/pysot>
 
 - FairMOT
   - [A Simple Baseline for Multi-Object Tracking](https://arxiv.org/pdf/2004.01888.pdf)
   -<https://github.com/ifzhang/FairMOT>
+
+- <https://github.com/foolwood/benchmark_results>
 
 ---
 
@@ -125,6 +127,11 @@ Programming Algorithm相当于对之前帧特征的融合。Object Segmentation�
   - [Fast Visual Object Tracking with Rotated Bounding Boxes](https://arxiv.org/pdf/1907.03892v5.pdf)
   - [Bao Xin Chen John K. Tsotsos][York University]
   - <https://github.com/baoxinchen/siammask_e>
+
+- 苏伊士联邦理工学院Martin Danelljan大神作品。tracking普遍基于目标的appearance，initial frame和current frame预测目标，容易受关键影响，性能不鲁棒。
+本文提出Initial Frame+ Prev+Frame Current Frame，高效利用场景信息。
+  - [Know Your Surroundings: Exploiting Scene Information for Object Tracking](https://arxiv.org/pdf/2003.11014v1.pdf)
+
 ---
 
 ## Dataset
@@ -133,7 +140,11 @@ Programming Algorithm相当于对之前帧特征的融合。Object Segmentation�
 
   - [CVPR19 Tracking and Detection Challenge:How crowded can it get?](https://arxiv.org/pdf/1906.04567.pdf)
   
-## 待更新
+## Distinguished
+
+Researchers & Teams
+
+## 待更新      
 
 Martin大神新作，需要仔细研读
 
