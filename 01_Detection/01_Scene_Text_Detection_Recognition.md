@@ -54,6 +54,9 @@ Attention模型可以取得最佳效果（没有考虑实时性）。再次证�
 
   - [What is wrong with scene text recognition model comparisons? dataset and model analysis](https://128.84.21.199/pdf/1904.01906.pdf)[1904.01]
 
+- 解决STR方法中对词汇表依赖的问题。
+  - [On Vocabulary Reliance in Scene Text Recognition](https://arxiv.org/pdf/2005.03959.pdf)
+
 ## Index
 
 1、ICCV2017----Focusing Attention: Towards Accurate Text Recognition in Natural Images[pdf](https://arxiv.org/pdf/1709.02054.pdf)[1709.02]

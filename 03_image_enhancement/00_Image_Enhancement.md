@@ -13,6 +13,9 @@
 - 图像去噪综述。
   - [2019][Deep Learning on Image Denoising: An overview](https://arxiv.org/pdf/1912.13171.pdf)
   
+- NTIRE 2020 Challenge。关于图像去噪竞赛的综述。
+  - [NTIRE 2020 Challenge on Real Image Denoising:Dataset, Methods and Results](https://arxiv.org/pdf/2005.04117.pdf)
+
 ## Super-Resolution
 
 - CVPR2019论文，中科大，自动化所，旷视等联合提出Meta-SR, 单一模型解决任意尺度的 super-resolution。模型包括：Feature Learning Module和MetaUpscale Module。Feature Learning Module
@@ -41,4 +44,3 @@ PSNR and SSIM
 ## dataset
 
 MIT-Adobe FiveK
-
