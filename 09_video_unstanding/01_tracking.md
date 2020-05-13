@@ -144,7 +144,7 @@ Programming Algorithm相当于对之前帧特征的融合。Object Segmentation�
 
 Researchers & Teams
 
-## 待更新      
+## 待更新
 
 Martin大神新作，需要仔细研读
 
