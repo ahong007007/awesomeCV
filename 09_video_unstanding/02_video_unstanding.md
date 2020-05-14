@@ -25,6 +25,9 @@
 
 ## video-recognition
 
+- ICCV2019论文。
+  - [TSM: Temporal Shift Module for Efficient Video Understanding](https://arxiv.org/pdf/1811.08383.pdf)
+
 - Fackbook出品。论文引入生物学中灵长类视网膜细胞启发，在视网膜节细胞中，80%是P-cell, 20%是M-cell，其中M-cell，
 接受高帧率信息，负责响应运动变化，对空间和颜色信息不敏感。P-cell处理低帧率信息，负责精细的空间和颜色信息。对应论文两个分支：Slow pathway和
 Fast pathway，分别处理低帧率图像空间语义信息和高帧率运动信息Slow pathway channels是Fast pathway 1/8,但是显著提高整个模型的准确率，Kinetics达到了79%的精度。
@@ -34,6 +37,9 @@ Fast pathway，分别处理低帧率图像空间语义信息和高帧率运动�
 
 - Facebook出品，基于自家Fast-slow更新。基本思路在google EfficientNet延伸，在3D卷积中对各个系数进行调整：持续视觉，帧率，图像特征分辨率，宽度和深度。搜索空间要比EfficientNet更复杂。
   - [X3D: Expanding Architectures for Efficient Video Recognition](https://arxiv.org/pdf/2004.04730.pdf)
+
+- AAAI2020论文，清华+商汤+港中文联合实现，基于TMS,作者思考如何将时间信息嵌入到空间信息中，使得可以一次性联合学习两种信息。
+  - [Temporal Interlacing Network](https://arxiv.org/pdf/2001.06499.pdf)
 
 ## video-segment
 
