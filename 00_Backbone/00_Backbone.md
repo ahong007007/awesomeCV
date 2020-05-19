@@ -40,6 +40,9 @@
 
 ## backbone
 
+- 亚马逊团队，在ResNet50改进。
+  - [Bag of Tricks for Image Classification with Convolutional Neural Networks](https://arxiv.org/pdf/1812.01187.pdf)
+
 - Res2Net,南开大学提出。计算机视觉的主题是提取更好的特征表示，多尺度特征提取是图像分类，识别，检测，分割的重要手段，
 FPN/ResNet/ResNeXt/DLA/DenseNet等模型都在构造各种提高性能的连接，赏心悦目的美学结构，终极目标应该是何凯明等人提出的
 网络随机生成器。Res2Net的基本结构很容易理解，基本单元拆分Res2Net为分组卷积和SENet，显著降低计算量同时提高准确率。论文
@@ -88,7 +91,7 @@ depthwise conv、pointwise conv、groupwise conv减少模型计算量，轮提�
 - Facebook何凯明团队提出，手动设计网络和NAS结合。
   - [Designing Network Design Spaces](https://arxiv.org/pdf/2003.13678.pdf)
 
-- 亚马逊李沐等提出ResNeSt超越ResNet的各种变体：SENet、ResNeXt、EfficientNet.
+- 亚马逊李沐等提出ResNeSt超越ResNet的各种变体：SENet、ResNeXt、EfficientNet，实现在分类，检测，实例分割等各类视觉任务的提升.
   - backbone是计算机视觉的基础，目标检测，分割和各种姿态分析都是基于backbone开发。NAS可以显著提高backbone，但是浪费较多CPU/GPU资源，论文提出一种基于ResNet手工设计的神经网络架构,增加channel之间的特征表达，可用于CV的各个领域。
   - ResNeSt更像是SK-Net，分组卷积，attention机制的排列组合。
   - 性能显著提升，参数量却没有明显增加? 并行的cardinal group没有增加显存和运算时间？
