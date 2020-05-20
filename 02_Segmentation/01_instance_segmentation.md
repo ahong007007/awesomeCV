@@ -5,6 +5,7 @@
 ## Table of Contents
 
 - [survey](#survey)
+- [awesome](#awesome)
 - [Instance_segmentation](#Instance_segmentation)
 - [Panoptic_Segmentation](#Panoptic_Segmentation)
 
@@ -13,6 +14,13 @@
 ## survey
 
 survey/overview/review
+
+---
+
+## awesome
+
+- <https://github.com/Angzz/awesome-panoptic-segmentation>
+- <https://zhuanlan.zhihu.com/p/59141570>
 
 ---
 
