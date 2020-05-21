@@ -38,7 +38,10 @@ survey/review/overview
   - [2019][Target-less registration of point clouds: A review](https://arxiv.org/pdf/1912.12756.pdf)
 
 - 3D检测框恢复6D姿态估计。
-  - [2020][A Review on Object Pose Recovery: from 3D Bounding Box Detectors to Full 6D Pose Estimators](https://arxiv.org/pdf/2001.10609.pdf) 
+  - [2020][A Review on Object Pose Recovery: from 3D Bounding Box Detectors to Full 6D Pose Estimators](https://arxiv.org/pdf/2001.10609.pdf)
+
+- 自动驾驶中的点云综述,加拿大滑铁卢大学提出。包括数据集，评价方法，分类，目标检测和分割。对点云的处理有框架性的概括。:star: :star: :star: :star: :star:
+  - [Deep Learning for LiDAR Point Clouds in Autonomous Driving: A Review](https://arxiv.org/pdf/2005.09830.pdf)
 
 ---
 
