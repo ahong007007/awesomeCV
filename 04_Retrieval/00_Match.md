@@ -25,6 +25,9 @@ overview/review/survey
 - <https://github.com/shamangary/awesome-local-global-descriptor>
 - [Image Registration: From SIFT to Deep Learning](https://www.sicara.ai/blog/2019-07-16-image-registration-deep-learning)
 
+- Covering all SOTA detector, descriptor for slam.
+  - <https://github.com/luigifreda/pyslam>
+
 ---
 
 ## Dataset
