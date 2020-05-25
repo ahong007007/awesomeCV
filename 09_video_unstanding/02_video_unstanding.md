@@ -23,10 +23,23 @@
 
 ---
 
+## Framework
+
+- SenseTime X-Lab关于视频理解框架，包括SlowFast，R(2+1)D，R3D，TSN、TIN、TSM等。
+  - <https://github.com/Sense-X/X-Temporal>
+
+- Multi-Moments in Time Challenge 2019
+  - <http://moments.csail.mit.edu/challenge_iccv_2019.html>
+
+---
+
 ## video-recognition
 
-- ICCV2019论文。
+- ICCV2019论文,MIT提出。传统2D卷积和3D卷积难以兼顾空间和时序信息，论文提出TSM模块偏移channel维度的特征，实现相邻帧之间的信息交换。
+  - TSM的思想类似于二维卷积中的TCN.
+  - 2D 空洞卷积是否也可引入？
   - [TSM: Temporal Shift Module for Efficient Video Understanding](https://arxiv.org/pdf/1811.08383.pdf)
+  - <https://github.com/mit-han-lab/temporal-shift-module>
 
 - Fackbook出品。论文引入生物学中灵长类视网膜细胞启发，在视网膜节细胞中，80%是P-cell, 20%是M-cell，其中M-cell，
 接受高帧率信息，负责响应运动变化，对空间和颜色信息不敏感。P-cell处理低帧率信息，负责精细的空间和颜色信息。对应论文两个分支：Slow pathway和
@@ -61,6 +74,10 @@ Fast pathway，分别处理低帧率图像空间语义信息和高帧率运动�
 匹配图像卷积（检索的feature map patch，和gallery feature map匹配）。另外提出一种假设，在一台摄像机附近的人仍然可能在另外一台摄像机附近（这种假设对一篇特征匹配应该用处不大）。
 
   - [2019][Interpretable and Generalizable Deep Image Matching with Adaptive Convolutions](https://arxiv.org/pdf/1904.10424.pdf)
+
+## Visual-Dialog
+
+- [History for Visual Dialog: Do we really need it?](https://arxiv.org/pdf/2005.07493.pdf)
 
 ## tricks
 
