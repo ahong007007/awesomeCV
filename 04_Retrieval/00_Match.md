@@ -214,6 +214,11 @@ Fine-tuning和Attention-based训练。模型训练集只需要分类的标注，
   - [ASLFeat: Learning Local Features of Accurate Shape and Localization](https://arxiv.org/pdf/2003.10071.pdf)
   - <https://github.com/lzx551402/ASLFeat>
 
+- 神经网络提取描述子和特征点，需要SfM或者其他方式获取的真值，而真值获取相对较为困难。论文提出用相机姿态估计的方法得到对极几何约束，构建弱监督学习。
+  - 相机姿态如何获取？SfM,和直接获取特征点真值有何区别？
+  - 测试集如果不是同一个相机拍摄，内参不一致，相机姿态如何获取？可适配所有匹配类型？
+  - [Learning Feature Descriptors using Camera Pose Supervision](https://arxiv.org/pdf/2004.13324.pdf)
+
 ---
 
 ## Detector
