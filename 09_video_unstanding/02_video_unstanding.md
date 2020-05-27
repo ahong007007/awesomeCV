@@ -17,6 +17,8 @@
 
  survey/overview/Review
 
+- [Deep Learning for Videos: A 2018 Guide to Action Recognition](http://blog.qure.ai/notes/deep-learning-for-videos-action-recognition-review)
+
 - 天津大学关于无人机在计算机视觉领域的检测和跟踪进行全面的综述，包括当前面临的挑战，提出未来的发展和改进方向，提供一个大规模的无人机捕获数据集visDrone：
 包含image object detection, video object detection, single object tracking, multi-object tracking四大类别数据集。
   - [Vision Meets Drones: Past, Present and Future](https://arxiv.org/pdf/2001.06303.pdf)
@@ -24,6 +26,8 @@
 ---
 
 ## Framework
+
+- <https://github.com/open-mmlab/mmaction>
 
 - SenseTime X-Lab关于视频理解框架，包括SlowFast，R(2+1)D，R3D，TSN、TIN、TSM等。
   - <https://github.com/Sense-X/X-Temporal>

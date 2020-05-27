@@ -132,6 +132,9 @@ Programming Algorithm相当于对之前帧特征的融合。Object Segmentation�
 本文提出Initial Frame+ Prev+Frame Current Frame，高效利用场景信息。
   - [Know Your Surroundings: Exploiting Scene Information for Object Tracking](https://arxiv.org/pdf/2003.11014v1.pdf)
 
+- 
+  - [Siam R-CNN: Visual Tracking by Re-Detection](https://arxiv.org/pdf/1911.12836.pdf)
+
 ---
 
 ## Dataset
