@@ -5,6 +5,7 @@
 - [survey](#survey)
 - [Facial_Detector](#Facial_Detector)
 - [Object_Detection](#Object_Detection)
+- [Transformer](#Transformer)
 - [Tiny](#Tiny)
 - [Imbalance](#Imbalance)
 - [loss](#loss)
@@ -138,6 +139,16 @@ non-local模块修正语义特征。损失函数不平衡：论文设计Balanced
   - 引入progressive constraint（PC）损失，来帮助检测器性能大幅度超越传统的检测器头部。
   - trick包括deformable convnet，multi-scale testing，averaging the parameters of epoch。
   - [CVPR2020][1st Place Solutions for OpenImage2019 - Object Detection and Instance Segmentation](https://arxiv.org/pdf/2003.07557.pdf)
+
+---
+
+## Transformer
+
+- Facebook出品，舍弃了目标检测领域的two-stage one_stage方法，直接用NLP领域的Transformer替代anchor方法，预测目标。
+  - 论文没有使用trick，对比经典的Faster-RCNN算法，没有anchor也不用nms。
+  - 论文还指出进一步研究的方向：Transformer的特点对大目标检测很好但是对小目标检测不好；由于N的限制，每次只能检测100个；GFLOPs持平，但是速度降低一倍。
+  - 开山之作，会带一波检测领域的论文。
+  - [End-to-End Object Detection with Transformers](https://arxiv.org/pdf/2005.12872.pdf)
 
 ---
 
