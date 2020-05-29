@@ -20,6 +20,11 @@ survey/overview/review
 
 - [Image Segmentation: Tips and Tricks from 39 Kaggle Competitions](https://neptune.ai/blog/image-segmentation-tips-and-tricks-from-kaggle-competitions?utm_source=reddit&utm_medium=post&utm_campaign=blog-image-segmentation-tips-and-tricks-from-kaggle-competitions)
 
+- 图像分割loss综述，南京大学Jun Ma总结,研究loss不可多得的材料。
+  - 扩展：分类，检测，分割，视频理解，3D点云都有各个方向的loss设计，综述一下，应该会有惊喜。
+  - [Segmentation Loss Odyssey](https://arxiv.org/pdf/2005.13449v1.pdf)
+  - <https://github.com/JunMa11/SegLoss>
+
 ---
 
 ## Semantic_Segmentation
