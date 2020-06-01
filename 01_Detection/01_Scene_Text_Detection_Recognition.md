@@ -57,6 +57,13 @@ Attention模型可以取得最佳效果（没有考虑实时性）。再次证�
 - 解决STR方法中对词汇表依赖的问题。
   - [On Vocabulary Reliance in Scene Text Recognition](https://arxiv.org/pdf/2005.03959.pdf)
 
+- AAAI2020论文，旷视，华中科技大学白翔团队作品。基于分割方法解决字符串识别的问题(char-level)。
+  - RNN-attention缺点是注意力漂移，分割方法缺点是阈值选取不当。
+  - 论文提出的TextScanner，包括class分支（像素分类，还是图像分割？），Different colors in character segmentation map
+represent the values in different channels是说每一个channel代表一个类别，论文只用于识别英文字符，不包括中文？
+  - localization map and order maps，按照顺序，单个字符分开识别。长句怎么办？
+  - [TextScanner: Reading Characters in Order for Robust Scene Text Recognition](https://arxiv.org/pdf/1912.12422.pdf)
+
 ## Index
 
 1、ICCV2017----Focusing Attention: Towards Accurate Text Recognition in Natural Images[pdf](https://arxiv.org/pdf/1709.02054.pdf)[1709.02]
