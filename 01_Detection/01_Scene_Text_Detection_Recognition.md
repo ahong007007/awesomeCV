@@ -14,6 +14,7 @@
 - <https://handong1587.github.io/deep_learning/2015/10/09/ocr.html>
 - 旷视一篇场景场景文字检测与识别的论文。
   - [Scene Text Detection and Recognition: The Deep Learning Era](https://arxiv.org/pdf/1811.04256.pdf)
+  - <https://github.com/Jyouhou/SceneTextPapers>
 - <https://paperswithcode.com/task/scene-text-detection>
 - <https://paperswithcode.com/task/scene-text-recognition>
 - <https://github.com/HCIILAB/Scene-Text-Recognition>
