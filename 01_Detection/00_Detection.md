@@ -140,6 +140,10 @@ non-local模块修正语义特征。损失函数不平衡：论文设计Balanced
   - trick包括deformable convnet，multi-scale testing，averaging the parameters of epoch。
   - [CVPR2020][1st Place Solutions for OpenImage2019 - Object Detection and Instance Segmentation](https://arxiv.org/pdf/2003.07557.pdf)
 
+- 霍普金斯大学&谷歌提出，backbone使用递归调用金字塔，以及可切换的空洞卷积（SAC，Switchable Atrous Convolution），实现在检测，实例分割，全景分割的STOA。
+  - DetectoRS = Detector + RFP + SAC = Detector + Recursive Feature Pyramid + Switchable Atrous Convolution
+  - [DetectoRS: Detecting Objects with Recursive Feature Pyramid and Switchable Atrous Convolution](https://arxiv.org/pdf/2006.02334)
+
 ---
 
 ## Transformer
