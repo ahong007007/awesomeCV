@@ -103,6 +103,9 @@ computation), matching cost aggregation and disparity prediction.本文主要介
   
 - [2019][SelfVIO: Self-Supervised Deep Monocular Visual-Inertial Odometry and Depth Estimation](https://arxiv.org/pdf/1911.09968.pdf)
 
+- 深度估计综述，包括各种深度学习算法，这几年少有的综述。
+  - [A Survey on Deep Learning Techniques for Stereo-based Depth Estimation](https://arxiv.org/pdf/2006.02535.pdf)
+
 ---
 
 ## Multi-View-Stereo
