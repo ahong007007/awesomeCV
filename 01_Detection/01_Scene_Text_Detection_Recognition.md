@@ -108,3 +108,22 @@ represent the values in different channels是说每一个channel代表一个类�
 | [IIIT 5K-Word (2012)](http://cvit.iiit.ac.in/projects/SceneTextUnderstanding/IIIT5K.html) | 5000 (-/-) | 5000 (2000/3000) | Horizontal| -| cropped | -/✓ |
 | [SVHN (2010)](http://www.iapr-tc11.org/mediawiki/index.php?title=The_Street_View_House_Numbers_(SVHN)_Dataset) | - (-/-) | 600000 (-/-) | Horizontal| -| House number digits | -/✓ |
 | [SVTP (2013)](https://github.com/Jyouhou/SceneTextPapers/blob/master/datasets/svt-p.zip) | 639 (-/639) | - (-/-) |  | En | Distorted | -/✓ |
+
+## review
+
+- ● difficulties
+  - ○ Diversity and Variability of Text in Natural Scenes
+  - ○ Complexity and Interference of Backgrounds
+  - ○ Imperfect Imaging Conditions
+- ● trend
+  - ○ pipeline simplification
+    - Anchor-based EAST R2-CNN
+  - ○ changes in prediction units
+    - Text-instance
+  - ○ Specific Targets
+    - Long text / Multi-orientation / Irregular shapes / Speed-up
+- ● Recognition
+  - ○ CTC & Attention
+- ● Auxiliary Technologies
+  - ○ deblurring
+  - ○ Adversarial Attack
