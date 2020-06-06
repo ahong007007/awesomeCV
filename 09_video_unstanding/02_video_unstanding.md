@@ -79,6 +79,9 @@ Fast pathway，分别处理低帧率图像空间语义信息和高帧率运动�
 
   - [2019][Interpretable and Generalizable Deep Image Matching with Adaptive Convolutions](https://arxiv.org/pdf/1904.10424.pdf)
 
+- 京东提出的FastReID框架，在Market1501&DukeMTMC&MSMT17数据集SOTA.
+  -[FastReID: A Pytorch Toolbox for Real-world Person Re-identification](https://arxiv.org/pdf/2006.02631.pdf)
+
 ## Visual-Dialog
 
 - [History for Visual Dialog: Do we really need it?](https://arxiv.org/pdf/2005.07493.pdf)
