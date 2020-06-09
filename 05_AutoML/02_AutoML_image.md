@@ -43,6 +43,13 @@ top-down,bottom-up特征层的连接方式（还是连连看），取得state-of
   透过屏幕感觉一大波论文迎面而来。
   - [AAAI2020][SM-NAS: Structural-to-Modular Neural Architecture Search for Object Detection](https://arxiv.org/pdf/1911.09929.pdf)
 
+- Fackbok出品，FBNetV3，网络架构与训练策略同时进行搜索。
+  - [FBNetV3: Joint Architecture-Recipe Search using Neural Acquisition Function](https://arxiv.org/pdf/2006.02049.pdf)
+
+- Google出品。
+  - depthwise conv对移动端而言不是很友好，论文用普通卷积+1*1卷积提到DW+PW.
+  - [MobileDets: Searching for Object Detection Architectures for Mobile Accelerators](https://arxiv.org/pdf/2004.14525.pdf)
+
 ---
 
 # Recognition
