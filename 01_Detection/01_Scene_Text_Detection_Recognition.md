@@ -21,6 +21,8 @@
 - 华南理工大学金连文团队提出的文本检测+识别+数据集，全面概括文本识别的方方面面。
   - [Text Recognition in the Wild: A Survey](https://arxiv.org/pdf/2005.03492.pdf)
   - <https://github.com/HCIILAB/Scene-Text-Recognition>
+- 加拿大滑铁卢大学，综述。
+  - [Text Detection and Recognition in the Wild: A Review](https://arxiv.org/pdf/2006.04305.pdf)
 
 ---
 
