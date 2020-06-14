@@ -16,10 +16,13 @@ the Rendered Hand Pose Dataset (RHD)
 
 LSP, FashionPose, PASCAL Person Layout,J-HMDB, MSCOCO, MPII, AI Challenger
 
-## awesome_blog
+## survey
 
 - [An Overview of Human Pose Estimation with Deep Learning](https://medium.com/beyondminds/an-overview-of-human-pose-estimation-with-deep-learning-d49eb656739b)
 - [A 2019 guide to Human Pose Estimation with Deep Learning](https://nanonets.com/blog/human-pose-estimation-2d-guide/)
+
+- 单目姿态估计综述。
+  - [Monocular Human Pose Estimation: A Survey of Deep Learning-based Methods](https://arxiv.org/pdf/2006.01423.pdf)
 
 ## 2D_Human_Pose_Estimation
 
