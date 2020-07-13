@@ -28,6 +28,9 @@ overview/review/survey
 - Covering all SOTA detector, descriptor for slam.
   - <https://github.com/luigifreda/pyslam>
 
+- https://local-features-tutorial.github.io/
+  - <https://local-features-tutorial.github.io/pdfs/Local_features_from_paper_to_practice.pdf>
+
 ---
 
 ## Dataset
@@ -248,6 +251,11 @@ Bilinear Pool，提取像素的描述符。模型需要和特征检测器(Superp
 
 ## Geometric-verification
 
+- RANSAC in 2020: A CVPR Tutorial
+  - <http://cmp.felk.cvut.cz/cvpr2020-ransac-tutorial/>
+- Benchmarking Robust Estimation Methods
+  - <http://cmp.felk.cvut.cz/cvpr2020-ransac-tutorial/presentations/RANSAC-CVPR20-Mishkin.pdf>
+
 DEGENSAC GC-RANSAC  
 
 - Robert B. Fisher等人提出。
@@ -264,7 +272,7 @@ DEGENSAC GC-RANSAC
   -<https://github.com/ducha-aiki/pymagsac>
 
 - ETH Zurich提出，基于Attentional Graph Neural Network+Optimal Matching Layer，解决RANSAC匹配不准确的问题。
-  - [SuperGlue: Learning Feature Matching with Graph Neural Networks](https://arxiv.org/pdf/1911.11763.pdf)
+  - [CVPR2020][SuperGlue: Learning Feature Matching with Graph Neural Networks](https://arxiv.org/pdf/1911.11763.pdf)
   - <https://github.com/magicleap/SuperGluePretrainedNetwork>
 
 - <https://vision.uvic.ca/image-matching-challenge/submit/index.html#tac>
