@@ -143,10 +143,17 @@ non-local模块修正语义特征。损失函数不平衡：论文设计Balanced
 - Google出品，基于Google自家作品Data Augmentation，pre-training,Self-training(Noisy Student training),排列组合，宣布输出SpineNet。
   - [Rethinking Pre-training and Self-training](https://arxiv.org/pdf/2006.06882v1.pdf)
 
-
 - 霍普金斯大学&谷歌提出，backbone使用递归调用金字塔，以及可切换的空洞卷积（SAC，Switchable Atrous Convolution），实现在检测，实例分割，全景分割的STOA。
   - DetectoRS = Detector + RFP + SAC = Detector + Recursive Feature Pyramid + Switchable Atrous Convolution
   - [DetectoRS: Detecting Objects with Recursive Feature Pyramid and Switchable Atrous Convolution](https://arxiv.org/pdf/2006.02334)
+
+- Google Brain团队Quoc V. Le等大佬出品，55.1 COCO test-dev,目标检测领域的STOA，论文主要是对FPN的改进。
+  - EfficientNet比较好理解，用NAS搜索出backbone的最佳resolution/depth/width。
+  - 基于EfficientNet基础上，对FPN改进成为BiFPN，Cross-Scale Connections和Weighted Feature Fusion。
+  - Cross-Scale Connections：吸收FPN,PANet，NAS-FPN的经验，做三点改进：移除只有一个输入的节点，添加同一level的原始特征融合，重复三次top-down &bottom-up，加强更高特征的融合。
+  - Weighted Feature Fusion:一般特征融合方式是直接相加或拼接。论文提出给各个feature增加权重系数，改善特征的重要性。
+  - 论文的模型到处是各种因子，128个TPU调参，炼丹味道太浓。不过开源的模型可以直接拿来主义。
+  - [ECCV2020][EfficientDet: Scalable and Efficient Object Detection](https://arxiv.org/pdf/1911.09070.pdf)
 
 ---
 
