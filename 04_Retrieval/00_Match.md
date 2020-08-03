@@ -95,6 +95,9 @@ overview/review/survey
   - <https://vision.uvic.ca/image-matching-challenge/>
   - [Image Matching across Wide Baselines: From Paper to Practice](https://arxiv.org/pdf/2003.01587.pdf)
 
+- Map-based Localization for Autonomous Driving
+  - <https://sites.google.com/view/mlad-eccv2020/home>
+
 ## Google Landmark Retrieval 2019
 
 - 百度基于PaddlePaddle的开源方案。鉴于PaddlePaddle小众，工业项目设计实在不敢用。
@@ -277,6 +280,9 @@ DEGENSAC GC-RANSAC
 
 - <https://vision.uvic.ca/image-matching-challenge/submit/index.html#tac>
   - OpenCV RANSAC: 100k. Note that OpenCV fixes the number of iterations to 1k, but we have a patched version which removes this limitation. We recommend not using this option as it is not available on all the evaluation clusters and typically performs the worst.
+
+## Visual-Localization
+
 
 ---
 
