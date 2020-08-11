@@ -58,6 +58,10 @@ COCO，MPII test，PoseTrack2017取得较高的准确率，但是实时性避而
   - [2020][CVPR][HigherHRNet: Scale-Aware Representation Learning for Bottom-Up Human Pose Estimation](https://arxiv.org/pdf/1908.10357.pdf)
   - <https://github.com/HRNet/Higher-HRNet-Human-Pose-Estimation>
 
+- 三星研究院作品，MPII state-of-art,论文比较水，在HourGlass更新skip connection(待权重的跳跃连接),concatenation方式采用先拼接再卷积，相当于拼接时增加权重。
+  - 特征的融合，比如FPN等都可以采用带权重的特征融合方式。
+  - [Toward fast and accurate human pose estimation via soft-gated skip connections](https://arxiv.org/pdf/2002.11098v1.pdf)
+
 ## 3D_Human_Pose_Estimation
 
 - [A 2019 guide to 3D Human Pose Estimation](https://blog.nanonets.com/human-pose-estimation-3d-guide/)
