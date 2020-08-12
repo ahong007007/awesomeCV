@@ -64,6 +64,13 @@
 
   - [2019.02][PFLD:A Practical Facial Landmark Detector](https://arxiv.org/pdf/1902.10859.pdf)
 
+- 伦敦帝国学院,InsightFace联合提出，单阶段的人脸检测模型，在WIDER FACE hard test set超过两阶段人脸检测模型。
+  - 论文提出多目标任务学习方法，同时预测 face score, face box, five facial landmarks, and 3D position and correspondence。(face detection and alignment)
+  - Dense Regression Branch:就是将2D的人脸映射到3D模型上，再将3D模型解码为2D图片，然后计算经过编解码的图片和原始图片的差别。中间用到了图卷积。
+  - 训练阶段，用OHEM来平衡positive 和negative的anchors。
+  - FPN之间添加Context Module，增强图像的感受野，用deformable convolution network (DCN) 代替3x3卷积，提高非刚性目标的上下文建模能力。
+  - [RetinaFace: Single-stage Dense Face Localisation in the Wild](https://arxiv.org/pdf/1905.00641.pdf)
+
 ---
 
 ## Object_Detection
