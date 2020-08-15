@@ -225,6 +225,14 @@ Fine-tuning和Attention-based训练。模型训练集只需要分类的标注，
   - 测试集如果不是同一个相机拍摄，内参不一致，相机姿态如何获取？可适配所有匹配类型？
   - [Learning Feature Descriptors using Camera Pose Supervision](https://arxiv.org/pdf/2004.13324.pdf)
 
+- 首先输入两张图->dense feature提取->4D CNN直接回归match->邻域一致性约束refine match->最终match.
+  - 缺点：内存消耗过大，速度慢，效果差。
+  - [NIPS2018][Neighbourhood consensus networks](https://arxiv.org/pdf/1810.10510.pdf)
+
+- 论文在NCNet基础上，提出可训练的特征提取、匹配和匹配过滤(网络包括匹配的所有过程)，直接输出匹配关系。
+  - 为了解决之前dense match的问题，首先将feature进行knn match 然后得到top k的最近邻，之后构造4D匹配空间的时候将没在topk的地方设置成0，这样其实就是一个sparse矩阵，减少计算量。
+  - [CVPR2020][Efficient Neighbourhood Consensus Networks via Submanifold Sparse Convolutions](https://arxiv.org/pdf/2004.10566.pdf)
+
 ---
 
 ## Detector
@@ -280,9 +288,6 @@ DEGENSAC GC-RANSAC
 
 - <https://vision.uvic.ca/image-matching-challenge/submit/index.html#tac>
   - OpenCV RANSAC: 100k. Note that OpenCV fixes the number of iterations to 1k, but we have a patched version which removes this limitation. We recommend not using this option as it is not available on all the evaluation clusters and typically performs the worst.
-
-## Visual-Localization
-
 
 ---
 
