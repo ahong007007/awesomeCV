@@ -75,6 +75,10 @@ MaskIoU Head，代码也是facebook 开源框架maskrcnn_benchmark基础上直�
   - 论文既然强调Stronger的思想,mask learning和Matrix NMS是否可以移植到two-stage检测，分类领域？filter learning是否可在计算机视觉推广?
   - [SOLOv2: Dynamic, Faster and Stronger](https://arxiv.org/pdf/2003.10152.pdf)
 
+- . Single-stage instance segmentation。
+
+  [ECCV2020][SipMask: Spatial Information Preservation for Fast Image and Video Instance Segmentation](https://arxiv.org/pdf/2007.14772.pdf)
+
 ---
 
 ## Panoptic_Segmentation
