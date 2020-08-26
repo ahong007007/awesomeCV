@@ -70,6 +70,11 @@ represent the values in different channels是说每一个channel代表一个类�
   - localization map and order maps，按照顺序，单个字符分开识别。长句怎么办？
   - [TextScanner: Reading Characters in Order for Robust Scene Text Recognition](https://arxiv.org/pdf/1912.12422.pdf)
 
+- 华南理工大学和联想研究院作品，ICDAR 2019-ReCTS识别冠军主要方案。
+  - DAN在有效缓解了注意力机制的对齐错误问题，并在手写和场景两种文本识别场景上取得了SOTA或相当的效果。
+  - [AAAI2020][Decoupled Attention Network for Text Recognition](https://arxiv.org/pdf/1912.10205.pdf)
+  - <https://github.com/Wang-Tianwei/Decoupled-attention-network>
+
 ## Index
 
 1、ICCV2017----Focusing Attention: Towards Accurate Text Recognition in Natural Images[pdf](https://arxiv.org/pdf/1709.02054.pdf)[1709.02]
