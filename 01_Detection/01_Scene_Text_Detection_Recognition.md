@@ -5,6 +5,7 @@
 - [survey](#survey)
 - [Scene_Text_Detection](#Scene_Text_Detection)
 - [Scene_Text_Recognition](#Scene_Text_Recognition)
+- [end2toend](end2end)
 - [DataSet](#DataSet)
 
 ---
@@ -72,8 +73,20 @@ represent the values in different channels是说每一个channel代表一个类�
 
 - 华南理工大学和联想研究院作品，ICDAR 2019-ReCTS识别冠军主要方案。
   - DAN在有效缓解了注意力机制的对齐错误问题，并在手写和场景两种文本识别场景上取得了SOTA或相当的效果。
+  - 注意力机制背后的主要思想是匹配。给定特征映射中的一个特征，其注意评分是通过评分它与历史解码信息的匹配程度来计算的。传统注意力机制解码过程中的耦合关系不可避免地导致误差积累和传播。
   - [AAAI2020][Decoupled Attention Network for Text Recognition](https://arxiv.org/pdf/1912.10205.pdf)
   - <https://github.com/Wang-Tianwei/Decoupled-attention-network>
+
+## end2end
+
+- Mask TextSpotter v3s是华中科技大学白翔团队作品，用语义分割实现OCR边界的对齐，end2end实现检测和识别。
+  - 为什么是语义分割，实例分割不是更香嘛？
+  - 验证数据集较少。只有ICDAR2013，其他ICDAR系列数据集实验少。
+  - [ECCV2020][Mask TextSpotter v3: Segmentation Proposal Network for Robust Scene Text Spotting](https://arxiv.org/pdf/2007.09482.pdf) 
+
+## benchmark
+
+- [ICDAR2019-ReCTS](https://rrc.cvc.uab.es/?ch=12)
 
 ## Index
 
