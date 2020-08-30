@@ -56,7 +56,7 @@ Look More Than Once: An Accurate Detector for Text of Arbitrary Shapes
 阶段采用主流的方法，共2×3×2×2= 24种实现方式，从准确率最高的反推，应该是(默认已经检测或分割后的文字区域)STN+Backbone+BiLSTM+
 Attention模型可以取得最佳效果（没有考虑实时性）。再次证明学好排列组合的重要性。
 
-  BiLSTM=编码从后到前+从前向后信息(文字具有前后相关性)，Attention模块主要解决的是特征向量和输入图像中
+  - BiLSTM=编码从后到前+从前向后信息(文字具有前后相关性)，Attention模块主要解决的是特征向量和输入图像中
   对应的目标区域准确对齐(Index 1)，其实使用商汤的PMTD预测文本行中心位置即可，节省计算资源。
 
   - [What is wrong with scene text recognition model comparisons? dataset and model analysis](https://128.84.21.199/pdf/1904.01906.pdf)[1904.01]
@@ -83,6 +83,12 @@ represent the values in different channels是说每一个channel代表一个类�
   - 为什么是语义分割，实例分割不是更香嘛？
   - 验证数据集较少。只有ICDAR2013，其他ICDAR系列数据集实验少。
   - [ECCV2020][Mask TextSpotter v3: Segmentation Proposal Network for Robust Scene Text Spotting](https://arxiv.org/pdf/2007.09482.pdf) 
+
+- 华南理工大学，华为提出的文本检测方法；
+  - 通过参数化的贝塞尔曲线自适应地处理任意形状的文本。
+  - 提出BezierAlign，改善特征对齐的能力。
+  - Bezier曲线检测方法的计算开销可以忽略，识别速度提升10倍以上。
+  - [CVPR2020][ABCNet: Real-time Scene Text Spotting with Adaptive Bezier-Curve Network](https://arxiv.org/pdf/2002.10200.pdf)
 
 ## benchmark
 
@@ -143,7 +149,35 @@ represent the values in different channels是说每一个channel代表一个类�
   - ○ Specific Targets
     - Long text / Multi-orientation / Irregular shapes / Speed-up
 - ● Recognition
-  - ○ CTC & Attention
+  - ○ CTC
+    - Can hardly be directly applied to 2D prediction
+    - Large computation involved for long sequence
+    - Performance degradation for repeat patterns
+  - ○ Attention
+    - Misalignment problem (attention drift)
+    - More memory size required
+
 - ● Auxiliary Technologies
   - ○ deblurring
   - ○ Adversarial Attack
+
+## Challenge of Scene Text Detection
+
+1. Arbitrarily oriented
+2. Irregular text, perspective distortion
+3. Scale diversity
+4. Ambiguity of annotation:Char, Word，Text, Label sequence order
+5. Completeness and tightness:IoU>=0.5 ?
+6. Arbitrary variation of text appearances
+7. Different types of imaging artifacts
+8. Complicated image background
+9. Uneven lighting
+10. Low resolution
+11. Heavy overlay
+12. Long text detection
+
+- Segmentation based的方法不容易准确区分相邻或重叠文本
+- Regression based 的方法对长文本不易检测完整
+  - Bounding box regression 方法需要设置合理的anchor参数
+
+- 通用分割模型可用于OCR的分割，不同点在哪里？
