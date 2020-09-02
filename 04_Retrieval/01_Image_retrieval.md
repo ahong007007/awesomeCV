@@ -44,3 +44,7 @@
   - 3.通过语义分割和weighted-RANSAC，动态调整RANSAC阈值。
   - 街道的语义分割和深度估计，难点在于树木，楼面，前景和背景的压盖，像素级的识别难度高。论文应该有很多细节没有深入讨论。
   - [Visual Localization Using Semantic Segmentation and Depth Prediction](https://arxiv.org/pdf/2005.11922.pdf)
+
+## Record
+
+PCA,product quantization
