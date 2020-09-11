@@ -265,7 +265,11 @@ NVIDIA Tesla P100 GPU运行，CenterNet511-104 340ms/image，比CornerNet511-104
   - 集成学习，WRC, CSP,CmBN, SAT, Mish activation, Mosaic data augmentation, DropBlock regularization, and CIoU loss，各种trick集成一身，设计臃肿，但是速度飞快，性能高超。
   - 按照作者的思路，也可以在two-stage阶段写一篇佳作。
   - [YOLOv4: Optimal Speed and Accuracy of Object Detection](https://arxiv.org/pdf/2004.10934.pdf)
-  
+
+- Baidu推出的PP-YOLO，集成万千trick一身，速度和准确率都超过EfficientDet and YOLOv4.
+  - PP-YOLO的速度快，不见得是网络架构做的好，百度在paddlepaddle做了很多改进。比如百度在ResNet50基础上的开发ResNet50-vd，在底层实现的加速优化。
+  - [PP-YOLO: An Effective and Efficient Implementation of Object Detector](https://arxiv.org/pdf/2007.12099v3.pdf)
+
 ---
 
 ## NMS_Series
