@@ -37,6 +37,13 @@
 
 ---
 
+## video-Object-Detection
+
+- 谷歌提出了一种目标检测的新方法Context R-CNN，简单地说，就是利用摄像头长时间的拍摄内容，推理出模糊画面里的目标。
+  - 借助于视频关键帧(关键帧如何确定？),长时间的上下文信息(short attention,long attention，月度级计算量是不是很大？),检测目标。
+  - 视频监控，野外无人值守，可以实现长时间的视频综合分析。如何借助多个camera，长时间定位那？
+  - [Context R-CNN: Long Term Temporal Context for Per-Camera Object Detection](https://arxiv.org/pdf/1912.03538v3.pdf)
+
 ## video-recognition
 
 - ICCV2019论文,MIT提出。传统2D卷积和3D卷积难以兼顾空间和时序信息，论文提出TSM模块偏移channel维度的特征，实现相邻帧之间的信息交换。
