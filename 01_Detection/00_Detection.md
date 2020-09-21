@@ -42,6 +42,10 @@
 - 目标检测发展20年历程。
   - [Object Detection in 20 Years: A Survey](https://arxiv.org/pdf/1905.05055.pdf)
 
+- TIDE,分析object detection和instance segmentation错误分布的工具。
+  - 分析多个数据集，Pascal, COCO, Cityscapes, and LVIS等，错误原因包括Classification Error，Localization Error等6中类型，主要测试算法短板。
+  - [TIDE: A General Toolbox for Identifying Object Detection Errors](https://arxiv.org/pdf/2008.08115.pdf)
+
 ---
 
 ## dataset

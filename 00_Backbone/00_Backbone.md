@@ -98,6 +98,13 @@ depthwise conv、pointwise conv、groupwise conv减少模型计算量，轮提�
   - 模型的训练有很多策略，Large Mini-batch Distributed Training，Label Smoothing，Mixup、Large Crop Size、Regularization等。没有什么算法是一招制敌。
   - [ResNeSt: Split-Attention Networks](https://hangzhang.org/files/resnest.pdf)
 
+- CMU设计的知识蒸馏提高ResNet50的分类准确率。
+  - 论文使用Teacher Ensembles的方式，不需要标注真值，label由teacher mean 输出(ImageNet由人工标注，每个图不是只有一个目标，不能表示复杂的图像信息).
+  - KL散度度量teacher 和student概率分布差异，KL(p||q)简化为cross-entropy loss。
+  - 知识蒸馏的天花板是teacher模型的精度，论文用Ensembles方式，
+  - [MEAL V2: Boosting Vanilla ResNet-50 to 80%+ Top-1 Accuracy on ImageNet without Tricks](https://arxiv.org/pdf/2009.08453.pdf)
+
+
 ---
 
 ## tiny_backbone
