@@ -287,6 +287,11 @@ DEGENSAC GC-RANSAC
   - [CVPR2020][SuperGlue: Learning Feature Matching with Graph Neural Networks](https://arxiv.org/pdf/1911.11763.pdf)
   - <https://github.com/magicleap/SuperGluePretrainedNetwork>
 
+- ETH Zurich提出，AdaLAM的全称是Adaptive Locally-Affine Matching(自适应局部仿射匹配)，本文提出了一种高效快速外点滤除算法：论文首先找到初始匹配点，置信度高且分布较好的点作为种子，在局部区域选择匹配点。
+  - 痛点：在图像匹配任务中初始匹配中外点较多，目前难以高效快速地滤除外点。论文提出一种假设，局部图像之间满足放射变换(如果有语义分割那？局部的类别是已知的？)
+  - [AdaLAM: Revisiting Handcrafted Outlier Detection](https://arxiv.org/pdf/2006.04250.pdf)
+  - <https://github.com/cavalli1234/AdaLAM>
+
 - <https://vision.uvic.ca/image-matching-challenge/submit/index.html#tac>
   - OpenCV RANSAC: 100k. Note that OpenCV fixes the number of iterations to 1k, but we have a patched version which removes this limitation. We recommend not using this option as it is not available on all the evaluation clusters and typically performs the worst.
 
