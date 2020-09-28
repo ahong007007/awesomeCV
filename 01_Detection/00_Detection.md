@@ -274,6 +274,12 @@ NVIDIA Tesla P100 GPU运行，CenterNet511-104 340ms/image，比CornerNet511-104
   - PP-YOLO的速度快，不见得是网络架构做的好，百度在paddlepaddle做了很多改进。比如百度在ResNet50基础上的开发ResNet50-vd，在底层实现的加速优化。
   - [PP-YOLO: An Effective and Efficient Implementation of Object Detector](https://arxiv.org/pdf/2007.12099v3.pdf)
 
+- 目标检测分为两种框架One-stage 和two-stage，其实现在区别在RPN以及anchor-free。One-stage结构简单，效率高，但是两阶段准确率更高，耗时相对较长。有办法结合两种
+方法一起来做那？商汤和香港中文大学提出MimicDet，采用知识蒸馏的方法，one-stage和two-stage共用一个架构，不需要预训练teacher架构two-stage,
+两个模型一起训练，但是推断的时候只使用one-stage,在COCO test-dev测试集竟然达到46.1mAP。
+  - 论文中Head Mimicking使用两个余弦相似度作为损失函数，使用KL散度是不是更有效？
+  - [MimicDet: Bridging the Gap Between One-Stage and Two-Stage Object Detection](https://arxiv.org/pdf/2009.11528.pdf)
+
 ---
 
 ## NMS_Series
