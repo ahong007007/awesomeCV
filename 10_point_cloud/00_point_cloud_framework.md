@@ -10,7 +10,10 @@ non-Euclidean没有griddded array的数据属性.
   - [Deep Learning for 3D Point Clouds: A Survey](https://arxiv.org/pdf/1912.12033.pdf)
 
 - 厦门大学等综述点云与深度学习。
-  -[Review: deep learning on 3D point clouds](https://arxiv.org/pdf/2001.06280.pdf)
+  - [Review: deep learning on 3D point clouds](https://arxiv.org/pdf/2001.06280.pdf)
+
+- 综述点云与深度学习。
+  - [Deep Learning for 3D Point Cloud Understanding: A Survey](https://arxiv.org/pdf/2009.08920.pdf)
 
 ## Library
 
