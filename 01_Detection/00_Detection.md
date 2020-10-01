@@ -168,6 +168,10 @@ non-local模块修正语义特征。损失函数不平衡：论文设计Balanced
   - 论文的模型到处是各种因子，128个TPU调参，炼丹味道太浓。不过开源的模型可以直接拿来主义。
   - [ECCV2020][EfficientDet: Scalable and Efficient Object Detection](https://arxiv.org/pdf/1911.09070.pdf)
 
+- BorderDet是旷视和清华大学的作品，难得一篇好文章。现有目标检测有的直接预测anchor，或者预测中心点,而边界点/角点，预测的信息可能和目标没有任何关联。论文提出用目标的边界极限点特征对物体定位有很大帮助.
+  - [CVPR2020][BorderDet: Border Feature for Dense Object Detection](https://arxiv.org/pdf/2007.11056.pdf)
+  - <https://github.com/Megvii-BaseDetection/BorderDet>
+
 ---
 
 ## Transformer
