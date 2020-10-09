@@ -187,6 +187,7 @@ non-local模块修正语义特征。损失函数不平衡：论文设计Balanced
 - DERT模型在目标检测领域是最精简和直接的，在空间特征处理上有很多缺点，商汤在DERT基础上做了一些改进：
   - 论文重要是在Transformer Encoder/Transformer Decoder增加Deformable和Multi-scale，增加空间表达能力。
   - 论文的涨点策略包括Iterative Bounding Box Refinement（对decoder layer修订bounding boxes），Two-Stage Deformable DETR(encoder输出的特征图，增加detection head，输出到第二阶段的encoder)。
+  - 训练速度比DETR快10倍，COCO 2017 test-dev达到52.3mAP,目标检测又和two-stage链接，是否可以做到替代Faster RCNN为代表的anchor方法那？
   - [Deformable DETR: Deformable Transformers for End-to-End Object Detection](https://arxiv.org/pdf/2010.04159.pdf)
   
 ---
