@@ -179,9 +179,16 @@ non-local模块修正语义特征。损失函数不平衡：论文设计Balanced
 - Facebook出品，舍弃了目标检测领域的two-stage one_stage方法，直接用NLP领域的Transformer替代anchor方法，预测目标。
   - 论文没有使用trick，对比经典的Faster-RCNN算法，没有anchor也不用nms。
   - 论文还指出进一步研究的方向：Transformer的特点对大目标检测很好但是对小目标检测不好；由于N的限制，每次只能检测100个；GFLOPs持平，但是速度降低一倍。
+  - transformer 的结构是 permutation-invariant，也就是说 调换输入顺序，结果不变。为了解决这个问题，每一次都加 positional encoding。
+  - 论文需要的训练资源较多，训练时间很长，论文中的的DETR模型训练了500个epoch,每块V100（32G显存）只能放下四张图片的batch，64个batch是用了16块V100实现的。
   - 开山之作，会带一波检测领域的论文。
   - [End-to-End Object Detection with Transformers](https://arxiv.org/pdf/2005.12872.pdf)
 
+- DERT模型在目标检测领域是最精简和直接的，在空间特征处理上有很多缺点，商汤在DERT基础上做了一些改进：
+  - 论文重要是在Transformer Encoder/Transformer Decoder增加Deformable和Multi-scale，增加空间表达能力。
+  - 论文的涨点策略包括Iterative Bounding Box Refinement（对decoder layer修订bounding boxes），Two-Stage Deformable DETR(encoder输出的特征图，增加detection head，输出到第二阶段的encoder)。
+  - [Deformable DETR: Deformable Transformers for End-to-End Object Detection](https://arxiv.org/pdf/2010.04159.pdf)
+  
 ---
 
 ## Tiny
