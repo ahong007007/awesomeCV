@@ -52,6 +52,7 @@ Look More Than Once: An Accurate Detector for Text of Arbitrary Shapes
 
 - 武汉大学，悉尼大学联合提出针对任意文字检测的方法，结合单子特征，文本行特征，全局特征，以及语义分割，联合使用，校测较为准确的文本。
   - global-level features来自于segmentation，word以及char信息来自于RoIAlign。
+  - 论文主要是针对英文，对中文检测是否有效待验证。
   - [TextFuseNet: Scene Text Detection with Richer Fused Features](https://www.ijcai.org/Proceedings/2020/0072.pdf)
   - <https://github.com/ying09/TextFuseNet>
 
