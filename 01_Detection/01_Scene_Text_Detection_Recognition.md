@@ -50,6 +50,11 @@ Look More Than Once: An Accurate Detector for Text of Arbitrary Shapes
   - head包含Character Branch 和 Text Detection Branch。
   - [Convolutional Character Networks](https://arxiv.org/pdf/1910.07954v1.pdf)
 
+- 武汉大学，悉尼大学联合提出针对任意文字检测的方法，结合单子特征，文本行特征，全局特征，以及语义分割，联合使用，校测较为准确的文本。
+  - global-level features来自于segmentation，word以及char信息来自于RoIAlign。
+  - [TextFuseNet: Scene Text Detection with Richer Fused Features](https://www.ijcai.org/Proceedings/2020/0072.pdf)
+  - <https://github.com/ying09/TextFuseNet>
+
 ## Scene_Text_Recognition
 
 - 论文提出一个框架模型，包括Spatial Transformer Network，Feature extraction，Sequence modeling，predictor，每个
