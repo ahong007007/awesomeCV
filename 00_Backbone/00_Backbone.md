@@ -103,7 +103,8 @@ depthwise conv、pointwise conv、groupwise conv减少模型计算量，轮提�
   - KL散度度量teacher 和student概率分布差异，KL(p||q)简化为cross-entropy loss。
   - 知识蒸馏的天花板是teacher模型的精度，论文用Ensembles方式，
   - [MEAL V2: Boosting Vanilla ResNet-50 to 80%+ Top-1 Accuracy on ImageNet without Tricks](https://arxiv.org/pdf/2009.08453.pdf)
-
+- ICLR2021盲审论文，LambdaResNets 在实现 SOTA ImageNet 准确性的同时，运行速度是 EfficientNets 的4.5 倍左右。
+  - [LambdaNetworks: Modeling long-range Interactions without Attention](https://openreview.net/pdf?id=xTJEN-ggl1b)
 
 ---
 
