@@ -37,6 +37,14 @@
 
 ---
 
+## Video Classification
+
+- Facebook Christoph大神作品，和2D分类模型一脉相承，在谷歌EfficientNet基础上一脉相承，对视频理解框架fastslow的网络架构，在空间，时间，特征的宽度
+  高度等缩放空间搜索，实现5.5x的parameter参数减少，同时准确率保持不变。
+  - [X3D: Expanding Architectures for Efficient Video Recognition](https://arxiv.org/pdf/2004.04730v1.pdf)
+  - [https://github.com/facebookresearch/SlowFast]
+
+
 ## video-Object-Detection
 
 - 谷歌提出了一种目标检测的新方法Context R-CNN，简单地说，就是利用摄像头长时间的拍摄内容，推理出模糊画面里的目标。
