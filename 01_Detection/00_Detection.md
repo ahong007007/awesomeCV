@@ -171,7 +171,17 @@ non-local模块修正语义特征。损失函数不平衡：论文设计Balanced
 - BorderDet是旷视和清华大学的作品，难得一篇好文章。现有目标检测有的直接预测anchor，或者预测中心点,而边界点/角点，预测的信息可能和目标没有任何关联。论文提出用目标的边界极限点特征对物体定位有很大帮助.
   - [CVPR2020][BorderDet: Border Feature for Dense Object Detection](https://arxiv.org/pdf/2007.11056.pdf)
   - <https://github.com/Megvii-BaseDetection/BorderDet>
-
+  
+- Google大脑有一个刷榜之作品，论文在EfficientNet+NAS-FPN基础上，在训练的时候做数据增强(copy paste augmentation)和self training，提高了检测和实例分割效果。
+  - copy paste augmentation:I2=I1 × α + I2 × (1 − α), α使用高斯滤波器平滑图像边缘。
+  - Large Scale Jittering:论文使用standard scale jittering (SSJ) and large scale jittering (LSJ)，随机裁剪和缩放图像。 LargeScaleJitter from scale of 0.1 to 2
+  - self training:
+    (1) train a supervised model with Copy-Paste augmentation on labeled data, 
+    (2) generate pseudo labels on unlabeled data,
+    (3) paste ground-truth instances into pseudo labeled and supervised labeled images and train a model this new data。
+  - [Simple Copy-Paste is a Strong Data Augmentation Method for Instance Segmentation](https://arxiv.org/pdf/2012.07177v1.pdf)
+  - <https://github.com/conradry/copy-paste-aug>
+  
 ---
 
 ## Transformer
