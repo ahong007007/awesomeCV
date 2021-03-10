@@ -156,8 +156,8 @@ non-local模块修正语义特征。损失函数不平衡：论文设计Balanced
 
 - 霍普金斯大学&谷歌提出，backbone使用递归调用金字塔，以及可切换的空洞卷积（SAC，Switchable Atrous Convolution），实现在检测，实例分割，全景分割的STOA。
   - DetectoRS = Detector + RFP + SAC = Detector + Recursive Feature Pyramid + Switchable Atrous Convolution
-  - Recursive Feature Pyramid=top-down+bottom-up的双路特征金字塔。
-  - 论文提出可切换的空洞卷积，是不是也可以做可切换的DCN？
+  - Recursive Feature Pyramid=top-down+bottom-up的双路特征金字塔,达到FPN-NAS类似的效果，增加特征的感受野。Unrolling RFP循环只是做一次还是无限循环下去？
+  - Switchable Atrous Convolution，感受野动态调整(是不是也可以做可切换的DCN)。
   - [DetectoRS: Detecting Objects with Recursive Feature Pyramid and Switchable Atrous Convolution](https://arxiv.org/pdf/2006.02334)
 
 - Google Brain团队Quoc V. Le等大佬出品，55.1 COCO test-dev,目标检测领域的STOA，论文主要是对FPN的改进。
