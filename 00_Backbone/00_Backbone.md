@@ -58,7 +58,9 @@ depthwise conv、pointwise conv、groupwise conv减少模型计算量，轮提�
   - [HetConv: Heterogeneous Kernel-Based Convolutions for Deep CNNs](https://arxiv.org/pdf/1903.04120.pdf)
 
 - google提出的backbone模型，主要是对现有模型基础上depth/width/resolution尺度变换，即三个维度系数的设计（手工调参？）。这些维度都是>1的乘法，为什么准确率提高的同时，计算量还降低？模型没有结合SENet等常见trick，貌似用使用更多的5x5卷积。
-
+  - backbone的设计转换为grid search问题。
+  - 为什么三个维度同时搜索？论文对比发现单个维度对模型的性能影响有限。是深度卷积神经网络的深度、宽度、分辨率，分别设到什么程度，可以帮助网络更好地拟合非线性特性，提取图像语义特征并用合理的计算资源完成模式识别工作。
+  - 参数量并不等于实际计算量，resnet150参数量是efficientnet-b211倍，但是速度是efficientnet-b2的87%。
   - [EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks](https://arxiv.org/pdf/1905.11946.pdf)
 
 - FaceBook作品，提出FixResNeXt，ImageNet Top 1 86.4%。当训练与测试时使用的图像分辨率差异较大时，分类器模型会出现性能差异，一般解决方法是数据增强，包括图像的裁剪，水平翻转和色彩抖动。
@@ -103,9 +105,16 @@ depthwise conv、pointwise conv、groupwise conv减少模型计算量，轮提�
   - KL散度度量teacher 和student概率分布差异，KL(p||q)简化为cross-entropy loss。
   - 知识蒸馏的天花板是teacher模型的精度，论文用Ensembles方式，
   - [MEAL V2: Boosting Vanilla ResNet-50 to 80%+ Top-1 Accuracy on ImageNet without Tricks](https://arxiv.org/pdf/2009.08453.pdf)
+
 - ICLR2021盲审论文，LambdaResNets 在实现 SOTA ImageNet 准确性的同时，运行速度是 EfficientNets 的4.5 倍左右。
   - [LambdaNetworks: Modeling long-range Interactions without Attention](https://openreview.net/pdf?id=xTJEN-ggl1b)
 
+- 谷歌在imageNet刷榜作品。轮提出的方法是改进self trainging.
+  - confirmation bias:不管是teacher还是student，都会有错误偏差，论文的模型如何解决？
+  - 资源：a cluster of 2,048 TPUv3 cores  +不开源的JFT data。JFT数据集远高于ImageNet，胜之不武。
+  - imagenet榜单前15名都是Google家的，强者恒强，垄断了ImageNet. 
+  - [Meta Pseudo Labels](https://arxiv.org/pdf/2003.10580v4.pdf)
+  
 ---
 
 ## tiny_backbone
