@@ -41,6 +41,7 @@
 
 - Facebook Christoph大神作品，和2D分类模型一脉相承，在谷歌EfficientNet基础上一脉相承，对视频理解框架fastslow的网络架构，在空间，时间，特征的宽度
   高度等缩放空间搜索，实现5.5x的parameter参数减少，同时准确率保持不变。
+  - EfficientNet的缩放策略，可以压缩任何计算机视觉，NLP模型；灌水大法真好！
   - [X3D: Expanding Architectures for Efficient Video Recognition](https://arxiv.org/pdf/2004.04730v1.pdf)
   - [https://github.com/facebookresearch/SlowFast]
 
@@ -63,6 +64,9 @@
 - Fackbook出品。论文引入生物学中灵长类视网膜细胞启发，在视网膜节细胞中，80%是P-cell, 20%是M-cell，其中M-cell，
 接受高帧率信息，负责响应运动变化，对空间和颜色信息不敏感。P-cell处理低帧率信息，负责精细的空间和颜色信息。对应论文两个分支：Slow pathway和
 Fast pathway，分别处理低帧率图像空间语义信息和高帧率运动信息Slow pathway channels是Fast pathway 1/8,但是显著提高整个模型的准确率，Kinetics达到了79%的精度。
+  - Slow pathway处理空间语义信息，Fast pathway捕获动作语义信息。
+  - 每层的输出，Slow为{T,S^2,C}，而Fast为{αT,S^2,βC},Time-strided convolution将两者尺寸匹配。  
+    Fast pathway ：higher temporal resolution and lower channel capacity。
   - Slow pathway是Fast pathway 计算量20%，但是两个通道不是孤立的，各个特征分辨率均有特征融合。
   - 模型训练时使用128个GPU，视频理解领域还需要更简洁的特征表达能力。
   - [2019][ICCV][SlowFast Networks for Video Recognition](https://arxiv.org/pdf/1812.03982v3.pdf)
@@ -100,6 +104,13 @@ Fast pathway，分别处理低帧率图像空间语义信息和高帧率运动�
 ## Visual-Dialog
 
 - [History for Visual Dialog: Do we really need it?](https://arxiv.org/pdf/2005.07493.pdf)
+
+---
+
+## training
+
+- 视频处理不仅运行速度慢(模型参数量大),训练速度也慢。Ross Girshick，何凯明等提出使用Multigrid Method的方法提高模型的训练速度。
+  - [A Multigrid Method for Efficiently Training Video Models](https://arxiv.org/pdf/1912.00998v2.pdf)
 
 ## tricks
 

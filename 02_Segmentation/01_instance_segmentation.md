@@ -21,6 +21,7 @@ survey/overview/review
 
 - <https://github.com/Angzz/awesome-panoptic-segmentation>
 - <https://zhuanlan.zhihu.com/p/59141570>
+-
 
 ---
 
@@ -78,6 +79,9 @@ MaskIoU Head，代码也是facebook 开源框架maskrcnn_benchmark基础上直�
 - . Single-stage instance segmentation。
 
   [ECCV2020][SipMask: Spatial Information Preservation for Fast Image and Video Instance Segmentation](https://arxiv.org/pdf/2007.14772.pdf)
+
+- 
+  - [Simple Copy-Paste is a Strong Data Augmentation Method for Instance Segmentation](https://arxiv.org/pdf/2012.07177v1.pdf)
 
 ---
 

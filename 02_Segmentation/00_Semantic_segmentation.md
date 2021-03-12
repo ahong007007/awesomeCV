@@ -25,6 +25,10 @@ survey/overview/review
   - [Segmentation Loss Odyssey](https://arxiv.org/pdf/2005.13449v1.pdf)
   - <https://github.com/JunMa11/SegLoss>
 
+- loss算法综述。
+  - [A survey of loss functions for semantic segmentation](https://arxiv.org/pdf/2006.14822.pdf)
+  - <https://github.com/shruti-jadon/Semantic-Segmentation-Loss-Functions>
+
 ---
 
 ## Semantic_Segmentation
