@@ -1,3 +1,31 @@
+#　顶会论文的突破
+
+- 框架总结： 
+  - 1.手动设计网络结构 -> NAS搜索； 
+  - 2.固定感受野 -> 引入空间注意力做感受野自动调节；
+  - 3.效果提升不上去 -> 换个思路做实时分割来对比结果；
+  - 4.自监督太热门 -> 引入弱监督 （GAN, 知识蒸馏, ...） + trick = 差不多的score；
+  - 5.DNN太枯燥，融入点传统视觉的方法搞成end-to-end训练；
+  - 6.CNN太单调，配合GCN搞点悬念；
+  - 7.嫌2D太low逼，转3D点云分割；在3D卷积中引入2D的各种相似结构。
+
+- 积木总结：A+B，A+B+C，A+B+C+D，... 
+
+  - 1.注意力机制：spatial/Temporal attention，Hard/Soft attention.
+    SE ~ Non-local ~ CcNet ~ GC-Net ~ Gate ~ CBAM ~ Dual Attention ~ Spatial Attention ~ Channel Attention ~ ... 
+  【只要你能熟练的掌握加法、乘法、并行、串行四大法则，外加知道一点基本矩阵运算规则（如：HW * WH = HH）和sigmoid/softmax操作，那么你就能随意的生成很多种注意力机制】 
+  - 2.卷积结构：Residual block ~ Bottle-neck block ~ Split-Attention block ~ Depthwise separable convolution ~ Recurrent convolution ~ Group convolution  ~ Octave convolution ~ Ghost convolution 
+  - 3.可形变卷积：deformable conv,dilated conv
+  - 4.多尺度模块：ASPP ~ PPM ~ DCM ~ DenseASPP ~ FPA ~ OCNet ~ MPM... 【好好把ASPP和PPM这两个模块理解一下，搞多/减少几条分支，并联改成串联或者串并联结合，每个分支搞点加权，再结合点注意力或者替换卷积又可以组装上百种新结构出来了】 
+  - 5.损失函数：Focal loss ~ Dice loss ~ BCE loss ~ Wetight loss ~ Boundary loss ~ Lovász-Softmax loss ~ TopK loss ~ Hausdorff distance(HD) loss ~ Sensitivity-Specificity (SS) loss ~ Distance penalized CE loss ~ Colour-aware Loss...
+  - 6.池化结构：Max pooling ~ Average pooling ~ Random pooling ~ Strip Pooling ~ Mixed Pooling ~...
+  - 7.归一化模块：Batch Normalization ~Layer Normalization ~ Instance Normalization ~ Group Normalization ~ Switchable Normalization ~ Filter Response Normalization...
+  - 8.学习衰减策略：StepLR ~ MultiStepLR ~ ExponentialLR ~ CosineAnnealingLR ~ ReduceLROnPlateau ~...
+  - 9.优化算法：BGD ~ SGD ~ Adam ~ RMSProp ~ Lookahead ~...
+  - 10.数据增强：水平翻转、垂直翻转、旋转、平移、缩放、裁剪、擦除、反射变换 ~ 亮度、对比度、饱和度、色彩抖动、对比度变换 ~ 锐化、直方图均衡、Gamma增强、PCA白化、高斯噪声、GAN ~ Mixup
+  - 11.骨干网络：LeNet ~ ResNet ~ DenseNet ~ VGGNet ~ GoogLeNet ~ Res2Net ~ ResNeXt ~ InceptionNet ~ SqueezeNet ~ ShuffleNet ~ SENet ~ DPNet ~ MobileNet ~NasNet ~ DetNet ~ EfficientNet ~ ...
+
+
 # backbone
 FPN->ResNet->ResNeXt->DLA->DenseNet->Res2Net
 
