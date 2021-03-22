@@ -112,13 +112,13 @@ overview/review/survey
 ## End-to-end matching pipeline
 
 - 最近因为项目需要，重读图像匹配领域经典算法SIFT，追根溯源寻求特征匹配来龙去脉。这几年算法大多直接CNN，个人失去探索本源和对原理的理解。根据Opencv对SIFT总结，对比原论文，主要有以下几个部分：
-  -Scale-space peak Selection：对多尺度图像高斯模糊处理，图像金字塔生成Difference of Gaussians(DoG)， 搜索DoG空间极值点,获取潜在特征点。特征是在多尺度空间获取， 所以具有多尺度不变形。
-  -Keypoint Localization：Hessian matrix计算主曲率，去除位于图像边缘和无明显差异特征点。
-  -Orientation Assignment：使用直方图统计邻域内像素的梯度和方向。梯度直方图将360°平均分配36个bins。以直方图中最大值作为该关键点的主方向。为了增强匹配的鲁棒性，只保留峰值大于主方向峰值80％的方向作为该关键点的辅方向。
-  -Keypoint descriptor：特征点为中心选16x16的区域，划分为16个4*4子区域。每个4*4计算8个方向直方图，得到128维度特征向量。
-  -Keypoint Matching:采用最接近距离与第二最接近距离之比0.8，去除无效匹配点。
-  -[Distinctive Image Features from Scale-Invariant Keypoints](https://www.cs.ubc.ca/~lowe/papers/ijcv04.pdf)
-  -<https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_sift_intro/py_sift_intro.html>
+  - Scale-space peak Selection：对多尺度图像高斯模糊处理，图像金字塔生成Difference of Gaussians(DoG)， 搜索DoG空间极值点,获取潜在特征点。特征是在多尺度空间获取， 所以具有多尺度不变形。
+  - Keypoint Localization：Hessian matrix计算主曲率，去除位于图像边缘和无明显差异特征点。
+  - Orientation Assignment：使用直方图统计邻域内像素的梯度和方向。梯度直方图将360°平均分配36个bins。以直方图中最大值作为该关键点的主方向。为了增强匹配的鲁棒性，只保留峰值大于主方向峰值80％的方向作为该关键点的辅方向。
+  - Keypoint descriptor：特征点为中心选16x16的区域，划分为16个4*4子区域。每个4*4计算8个方向直方图，得到128维度特征向量。
+  - Keypoint Matching:采用最接近距离与第二最接近距离之比0.8，去除无效匹配点。
+  - [Distinctive Image Features from Scale-Invariant Keypoints](https://www.cs.ubc.ca/~lowe/papers/ijcv04.pdf)
+  - <https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_feature2d/py_sift_intro/py_sift_intro.html>
 
 - match一篇经典论文。
   - [CVPR][2012][Three things everyone should know to improve object retrieval](https://www.robots.ox.ac.uk/~vgg/publications/2012/Arandjelovic12/arandjelovic12.pdf)
@@ -172,11 +172,10 @@ Fine-tuning和Attention-based训练。模型训练集只需要分类的标注，
   - [2018][CVPR][Revisiting Oxford and Paris: Large-Scale Image Retrieval Benchmarking](https://arxiv.org/pdf/1803.11285.pdf)
 
 - Google出品DELF升级版，基于检测和检索融合的图像匹配方法。论文主要有三个贡献：
-1.标注Google Landmark Boxes dataset(86k images)数据集，相当于图像的目标检测框真值。
-2.训练检测器实现高效区域检索：网络模型backbone输出局部特征和目标检测框。
-3.借助于区域特征融合R-ASMK(regional aggregated selective match kernel)，实现图像鉴别：第一阶段生成VLAD描述子，第二阶段基于求和池化和归一化。
-论文提出的模型以大欺小，基于Google Landmarks dataset数据训练的模型DELF-GLD，在ROxford 和RParis 数据集实现state-of-art水平。
-
+  - 1.标注Google Landmark Boxes dataset(86k images)数据集，相当于图像的目标检测框真值。
+  - 2.训练检测器实现高效区域检索：网络模型backbone输出局部特征和目标检测框。
+  - 3.借助于区域特征融合R-ASMK(regional aggregated selective match kernel)，实现图像鉴别：第一阶段生成VLAD描述子，第二阶段基于求和池化和归一化。
+  - 论文提出的模型以大欺小，基于Google Landmarks dataset数据训练的模型DELF-GLD，在ROxford 和RParis 数据集实现state-of-art水平。
   - DELF在线计算平台<https://colab.research.google.com/github/tensorflow/hub/blob/master/examples/colab/tf_hub_delf_module.ipynb#scrollTo=mVaKXT3cMSib>
   - [2019][CVPR][Detect-to-Retrieve: Efficient Regional Aggregation for Image Search](https://arxiv.org/pdf/1812.01584.pdf)
 
@@ -241,7 +240,7 @@ Fine-tuning和Attention-based训练。模型训练集只需要分类的标注，
 - CVPR2019论文科技大学提出，两种增强局部特征描述符上下文信息的方法：high level图像表示的视觉上下文信息和关键点分布的几何上下文信息。
   - [2019][CVPR][ContextDesc: Local Descriptor Augmentation with Cross-Modality Context](https://arxiv.org/pdf/1904.04084.pdf):star: :star: :star: :star: :star:
   - <https://github.com/lzx551402/contextdesc>
-  -[2019][CVPR][SOSNet:Second Order Similarity Regularization for Local Descriptor Learning]
+  - [2019][CVPR][SOSNet:Second Order Similarity Regularization for Local Descriptor Learning]
   - <https://github.com/yuruntian/SOSNet>
 
 ---
@@ -253,7 +252,7 @@ Fine-tuning和Attention-based训练。模型训练集只需要分类的标注，
   - <https://github.com/DagnyT/hardnet>
 
 - 论文提出对描述子距离度量的改进。First Order Similarity (FOS) loss近似认为是描述子的L1距离，论文提出Second Order Similarity Regularization(SOS)，用FOS+SOS作为损失函数度量特征向量的距离。
-  [SOSNet: Second Order Similarity Regularization for Local Descriptor Learning](https://arxiv.org/pdf/1904.05019.pdf)
+  - [SOSNet: Second Order Similarity Regularization for Local Descriptor Learning](https://arxiv.org/pdf/1904.05019.pdf)
 
 - NIPS2019论文，浙江大学提出，主要解决在不同视角图像的匹配关系。论文不是在旋转图像上直接提取特征，而是包含两个分支：直接在旋转图像的特征金字塔提取特征和在变化图像的特征金字塔提取特征，再经过分组卷积和
 Bilinear Pool，提取像素的描述符。模型需要和特征检测器(Superpoint/DoG/LF-Net)配合，不是end-to-end方式。如论文使用的评测数据集HPSequences和SUN3D数据量都不足1K,对比试验也仅仅基于SIFT和GeoDesc，实验数据不具有代表性，但是提出对图像/特征均进行映射变变换，具有参考意义。
