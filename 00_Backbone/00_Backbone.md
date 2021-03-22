@@ -115,6 +115,11 @@ depthwise conv、pointwise conv、groupwise conv减少模型计算量，轮提�
   - imagenet榜单前15名都是Google家的，强者恒强，垄断了ImageNet. 
   - [Meta Pseudo Labels](https://arxiv.org/pdf/2003.10580v4.pdf)
   
+- 谷歌团体再次刷榜之作,证明训练策略和扩展策略，比网络结构更重要.
+  - 1.如果可能过拟合，则缩放模型深度；否则，缩放模型宽度；
+  - 2.增加图像分辨率,但是速度比以往的论文中推荐的速度更慢。  
+  - [Revisiting ResNets: Improved Training and Scaling Strategies](https://arxiv.org/pdf/2103.07579.pdf)
+
 ---
 
 ## tiny_backbone
