@@ -1,6 +1,8 @@
-#　顶会论文的突破
+#　State of the art
 
-- 框架总结： 
+
+## 框架总结 
+
   - 1.手动设计网络结构 -> NAS搜索； 
   - 2.固定感受野 -> 引入空间注意力做感受野自动调节；
   - 3.效果提升不上去 -> 换个思路做实时分割来对比结果；
@@ -9,8 +11,8 @@
   - 6.CNN太单调，配合GCN搞点悬念；
   - 7.嫌2D太low逼，转3D点云分割；在3D卷积中引入2D的各种相似结构。
 
-- 结构类总结：A+B，A+B+C，A+B+C+D，... 
-
+## 结构类总结
+  - A+B，A+B+C，A+B+C+D，...
   - 1.注意力机制：spatial/Temporal attention，Hard/Soft attention.
     SE ~ Non-local ~ CcNet ~ GC-Net ~ Gate ~ CBAM ~ Dual Attention ~ Spatial Attention ~ Channel Attention ~ ... 
   【只要你能熟练的掌握加法、乘法、并行、串行四大法则，外加知道一点基本矩阵运算规则（如：HW * WH = HH）和sigmoid/softmax操作，那么你就能随意的生成很多种注意力机制】 
@@ -21,12 +23,24 @@
   - 6.池化结构：Max pooling ~ Average pooling ~ Random pooling ~ Strip Pooling ~ Mixed Pooling ~...
   - 7.归一化模块：Batch Normalization ~Layer Normalization ~ Instance Normalization ~ Group Normalization ~ Switchable Normalization ~ Filter Response Normalization...
   - 8.骨干网络：LeNet ~ ResNet ~ DenseNet ~ VGGNet ~ GoogLeNet ~ Res2Net ~ ResNeXt ~ InceptionNet ~ SqueezeNet ~ ShuffleNet ~ SENet ~ DPNet ~ MobileNet ~NasNet ~ DetNet ~ EfficientNet ~ ...
+  - 9.缩放策略：model dimensions(width, depth and resolution)
 
-- 训练类总结  
-  - 8.学习衰减策略：StepLR ~ MultiStepLR ~ ExponentialLR ~ CosineAnnealingLR ~ ReduceLROnPlateau ~...
-  - 9.优化算法：BGD ~ SGD ~ Adam ~ RMSProp ~ Lookahead ~...
-  - 10.数据增强：水平翻转、垂直翻转、旋转、平移、缩放、裁剪、擦除、反射变换 ~ 亮度、对比度、饱和度、色彩抖动、对比度变换 ~ 锐化、直方图均衡、Gamma增强、PCA白化、高斯噪声、GAN ~ Mixup
+## 训练类总结
 
+  - 1.学习衰减策略：StepLR ~ MultiStepLR ~ ExponentialLR ~ CosineAnnealingLR ~ ReduceLROnPlateau ~...
+  - 2.优化算法：BGD ~ SGD ~ Adam ~ RMSProp ~ Lookahead ~...
+  - 3.正则化方法：dropout,label smoothing,stochastic depth,dropblock  
+  - 4.数据增强：水平翻转、垂直翻转、旋转、平移、缩放、裁剪、擦除、反射变换 ~ 亮度、对比度、饱和度、色彩抖动、对比度变换 ~ 锐化、直方图均衡、Gamma增强、PCA白化、高斯噪声、GAN,Mixup
+
+## 目标检测类
+  
+  - Neck:从直筒型的SSD,STDN到FPN,PANet,Bi-FPN,NAS-FPN,ASFF,i-FPN：本质是增加不同level的feature map感受野，增加小目标/大目标的语义信息.
+  - loss&IOU函数:
+  - RoIpooling:
+  - NMS:
+
+## 语义分割&实例分割
+  - loss函数
 
 # backbone
 FPN->ResNet->ResNeXt->DLA->DenseNet->Res2Net
