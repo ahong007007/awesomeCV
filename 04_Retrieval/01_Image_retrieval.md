@@ -7,6 +7,11 @@
 - Google的GLDv2，数据规模百万级，是图像检索领域最重要的数据集。
   - [2020][Google Landmarks Dataset v2:A Large-Scale Benchmark for Instance-Level Recognition and Retrieval](https://arxiv.org/pdf/2004.01804.pdf)
 
+## survey
+ 
+- 
+  - [Deep Image Retrieval: A Survey](https://arxiv.org/pdf/2101.11282v2.pdf)
+
 ## Image-retrieval
 
 - 图像检索过程：1、对于输入图像I，计算图像的特征f(I)。2、计算待查询图像q的特征f(q)。3、计算f(I)和f(q)欧式距离d，d正比于图像相似度。
