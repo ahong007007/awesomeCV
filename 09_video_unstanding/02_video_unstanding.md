@@ -23,6 +23,9 @@
 包含image object detection, video object detection, single object tracking, multi-object tracking四大类别数据集。
   - [Vision Meets Drones: Past, Present and Future](https://arxiv.org/pdf/2001.06303.pdf)
 
+- 麻省理工学院(MIT)综述：包含问题定义，数据集，数据预处理，模型，评价尺度等。
+  - [Video Action Understanding: A Tutorial](https://arxiv.org/pdf/2010.06647.pdf)
+  
 ---
 
 ## Framework
@@ -36,15 +39,6 @@
   - <http://moments.csail.mit.edu/challenge_iccv_2019.html>
 
 ---
-
-## Video Classification
-
-- Facebook Christoph大神作品，和2D分类模型一脉相承，在谷歌EfficientNet基础上一脉相承，对视频理解框架fastslow的网络架构，在空间，时间，特征的宽度
-  高度等缩放空间搜索，实现5.5x的parameter参数减少，同时准确率保持不变。
-  - EfficientNet的缩放策略，可以压缩任何计算机视觉，NLP模型；灌水大法真好！
-  - [X3D: Expanding Architectures for Efficient Video Recognition](https://arxiv.org/pdf/2004.04730v1.pdf)
-  - [https://github.com/facebookresearch/SlowFast]
-
 
 ## video-Object-Detection
 
@@ -65,13 +59,21 @@
 接受高帧率信息，负责响应运动变化，对空间和颜色信息不敏感。P-cell处理低帧率信息，负责精细的空间和颜色信息。对应论文两个分支：Slow pathway和
 Fast pathway，分别处理低帧率图像空间语义信息和高帧率运动信息Slow pathway channels是Fast pathway 1/8,但是显著提高整个模型的准确率，Kinetics达到了79%的精度。
   - Slow pathway处理空间语义信息，Fast pathway捕获动作语义信息。
+  - Slow path以较低的采样率来处理输入视频（2D卷积+3D卷积），提取随时间变化较慢的外观特征，为了提取鲁邦的外观特征，卷积核的空间通道数较大；
+  - Fast path以较高的采样率来处理输入视频（3D卷积），提取随时间变化较快的运动特征，为了降低该通道的复杂度，卷积核的空间通道数较小；
+  - Lateral connections: (fast->slow)两个path的特征进行融合，进行行为识别。
   - 每层的输出，Slow为{T,S^2,C}，而Fast为{αT,S^2,βC},Time-strided convolution将两者尺寸匹配。  
     Fast pathway ：higher temporal resolution and lower channel capacity。
   - Slow pathway是Fast pathway 计算量20%，但是两个通道不是孤立的，各个特征分辨率均有特征融合。
   - 模型训练时使用128个GPU，视频理解领域还需要更简洁的特征表达能力。
+  - slowFast类比经典的特征金字塔，是不是说可以有不同的分支旁路？多个level的类似FPN特征进行融合？  
   - [2019][ICCV][SlowFast Networks for Video Recognition](https://arxiv.org/pdf/1812.03982v3.pdf)
 
-- Facebook出品，基于自家Fast-slow更新。基本思路在google EfficientNet延伸，在3D卷积中对各个系数进行调整：持续视觉，帧率，图像特征分辨率，宽度和深度。搜索空间要比EfficientNet更复杂。
+- Facebook出品，基于自家Fast-slow更新。
+  - 基本思路在google EfficientNet延伸，在3D卷积中对各个系数进行调整：持续视觉，帧率，图像特征分辨率，宽度和深度。搜索空间要比EfficientNet更复杂。
+  - 设计 stepwise network expansion approach，每个step中，对各个维度单独扩张分别训练一个model，选择扩张效果最好的维度。大大减小搜索优化的复杂度。
+  - 参考坐标下降法,每次对单个维度进行expand。  
+  - 使用了channel-wise separable convolution，model非常小，block的width非常小.  
   - [X3D: Expanding Architectures for Efficient Video Recognition](https://arxiv.org/pdf/2004.04730.pdf)
 
 - AAAI2020论文，清华+商汤+港中文联合实现，基于TMS,作者思考如何将时间信息嵌入到空间信息中，使得可以一次性联合学习两种信息。
@@ -82,6 +84,15 @@ Fast pathway，分别处理低帧率图像空间语义信息和高帧率运动�
 - 微软提出的视频分割方法。
   - [A Transductive Approach for Video Object Segmentation](https://arxiv.org/pdf/2004.07193.pdf)
   - <https://github.com/microsoft/transductive-vos.pytorch>
+  
+- google提出的视频分割方法，主要借助于Teacher-student迭代生成伪标签，用于模型训练。图片的训练方法延伸到视频分割中，是否也可以作为行为识别，姿态估计等过程？
+  - 数据集准备Labeled data和Unlabeled data。
+  - 1.Labeled data训练Teacher network。
+  - 2.Teacher network在未标注图像生成pseudo-labels。
+  - 3.Student network在pseudo-labels数据集训练。
+  - 4.Student network在Labeled data数据集fine-tune。
+  - 5.把Student network当做Teacher network，重复步骤2的过程，直到指定的迭代次数。  
+  - [2021][Naive-Student: Leveraging Semi-Supervised Learning in Video Sequences for Urban Scene Segmentation](https://arxiv.org/pdf/2005.10266v4.pdf)
 
 ## Moving-Objects
 
@@ -105,6 +116,12 @@ Fast pathway，分别处理低帧率图像空间语义信息和高帧率运动�
 
 - [History for Visual Dialog: Do we really need it?](https://arxiv.org/pdf/2005.07493.pdf)
 
+## Multimodal
+
+- Facebook提出的视频与音频多模态视频识别模型，Audiovisual SlowFast
+  - 延伸： Appearance, Motion, Audio, Text, Radar, Lidar, Touch,各种信息源可能对Multimodal学习都有效。
+  - [Audiovisual SlowFast Networks for Video Recognition]<https://arxiv.org/pdf/2001.08740.pdf>
+  
 ---
 
 ## training
