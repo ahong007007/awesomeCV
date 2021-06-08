@@ -26,6 +26,9 @@
 - 麻省理工学院(MIT)综述：包含问题定义，数据集，数据预处理，模型，评价尺度等。
   - [Video Action Understanding: A Tutorial](https://arxiv.org/pdf/2010.06647.pdf)
   
+- <https://paperswithcode.com/task/action-classification>
+
+
 ---
 
 ## Framework
@@ -79,6 +82,11 @@ Fast pathway，分别处理低帧率图像空间语义信息和高帧率运动�
 - AAAI2020论文，清华+商汤+港中文联合实现，基于TMS,作者思考如何将时间信息嵌入到空间信息中，使得可以一次性联合学习两种信息。
   - [Temporal Interlacing Network](https://arxiv.org/pdf/2001.06499.pdf)
 
+- Google提出适配移动端的视频处理方法。
+  - 1.neural architecture search设计视频处理的backbone
+  - 2.Stream Buffer计算，解耦存储空间，适用于处理任意长度的训练和推断视频序列。
+  - 3.ensembling technique改善准确率同时提高效率。
+  - [MoViNets: Mobile Video Networks for Efficient Video Recognition](https://arxiv.org/pdf/2103.11511v2.pdf)
 ## video-segment
 
 - 微软提出的视频分割方法。
