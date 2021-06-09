@@ -28,6 +28,8 @@
   
 - <https://paperswithcode.com/task/action-classification>
 
+- <https://github.com/open-mmlab/mmaction2>
+
 
 ---
 
@@ -87,6 +89,15 @@ Fast pathway，分别处理低帧率图像空间语义信息和高帧率运动�
   - 2.Stream Buffer计算，解耦存储空间，适用于处理任意长度的训练和推断视频序列。
   - 3.ensembling technique改善准确率同时提高效率。
   - [MoViNets: Mobile Video Networks for Efficient Video Recognition](https://arxiv.org/pdf/2103.11511v2.pdf)
+
+- 字节跳动提出的一个视频特征提取方法，借鉴2D卷积的SEnet，提出Spatio-Temporal Excitation(时空特征)，Channel Excitation,Motion Excitation
+  分别从三个角度融合时序特征和空间特征。
+  - 如何实现网络结构：residual block的非skip分支中添加
+  - 效果：something-v2效果一般，egoGesture和jester较为明显，Kinetics没有测试。而且只是比较了计算量，没有比较inference time。
+  - [ACTION-Net: Multipath Excitation for Action Recognition](https://arxiv.org/pdf/2103.07372.pdf)
+  - <https://arxiv.org/pdf/2103.07372.pdf>
+  - <https://github.com/V-Sense/ACTION-Net>
+
 ## video-segment
 
 - 微软提出的视频分割方法。
