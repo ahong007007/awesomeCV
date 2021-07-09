@@ -33,6 +33,7 @@
   -[A Survey of the Recent Architectures of Deep Convolutional Neural Networks](https://arxiv.org/pdf/1901.06032.pdf)
 
 - <https://paperswithcode.com/task/image-classification>
+- <https://sotabench.com/benchmarks/image-classification-on-imagenet>  
 - <https://www.reddit.com/r/computervision/>
 - <https://www.reddit.com/r/MachineLearning/>
 
@@ -121,8 +122,7 @@ depthwise conv、pointwise conv、groupwise conv减少模型计算量，轮提�
   - [Revisiting ResNets: Improved Training and Scaling Strategies](https://arxiv.org/pdf/2103.07579.pdf)
 
 - Deepmind提出的一种替代Batch normal方法。
-  - 轮声称BN计算量大，但是实验效果无论是速度，还是参数，看上去没有显著提升？
-    
+  - 轮声称BN计算量大，但是实验效果无论是速度，还是参数，看上去没有显著提升.
   - [High-Performance Large-Scale Image Recognition Without Normalization](https://arxiv.org/pdf/2102.06171v1.pdf)
 
 ---

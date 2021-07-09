@@ -19,6 +19,7 @@
 
 - state of art
   - <https://paperswithcode.com/sota/object-detection-on-coco>
+  - <https://sotabench.com/benchmarks/object-detection-on-coco-minival>
 
 - 香港中文大学，商汤等联合提出的MMDetection，包括检测模型，实体分割等state-of-art模型框架源码，属业界良心。
 

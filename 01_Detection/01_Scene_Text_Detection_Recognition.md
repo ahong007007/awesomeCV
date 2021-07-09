@@ -25,6 +25,10 @@
 - 加拿大滑铁卢大学，综述。
   - [Text Detection and Recognition in the Wild: A Review](https://arxiv.org/pdf/2006.04305.pdf)
 
+- Scene_Text_Recognition 
+  - CNN+RNN+CTC
+  - CNN+RNN+Attention
+
 ---
 
 ## Scene_Text_Detection
@@ -50,7 +54,7 @@ Look More Than Once: An Accurate Detector for Text of Arbitrary Shapes
   - head包含Character Branch 和 Text Detection Branch。
   - [Convolutional Character Networks](https://arxiv.org/pdf/1910.07954v1.pdf)
 
-- 武汉大学，悉尼大学联合提出针对任意文字检测的方法，结合单子特征，文本行特征，全局特征，以及语义分割，联合使用，校测较为准确的文本。
+- 武汉大学，悉尼大学联合提出针对任意文字检测的方法，结合单字特征，文本行特征，全局特征，以及语义分割，联合使用，校测较为准确的文本。
   - global-level features来自于segmentation，word以及char信息来自于RoIAlign。
   - 论文主要是针对英文，对中文检测是否有效待验证。
   - [TextFuseNet: Scene Text Detection with Richer Fused Features](https://www.ijcai.org/Proceedings/2020/0072.pdf)
